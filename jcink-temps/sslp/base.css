@@ -122,6 +122,9 @@
 .playlist {
   width: 280px;
 }
+.playlist .sslp-scroll {
+  text-align: left;
+}
 .sslp-wrap song,
 .sslp-wrap thread {
   display: grid;
