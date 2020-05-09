@@ -204,7 +204,7 @@
 .sslp-wrap section {
   position: relative;
   display: grid;
-  margin: 0 0 0 -85px;
+  margin: 30px 0 0 -85px;
   grid-template-columns: 70px calc(100% - 100px);
   grid-column-gap: 30px;
 }
