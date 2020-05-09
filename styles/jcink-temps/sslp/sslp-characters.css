@@ -1,0 +1,22 @@
+/****************************
+	Lottie
+****************************/
+.lottie h1,
+.lottie h2,
+.lottie b,
+.lottie b,
+.lottie i,
+.lottie a,
+.lottie tag {
+	color: #ca8a93;
+}
+.lottie.scroll .sslp-scroll {
+	scrollbar-color: #ca8a93 transparent !important;
+}
+.lottie.scroll .sslp-scroll::-webkit-scrollbar-thumb {
+	background-color: #ca8a93;
+}
+.lottie .sslp-wrap,
+.lottie ib:before {
+	border-color: #e8ccd1;
+}
