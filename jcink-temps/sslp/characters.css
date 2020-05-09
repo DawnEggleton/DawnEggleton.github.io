@@ -23,3 +23,29 @@
 .lottie year {
 	border-color: #e8ccd1;
 }
+
+/****************************
+	Nik
+****************************/
+.nik h1,
+.nik h2,
+.nik b,
+.nik b i,
+.nik i,
+.nik a,
+.nik tag,
+.nik year {
+	color: #61a6aa;
+}
+.nik.scroll .sslp-scroll {
+	scrollbar-color: #61a6aa transparent !important;
+}
+.nik.scroll .sslp-scroll::-webkit-scrollbar-thumb {
+	background-color: #61a6aa;
+}
+.nik .sslp-wrap,
+.nik ib:before,
+.nik song i,
+.nik year {
+	border-color: #81c1c5;
+}
