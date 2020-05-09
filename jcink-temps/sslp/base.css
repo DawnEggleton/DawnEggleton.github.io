@@ -72,6 +72,7 @@
 .sslp-wrap i,
 .sslp-wrap a {
   color: #000000;
+  padding: 0;
 }
 
 .sslp-wrap b {
