@@ -57,7 +57,7 @@
   text-align: justify;
   font-size: 10px;
   letter-spacing: 2px;  
-  margin: 20px 0;
+  margin: 30px 0;
 }
 .sslp-wrap > h1:first-of-type,
 .sslp-wrap > h2:first-of-type,
@@ -117,99 +117,215 @@
 .scroll .sslp-scroll::-webkit-scrollbar-thumb {
   background-color: #000000;
 }
+
+.playlist {
+  width: 280px;
+}
+.sslp-wrap song,
+.sslp-wrap thread {
+  display: grid;
+  grid-template-columns: max-content auto;
+  grid-column-gap: 20px;
+  align-items: center;
+  line-height: 140%;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.sslp-wrap song i {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  font-size: 12px;
+  border: 1px solid #000000;
+  padding: 10px 9px 10px 11px;
+  border-radius: 50%;
+}
+.sslp-wrap thread i {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  font-size: 14px;
+}
+.sslp-wrap song b,
+.sslp-wrap thread a b {
+  font-family: 'mallory_narrow';
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+.sslp-wrap thread a {
+  font-family: 'mallory_narrow';
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-decoration: none;
+}
+.sslp-wrap song span,
+.sslp-wrap thread span {
+  letter-spacing: 1px;
+  font-family: 'Jost', sans-serif;
+  font-size: 9px;
+  font-style: italic;
+}
+
+.quote {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+.quote tag {
+  text-align: left;
+}
+
+.sslp-wrap img {
+  max-width: 100%;
+  height: auto;
+}
+.imgdev {
+  display: grid;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  padding: 30px;
+}
+.col2 {
+  grid-template-columns: 1fr 1fr;
+}
+.col3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.col4 {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.col5 {
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.timeline {
+  padding: 50px;
+}
+
+.timeline section {
+  position: relative;
+  display: grid;
+  margin: 0 0 0 -85px;
+  grid-template-columns: 70px calc(100% - 100px);
+  grid-column-gap: 30px;
+}
+year {
+  width: 70px;
+  height: 70px;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  text-align: center;
+  font-family: 'mallory_narrow';
+  font-weight: 900;
+  font-size: 18px;
+  background: #ffffff;
+}
+events {
+  display: grid;
+  grid-row-gap: 20px;
+  padding-top: 25px;
+  margin-bottom: 20px;
+}
+event {
+  line-height: 160%;
+}
+
+
+
 /*Black Italic*/
 @font-face {
   font-family: 'mallory_narrow';
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.eot');
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.eot?#iefix') format('embedded-opentype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.woff2') format('woff2'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.woff') format('woff'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.ttf') format('truetype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.svg#mallory_narrowblack_italic') format('svg');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.eot');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.eot?#iefix') format('embedded-opentype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.woff2') format('woff2'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.woff') format('woff'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.ttf') format('truetype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black_italic.svg#mallory_narrowblack_italic') format('svg');
   font-weight: 900;
   font-style: italic;
 }
 /*Black*/
 @font-face {
   font-family: 'mallory_narrow';
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.eot');
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.eot?#iefix') format('embedded-opentype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.woff2') format('woff2'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.woff') format('woff'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.ttf') format('truetype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.svg#mallory_narrowblack') format('svg');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.eot');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.eot?#iefix') format('embedded-opentype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.woff2') format('woff2'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.woff') format('woff'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.ttf') format('truetype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_black.svg#mallory_narrowblack') format('svg');
   font-weight: 900;
   font-style: normal;
 }
 /*Bold Italic*/
 @font-face {
   font-family: 'mallory_narrow';
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.eot');
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.eot?#iefix') format('embedded-opentype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.woff2') format('woff2'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.woff') format('woff'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.ttf') format('truetype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.svg#mallory_narrowbold_italic') format('svg');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.eot');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.eot?#iefix') format('embedded-opentype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.woff2') format('woff2'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.woff') format('woff'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.ttf') format('truetype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold_italic.svg#mallory_narrowbold_italic') format('svg');
   font-weight: 700;
   font-style: italic;
 }
 /*Bold*/
 @font-face {
   font-family: 'mallory_narrow';
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.eot');
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.eot?#iefix') format('embedded-opentype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.woff2') format('woff2'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.woff') format('woff'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.ttf') format('truetype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.svg#mallory_narrowbold') format('svg');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.eot');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.eot?#iefix') format('embedded-opentype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.woff2') format('woff2'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.woff') format('woff'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.ttf') format('truetype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_bold.svg#mallory_narrowbold') format('svg');
   font-weight: 700;
   font-style: normal;
 }
 /*Book Italic*/
 @font-face {
   font-family: 'mallory_narrow';
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.eot');
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.eot?#iefix') format('embedded-opentype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.woff2') format('woff2'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.woff') format('woff'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.ttf') format('truetype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.svg#mallory_narrowbook_italic') format('svg');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.eot');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.eot?#iefix') format('embedded-opentype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.woff2') format('woff2'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.woff') format('woff'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.ttf') format('truetype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book_italic.svg#mallory_narrowbook_italic') format('svg');
   font-weight: 300;
   font-style: italic;
 }
 /*Book*/
 @font-face {
   font-family: 'mallory_narrow';
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.eot');
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.eot?#iefix') format('embedded-opentype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.woff2') format('woff2'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.woff') format('woff'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.ttf') format('truetype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.svg#mallory_narrowbook') format('svg');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.eot');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.eot?#iefix') format('embedded-opentype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.woff2') format('woff2'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.woff') format('woff'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.ttf') format('truetype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_book.svg#mallory_narrowbook') format('svg');
   font-weight: 300;
   font-style: normal;
 }
 /*Regular Italic*/
 @font-face {
   font-family: 'mallory_narrow';
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.eot');
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.eot?#iefix') format('embedded-opentype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.woff2') format('woff2'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.woff') format('woff'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.ttf') format('truetype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.svg#mallory_narrowmedium_italic') format('svg');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.eot');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.eot?#iefix') format('embedded-opentype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.woff2') format('woff2'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.woff') format('woff'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.ttf') format('truetype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium_italic.svg#mallory_narrowmedium_italic') format('svg');
   font-weight: 500;
   font-style: italic;
 }
 /*Regular*/
 @font-face {
   font-family: 'mallory_narrow';
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.eot');
-  src: url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.eot?#iefix') format('embedded-opentype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.woff2') format('woff2'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.woff') format('woff'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.ttf') format('truetype'),
-   url('//files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.svg#mallory_narrowmedium') format('svg');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.eot');
+  src: url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.eot?#iefix') format('embedded-opentype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.woff2') format('woff2'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.woff') format('woff'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.ttf') format('truetype'),
+   url('https://files.jcink.net/uploads/survivorguilt/fearofthewater/mallory_narrow_medium.svg#mallory_narrowmedium') format('svg');
   font-weight: 500;
   font-style: normal;
 }

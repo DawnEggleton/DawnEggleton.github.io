@@ -7,7 +7,8 @@
 .lottie b,
 .lottie i,
 .lottie a,
-.lottie tag {
+.lottie tag,
+.lottie year {
 	color: #ca8a93;
 }
 .lottie.scroll .sslp-scroll {
@@ -17,6 +18,8 @@
 	background-color: #ca8a93;
 }
 .lottie .sslp-wrap,
-.lottie ib:before {
+.lottie ib:before,
+.lottie song i,
+.lottie year {
 	border-color: #e8ccd1;
 }
