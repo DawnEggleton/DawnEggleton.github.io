@@ -20,6 +20,9 @@
   height: 60px;
   border-radius: 50%;
   border: 5px solid #ffffff;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 .sslp-wrap ib img {
   position: relative;
