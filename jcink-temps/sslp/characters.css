@@ -51,27 +51,27 @@
 }
 
 /****************************
-	Nik
+	Fletch
 ****************************/
-.nik h1,
-.nik h2,
-.nik b,
-.nik b i,
-.nik i,
-.nik a,
-.nik tag,
-.nik year {
+.fletch h1,
+.fletch h2,
+.fletch b,
+.fletch b i,
+.fletch i,
+.fletch a,
+.fletch tag,
+.fletch year {
 	color: #5a7e5e;
 }
-.nik.scroll .sslp-scroll {
+.fletch.scroll .sslp-scroll {
 	scrollbar-color: #5a7e5e transparent !important;
 }
-.nik.scroll .sslp-scroll::-webkit-scrollbar-thumb {
+.fletch.scroll .sslp-scroll::-webkit-scrollbar-thumb {
 	background-color: #5a7e5e;
 }
-.nik .sslp-wrap,
-.nik ib:before,
-.nik song i,
-.nik year {
+.fletch .sslp-wrap,
+.fletch ib:before,
+.fletch song i,
+.fletch year {
 	border-color: #bdd2c0;
 }
