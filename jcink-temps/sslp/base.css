@@ -11,6 +11,8 @@
   font-size: 12px;
   line-height: 200%;
   color: #696969;
+  text-transform: none;
+  letter-spacing: 0;
 }
 .sslp-wrap ib {
   position: absolute;
