@@ -75,3 +75,29 @@
 .fletch year {
 	border-color: #bdd2c0;
 }
+
+/****************************
+	Milo
+****************************/
+.milo h1,
+.milo h2,
+.milo b,
+.milo b i,
+.milo i,
+.milo a,
+.milo tag,
+.milo year {
+	color: #d48d79;
+}
+.milo.scroll .sslp-scroll {
+	scrollbar-color: #d48d79 transparent !important;
+}
+.milo.scroll .sslp-scroll::-webkit-scrollbar-thumb {
+	background-color: #d48d79;
+}
+.milo .sslp-wrap,
+.milo ib:before,
+.milo song i,
+.milo year {
+	border-color: #e1bdb2;
+}
