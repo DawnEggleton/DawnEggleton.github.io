@@ -256,6 +256,32 @@ event {
 
 
 
+
+h1,
+h2,
+b,
+b i,
+i,
+a,
+tag,
+year {
+	color: var(--dkAccent) !important;
+}
+.scroll .sslp-scroll {
+	scrollbar-color: var(--dkAccent) transparent !important;
+}
+.scroll .sslp-scroll::-webkit-scrollbar-thumb {
+	background-color: var(--dkAccent) !important;
+}
+.sslp-wrap,
+ib:before,
+song i,
+year {
+	border-color: var(--ltAccent) !important;
+}
+
+
+
 /*Black Italic*/
 @font-face {
   font-family: 'mallory_narrow';
@@ -352,3 +378,6 @@ event {
   font-weight: 500;
   font-style: normal;
 }
+
+
+

@@ -1,103 +1,30 @@
-/****************************
-	Lottie
-****************************/
-.lottie h1,
-.lottie h2,
-.lottie b,
-.lottie b,
-.lottie i,
-.lottie a,
-.lottie tag,
-.lottie year {
-	color: #ca8a93;
-}
-.lottie.scroll .sslp-scroll {
-	scrollbar-color: #ca8a93 transparent !important;
-}
-.lottie.scroll .sslp-scroll::-webkit-scrollbar-thumb {
-	background-color: #ca8a93;
-}
-.lottie .sslp-wrap,
-.lottie ib:before,
-.lottie song i,
-.lottie year {
-	border-color: #e8ccd1;
+:root {
+	--lt-lottie: #e8ccd1;
+	--dk-lottie: #ca8a93;
+
+	--lt-nik: #81c1c5;
+	--dk-nik: #61a6aa;
+
+	--lt-milo: #e1bdb2;
+	--dk-milo: #d48d79;
+
+	--lt-fletch: #bdd2c0;
+	--dk-fletch: #5a7e5e;
 }
 
-/****************************
-	Nik
-****************************/
-.nik h1,
-.nik h2,
-.nik b,
-.nik b i,
-.nik i,
-.nik a,
-.nik tag,
-.nik year {
-	color: #61a6aa;
+.lottie {
+	--ltAccent: var(--lt-lottie);
+	--dkAccent: var(--dk-lottie);
 }
-.nik.scroll .sslp-scroll {
-	scrollbar-color: #61a6aa transparent !important;
+.nik {
+	--ltAccent: var(--lt-nik);
+	--dkAccent: var(--dk-nik);
 }
-.nik.scroll .sslp-scroll::-webkit-scrollbar-thumb {
-	background-color: #61a6aa;
+.fletch {
+	--ltAccent: var(--lt-fletch);
+	--dkAccent: var(--dk-fletch);
 }
-.nik .sslp-wrap,
-.nik ib:before,
-.nik song i,
-.nik year {
-	border-color: #81c1c5;
-}
-
-/****************************
-	Fletch
-****************************/
-.fletch h1,
-.fletch h2,
-.fletch b,
-.fletch b i,
-.fletch i,
-.fletch a,
-.fletch tag,
-.fletch year {
-	color: #5a7e5e;
-}
-.fletch.scroll .sslp-scroll {
-	scrollbar-color: #5a7e5e transparent !important;
-}
-.fletch.scroll .sslp-scroll::-webkit-scrollbar-thumb {
-	background-color: #5a7e5e;
-}
-.fletch .sslp-wrap,
-.fletch ib:before,
-.fletch song i,
-.fletch year {
-	border-color: #bdd2c0;
-}
-
-/****************************
-	Milo
-****************************/
-.milo h1,
-.milo h2,
-.milo b,
-.milo b i,
-.milo i,
-.milo a,
-.milo tag,
-.milo year {
-	color: #d48d79;
-}
-.milo.scroll .sslp-scroll {
-	scrollbar-color: #d48d79 transparent !important;
-}
-.milo.scroll .sslp-scroll::-webkit-scrollbar-thumb {
-	background-color: #d48d79;
-}
-.milo .sslp-wrap,
-.milo ib:before,
-.milo song i,
-.milo year {
-	border-color: #e1bdb2;
+.milo {
+	--ltAccent: var(--lt-milo);
+	--dkAccent: var(--dk-milo);
 }
