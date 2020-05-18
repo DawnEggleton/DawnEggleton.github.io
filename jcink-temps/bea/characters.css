@@ -1,0 +1,12 @@
+.carly {
+    --accent: var(--carly);
+}
+.glenn {
+    --accent: var(--glenn);
+}
+
+
+:root {
+    --carly: #ff0000;
+    --glenn: #00ff00;
+}
