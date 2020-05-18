@@ -179,6 +179,9 @@
 .bea-wrap.timeline .bea-content event:last-of-type {
     margin-bottom: 0;
 }
+.bea-wrap.playlist {
+    width: 500px;
+}
 .bea-wrap.playlist .bea-content {
     max-height: 300px;
     overflow: auto;
