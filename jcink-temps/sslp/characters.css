@@ -1,30 +1,86 @@
 :root {
+	--lt-connor: #e0d0b5;
+	--dk-connor: #b6a280;
+
+	--lt-duck: #c9aebe;
+	--dk-duck: #805e73;
+
+	--lt-evan: #bb9a9a;
+	--dk-evan: #994545;
+
+	--lt-fletch: #bdd2c0;
+	--dk-fletch: #5a7e5e;
+
+	--lt-gabe: #cad9bb;
+	--dk-gabe: #92a481;
+
 	--lt-lottie: #e8ccd1;
 	--dk-lottie: #ca8a93;
 
-	--lt-nik: #81c1c5;
-	--dk-nik: #61a6aa;
+	--lt-maggie: #b6c2b9;
+	--dk-maggie: #65806b;
+
+	--lt-mari: #e6cdc6;
+	--dk-mari: #dba797;
+
+	--lt-mav: #e1bdb2;
+	--dk-mav: #d48d79;
 
 	--lt-milo: #e1bdb2;
 	--dk-milo: #d48d79;
 
-	--lt-fletch: #bdd2c0;
-	--dk-fletch: #5a7e5e;
+	--lt-nik: #81c1c5;
+	--dk-nik: #61a6aa;
+
+	--lt-simon: #cde0a8;
+	--dk-simon: #9cc34f;
 }
 
-.lottie {
-	--ltAccent: var(--lt-lottie);
-	--dkAccent: var(--dk-lottie);
+.connor {
+	--ltAccent: var(--lt-connor);
+	--dkAccent: var(--dk-connor);
 }
-.nik {
-	--ltAccent: var(--lt-nik);
-	--dkAccent: var(--dk-nik);
+.duck {
+	--ltAccent: var(--lt-duck);
+	--dkAccent: var(--dk-duck);
+}
+.evan {
+	--ltAccent: var(--lt-evan);
+	--dkAccent: var(--dk-evan);
 }
 .fletch {
 	--ltAccent: var(--lt-fletch);
 	--dkAccent: var(--dk-fletch);
 }
+.gabe {
+	--ltAccent: var(--lt-gabe);
+	--dkAccent: var(--dk-gabe);
+}
+.lottie {
+	--ltAccent: var(--lt-lottie);
+	--dkAccent: var(--dk-lottie);
+}
+.maggie {
+	--ltAccent: var(--lt-maggie);
+	--dkAccent: var(--dk-maggie);
+}
+.mari {
+	--ltAccent: var(--lt-mari);
+	--dkAccent: var(--dk-mari);
+}
+.mav {
+	--ltAccent: var(--lt-mav);
+	--dkAccent: var(--dk-mav);
+}
 .milo {
 	--ltAccent: var(--lt-milo);
 	--dkAccent: var(--dk-milo);
+}
+.nik {
+	--ltAccent: var(--lt-nik);
+	--dkAccent: var(--dk-nik);
+}
+.simon {
+	--ltAccent: var(--lt-simon);
+	--dkAccent: var(--dk-simon);
 }
