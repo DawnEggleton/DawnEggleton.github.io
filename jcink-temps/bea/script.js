@@ -1,13 +1,5 @@
 $('.bea-wrap.timeline h1').on('click', function() {
-    if($(this).hasClass('yearOpen')) {
-        $(this).next('.bea-content').slideUp();
-        $(this).removeClass('yearOpen');
-        console.log('class removed');
-    } else {
-        $(this).next('.bea-content').slideDown();
-        $(this).addClass('yearOpen');
-        console.log('class added');
-    }
+    $(this).next().slideToggle();
 });
 
 $('.bea-wrap.tabbed .bea-notes span').on('click', function() {
