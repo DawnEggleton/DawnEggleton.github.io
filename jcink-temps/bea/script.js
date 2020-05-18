@@ -1,6 +1,11 @@
-$('.bea-wrap.timeline .bea-main h1').on('click', function() {
-    $(this).next().slideToggle();
-    console.log('timeline year clicked');
+$('.bea-wrap.timeline h1').on('click', function() {
+    if($(this).hasClass('yearOpen')) {
+        $(this).next('.bea-content').slideUp();
+        $(this).removeClass('yearOpen');
+    } else {
+        $(this).next('.bea-content').slideDown();
+        $(this).addClass('yearOpen');
+    }
 });
 
 $('.bea-wrap.tabbed .bea-notes span').on('click', function() {
