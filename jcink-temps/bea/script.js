@@ -1,5 +1,6 @@
 $('.bea-wrap.timeline .bea-main h1').on('click', function() {
     $(this).next().slideToggle();
+    console.log('timeline year clicked');
 });
 
 $('.bea-wrap.tabbed .bea-notes span').on('click', function() {
