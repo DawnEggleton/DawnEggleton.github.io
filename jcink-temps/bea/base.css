@@ -194,10 +194,12 @@
     scrollbar-width: thin;
     scrollbar-color: var(--accent) transparent;
 }
-.bea-wrap.playlist .bea-content::-webkit-scrollbar {
+.bea-wrap.playlist .bea-content::-webkit-scrollbar,
+.tabbed .bea-notes::-webkit-scrollbar {
     width: 5px;
 }
-.bea-wrap.playlist .bea-content::-webkit-scrollbar-thumb {
+.bea-wrap.playlist .bea-content::-webkit-scrollbar-thumb,
+.tabbed .bea-notes::-webkit-scrollbar-thumb {
     background: var(--accent);
 }
 .bea-wrap.playlist song {
@@ -271,6 +273,31 @@
     text-transform: uppercase;
     display: block;
     margin: 20px 30px 0;
+}
+
+.tabbed .bea-main {
+    display: none;
+}
+.tabbed .bea-main.activeTab {
+    display: grid;
+}
+.tabbed .bea-notes span {
+    cursor: pointer;
+    color: #414141;
+}
+.tabbed .bea-notes span.activeTab {
+    color: var(--accent);
+    font-weight: bold;
+}
+.tabbed .bea-notes {
+    max-height: 200px;
+    overflow: auto;
+    padding-right: 10px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+}
+.tabbed .bea-content {
+    height: max-content;
 }
 
 
