@@ -254,7 +254,7 @@
     width: 400px;
 }
 .bea-wrap.quoteDev .bea-content {
-    font-size: 24px;
+    font-size: 24px !important;
     font-family: 'Thasadith', sans-serif;
 }
 .bea-wrap.quoteDev .bea-content span {
@@ -263,4 +263,24 @@
     text-transform: uppercase;
     display: block;
     margin: 20px 30px 0;
+}
+
+
+
+.totl .bea-content,
+.totl .bea-content a {
+    font-size: var(--size-m);
+}
+.totl .bea-content b,
+.totl .bea-content i {
+    font-size: var(--size-l);
+}
+.totl .bea-wrap.timeline .bea-content b,
+.totl .bea-wrap.playlist song b,
+.totl .bea-wrap.quoteDev .bea-content span {
+    font-size: var(--size-m);
+}
+.totl .bea-wrap.playlist song i,
+.totl .bea-wrap.playlist song span {
+    font-size: var(--size-s);
 }
