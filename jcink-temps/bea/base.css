@@ -164,7 +164,7 @@
 .bea-wrap.timeline .bea-content {
     display: none;
 }
-.bea-wrap.timeline .bea-content h1 {
+.bea-wrap.timeline .bea-main h1 {
     cursor: pointer;
 }
 .bea-wrap.timeline .bea-content b {
