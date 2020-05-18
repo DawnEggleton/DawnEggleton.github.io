@@ -1,5 +1,5 @@
-.default {
-    --accent: var(--default);
+.character {
+    --accent: var(--character);
 }
 .carly {
     --accent: var(--carly);
@@ -10,7 +10,7 @@
 
 
 :root {
-    --default: #000000;
+    --character: #000000;
     --carly: #ff0000;
     --glenn: #00ff00;
 }
