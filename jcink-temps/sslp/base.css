@@ -257,14 +257,14 @@ event {
 
 
 
-h1,
-h2,
-b,
-b i,
-i,
-a,
-tag,
-year {
+.sslp-wrap h1,
+.sslp-wrap h2,
+.sslp-wrap b,
+.sslp-wrap b i,
+.sslp-wrap i,
+.sslp-wrap a,
+.sslp-wrap tag,
+.sslp-wrap year {
 	color: var(--dkAccent) !important;
 }
 .scroll .sslp-scroll {
@@ -274,9 +274,9 @@ year {
 	background-color: var(--dkAccent) !important;
 }
 .sslp-wrap,
-ib:before,
-song i,
-year {
+.sslp-wrap ib:before,
+.sslp-wrap song i,
+.sslp-wrap year {
 	border-color: var(--ltAccent) !important;
 }
 
