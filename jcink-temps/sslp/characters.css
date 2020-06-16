@@ -1,6 +1,9 @@
 /*still need: */
 
 :root {
+	--lt-al: #e1bdb2;
+	--dk-al: #d48d79;
+
 	--lt-connor: #e0d0b5;
 	--dk-connor: #b6a280;
 
@@ -38,9 +41,9 @@
 	--dk-simon: #9cc34f;
 }
 
-.connor {
-	--ltAccent: var(--lt-connor);
-	--dkAccent: var(--dk-connor);
+.al {
+	--ltAccent: var(--lt-al);
+	--dkAccent: var(--dk-al);
 }
 .duck {
 	--ltAccent: var(--lt-duck);
