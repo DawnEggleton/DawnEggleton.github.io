@@ -7,6 +7,9 @@
 	--lt-connor: #e0d0b5;
 	--dk-connor: #b6a280;
 
+	--lt-cyn: #bb9a9a;
+	--dk-cyn: #994545;
+
 	--lt-duck: #c9aebe;
 	--dk-duck: #805e73;
 
@@ -18,6 +21,12 @@
 
 	--lt-gabe: #cad9bb;
 	--dk-gabe: #92a481;
+
+	--lt-harley: #e8ccd1;
+	--dk-harley: #ca8a93;
+
+	--lt-hayd: #96b79a;
+	--dk-hayd: #519358;
 
 	--lt-lottie: #e8ccd1;
 	--dk-lottie: #ca8a93;
@@ -39,11 +48,18 @@
 
 	--lt-simon: #cde0a8;
 	--dk-simon: #9cc34f;
+
+	--lt-tia: #e1b691;
+	--dk-tia: #bd7c43;
 }
 
 .al {
 	--ltAccent: var(--lt-al);
 	--dkAccent: var(--dk-al);
+}
+.cyn {
+	--ltAccent: var(--lt-cyn);
+	--dkAccent: var(--dk-cyn);
 }
 .duck {
 	--ltAccent: var(--lt-duck);
@@ -60,6 +76,14 @@
 .gabe {
 	--ltAccent: var(--lt-gabe);
 	--dkAccent: var(--dk-gabe);
+}
+.harley {
+	--ltAccent: var(--lt-harley);
+	--dkAccent: var(--dk-harley);
+}
+.hayd {
+	--ltAccent: var(--lt-hayd);
+	--dkAccent: var(--dk-hayd);
 }
 .lottie {
 	--ltAccent: var(--lt-lottie);
@@ -88,4 +112,8 @@
 .simon {
 	--ltAccent: var(--lt-simon);
 	--dkAccent: var(--dk-simon);
+}
+.tia {
+	--ltAccent: var(--lt-tia);
+	--dkAccent: var(--dk-tia);
 }
