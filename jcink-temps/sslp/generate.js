@@ -170,160 +170,82 @@ $('#updateTemp').on('click', function() {
                     '; --dkAccent: ' +
                     $('input[name="dkAccent"]').val() +
                     ';}</style>';
-    if(tag != '') {
-        //set post code setup
-        temp_post =     '<span class="' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        $('#postText').val() + '\n\n' +
-                        '<div class="sslp-scroll"></div>' + '\n\n' +
-                        tag + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
     
-        //set tracker code setup
-        temp_track =    '<span class="scroll ' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap tracker">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        '<div class="sslp-scroll">' + '\n\n' + 
-                        tracking + '\n\n' +
-                        '</div>' + '\n\n' +
-                        tag + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set image code setup
-        temp_image =    '<span class="' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap">' + '\n\n' + 
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        '<span class="imgdev col' + columns + '">' + '\n\n' +
-                        images + '\n\n' + 
-                        '</span>' + '\n\n' +
-                        tag + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set playlist code setup
-        temp_music =    '<span class="scroll ' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap playlist">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        '<div class="sslp-scroll">' + '\n\n' + 
-                        songs + '\n\n' + 
-                        '</div>' + '\n\n' +
-                        tag + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set quote code setup
-        temp_quote =    '<span class="' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap quote">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        quote + '\n\n' +
-                        source + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set timeline code setup
-        temp_time =     '<span class="' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap timeline">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        timeline + '\n\n' +
-                        tag + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    } else {
-        //set post code setup
-        temp_post =     '<span class="' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        $('#postText').val() + '\n\n' +
-                        '<div class="sslp-scroll"></div>' + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set tracker code setup
-        temp_track =    '<span class="scroll ' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap tracker">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        '<div class="sslp-scroll">' + '\n\n' + 
-                        tracking + '\n\n' +
-                        '</div>' + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set image code setup
-        temp_image =    '<span class="' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap">' + '\n\n' + 
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        '<span class="imgdev col' + columns + '">' + '\n\n' +
-                        images + '\n\n' + 
-                        '</span>' + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set playlist code setup
-        temp_music =    '<span class="scroll ' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap playlist">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        '<div class="sslp-scroll">' + '\n\n' + 
-                        songs + '\n\n' + 
-                        '</div>' + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set quote code setup
-        temp_quote =    '<span class="' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap quote">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        quote + '\n\n' +
-                        source + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    
-        //set timeline code setup
-        temp_time =     '<span class="' +
-                        $('input[name="char"]').val() +
-                        '"><div class="sslp-wrap timeline">' + '\n\n' +
-                        image + '\n\n' +
-                        lHead + '\n\n' +
-                        sHead + '\n\n' +
-                        timeline + '\n\n' +
-                        '</div></span>' + '\n\n' +
-                        colors;
-    }
+    //set post code setup
+    temp_post =     '<span class="' +
+                    $('input[name="char"]').val() +
+                    '"><div class="sslp-wrap">' + '\n\n' +
+                    image + '\n\n' +
+                    lHead + '\n\n' +
+                    sHead + '\n\n' +
+                    '<div class="sslp-scroll">' + '\n\n' + 
+                    $('#postText').val() + '\n\n' +
+                    '</div>' + '\n\n' +
+                    tag + '\n\n' +
+                    '</div></span>' + '\n\n' +
+                    colors;
+
+    //set tracker code setup
+    temp_track =    '<span class="scroll ' +
+                    $('input[name="char"]').val() +
+                    '"><div class="sslp-wrap tracker">' + '\n\n' +
+                    image + '\n\n' +
+                    lHead + '\n\n' +
+                    sHead + '\n\n' +
+                    '<div class="sslp-scroll">' + '\n\n' + 
+                    tracking + '\n\n' +
+                    '</div>' + '\n\n' +
+                    '</div></span>' + '\n\n' +
+                    colors;
+
+    //set image code setup
+    temp_image =    '<span class="' +
+                    $('input[name="char"]').val() +
+                    '"><div class="sslp-wrap">' + '\n\n' + 
+                    image + '\n\n' +
+                    lHead + '\n\n' +
+                    sHead + '\n\n' +
+                    '<span class="imgdev col' + columns + '">' + '\n\n' +
+                    images + '\n\n' + 
+                    '</span>' + '\n\n' +
+                    '</div></span>' + '\n\n' +
+                    colors;
+
+    //set playlist code setup
+    temp_music =    '<span class="scroll ' +
+                    $('input[name="char"]').val() +
+                    '"><div class="sslp-wrap playlist">' + '\n\n' +
+                    image + '\n\n' +
+                    lHead + '\n\n' +
+                    sHead + '\n\n' +
+                    '<div class="sslp-scroll">' + '\n\n' + 
+                    songs + '\n\n' + 
+                    '</div>' + '\n\n' +
+                    '</div></span>' + '\n\n' +
+                    colors;
+
+    //set quote code setup
+    temp_quote =    '<span class="' +
+                    $('input[name="char"]').val() +
+                    '"><div class="sslp-wrap quote">' + '\n\n' +
+                    image + '\n\n' +
+                    lHead + '\n\n' +
+                    sHead + '\n\n' +
+                    quote + '\n\n' +
+                    source + '\n\n' +
+                    '</div></span>' + '\n\n' +
+                    colors;
+
+    //set timeline code setup
+    temp_time =     '<span class="' +
+                    $('input[name="char"]').val() +
+                    '"><div class="sslp-wrap timeline">' + '\n\n' +
+                    image + '\n\n' +
+                    lHead + '\n\n' +
+                    sHead + '\n\n' +
+                    timeline + '\n\n' +
+                    '</div></span>' + '\n\n' +
+                    colors;
 
     switch(type) {
         case 'posting': 
