@@ -218,6 +218,7 @@ section input[type="text"] {
     color: #444444;
     font: 12px Jost;
     box-sizing: border-box;
+    min-height: 23px;
 }
 
 button {
