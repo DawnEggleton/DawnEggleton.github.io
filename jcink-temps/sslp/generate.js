@@ -102,31 +102,31 @@ function addSongs() {
 //Template Production
 
 $('#updateTemp').on('click', function() {
-    var type, temp_post, temp_track, temp_image, temp_music, temp_quote, temp_time, colors, image, lHead, sHead, tag = '', timeline, tracking, quote, source, postContent, images, songs, columns;
+    var type, temp_post, temp_track, temp_image, temp_music, temp_quote, temp_time, colors, image, lHead, sHead, tag = '', timeline, tracking, quote, source, images, songs, columns;
 
     //set image
-    if($('input[name="image"]').val() == 'imgY') {
+    if($('input[name="image"]:checked').val() == 'imgY') {
         image = '<ib><img src="' + $('input[name="imgURL"]').val() + '" /></ib>';
     } else {
         image = '';
     }
 
     //set large header
-    if($('input[name="lh"]').val() == 'lhY') {
+    if($('input[name="lh"]:checked').val() == 'lhY') {
         lHead = '<h1>' + $('input[name="lhText"]').val() + '</h1>';
     } else {
         lHead = '';
     }
 
     //set small header
-    if($('input[name="sh"]').val() == 'shY') {
+    if($('input[name="sh"]:checked').val() == 'shY') {
         sHead = '<h2>' + $('input[name="shText"]').val() + '</h2>';
     } else {
         sHead = '';
     }
 
     //set notes / tag
-    if($('input[name="nt"]').val() == 'ntY') {
+    if($('input[name="nt"]:checked').val() == 'ntY') {
         if($('input[name="ntText"]').val().trim() != '') {
             tag = '<tag>' + $('input[name="ntText"]').val() + '</tag>';
         } else {
