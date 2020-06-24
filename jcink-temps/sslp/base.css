@@ -1,3 +1,6 @@
+a {
+  text-decoration: none;
+}
 .sslp-wrap {
   position: relative;
   box-sizing: border-box;
@@ -188,6 +191,7 @@
 }
 .quote tag {
   text-align: left;
+  margin: 10px 0 0 0;
 }
 
 .sslp-wrap img {
@@ -199,6 +203,9 @@
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   padding: 30px;
+}
+.sslp-wrap > .imgdev {
+  padding: 0 0 20px 0;
 }
 .col2 {
   grid-template-columns: 1fr 1fr;
@@ -278,7 +285,7 @@ event {
 .sslp-wrap ib:before,
 .sslp-wrap song i,
 .sslp-wrap year {
-	border-color: var(--ltAccent) !important;
+	border-color: var(--accent) !important;
 }
 
 

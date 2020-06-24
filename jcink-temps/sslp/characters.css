@@ -1,119 +1,60 @@
 /*still need: */
 
 :root {
-	--lt-al: #e1bdb2;
-	--dk-al: #d48d79;
-
-	--lt-connor: #e0d0b5;
-	--dk-connor: #b6a280;
-
-	--lt-cyn: #bb9a9a;
-	--dk-cyn: #994545;
-
-	--lt-duck: #c9aebe;
-	--dk-duck: #805e73;
-
-	--lt-evan: #bb9a9a;
-	--dk-evan: #994545;
-
-	--lt-fletch: #bdd2c0;
-	--dk-fletch: #5a7e5e;
-
-	--lt-gabe: #cad9bb;
-	--dk-gabe: #92a481;
-
-	--lt-harley: #e8ccd1;
-	--dk-harley: #ca8a93;
-
-	--lt-hayd: #96b79a;
-	--dk-hayd: #519358;
-
-	--lt-lottie: #e8ccd1;
-	--dk-lottie: #ca8a93;
-
-	--lt-maggie: #b6c2b9;
-	--dk-maggie: #65806b;
-
-	--lt-mari: #e6cdc6;
-	--dk-mari: #dba797;
-
-	--lt-mav: #e1bdb2;
-	--dk-mav: #d48d79;
-
-	--lt-milo: #e1bdb2;
-	--dk-milo: #d48d79;
-
-	--lt-nik: #81c1c5;
-	--dk-nik: #61a6aa;
-
-	--lt-simon: #cde0a8;
-	--dk-simon: #9cc34f;
-
-	--lt-tia: #e1b691;
-	--dk-tia: #bd7c43;
+	--accent: #222222;
+	--dkAccent: #444444;
 }
 
-.al {
-	--ltAccent: var(--lt-al);
-	--dkAccent: var(--dk-al);
+.al,
+.mav,
+.milo,
+.tia {
+	--accent: #e1bdb2;
+	--dkAccent: #d48d79;
 }
-.cyn {
-	--ltAccent: var(--lt-cyn);
-	--dkAccent: var(--dk-cyn);
+.connor {
+	--accent: #e0d0b5;
+	--dkAccent: #b6a280;
+}
+.cyn,
+.evan {
+	--accent: #bb9a9a;
+	--dkAccent: #994545;
 }
 .duck {
-	--ltAccent: var(--lt-duck);
-	--dkAccent: var(--dk-duck);
-}
-.evan {
-	--ltAccent: var(--lt-evan);
-	--dkAccent: var(--dk-evan);
+	--accent: #c9aebe;
+	--dkAccent: #805e73;
 }
 .fletch {
-	--ltAccent: var(--lt-fletch);
-	--dkAccent: var(--dk-fletch);
+	--accent: #bdd2c0;
+	--dkAccent: #5a7e5e;
 }
 .gabe {
-	--ltAccent: var(--lt-gabe);
-	--dkAccent: var(--dk-gabe);
+	--accent: #cad9bb;
+	--dkAccent: #92a481;
 }
-.harley {
-	--ltAccent: var(--lt-harley);
-	--dkAccent: var(--dk-harley);
+.harley,
+.lottie {
+	--accent: #e8ccd1;
+	--dkAccent: #ca8a93;
 }
 .hayd {
-	--ltAccent: var(--lt-hayd);
-	--dkAccent: var(--dk-hayd);
-}
-.lottie {
-	--ltAccent: var(--lt-lottie);
-	--dkAccent: var(--dk-lottie);
+	--accent: #96b79a;
+	--dkAccent: #519358;
 }
 .maggie {
-	--ltAccent: var(--lt-maggie);
-	--dkAccent: var(--dk-maggie);
+	--accent: #b6c2b9;
+	--dkAccent: #65806b;
 }
 .mari {
-	--ltAccent: var(--lt-mari);
-	--dkAccent: var(--dk-mari);
-}
-.mav {
-	--ltAccent: var(--lt-mav);
-	--dkAccent: var(--dk-mav);
-}
-.milo {
-	--ltAccent: var(--lt-milo);
-	--dkAccent: var(--dk-milo);
+	--accent: #e6cdc6;
+	--dkAccent: #dba797;
 }
 .nik {
-	--ltAccent: var(--lt-nik);
-	--dkAccent: var(--dk-nik);
+	--accent: #81c1c5;
+	--dkAccent: #61a6aa;
 }
 .simon {
-	--ltAccent: var(--lt-simon);
-	--dkAccent: var(--dk-simon);
-}
-.tia {
-	--ltAccent: var(--lt-tia);
-	--dkAccent: var(--dk-tia);
+	--accent: #cde0a8;
+	--dkAccent: #9cc34f;
 }

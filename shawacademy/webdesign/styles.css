@@ -1,0 +1,56 @@
+body {
+    background: url(http://placehold.it/1920x1080) left bottom / cover no-repeat;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+h1 {
+    width: 100%;
+    color: white;
+    font: 50px Lato;
+    text-align: center;
+    text-shadow: 1px 2px grey;
+}
+h2 {
+    font: 25px Lato;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+}
+table {
+    font: Lato;
+    border-collapse: collapse;
+    width: 60%;
+    text-align: center;
+    margin-top: 80px;
+}
+th {
+    font: 20px;
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+    background: #6bbe30;
+}
+td {
+    font: 15px;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(odd) {
+    background: #6bbe30;
+}
+tr:nth-child(even) {
+    background: #cae8f2;
+}
+main {
+    padding-top: 40px;
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
