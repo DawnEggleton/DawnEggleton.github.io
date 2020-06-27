@@ -72,11 +72,13 @@ main > section:nth-of-type(even) {
     padding: 5px 20px;
     align-self: center;
     cursor: pointer;
+    opacity: 0.8;
 }
 .result h3.active,
 .result h3:hover {
     border-bottom: 1px solid #222222;
     width: max-content;
+    opacity: 1;
 }
 .scroll {
     width: 100%;
