@@ -252,10 +252,12 @@
                 <button id="updateTemp">Update</button>
             </section>
             <section class="result">
-                <div class="scroll">
-                    <div id="display"></div>
+                <h3 id="tab1" class="active">Preview</h3>
+                <h3 id="tab2">Code</h3>
+                <div id="tab1-content" class="scroll active">
+                    <div id="display">Click 'update' to see a preview.</div>
                 </div>
-                <div>
+                <div id="tab2-content" class="scroll">
                     <selectCode>Click to Highlight</selectCode>
                     <pre><code><div id="code"></div></code></pre>
                 </div>

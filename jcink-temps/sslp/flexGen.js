@@ -1,5 +1,5 @@
 //general variables
-let type, colors, image = [''], lHead = [''], sHead = [''], tempCode;
+let type, colors, image = [''], lHead = [''], sHead = [''], tempCode = '';
 
 //post variables
 let temp_post, tag = [''];
@@ -79,35 +79,36 @@ function addFieldSet(fieldVar, fieldType) {
 //Build Complex Content
 function buildTimeline (yearArray, monthArray, eventArray) {    
     for (var i = 0; i < yearArray.length; i++) {
-        monthArray[i].sort();
+        monthArray.sort();
         var tempYear = '<section><year>' + yearArray[i] + '</year><events>\n';
         for (var j = 0; j < monthArray[i].length; j++) {
+            console.log(monthArray[i]);
             switch(monthArray[i][j].split('-')[2]) {
-                case '01' || '1':
+                case '1':
                     tempYear += '<b>January</b>\n';
                     break;
-                case '02' || '2':
+                case '2':
                     tempYear += '<b>February</b>\n';
                     break;
-                case '03' || '3':
+                case '3':
                     tempYear += '<b>March</b>\n';
                     break;
-                case '04' || '4':
+                case '4':
                     tempYear += '<b>April</b>\n';
                     break;
-                case '05' || '5':
+                case '5':
                     tempYear += '<b>May</b>\n';
                     break;
-                case '06' || '6':
+                case '6':
                     tempYear += '<b>June</b>\n';
                     break;
-                case '07' || '7':
+                case '7':
                     tempYear += '<b>July</b>\n';
                     break;
-                case '08' || '8':
+                case '8':
                     tempYear += '<b>August</b>\n';
                     break;
-                case '09' || '9':
+                case '9':
                     tempYear += '<b>September</b>\n';
                     break;
                 case '10':
@@ -226,7 +227,7 @@ function setPostCode() {
                     $('#postText').val() + '\n\n' +
                     '</div>' + '\n\n' +
                     tag + '\n\n' +
-                    '</div></span>' + '\n\n' +
+                    '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                     colors;
     return code;
 }
@@ -241,7 +242,7 @@ function setTrackerCode() {
                 '<div class="sslp-scroll">' + '\n\n' + 
                 tracking + '\n\n' +
                 '</div>' + '\n\n' +
-                '</div></span>' + '\n\n' +
+                '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                 colors;
     return code;
 }
@@ -256,7 +257,7 @@ function setImageCode() {
                 '<span class="imgdev col' + columns + '">' + '\n\n' +
                 images + '\n\n' + 
                 '</span>' + '\n\n' +
-                '</div></span>' + '\n\n' +
+                '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                 colors;
     return code;
 }
@@ -271,7 +272,7 @@ function setPlaylistCode() {
                 '<div class="sslp-scroll">' + '\n\n' + 
                 songs + '\n\n' + 
                 '</div>' + '\n\n' +
-                '</div></span>' + '\n\n' +
+                '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                 colors;
     return code;
 }
@@ -285,7 +286,7 @@ function setQuoteCode() {
                 sHead + '\n\n' +
                 quote + '\n\n' +
                 source + '\n\n' +
-                '</div></span>' + '\n\n' +
+                '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                 colors;
     return code;
 }
@@ -298,7 +299,7 @@ function setTimelineCode() {
                 lHead + '\n\n' +
                 sHead + '\n\n' +
                 timeline + '\n\n' +
-                '</div></span>' + '\n\n' +
+                '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                 colors;
     return code;
 }

@@ -1,3 +1,11 @@
+//Preview Tabs
+$('.result h3').on('click', function () {
+    $('.result h3').removeClass('active');
+    $('.result .scroll').removeClass('active');
+    $(this).addClass('active');
+    $('#' + this.id + '-content').addClass('active');
+});
+
 //Template Production
 $('#updateTemp').on('click', function() {
     setValues();
@@ -48,89 +56,20 @@ function orderEvents(num, yearArray, monthArray, eventArray, type, prefix) {
         var monthGroups = [];
         
         $('.' + type + ' .month').each(function () {
-            if ($(this).prev().val() == yearArray[i]) {
-                switch($(this).val()) {
-                    case '01' || '1':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '02' || '2':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '03' || '3':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '04' || '4':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '05' || '5':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '06' || '6':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '07' || '7':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '08' || '8':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '09' || '9':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '10':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '11':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    case '12':
-                        var month = 'ym-' + yearArray[i] + '-' + $(this).val();
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
-                    default:
-                        var month = 'ym-' + yearArray[i];
-                        if(jQuery.inArray(month, monthGroups) == -1) {
-                            monthGroups.push(month);
-                        }
-                        break;
+            if ($(this).prev().val() == yearArray[i]) { 
+                var month;
+                if($(this).val() != '10') {
+                    month = 'ym-' + yearArray[i] + '-' + $(this).val().replace('0', '');
+                } else {
+                    month = 'ym-' + yearArray[i] + '-' + $(this).val();
+                }
+                console.log('month ' + month)
+                if(jQuery.inArray(month, monthGroups) == -1) {
+                    monthGroups.push(month);
                 }
             }
         });
+        monthGroups.sort();
         monthArray.push(monthGroups);
     }
     
