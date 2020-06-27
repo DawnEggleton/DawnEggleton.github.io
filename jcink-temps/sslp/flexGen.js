@@ -13,6 +13,47 @@ let thread = [0], tYears = [], tMonths = [], threads = [], tracking;
 //dev variables
 let imageNum = [0], songNum = [0], quote, source, images, songs, columns;
 
+
+//Show/Hide Basic Fields
+showhide('image', 'ifImg');
+showhide('lh', 'ifLH');
+showhide('sh', 'ifSH');
+showhide('nt', 'ifNT');
+
+//Show/Hide Complex Fields
+$('input[name="type"]').change(function () {
+	switch($(this).val()) {
+        case 'posting': 
+            $('.typeSwitch').hide();
+            $('.ifPost').show();
+            break;
+        case 'timeline': 
+            $('.typeSwitch').hide();
+            $('.ifTime').show();
+            break;
+        case 'tracker': 
+            $('.typeSwitch').hide();
+            $('.ifTrack').show();
+            break;
+        case 'playlist': 
+            $('.typeSwitch').hide();
+            $('.ifMusic').show();
+            break;
+        case 'imagedev': 
+            $('.typeSwitch').hide();
+            $('.ifImage').show();
+            break;
+        case 'quotedev': 
+            $('.typeSwitch').hide();
+            $('.ifQuote').show();
+            break;
+        default:
+            console.log('template type: ' + $(this).val());
+            break;
+    }
+});
+
+
 //Set Variables
 function setValues() {
 

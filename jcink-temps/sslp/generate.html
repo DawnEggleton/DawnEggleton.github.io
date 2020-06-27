@@ -2,21 +2,22 @@
 <html>
     <head>
         <title>Sit Still, Look Pretty Generator</title>
-        <link rel="stylesheet" href="base.css" />
-        <link rel="stylesheet" href="characters.css" />
-        <link rel="stylesheet" href="generate.css" />
+        <link rel="stylesheet" href="../generator/generator.css" />
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
         <script src="../../scripts/jquery-1.12.1.min.js"></script>
-        <script>
-        </script>
+        <script defer src="../generator/staticGen.js"></script>
+
+        <!-- Template Specific -->
+        <link rel="stylesheet" href="base.css" />
+        <link rel="stylesheet" href="characters.css" />
         <script defer src="flexGen.js"></script>
-        <script defer src="staticGen.js"></script>
     </head>
     <body id="generate">
         <header>
             <h1>Sit Still, Look Pretty Template</h1>
-            <p>Want to use the template? Use the form to the left and hit 'generate' to produce a sample and the associated code!</p>
+            <p>Use the form to the left and hit 'generate' to produce a sample and the associated code!</p>
+            <a href="../generator/generator.html"><i class="fas fa-angle-left"></i> Back</a>
         </header>
         <main>
             <section class="form">
@@ -249,13 +250,13 @@
 
                 <!-- END FORM CONTENTS -->
 
-                <button id="updateTemp">Update</button>
+                <button id="updateTemp">Generate</button>
             </section>
             <section class="result">
                 <h3 id="tab1" class="active">Preview</h3>
                 <h3 id="tab2">Code</h3>
                 <div id="tab1-content" class="scroll active">
-                    <div id="display">Click 'update' to see a preview.</div>
+                    <div id="display">Click 'generate' to see a preview.</div>
                 </div>
                 <div id="tab2-content" class="scroll">
                     <selectCode>Click to Highlight</selectCode>
