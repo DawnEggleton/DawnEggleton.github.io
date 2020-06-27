@@ -8,7 +8,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
         <script src="../../scripts/jquery-1.12.1.min.js"></script>
-        <script defer src="generate.js"></script>
+        <script>
+        </script>
+        <script defer src="flexGen.js"></script>
+        <script defer src="staticGen.js"></script>
     </head>
     <body id="generate">
         <header>
@@ -34,12 +37,12 @@
                         <h2 class="fullWidth">Image?</h2>
                         <span class="twoCol">
                             <label for="imgY">
-                                <input type="radio" id="imgY" name="image" value="imgY" />
+                                <input type="radio" id="imgY" name="image" value="y" />
                                 <div><div></div></div>
                                 Yes
                             </label>
                             <label for="imgN">
-                                <input type="radio" id="imgN" name="image" value="imgN" />
+                                <input type="radio" id="imgN" name="image" value="n" />
                                 <div><div></div></div>
                                 No
                             </label>                        
@@ -50,12 +53,12 @@
                         <h2 class="fullWidth">Large Header?</h2>
                         <span class="twoCol">
                             <label for="lhY">
-                                <input type="radio" id="lhY" name="lh" value="lhY" />
+                                <input type="radio" id="lhY" name="lh" value="y" />
                                 <div><div></div></div>
                                 Yes
                             </label>
                             <label for="lhN">
-                                <input type="radio" id="lhN" name="lh" value="lhN" />
+                                <input type="radio" id="lhN" name="lh" value="n" />
                                 <div><div></div></div>
                                 No
                             </label>                        
@@ -66,12 +69,12 @@
                         <h2 class="fullWidth">Small Header?</h2>
                         <span class="twoCol">
                             <label for="shY">
-                                <input type="radio" id="shY" name="sh" value="shY" />
+                                <input type="radio" id="shY" name="sh" value="y" />
                                 <div><div></div></div>
                                 Yes
                             </label>
                             <label for="shN">
-                                <input type="radio" id="shN" name="sh" value="shN" />
+                                <input type="radio" id="shN" name="sh" value="n" />
                                 <div><div></div></div>
                                 No
                             </label>                        
@@ -82,12 +85,12 @@
                         <h2 class="fullWidth">Notes/Tag?</h2>
                         <span class="twoCol">
                             <label for="ntY">
-                                <input type="radio" id="ntY" name="nt" value="ntY" />
+                                <input type="radio" id="ntY" name="nt" value="y" />
                                 <div><div></div></div>
                                 Yes
                             </label>
                             <label for="ntN">
-                                <input type="radio" id="ntN" name="nt" value="ntN" />
+                                <input type="radio" id="ntN" name="nt" value="n" />
                                 <div><div></div></div>
                                 No
                             </label>                        
@@ -147,8 +150,8 @@
                             <input type="text" name="post0" class="location" placeholder="location" />
                         </span>
                         <span class="twoCol">
-                            <input type="text" name="addThreads" placeholder="numbers only" />
-                            <button id="addThreads" onClick="addThreads()">New Threads</button>
+                            <input type="text" name="addthread" placeholder="numbers only" />
+                            <button id="addThreads" onClick="addFields(thread, 'thread')">New Threads</button>
                         </span>
                     </div>
                     <div class="hideFirst typeSwitch ifMusic">
@@ -157,8 +160,8 @@
                             <input type="text" name="s0" class="songArtist" placeholder="Song Artist" />
                         </span>
                         <span class="twoCol">
-                            <input type="text" name="addSongs" placeholder="numbers only" />
-                            <button id="addSongs" onClick="addSongs()">New Songs</button>
+                            <input type="text" name="addsongNum" placeholder="numbers only" />
+                            <button id="addSongs" onClick="addFields(songNum, 'songNum')">New Songs</button>
                         </span>
                     </div>
                     <div class="hideFirst typeSwitch ifImage">
@@ -195,8 +198,8 @@
                             <input type="text" name="i0" class="iLink" />
                         </span>
                         <span class="twoCol">
-                            <input type="text" name="addImages" placeholder="numbers only" />
-                            <button id="addImages" onClick="addImages()">New Images</button>
+                            <input type="text" name="addimageNum" placeholder="numbers only" />
+                            <button id="addImages" onClick="addFields(imageNum, 'imageNum')">New Images</button>
                         </span>
                     </div>
                     <div class="hideFirst typeSwitch ifQuote">
@@ -212,8 +215,8 @@
                             <input type="text" name="ev0" class="event" placeholder="Event" />
                         </span>
                         <span class="twoCol">
-                            <input type="text" name="addEvents" placeholder="numbers only" />
-                            <button id="addEvents" onClick="addEvents()">New Events</button>
+                            <input type="text" name="addevent" placeholder="numbers only" />
+                            <button id="addEvents" onClick="addFields(tevent, 'event')">New Events</button>
                         </span>
                     </div>
                 </div>

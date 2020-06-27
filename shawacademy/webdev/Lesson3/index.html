@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Lesson</title>
+    </head>
+    <body>
+        <p>This is a paragraph.</p>
+        <p id="p2">This is paragraph two.</p>
+
+        <input type="text" id="myInput" />
+        <button onclick="myFunc('myInput')">Click Me</button>
+        
+        <script>
+            function myFunc (inputID) {
+                //Store the input box contents to a variable
+                var userInput = document.getElementById(inputID).value;
+                //Change the second paragraph's content to the userInput variable
+                document.getElementById('p2').innerHTML = userInput;
+            }
+        </script>
+    </body>
+</html>
