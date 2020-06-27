@@ -21,6 +21,10 @@
         <main>
             <section class="form">
                 <div class="scroll">
+
+                    <!-- START FORM CONTENTS -->
+
+                    <!-- Styling -->
                     <h2>Character</h2>
                     <input type="text" id="char" name="char" placeholder="First name only." />
                     <div class="twoCol">
@@ -33,6 +37,8 @@
                             <input type="color" id="accent" name="accent" />  
                         </span>               
                     </div>
+
+                    <!-- Post Image -->
                     <div class="twoCol">
                         <h2 class="fullWidth">Image?</h2>
                         <span class="twoCol">
@@ -49,6 +55,8 @@
                         </span>
                         <input type="text" id="imgURL" name="imgURL" placeholder="Image URL" class="ifImg hideFirst" />
                     </div>
+
+                    <!-- Post Header -->
                     <div class="twoCol">
                         <h2 class="fullWidth">Large Header?</h2>
                         <span class="twoCol">
@@ -65,6 +73,8 @@
                         </span>
                         <input type="text" id="lhText" name="lhText" class="ifLH hideFirst" />
                     </div>
+
+                    <!-- Post Subheader -->
                     <div class="twoCol">
                         <h2 class="fullWidth">Small Header?</h2>
                         <span class="twoCol">
@@ -81,6 +91,8 @@
                         </span>
                         <input type="text" id="shText" name="shText" class="ifSH hideFirst" />
                     </div>
+
+                    <!-- Post Notes/Tag -->
                     <div class="twoCol">
                         <h2 class="fullWidth">Notes/Tag?</h2>
                         <span class="twoCol">
@@ -97,6 +109,8 @@
                         </span>
                         <input type="text" id="ntText" name="ntText" class="ifNT hideFirst" />
                     </div>
+
+                    <!-- Template Type -->
                     <h2>Template Type</h2>
                     <div class="tempType">
                         <label for="posting">
@@ -130,10 +144,14 @@
                             Quote Dev
                         </label>
                     </div>
+
+                    <!-- Posting Template -->
                     <div class="hideFirst typeSwitch ifPost">
                         <h2>Post Content</h2>
                         <textarea id="postText" name="postText"></textarea>
                     </div>
+
+                    <!-- Tracker Template -->
                     <div class="hideFirst typeSwitch ifTrack">
                         <h2>Threads</h2>
                         <span class="tracker">
@@ -154,6 +172,8 @@
                             <button id="addThreads" onClick="addFields(thread, 'thread')">New Threads</button>
                         </span>
                     </div>
+
+                    <!-- Playlist Template -->
                     <div class="hideFirst typeSwitch ifMusic">
                         <span class="twoCol songList">
                             <input type="text" name="s0" class="songTitle" placeholder="Song Name" />
@@ -164,6 +184,8 @@
                             <button id="addSongs" onClick="addFields(songNum, 'songNum')">New Songs</button>
                         </span>
                     </div>
+
+                    <!-- Image Dev Template -->
                     <div class="hideFirst typeSwitch ifImage">
                         <h2>Number of Columns</h2>
                         <span class="fiveCol">
@@ -202,12 +224,16 @@
                             <button id="addImages" onClick="addFields(imageNum, 'imageNum')">New Images</button>
                         </span>
                     </div>
+
+                    <!-- Quote Template -->
                     <div class="hideFirst typeSwitch ifQuote">
                         <h2>Quote</h2>
                         <textarea id="quoteBody" name="quoteBody"></textarea>
                         <h2>Source</h2>
                         <input type="text" name="quoteSource" id="quoteSource" placeholder="Source" />
                     </div>
+
+                    <!-- Timeline Template -->
                     <div class="hideFirst typeSwitch ifTime">
                         <span class="timeline">
                             <input type="text" name="ev0" class="year" placeholder="YYYY" />
@@ -220,6 +246,9 @@
                         </span>
                     </div>
                 </div>
+
+                <!-- END FORM CONTENTS -->
+
                 <button id="updateTemp">Update</button>
             </section>
             <section class="result">
