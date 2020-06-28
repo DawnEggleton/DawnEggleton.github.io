@@ -69,7 +69,7 @@ function setPostCode() {
                 lHead + '\n\n' +
                 '</div></div><div class="lux-temp1-contentbox"><div class="lux-temp1-content" id="scroll">\n' + 
                 $('#postText').val() + '\n\n' +
-                '</div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/moments/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/moments/scripts.js></script><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">' +
+                '</div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/simple/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/simple/scripts.js></script><link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">' +
                 colors;
     return code;
 }
@@ -102,7 +102,7 @@ function setTabbedCode() {
         }
     }
     
-    code += '<div class="lux-temp1-left"><i class="fas fa-caret-left"></i></div><div class="lux-temp1-right"><i class="fas fa-caret-right"></i></div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/moments/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/moments/scripts.js></script><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">' + colors;
+    code += '<div class="lux-temp1-left"><i class="fas fa-caret-left"></i></div><div class="lux-temp1-right"><i class="fas fa-caret-right"></i></div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/simple/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/simple/scripts.js></script><link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">' + colors;
     return code;
 }
 
