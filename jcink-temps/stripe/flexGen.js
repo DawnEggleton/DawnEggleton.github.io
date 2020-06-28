@@ -79,15 +79,6 @@ function addFieldSet(fieldVar, fieldType) {
     switch(fieldType) {
         case 'event':
             $('.ifTime span.timeline').append('<input type="text" name="ev' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="ev' + fieldVar + '" class="month" placeholder="MM" /><input type="text" name="ev' + fieldVar + '" class="event" placeholder="Event" />');
-            break;    
-        case 'thread':
-            $('.ifTrack span.tracker').append('<input type="text" name="post' + fieldVar + '" class="title" placeholder="Thread Title" /><input type="text" name="post' + fieldVar + '" class="tid" placeholder="Topic ID" /><select name="post' + fieldVar + '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post' + fieldVar + '" class="feat" placeholder="Featuring" /><input type="text" name="post' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="post' + fieldVar + '" class="month" placeholder="Month" /><input type="text" name="post' + fieldVar + '" class="location" placeholder="location" />');
-            break;
-        case 'imageNum':
-            $('.ifImage span.urls').append('<input type="text" name="i' + imageNum + '" class="iLink" />');
-            break;
-        case 'songNum':
-            $('.ifMusic span.songList').append('<input type="text" name="s' + imageNum + '" class="songTitle" placeholder="Song Name" /><input type="text" name="s' + imageNum + '" class="songArtist" placeholder="Song Artist" />');
             break;
     }  
 }
@@ -176,7 +167,7 @@ function setLargeCode() {
                         sHead + '\n\n' +
                         '</span></div><div class="adr2-temp-content"><div class="adr2-temp-inner">' + '\n\n' + 
                         $('#postText').val() + '\n\n' +
-                        '</div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
+                        '</div></div></div></span><link href="//fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet"><link href="//fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
                         colors;
     } else {
         var code =     '<span class="' +
@@ -185,7 +176,7 @@ function setLargeCode() {
                         $('#lhText').val() + '\n\n' +
                         '</span></div><div class="adr2-temp-content"><div class="adr2-temp-inner">' + '\n\n' + 
                         $('#postText').val() + '\n\n' +
-                        '</div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
+                        '</div></div></div></span><link href="//fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet"><link href="//fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
                         colors;
     }
     return code;
@@ -201,7 +192,7 @@ function setSmallCode() {
                     sHead + '\n\n' +
                     '</span></div><div class="adr2-temp-content"><div class="adr2-temp-inner">' + '\n\n' + 
                     $('#postText').val() + '\n\n' +
-                    '</div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
+                    '</div></div></div></span><link href="//fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet"><link href="//fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
                     colors;
     } else {
         var code =  '<span class="scroll ' +
@@ -210,7 +201,7 @@ function setSmallCode() {
                     $('#lhText').val() + '\n\n' +
                     '</span></div><div class="adr2-temp-content"><div class="adr2-temp-inner">' + '\n\n' + 
                     $('#postText').val() + '\n\n' +
-                    '</div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
+                    '</div></div></div></span><link href="//fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet"><link href="//fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
                     colors;
     }
     return code;
@@ -255,7 +246,7 @@ function setTabbedCode() {
         }
     }
     
-    code += '</div></span><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' + colors;
+    code += '</div></span><link href="//fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet"><link href="//fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' + colors;
     return code;
 }
 
@@ -268,7 +259,7 @@ function setTimelineCode() {
                 $('#imgURL').val() + 
                 '"><div style="height: 50px;"></div>' + 
                 timeline + 
-                '<div class="lux-timeline-section-last"></div></div></span><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
+                '<div class="lux-timeline-section-last"></div></div></span><link href="//fonts.googleapis.com/css?family=Raleway:400,400i,700,700i" rel="stylesheet"><link href="//fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=cyrillic,latin-ext" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/stripe/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/stripe/scripts.js></script>' +
                 colors;
     return code;
 }
