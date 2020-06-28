@@ -13,6 +13,15 @@ $('#updateTemp').on('click', function() {
         case 'posting':
             tempCode = setPostCode();
             break;
+        case 'large':
+            tempCode = setLargeCode();
+            break;
+        case 'small':
+            tempCode = setSmallCode();
+            break;
+        case 'tabbed':
+            tempCode = setTabbedCode();
+            break;
         case 'timeline': 
             tempCode = setTimelineCode();
             break;
@@ -63,7 +72,6 @@ function orderEvents(num, yearArray, monthArray, eventArray, type, prefix) {
                 } else {
                     month = 'ym-' + yearArray[i] + '-' + $(this).val();
                 }
-                console.log('month ' + month)
                 if(jQuery.inArray(month, monthGroups) == -1) {
                     monthGroups.push(month);
                 }

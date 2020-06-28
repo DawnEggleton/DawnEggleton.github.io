@@ -43,7 +43,7 @@ function setPostCode() {
                     note + '\n\n' + 
                     '</div><div class="lux-slide-togPost">Read <i class="fal fa-long-arrow-right"></i></div></div><div class="lux-slide-post"><div class="lux-slide-postBox"><div class="lux-slide-postBoxIn">' +
                     $('#postText').val() + 
-                    '</div></div><div class="lux-slide-togInfo"><i class="fal fa-long-arrow-left"></i> Info</div></div></div></span><link href="//fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap" rel="stylesheet"><link href="//fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script defer src="scripts.js"></script>' + 
+                    '</div></div><div class="lux-slide-togInfo"><i class="fal fa-long-arrow-left"></i> Info</div></div></div></span><link href="//fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i&display=swap" rel="stylesheet"><link href="//fonts.googleapis.com/css?family=Crimson+Text:400,400i,700,700i&display=swap" rel="stylesheet"><link rel="stylesheet" href="//dawneggleton.github.io/jcink-temps/slide/styles.css"><script defer src="//dawneggleton.github.io/jcink-temps/slide/scripts.js"></script>' + 
                     colors;
     return code;
 }

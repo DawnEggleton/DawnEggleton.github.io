@@ -268,7 +268,7 @@ function setPostCode() {
                     $('#postText').val() + '\n\n' +
                     '</div>' + '\n\n' +
                     tag + '\n\n' +
-                    '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
+                    '</div></span><link href="//dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                     colors;
     return code;
 }
