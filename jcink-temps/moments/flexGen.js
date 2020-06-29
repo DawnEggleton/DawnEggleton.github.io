@@ -83,7 +83,7 @@ function setValues() {
 function buildTimeline (yearArray, monthArray, eventArray) {    
     for (var i = 0; i < yearArray.length; i++) {
         monthArray.sort();
-        var tempYear = '<div class="temp-timeline"><div class="time-line"></div><div class="time-dot">' + yearArray[i] + '</div><div class="time-content">\n';
+        var tempYear = '<div class="temp-timeline"><div class="time-line"></div><div class="time-dot">\n' + yearArray[i] + '\n</div><div class="time-content">\n';
         for (var j = 0; j < monthArray[i].length; j++) {
             console.log(monthArray[i]);
             switch(monthArray[i][j].split('-')[2]) {

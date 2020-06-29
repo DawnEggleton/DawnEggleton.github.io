@@ -101,17 +101,17 @@ function setValues() {
     if($('input[name="wt"]:checked').val() == 'y') {
         for(var i = 0; i < $('#charCount').val(); i++) {
             if(i != 0) {
-                wanteds += '<divider></divider>';
+                wanteds += '\n\n<divider></divider>\n\n';
             }
-            wanteds +=    '<div class="sl-tempChar"><img src="' +
+            wanteds +=    '<div class="sl-tempChar">\n<img src="' +
                         $('#charImg' + i).val() +
-                        '"><b class="tag">' +
+                        '">\n<b class="tag">' +
                         $('#charName' + i).val() +
-                        '</b><span>' +
+                        '</b>\n<span>' +
                         $('#charDeets' + i).val() +
-                        '</span></div><div class="sl-tempScroll">' +
+                        '</span>\n</div><div class="sl-tempScroll">\n' +
                         $('#charText' + i).val() +
-                        '</div>';
+                        '\n</div>';
         }        
     } else if ($('input[name="wt"]:checked').val() == 'n') {
         for(var i = 0; i < $('#charCount').val(); i++) {
@@ -125,12 +125,12 @@ function setValues() {
                             '"></span>';
                 wanteds +=  '<div id="tab' + 
                             i +
-                            '-content" class="sl-tempScroll sl-tempTabCont sl-activeTab">' +
+                            '-content" class="sl-tempScroll sl-tempTabCont sl-activeTab">\n' +
                             '<h1>' +
                             $('#charName' + i).val() +
-                            '</h1><h2>' +
+                            '</h1>\n<h2>' +
                             $('#charDeets' + i).val() +
-                            '</h2>' +
+                            '</h2>\n' +
                             $('#charText' + i).val() +
                             '</div>';
             } else {
@@ -144,11 +144,11 @@ function setValues() {
                 wanteds +=  '<div id="tab' + 
                             i +
                             '-content" class="sl-tempScroll sl-tempTabCont">' +
-                            '<h1>' +
+                            '\n<h1>' +
                             $('#charName' + i).val() +
-                            '</h1><h2>' +
+                            '</h1>\n<h2>' +
                             $('#charDeets' + i).val() +
-                            '</h2>' +
+                            '</h2>\n' +
                             $('#charText' + i).val() +
                             '</div>';
             }
@@ -166,7 +166,7 @@ function setValues() {
     });
 
     //set quote dev
-    quote = '<quote>' + $('#quoteBody').val() + '</quote><qSource>' + $('#quoteSource').val() + '</qSource>';
+    quote = '<quote>' + $('#quoteBody').val() + '</quote>\n<qSource>' + $('#quoteSource').val() + '</qSource>';
 
     //set up color styles
     var accentArr = hexToRgb($('input[name="dullAccent"]').val().split('#')[1]);
@@ -219,8 +219,8 @@ function setGeneralCode() {
     code += '">';
 
     //content start
-    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent"><div class="sl-tempScroll">';
-    code += $('#genText').val();
+    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent"><div class="sl-tempScroll">' + '\n\n';
+    code += $('#genText').val() + '\n\n';
     code += '</div></div></div></div>';
     //content end
     
@@ -257,14 +257,14 @@ function setPostCode() {
     code += '">';
 
     //content start
-    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent"><div class="sl-tempChar"><img src="';
+    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent"><div class="sl-tempChar">\n<img src="';
     code += $('#postImage').val();
-    code += '"><b class="tag">';
+    code += '">\n<b class="tag">';
     code += $('#postTag').val();
-    code += '</b><span>';
+    code += '</b>\n<span>';
     code += $('#postLyrics').val();
-    code += '</span></div><divider></divider><div class="sl-tempScroll">';
-    code += $('#postText').val();
+    code += '</span>\n</div><divider></divider><div class="sl-tempScroll">' + '\n\n';
+    code += $('#postText').val() + '\n\n';
     code += '</div></div></div></div>';
 
     //content end
@@ -302,7 +302,7 @@ function setTabbedCode() {
     code += '">';
 
     //content start
-    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempTab"><div class="sl-tempTabs"><div class="sl-sticky">';
+    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempTab"><div class="sl-tempTabs"><div class="sl-sticky">\n';
     for(var i = 0; i < $('#tabCount').val(); i++) {
         var labelArr = $('#tabTitle' + i).val().split(' ');
         var label = '';
@@ -310,12 +310,12 @@ function setTabbedCode() {
             label += '' + labelArr[h];
         }
         if(i == 0) {
-            code += '<span id="' + label + '" class="sl-activeTab">' + $('#tabTitle' + i).val() + '</span>';
+            code += '<span id="' + label + '" class="sl-activeTab">' + $('#tabTitle' + i).val() + '</span>\n';
         } else {
-            code += '<span id="' + label + '">' + $('#tabTitle' + i).val() + '</span>';
+            code += '<span id="' + label + '">' + $('#tabTitle' + i).val() + '</span>\n';
         }
     }
-    code += '<div style="clear:both;"></div></div></div>';
+    code += '<div style="clear:both;"></div></div></div>' + '\n\n';
     for(var i = 0; i < $('#tabCount').val(); i++) {
         var labelArr = $('#tabTitle' + i).val().split(' ');
         var label = '';
@@ -323,12 +323,12 @@ function setTabbedCode() {
             label += '' + labelArr[h];
         }
         if(i == 0) {
-            code += '<div id="' + label + '-content" class="sl-tempScroll sl-tempTabCont sl-activeTab">' + $('#tabText' + i).val() + '</div>';
+            code += '<div id="' + label + '-content" class="sl-tempScroll sl-tempTabCont sl-activeTab">\n' + $('#tabText' + i).val() + '\n</div>\n';
         } else {
-            code += '<div id="' + label + '-content" class="sl-tempScroll sl-tempTabCont">' + $('#tabText' + i).val() + '</div>';
+            code += '<div id="' + label + '-content" class="sl-tempScroll sl-tempTabCont">\n' + $('#tabText' + i).val() + '\n</div>\n';
         }
     }
-    code += '</div></div></div></span>';
+    code += '\n</div></div></div></span>';
     //content end
     
     code += '</span>'
@@ -365,14 +365,14 @@ function setWantedCode () {
 
     //content start
     if ($('input[name="wt"]:checked').val() == 'y') {
-        code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempWant">';
-        code += wanteds;
+        code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempWant">' + '\n\n';
+        code += wanteds + '\n\n';
         code += '</div></div></div></span>';
     } else {
-        code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempTab sl-tempWantTab"><div class="sl-tempTabs"><div class="sl-sticky">';
+        code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempTab sl-tempWantTab"><div class="sl-tempTabs"><div class="sl-sticky">\n';
         code += wantTabs;
-        code += '<div style="clear:both;"></div></div></div>';
-        code += wanteds;
+        code += '\n<div style="clear:both;"></div></div></div>' + '\n\n';
+        code += wanteds + '\n\n';
         code += '</div></div></div>';
     }
     //content end
@@ -410,8 +410,8 @@ function setPlaylistCode() {
     code += '">';
 
     //content start
-    code += '<div class="sl-tempWrap sl-tempPlay"><div class="sl-tempBox"><div class="sl-tempContent"><div class="sl-tempScroll">';
-    code += songs;
+    code += '<div class="sl-tempWrap sl-tempPlay"><div class="sl-tempBox"><div class="sl-tempContent"><div class="sl-tempScroll">' + '\n\n';
+    code += songs + '\n\n';
     code += '</div></div></div></div>';
     //content end
     
@@ -449,8 +449,8 @@ function setImageCode() {
     code += '">';
 
     //content start
-    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent"><div class="sl-tempScroll">';
-    code += images;
+    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent"><div class="sl-tempScroll">' + '\n\n';
+    code += images + '\n\n';
     code += '</div></div></div></div>';
     //content end
     
@@ -487,8 +487,8 @@ function setQuoteCode () {
     code += '">';
 
     //content start
-    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempQuote"><div class="sl-tempScroll">';
-    code += quote;
+    code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempQuote"><div class="sl-tempScroll">' + '\n\n';
+    code += quote + '\n\n';
     code += '</div></div></div></div>';
     //content end
     

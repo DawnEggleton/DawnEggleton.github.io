@@ -121,7 +121,7 @@ function addFieldSet(fieldVar, fieldType) {
 function buildTimeline (yearArray, monthArray, eventArray) {    
     for (var i = 0; i < yearArray.length; i++) {
         monthArray.sort();
-        var tempYear = '<section><year>' + yearArray[i] + '</year><events>\n';
+        var tempYear = '<section><year>\n' + yearArray[i] + '\n</year><events>\n';
         for (var j = 0; j < monthArray[i].length; j++) {
             console.log(monthArray[i]);
             switch(monthArray[i][j].split('-')[2]) {

@@ -126,8 +126,6 @@ function setValues() {
         timeline = orderEvents(tevent[0], years, months, events, type, 'ev');
     } else if (type == 'tracker') {
         tracking = orderEvents(thread[0], tYears, tMonths, threads, type, 'post');
-    } else if (type == 'imagedev') {
-
     }
 
     //set phone messages
@@ -252,7 +250,7 @@ function buildTimeline (yearArray, monthArray, eventArray) {
 
 function buildTracker (yearArray, monthArray, eventArray) {
     var tempThread = '';
-    tempThread += '<div class="bs-tempBox"><div class="bs-titleCol"><b>active</b></div><div class="bs-contCol"><div class="bs-content">';
+    tempThread += '<div class="bs-tempBox"><div class="bs-titleCol">\n<b>active</b>\n</div><div class="bs-contCol"><div class="bs-content">\n\n';
     
     for (var i = 0; i < yearArray.length; i++) {
         monthArray[i].sort();
@@ -327,8 +325,8 @@ function buildTracker (yearArray, monthArray, eventArray) {
             }); 
         }
     }
-    tempThread += '</div></div></div>';
-    tempThread += '<div class="bs-tempBox"><div class="bs-titleCol"><b>archived</b></div><div class="bs-contCol"><div class="bs-content">';
+    tempThread += '\n\n</div></div></div>\n';
+    tempThread += '<div class="bs-tempBox"><div class="bs-titleCol">\n<b>archived</b>\n</div><div class="bs-contCol"><div class="bs-content">\n\n';
     for (var i = 0; i < yearArray.length; i++) {
         monthArray[i].sort();
         var currMonth = '';   
@@ -401,7 +399,7 @@ function buildTracker (yearArray, monthArray, eventArray) {
             });  
         }
     }
-    tempThread += '</div></div></div>';
+    tempThread += '\n\n</div></div></div>';
     return tempThread;
 }
 
@@ -428,11 +426,11 @@ function setPostCode() {
     if ($('input[name="dm"]:checked').val() == 'y') {
         code += 'dark ';
     }
-    code += '"><div class="bs-tempBox"><div class="bs-titleCol"><b>';
+    code += '">\n<div class="bs-tempBox"><div class="bs-titleCol"><b>\n';
     code += $('#postTitle').val();
-    code += '</b><i class="bs-tempIcon"></i></div><div class="bs-contCol"><div class="bs-content">';
+    code += '\n</b><i class="bs-tempIcon"></i></div><div class="bs-contCol"><div class="bs-content">\n\n';
     code += $('#postText').val();
-    code += '</div></div></div></span>';
+    code += '\n\n</div></div></div>\n</span>';
     if ($('input[name="tc"]:checked').val() == 'n') {
         //group color
         code += '</';
@@ -465,11 +463,11 @@ function setTrackerCode() {
     if ($('input[name="dm"]:checked').val() == 'y') {
         code += 'dark ';
     }
-    code += '"><div class="bs-tracker">';
+    code += '">\n<div class="bs-tracker">\n\n';
 
     code += tracking;
     
-    code += '</div></span>';
+    code += '\n\n</div>\n</span>';
     if ($('input[name="tc"]:checked').val() == 'n') {
         //group color
         code += '</';
@@ -503,13 +501,13 @@ function setImageCode() {
         code += 'dark ';
     }
     code += $('input[name="cols"]:checked').val();
-    code += '"><div class="bs-tempBox bs-imgDev"><div class="bs-titleCol"><b>';
+    code += '">\n<div class="bs-tempBox bs-imgDev"><div class="bs-titleCol"><b>\n';
     code += idHead;
-    code += '</b><i class="bs-tempIcon"></i></div><div class="bs-contCol">';
+    code += '\n</b><i class="bs-tempIcon"></i></div><div class="bs-contCol">\n\n';
 
     code += images;
     
-    code += '</div></div></span>';
+    code += '\n\n</div></div>\n</span>';
     if ($('input[name="tc"]:checked').val() == 'n') {
         //group color
         code += '</';
@@ -542,17 +540,17 @@ function setPlaylistCode() {
     if ($('input[name="dm"]:checked').val() == 'y') {
         code += 'dark ';
     }
-    code += '"><div class="bs-phoneCase"><div class="bs-phoneContent"><div class="bs-phoneBar">';
+    code += '">\n<div class="bs-phoneCase"><div class="bs-phoneContent"><div class="bs-phoneBar">\n';
     code += $('#musicTime').val();
-    code += '<span style="float: right;"><i class="fad fa-signal"></i><i class="fad fa-wifi"></i><i class="far fa-battery-full"></i></span></div><div class="bs-phoneMsgs">';
+    code += '\n<span style="float: right;"><i class="fad fa-signal"></i><i class="fad fa-wifi"></i><i class="far fa-battery-full"></i></span></div><div class="bs-phoneMsgs">\n\n';
 
     code += songs;
     
-    code += '</div><div class="bs-phoneContact"><img src="';
+    code += '\n\n</div><div class="bs-phoneContact">\n<img src="';
     code += $('#musicImg').val();
-    code += '"><i>currently streaming...</i><b><a href="';
+    code += '">\n<i>currently streaming...</i><b>\n<a href="';
     code += $('#musicLink').val();
-    code += '" target="_blank">listen</a></b>';
+    code += '" target="_blank">listen</a>\n</b>';
     code += '</div></div><div class="bs-phoneCut bs-top"></div><div class="bs-phoneCut bs-bottom"></div></div></span>';
     if ($('input[name="tc"]:checked').val() == 'n') {
         //group color
@@ -586,7 +584,7 @@ function setTimelineCode() {
     if ($('input[name="dm"]:checked').val() == 'y') {
         code += 'dark';
     }
-    code += '"><div class="bs-tempBox bs-timeline"><div class="bs-titleCol"><span><i class="fal fa-angle-up upClass"></i></span><div><div class="bs-years">';
+    code += '">\n<div class="bs-tempBox bs-timeline"><div class="bs-titleCol"><span><i class="fal fa-angle-up upClass"></i></span><div><div class="bs-years">\n';
 
     //do tab labels
     for(var i = 0; i < $('.timeline .year').length; i++) {
@@ -597,13 +595,13 @@ function setTimelineCode() {
     years.sort();
     
     for(var i = 0; i < years.length; i++) {
-        code += '<b>' + years[i] + '</b>';
+        code += '<b>' + years[i] + '</b>\n';
     }
-    code += '</div></div><span><i class="fal fa-angle-down downClass"></i></span></div><div class="bs-contCol">';
+    code += '\n</div></div><span><i class="fal fa-angle-down downClass"></i></span></div><div class="bs-contCol">\n\n';
 
     code += timeline;
     
-    code += '</div></div></span>';
+    code += '\n\n</div></div>\n</span>';
     if ($('input[name="tc"]:checked').val() == 'n') {
         //group color
         code += '</';
@@ -640,10 +638,10 @@ function setTabbedCode() {
     if ($('input[name="ih"]:checked').val() == 'y') {
         code += ' bs-ship'
     }
-    code += '">';
-    code += '<div class="bs-titleCol"><div><div class="bs-tabGrid"><b>';
+    code += '">\n';
+    code += '<div class="bs-titleCol"><div><div class="bs-tabGrid"><b>\n';
     code += lHead;
-    code += '</b><span class="bs-tabs">';
+    code += '\n</b><span class="bs-tabs">\n';
 
     //do tab labels
     for(var i = 0; i < $('#tabCount').val(); i++) {
@@ -653,18 +651,18 @@ function setTabbedCode() {
             label += '' + labelArr[h];
         }
         if(i == 0) {
-            code += '<a id="' + label + '" class="bs-actTab">' + $('#tabTitle' + i).val() + '</a>';
+            code += '<a id="' + label + '" class="bs-actTab">' + $('#tabTitle' + i).val() + '</a>\n';
         } else {
-            code += '<a id="' + label + '">' + $('#tabTitle' + i).val() + '</a>';
+            code += '<a id="' + label + '">' + $('#tabTitle' + i).val() + '</a>\n';
         }
     }
 
     if ($('input[name="ih"]:checked').val() == 'y') {
-        code += '</span></div></div><i class="bs-tempIcon"></i></div><div class="bs-imgCol"><img src="';
+        code += '\n</span></div></div><i class="bs-tempIcon"></i></div><div class="bs-imgCol">\n<img src="';
         code += $('#ihURL').val();
-        code += '"></div><div class="bs-contCol">'
+        code += '">\n</div><div class="bs-contCol">\n\n';
     } else {
-        code += '</span></div></div><i class="bs-tempIcon"></i></div><div class="bs-contCol">';
+        code += '\n</span></div></div><i class="bs-tempIcon"></i></div><div class="bs-contCol">\n\n';
     }
     
     //code tabs
@@ -675,12 +673,12 @@ function setTabbedCode() {
             label += '' + labelArr[h];
         }
         if(i == 0) {
-            code += '<div id="' + label + '-content" class="bs-content bs-actTab">' + $('#tabText' + i).val() + '</div>';
+            code += '<div id="' + label + '-content" class="bs-content bs-actTab">\n' + $('#tabText' + i).val() + '\n</div>\n';
         } else {
-            code += '<div id="' + label + '-content" class="bs-content">' + $('#tabText' + i).val() + '</div>';
+            code += '<div id="' + label + '-content" class="bs-content">\n' + $('#tabText' + i).val() + '\n</div>\n';
         }
     }
-    code += '</div></div></span>';
+    code += '\n</div></div></span>';
     if ($('input[name="tc"]:checked').val() == 'n') {
         //group color
         code += '</';
@@ -713,23 +711,23 @@ function setPhoneCode () {
     if ($('input[name="dm"]:checked').val() == 'y') {
         code += 'dark ';
     }
-    code += '"><div class="bs-phoneCase"><div class="bs-phoneContent"><div class="bs-phoneBar">';
+    code += '">\n<div class="bs-phoneCase"><div class="bs-phoneContent"><div class="bs-phoneBar">\n';
 
     code += $('#phoneTime').val();
-    code += '<span style="float: right;"><i class="fad fa-signal"></i><i class="fad fa-wifi"></i><i class="far fa-battery-full"></i></span></div><div class="bs-phoneMsgs">';
+    code += '\n<span style="float: right;"><i class="fad fa-signal"></i><i class="fad fa-wifi"></i><i class="far fa-battery-full"></i></span></div><div class="bs-phoneMsgs">\n\n';
     code += messages;
-    code += '</div><div class="bs-phoneContact"><img src="';
+    code += '\n\n</div><div class="bs-phoneContact">\n<img src="';
     code += $('#phoneImg').val();
-    code += '"><i>';
+    code += '">\n<i>';
 
     if($('input[name="phoneType"]:checked').val() == 'text') {
         code += 'message sending to';
     } else if ($('input[name="phoneType"]:checked').val() == 'call') {
         code += 'calling';
     }
-    code += '...</i><b>';
+    code += '...</i>\n<b>';
     code += $('#phoneTag').val();
-    code += '</b></div></div><div class="bs-phoneCut bs-top"></div><div class="bs-phoneCut bs-bottom">';
+    code += '</b>\n</div></div><div class="bs-phoneCut bs-top"></div><div class="bs-phoneCut bs-bottom">';
     
     code += '</div></div></span>';
     if ($('input[name="tc"]:checked').val() == 'n') {
@@ -764,24 +762,23 @@ function setWantedCode () {
     if ($('input[name="dm"]:checked').val() == 'y') {
         code += 'dark ';
     }
-    code += '">';
+    code += '">\n';
 
 
     if ($('input[name="wt"]:checked').val() == 'y') {
         //Simple
-        code += '<div class="bs-wanted1">';
+        code += '<div class="bs-wanted1">\n\n';
         for(var i = 0; i < $('#charCount').val(); i++) {
-            code += '<div class="bs-tempBox"><div class="bs-titleCol">';
-            code += '<b>' + $('#charName' + i).val() + '</b><img src="';
+            code += '<div class="bs-tempBox"><div class="bs-titleCol">\n';
+            code += '<b>' + $('#charName' + i).val() + '</b>\n<img src="';
             code += $('#charImg' + i).val();
-            code += '"></div><div class="bs-contCol"><div class="bs-content">';
+            code += '">\n</div><div class="bs-contCol"><div class="bs-content">\n';
             code += $('#charText' + i).val();
-            code += '</div></div></div>';
+            code += '\n</div></div></div>\n\n';
         }
     } else {
         //Tabbed
-        code += '<div class="bs-tempBox bs-wantTabbed"><div class="bs-titleCol"><span class="bs-tabs">';
-
+        code += '<div class="bs-tempBox bs-wantTabbed"><div class="bs-titleCol"><span class="bs-tabs">\n';
         //do tab labels
         for(var i = 0; i < $('#charCount').val(); i++) {
             var labelArr = $('#charName' + i).val().split(' ');
@@ -790,14 +787,12 @@ function setWantedCode () {
                 label += '' + labelArr[h];
             }
             if(i == 0) {
-                code += '<a id="' + label + '" class="bs-actTab"><img src="' + $('#charImg' + i).val() + '"></a>';
+                code += '<a id="' + label + '" class="bs-actTab"><img src="' + $('#charImg' + i).val() + '"></a>\n';
             } else {
-                code += '<a id="' + label + '"><img src="' + $('#charImg' + i).val() + '"></a>';
+                code += '<a id="' + label + '"><img src="' + $('#charImg' + i).val() + '"></a>\n';
             }
         }
-
-        code += '</span></div><div class="bs-contCol">';
-    
+        code += '</span></div><div class="bs-contCol">\n\n';    
         //code tabs
         for(var i = 0; i < $('#charCount').val(); i++) {
             var labelArr = $('#charName' + i).val().split(' ');
@@ -806,13 +801,13 @@ function setWantedCode () {
                 label += '' + labelArr[h];
             }
             if(i == 0) {
-                code += '<div id="' + label + '-content" class="bs-wantTab bs-actTab"><img src="';
-                code += $('#charImg' + i).val() + '"><div class="bs-content">';
-                code += $('#charText' + i).val() + '</div></div>';
+                code += '<div id="' + label + '-content" class="bs-wantTab bs-actTab">\n<img src="';
+                code += $('#charImg' + i).val() + '">\n<div class="bs-content">\n';
+                code += $('#charText' + i).val() + '\n</div></div>\n\n';
             } else {
-                code += '<div id="' + label + '-content" class="bs-wantTab"><img src="';
-                code += $('#charImg' + i).val() + '"><div class="bs-content">';
-                code += $('#charText' + i).val() + '</div></div>';
+                code += '<div id="' + label + '-content" class="bs-wantTab">\n<img src="';
+                code += $('#charImg' + i).val() + '">\n<div class="bs-content">\n';
+                code += $('#charText' + i).val() + '\n</div></div>\n\n';
             }
         }
 

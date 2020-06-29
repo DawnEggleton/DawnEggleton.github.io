@@ -244,8 +244,8 @@ function addFieldSet(fieldVar, fieldType) {
 function buildTimeline (yearArray, monthArray, eventArray) {    
     for (var i = 0; i < yearArray.length; i++) {
         monthArray.sort();
-        var tempYear =  '<div class="temp-sectWrap"><div class="temp-fancyTop"><div class="temp-fancyTitle">' +
-                        yearArray[i] + '</div><span></span></div>\n';
+        var tempYear =  '<div class="temp-sectWrap"><div class="temp-fancyTop"><div class="temp-fancyTitle">\n' +
+                        yearArray[i] + '\n</div><span></span></div>\n';
         for (var j = 0; j < monthArray[i].length; j++) {
             console.log(monthArray[i]);
             switch(monthArray[i][j].split('-')[2]) {
@@ -317,7 +317,9 @@ function buildTracker (yearArray, monthArray, eventArray) {
     var tempThread = '';
     tempThread += '<div class="temp-sectWrap"><div class="temp-fancyTop2"><div class="temp-fancyTitle">active</div><span></span></div><div class="temp-body temp-track">';    
     if ($('input[name="tsc"]:checked').val() == 'y') {
-        tempThread += '<div class="scroll pad20">';
+        tempThread += '<div class="scroll pad20">' + '\n\n';
+    } else {
+        tempThread += '\n\n';
     }
     
     for (var i = 0; i < yearArray.length; i++) {
@@ -395,11 +397,15 @@ function buildTracker (yearArray, monthArray, eventArray) {
     }    
     if ($('input[name="tsc"]:checked').val() == 'y') {
         tempThread += '</div>';
+    } else {
+        tempThread += '\n\n';
     }
     tempThread += '</div></div>';
     tempThread += '<div class="temp-sectWrap"><div class="temp-fancyTop2"><div class="temp-fancyTitle">archived</div><span></span></div><div class="temp-body temp-track">';    
     if ($('input[name="tsc"]:checked').val() == 'y') {
-        tempThread += '<div class="scroll pad20">';
+        tempThread += '<div class="scroll pad20">' + '\n\n';
+    } else {
+        tempThread += '\n\n';
     }
     for (var i = 0; i < yearArray.length; i++) {
         monthArray[i].sort();
@@ -474,7 +480,9 @@ function buildTracker (yearArray, monthArray, eventArray) {
         }
     }    
     if ($('input[name="tsc"]:checked').val() == 'y') {
-        tempThread += '</div>';
+        tempThread += '\n\n</div>';
+    } else {
+        tempThread += '\n\n';
     }
     tempThread += '</div></div>';
     return tempThread;

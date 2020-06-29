@@ -88,7 +88,7 @@ function addFieldSet(fieldVar, fieldType) {
 function buildTimeline (yearArray, monthArray, eventArray) {    
     for (var i = 0; i < yearArray.length; i++) {
         monthArray.sort();
-        var tempYear = '<div class="lux-timeline-section"><div class="lux-timeline-marker"><div class="lux-timeline-markline"></div><div class="lux-timeline-dot"></div></div><div class="lux-timeline-text"><h2>' + yearArray[i] + '</h2><div class="lux-timeline-blurbs">\n';
+        var tempYear = '<div class="lux-timeline-section"><div class="lux-timeline-marker"><div class="lux-timeline-markline"></div><div class="lux-timeline-dot"></div></div><div class="lux-timeline-text"><h2>\n' + yearArray[i] + '\n</h2><div class="lux-timeline-blurbs">\n';
         for (var j = 0; j < monthArray[i].length; j++) {
             console.log(monthArray[i]);
             switch(monthArray[i][j].split('-')[2]) {

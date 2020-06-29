@@ -85,24 +85,24 @@ function setTabbedCode() {
     //do tab labels
     for(var i = 0; i < $('#tabCount').val(); i++) {
         if(i == 0) {
-            code += '<div class="lux-temp1-title lux-active"><span></span>' + $('#tabTitle' + i).val() + '</div>';
+            code += '<div class="lux-temp1-title lux-active"><span></span>' + $('#tabTitle' + i).val() + '</div>\n';
         } else {
-            code += '<div class="lux-temp1-title"><span></span>' + $('#tabTitle' + i).val() + '</div>';
+            code += '<div class="lux-temp1-title"><span></span>' + $('#tabTitle' + i).val() + '</div>\n';
         }
     }
 
-    code += '</div><div class="lux-temp1-contentbox">';
+    code += '</div><div class="lux-temp1-contentbox">\n\n';
     
     //code tabs
     for(var i = 0; i < $('#tabCount').val(); i++) {
         if(i == 0) {
-            code += '<div class="lux-temp1-content lux-active" id="scroll">' + $('#tabText' + i).val() + '</div>';
+            code += '<div class="lux-temp1-content lux-active" id="scroll">\n' + $('#tabText' + i).val() + '\n</div>\n';
         } else {
-            code += '<div class="lux-temp1-content" id="scroll">' + $('#tabText' + i).val() + '</div>';
+            code += '<div class="lux-temp1-content" id="scroll">\n' + $('#tabText' + i).val() + '\n</div>\n';
         }
     }
     
-    code += '<div class="lux-temp1-left"><i class="fas fa-caret-left"></i></div><div class="lux-temp1-right"><i class="fas fa-caret-right"></i></div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/simple/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/simple/scripts.js></script><link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">' + colors;
+    code += '\n<div class="lux-temp1-left"><i class="fas fa-caret-left"></i></div><div class="lux-temp1-right"><i class="fas fa-caret-right"></i></div></div></div></span><link href="//dawneggleton.github.io/jcink-temps/simple/styles.css" rel="stylesheet"><script src=//dawneggleton.github.io/jcink-temps/simple/scripts.js></script><link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">' + colors;
     return code;
 }
 
