@@ -126,18 +126,6 @@ function setValues() {
                     ' .sl-tempBox {border-color: var(--brightAccent);}</style>';
 }
 
-//Create Flexible Fields
-function addFieldSet(fieldVar, fieldType) {
-    switch(fieldType) {
-        case 'imageNum':
-            $('.ifImage span.urls').append('<input type="text" name="i' + imageNum + '" class="iLink" />');
-            break;
-        case 'songNum':
-            $('.ifMusic span.songList').append('<input type="text" name="s' + imageNum + '" class="songTitle" placeholder="Song Name" /><input type="text" name="s' + imageNum + '" class="songArtist" placeholder="Song Artist" />');
-            break;
-    }  
-}
-
 
 //Build Final Content
 function setGeneralCode() {
