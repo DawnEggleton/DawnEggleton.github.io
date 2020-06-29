@@ -424,17 +424,13 @@
                             <input type="text" id="timeTitle" name="timeTitle" placeholder="Title (optional)" />
                             <input type="text" id="timeNotes" name="timeNotes" placeholder="Notes / Tag (optional)" />
                         </div>
+                        <span class="twoCol">
+                            <h2>Number of Events</h2>
+                            <input type="number" name="eventCount" id="eventCount" />
+                        </span>
                         <h2 class="fullWidth">Events</h2>
                         <i class="fullWidth">(Do not need to be in order)</i>
-                        <span class="timeline">
-                            <input type="text" name="ev0" class="year" placeholder="YYYY" />
-                            <input type="text" name="ev0" class="month" placeholder="MM" />
-                            <input type="text" name="ev0" class="event" placeholder="Event" />
-                        </span>
-                        <span class="twoCol">
-                            <input type="text" name="addevent" placeholder="numbers only" />
-                            <button id="addEvents" onClick="addFields(tevent, 'event')">New Events</button>
-                        </span>
+                        <span class="timeline eventContent"></span>
                     </div>
 
                     <!-- Tracker Template -->
@@ -467,24 +463,12 @@
                             <input type="text" id="trackTitle" name="trackTitle" placeholder="Title (optional)" />
                             <input type="text" id="trackNotes" name="trackNotes" placeholder="Notes / Tag (optional)" />
                         </div>
-                        <h2>Threads</h2>
-                        <span class="tracker">
-                            <input type="text" name="post0" class="title" placeholder="Thread Title" />
-                            <input type="text" name="post0" class="tid" placeholder="Topic ID" />
-                            <select name="post0" class="status">
-                                <option value="ip">in progress</option>
-                                <option value="c">complete</option>
-                                <option value="ic">incomplete</option>
-                            </select>
-                            <input type="text" name="post0" class="feat" placeholder="Featuring" />
-                            <input type="text" name="post0" class="year" placeholder="YYYY" />
-                            <input type="text" name="post0" class="month" placeholder="MM" />
-                            <input type="text" name="post0" class="location" placeholder="location" />
-                        </span>
                         <span class="twoCol">
-                            <input type="text" name="addthread" placeholder="numbers only" />
-                            <button id="addThreads" onClick="addFields(thread, 'thread')">New Threads</button>
+                            <h2>Number of Threads</h2>
+                            <input type="number" name="threadCount" id="threadCount" />
                         </span>
+                        <h2>Threads</h2>
+                        <span class="tracker threadContent"></span>
                     </div>
 
                     <!-- Image Dev Template -->
@@ -527,14 +511,12 @@
                                 4
                             </label>                     
                         </span>
-                        <h2>Image URLs</h2>
-                        <span class="urls">
-                            <input type="text" name="i0" class="iLink" />
-                        </span>
                         <span class="twoCol">
-                            <input type="text" name="addimageNum" placeholder="numbers only" />
-                            <button id="addImages" onClick="addFields(imageNum, 'imageNum')">New Images</button>
+                            <h2>Number of Images</h2>
+                            <input type="number" name="imgCount" id="imgCount" />
                         </span>
+                        <h2>Image URLs</h2>
+                        <div class="imgContent"></div>
                     </div>
 
                     <!-- Playlist Template -->
@@ -546,14 +528,12 @@
                         <h2 style="margin-top: 20px;">Playlist URL</h2>
                         <input type="text" id="musicLink" name="musicLink" />
                         <h2 class="fullWidth" style="margin-top: 20px">Songs</h2>
-                        <span class="twoCol songList">
-                            <input type="text" name="s0" class="songTitle" placeholder="Song Name" />
-                            <input type="text" name="s0" class="songArtist" placeholder="Song Artist" />
-                        </span>
                         <span class="twoCol">
-                            <input type="text" name="addsongNum" placeholder="numbers only" />
-                            <button id="addSongs" onClick="addFields(songNum, 'songNum')">New Songs</button>
+                            <h2>Number of Songs</h2>
+                            <input type="number" name="songCount" id="songCount" />
                         </span>
+                        <h2>Songs</h2>
+                        <span class="twoCol songList songContent"></span>
                     </div>
 
                     <!-- Quote Template -->

@@ -171,3 +171,95 @@ function hexToRgb(hex) {
       b: parseInt(result[3], 16)
     } : null;
   }
+
+  
+//Add/Subtract Fields
+function addFields(counterName, htmlPieces, appendBox) {
+    $('input[name="' + counterName + '"]').change(function () {
+        var html = '';
+        for (var i = 0; i < $(this).val(); i++) {
+            for (var j = 0; j < htmlPieces.length; j++) {
+                if (j == 0) {
+                    html += htmlPieces[j];
+                } else {
+                    html += i + htmlPieces[j];
+                }            
+            }
+        }
+        $('.' + appendBox).html(html);
+    });
+}
+function addFieldsPL(counterName, htmlPieces, appendBox) {
+    var html = '';
+    for (var i = 0; i < $('input[name="' + counterName + '"]').val(); i++) {
+        for (var j = 0; j < htmlPieces.length; j++) {
+            if (j == 0) {
+                html += htmlPieces[j];
+            } else {
+                html += i + htmlPieces[j];
+            }            
+        }
+    }
+    $('.' + appendBox).html(html);
+}
+
+//set up complex fields
+$('input[name="type"]').change(function () {
+	switch($(this).val()) {
+        case 'posting': 
+            $('.typeSwitch').hide();
+            $('.ifPost').show();
+            break;
+        case 'tabbed': 
+            $('.typeSwitch').hide();
+            $('.ifTab').show();            
+            addFieldsPL('tabCount', tabHTML, 'tabContents');
+            break;
+        case 'wanted': 
+            $('.typeSwitch').hide();
+            $('.ifWant').show();            
+            addFieldsPL('charCount', charHTML, 'wantContents');
+            break;
+        case 'phone': 
+            $('.typeSwitch').hide();
+            $('.ifPhone').show();         
+            addFieldsPL('msgCount', msgHTML, 'msgContents');
+            break;
+        case 'tindr': 
+            $('.typeSwitch').hide();
+            $('.ifTindr').show();
+            break;
+        case 'instagram': 
+            $('.typeSwitch').hide();
+            $('.ifInsta').show();
+            addFieldsPL('commCount', igHTML, 'igComments');
+            break;
+        case 'timeline': 
+            $('.typeSwitch').hide();
+            $('.ifTime').show();
+            addFieldsPL('eventCount', eventHTML, 'eventContent');
+            break;
+        case 'tracker': 
+            $('.typeSwitch').hide();
+            $('.ifTrack').show();
+            addFieldsPL('threadCount', threadHTML, 'threadContent');
+            break;
+        case 'imagedev': 
+            $('.typeSwitch').hide();
+            $('.ifImage').show();          
+            addFieldsPL('imgCount', imgHTML, 'imgContent');
+            break;
+        case 'playlist': 
+            $('.typeSwitch').hide();
+            $('.ifMusic').show();
+            addFieldsPL('songCount', songHTML, 'songContent');
+            break;
+        case 'quotedev': 
+            $('.typeSwitch').hide();
+            $('.ifQuote').show();
+            break;
+        default:
+            console.log('template type: ' + $(this).val());
+            break;
+    }
+});

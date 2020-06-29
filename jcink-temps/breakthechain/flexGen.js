@@ -71,108 +71,29 @@ $('input[name="igType"]').change(function () {
 });
 
 //Show/Hide Complex Fields
-$('input[name="type"]').change(function () {
-	switch($(this).val()) {
-        case 'posting': 
-            $('.typeSwitch').hide();
-            $('.ifPost').show();
-            break;
-        case 'tabbed': 
-            $('.typeSwitch').hide();
-            $('.ifTab').show();            
-            var html = '';
-            for (var i = 0; i < $('#tabCount').val(); i++) {
-                html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-            }
-            $('.tabContents').html(html);
-            break;
-        case 'wanted': 
-            $('.typeSwitch').hide();
-            $('.ifWant').show();            
-            var html = '';
-            for (var i = 0; i < $('#charCount').val(); i++) {
-                html += '<span class="twoCol altCol"><span><select name="wantGroup' + i + '"><option value="">Group Not Decided</option><option value="deity">Deity</option><option value="creature">Creature</option><option value="spirit">Spirit</option><option value="gifted">Gifted</option><option value="mortal">Mortal</option></select><input id="charName' + i + '" placeholder="Section Title" style="margin-top: 10px;" /><input id="charImg' + i + '" placeholder="Section Image" style="margin-top: 10px;" /><input id="charDeets' + i + '" placeholder="Section Details" style="margin-top: 10px;" /></span><textarea id="charText' + i + '"placeholder="Section Contents"></textarea></span>';
-            }
-            $('.wantContents').html(html);
-            break;
-        case 'phone': 
-            $('.typeSwitch').hide();
-            $('.ifPhone').show();         
-            var html = '';
-            for (var i = 0; i < $('#msgCount').val(); i++) {
-                html += '<textarea class="message" id="msg' + i + '"></textarea>';
-            }
-            $('.msgContents').html(html);
-            break;
-        case 'tindr': 
-            $('.typeSwitch').hide();
-            $('.ifTindr').show();
-            break;
-        case 'instagram': 
-            $('.typeSwitch').hide();
-            $('.ifInsta').show();
-            var html = '';
-            for (var i = 0; i < $('#commCount').val(); i++) {
-                html += '<span class="twoCol"><input type="text" id="igNPCName' + i + '" name="igNPCName' + i + '" placeholder="Commenter Name" /><input type="text" id="igNPCText' + i + '" name="igNPCText' + i + '" placeholder="Comment" /></span>';
-            }
-            $('.igComments').html(html);
-            break;
-        case 'timeline': 
-            $('.typeSwitch').hide();
-            $('.ifTime').show();
-            break;
-        case 'tracker': 
-            $('.typeSwitch').hide();
-            $('.ifTrack').show();
-            break;
-        case 'imagedev': 
-            $('.typeSwitch').hide();
-            $('.ifImage').show();
-            break;
-        case 'playlist': 
-            $('.typeSwitch').hide();
-            $('.ifMusic').show();
-            break;
-        case 'quotedev': 
-            $('.typeSwitch').hide();
-            $('.ifQuote').show();
-            break;
-        default:
-            console.log('template type: ' + $(this).val());
-            break;
-    }
-});
+var imgHTML = ['<input type="text" name="i', '" class="iLink" />'];
+addFields('imgCount', imgHTML, 'imgContent');
 
+var songHTML = ['<input type="text" name="s', '" class="songTitle" placeholder="Song Name" /><input type="text" name="s', '" class="songArtist" placeholder="Song Artist" />'];
+addFields('songCount', songHTML, 'songContent');
 
-$('input[name="tabCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-    }
-    $('.tabContents').html(html);
-});
-$('input[name="charCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol altCol"><span><select name="wantGroup' + i + '"><option value="">Group Not Decided</option><option value="deity">Deity</option><option value="creature">Creature</option><option value="spirit">Spirit</option><option value="gifted">Gifted</option><option value="mortal">Mortal</option></select><input id="charName' + i + '" placeholder="Section Title" style="margin-top: 10px;" /><input id="charImg' + i + '" placeholder="Section Image" style="margin-top: 10px;" /><input id="charDeets' + i + '" placeholder="Section Details" style="margin-top: 10px;" /></span><textarea id="charText' + i + '"placeholder="Section Contents"></textarea></span>';
-    }
-    $('.wantContents').html(html);
-});
-$('input[name="msgCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<textarea class="message" id="msg' + i + '"></textarea>';
-    }
-    $('.msgContents').html(html);
-});
-$('input[name="commCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol"><input type="text" id="igNPCName' + i + '" name="igNPCName' + i + '" placeholder="Commenter Name" /><input type="text" id="igNPCText' + i + '" name="igNPCText' + i + '" placeholder="Comment" /></span>';
-    }
-    $('.igComments').html(html);
-});
+var tabHTML = ['<span class="twoCol altCol"><input id="tabTitle', '" placeholder="Tab Title" /><textarea id="tabText', '"placeholder="Tab Contents"></textarea></span>'];
+addFields('tabCount', tabHTML, 'tabContents');
 
+var charHTML = ['<span class="twoCol altCol"><span><select name="wantGroup', '"><option value="">Group Not Decided</option><option value="deity">Deity</option><option value="creature">Creature</option><option value="spirit">Spirit</option><option value="gifted">Gifted</option><option value="mortal">Mortal</option></select><input id="charName', '" placeholder="Section Title" style="margin-top: 10px;" /><input id="charImg', '" placeholder="Section Image" style="margin-top: 10px;" /><input id="charDeets', '" placeholder="Section Details" style="margin-top: 10px;" /></span><textarea id="charText', '"placeholder="Section Contents"></textarea></span>'];
+addFields('charCount', charHTML, 'wantContents');
+
+var msgHTML = ['<textarea class="message" id="msg', '"></textarea>'];
+addFields('msgCount', msgHTML, 'msgContents');
+
+var igHTML = ['<span class="twoCol"><input type="text" id="igNPCName', '" name="igNPCName', '" placeholder="Commenter Name" /><input type="text" id="igNPCText', '" name="igNPCText', '" placeholder="Comment" /></span>'];
+addFields('commCount', igHTML, 'igComments');
+
+var eventHTML = ['<input type="text" name="ev', '" class="year" placeholder="YYYY" /><input type="text" name="ev', '" class="month" placeholder="MM" /><input type="text" name="ev', '" class="event" placeholder="Event" />'];
+addFields('eventCount', eventHTML, 'eventContent');
+
+var threadHTML = ['<input type="text" name="post', '" class="title" placeholder="Thread Title" /><input type="text" name="post', '" class="tid" placeholder="Topic ID" /><select name="post', '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post', '" class="feat" placeholder="Featuring" /><input type="text" name="post', '" class="year" placeholder="YYYY" /><input type="text" name="post', '" class="month" placeholder="MM" /><input type="text" name="post', '" class="location" placeholder="location" />'];
+addFields('threadCount', threadHTML, 'threadContent');
 
 //Set Variables
 function setValues() {
@@ -229,9 +150,6 @@ function addFieldSet(fieldVar, fieldType) {
             break;    
         case 'thread':
             $('.ifTrack span.tracker').append('<input type="text" name="post' + fieldVar + '" class="title" placeholder="Thread Title" /><input type="text" name="post' + fieldVar + '" class="tid" placeholder="Topic ID" /><select name="post' + fieldVar + '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post' + fieldVar + '" class="feat" placeholder="Featuring" /><input type="text" name="post' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="post' + fieldVar + '" class="month" placeholder="Month" /><input type="text" name="post' + fieldVar + '" class="location" placeholder="location" />');
-            break;
-        case 'imageNum':
-            $('.ifImage span.urls').append('<input type="text" name="i' + imageNum + '" class="iLink" />');
             break;
         case 'songNum':
             $('.ifMusic span.songList').append('<input type="text" name="s' + imageNum + '" class="songTitle" placeholder="Song Name" /><input type="text" name="s' + imageNum + '" class="songArtist" placeholder="Song Artist" />');
