@@ -26,67 +26,9 @@ $('input[name="tc"]').change(function () {
 });
 
 //Show/Hide Complex Fields
-$('input[name="type"]').change(function () {
-	switch($(this).val()) {
-        case 'general': 
-            $('.typeSwitch').hide();
-            $('.ifGen').show();
-            break;
-        case 'posting': 
-            $('.typeSwitch').hide();
-            $('.ifPost').show();
-            break;
-        case 'playlist': 
-            $('.typeSwitch').hide();
-            $('.ifMusic').show();
-            break;
-        case 'imagedev': 
-            $('.typeSwitch').hide();
-            $('.ifImage').show();
-            break;
-        case 'wanted': 
-            $('.typeSwitch').hide();
-            $('.ifWant').show();            
-            var html = '';
-            for (var i = 0; i < $('#charCount').val(); i++) {
-                html += '<span class="twoCol altCol"><span><input id="charName' + i + '" placeholder="Section Title" /><input id="charImg' + i + '" placeholder="Section Image" style="margin-top: 20px;" /><input id="charDeets' + i + '" placeholder="Section Details" style="margin-top: 20px;" /></span><textarea id="charText' + i + '"placeholder="Section Contents"></textarea></span>';
-            }
-            $('.wantContents').html(html);
-            break;
-        case 'quotedev': 
-            $('.typeSwitch').hide();
-            $('.ifQuote').show();
-            break;
-        case 'tabbed': 
-            $('.typeSwitch').hide();
-            $('.ifTab').show();            
-            var html = '';
-            for (var i = 0; i < $('#tabCount').val(); i++) {
-                html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-            }
-            $('.tabContents').html(html);
-            break;
-        default:
-            console.log('template type: ' + $(this).val());
-            break;
-    }
-});
 
-
-$('input[name="tabCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-    }
-    $('.tabContents').html(html);
-});
-$('input[name="charCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol altCol"><span><input id="charName' + i + '" placeholder="Section Title" /><input id="charImg' + i + '" placeholder="Section Image" style="margin-top: 20px;" /><input id="charDeets' + i + '" placeholder="Section Details" style="margin-top: 20px;" /></span><textarea id="charText' + i + '"placeholder="Section Contents"></textarea></span>';
-    }
-    $('.wantContents').html(html);
-});
+var charHTML = ['<span class="twoCol altCol"><span><input id="charName', '" placeholder="Section Title" /><input id="charImg', '" placeholder="Section Image" style="margin-top: 20px;" /><input id="charDeets', '" placeholder="Section Details" style="margin-top: 20px;" /></span><textarea id="charText', '"placeholder="Section Contents"></textarea></span>'];
+addFields('charCount', charHTML, 'wantContents');
 
 
 //Set Variables

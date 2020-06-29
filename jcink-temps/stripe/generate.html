@@ -94,15 +94,11 @@
 
                     <!-- Tabbed Template -->
                     <div class="hideFirst typeSwitch ifTabbed">
-                        <h2>Tab Count</h2>
-                        <select name="tabCount" id="tabCount">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                        </select>
+                        <span class="twoCol">
+                            <h2>Number of Tabs</h2>
+                            <input type="number" name="tabCount" id="tabCount" />
+                        </span>
+                        <h2>Tabs</h2>
                         <div class="tabContents"></div>
                     </div>
 
@@ -110,16 +106,13 @@
                     <div class="hideFirst typeSwitch ifTime">                        
                         <h2 class="fullWidth">Image</h2>
                         <input type="text" id="imgURL" name="imgURL" />
-                        <h2 style="margin-top: 20px;">Events</h2>
-                        <span class="timeline">
-                            <input type="text" name="ev0" class="year" placeholder="YYYY" />
-                            <input type="text" name="ev0" class="month" placeholder="MM" />
-                            <input type="text" name="ev0" class="event" placeholder="Event" />
-                        </span>
                         <span class="twoCol">
-                            <input type="text" name="addevent" placeholder="numbers only" />
-                            <button id="addEvents" onClick="addFields(tevent, 'event')">New Events</button>
+                            <h2>Number of Events</h2>
+                            <input type="number" name="eventCount" id="eventCount" />
                         </span>
+                        <h2 style="margin-top: 20px;">Events</h2>
+                        <i class="fullWidth">(Will order by year and month)</i>
+                        <span class="timeline eventContent"></span>
                     </div>
                 </div>
 

@@ -20,39 +20,6 @@ showhide('lh', 'ifLH');
 showhide('sh', 'ifSH');
 showhide('nt', 'ifNT');
 
-//Show/Hide Complex Fields
-$('input[name="type"]').change(function () {
-	switch($(this).val()) {
-        case 'posting': 
-            $('.typeSwitch').hide();
-            $('.ifPost').show();
-            break;
-        case 'timeline': 
-            $('.typeSwitch').hide();
-            $('.ifTime').show();
-            break;
-        case 'tracker': 
-            $('.typeSwitch').hide();
-            $('.ifTrack').show();
-            break;
-        case 'playlist': 
-            $('.typeSwitch').hide();
-            $('.ifMusic').show();
-            break;
-        case 'imagedev': 
-            $('.typeSwitch').hide();
-            $('.ifImage').show();
-            break;
-        case 'quotedev': 
-            $('.typeSwitch').hide();
-            $('.ifQuote').show();
-            break;
-        default:
-            console.log('template type: ' + $(this).val());
-            break;
-    }
-});
-
 
 //Set Variables
 function setValues() {
@@ -95,25 +62,6 @@ function setValues() {
                     '; --dkAccent: ' +
                     $('input[name="dkAccent"]').val() +
                     ';}</style>';
-}
-
-
-//Create Flexible Fields
-function addFieldSet(fieldVar, fieldType) {
-    switch(fieldType) {
-        case 'event':
-            $('.ifTime span.timeline').append('<input type="text" name="ev' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="ev' + fieldVar + '" class="month" placeholder="MM" /><input type="text" name="ev' + fieldVar + '" class="event" placeholder="Event" />');
-            break;    
-        case 'thread':
-            $('.ifTrack span.tracker').append('<input type="text" name="post' + fieldVar + '" class="title" placeholder="Thread Title" /><input type="text" name="post' + fieldVar + '" class="tid" placeholder="Topic ID" /><select name="post' + fieldVar + '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post' + fieldVar + '" class="feat" placeholder="Featuring" /><input type="text" name="post' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="post' + fieldVar + '" class="month" placeholder="Month" /><input type="text" name="post' + fieldVar + '" class="location" placeholder="location" />');
-            break;
-        case 'imageNum':
-            $('.ifImage span.urls').append('<input type="text" name="i' + imageNum + '" class="iLink" />');
-            break;
-        case 'songNum':
-            $('.ifMusic span.songList').append('<input type="text" name="s' + imageNum + '" class="songTitle" placeholder="Song Name" /><input type="text" name="s' + imageNum + '" class="songArtist" placeholder="Song Artist" />');
-            break;
-    }  
 }
 
 

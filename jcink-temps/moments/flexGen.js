@@ -10,38 +10,11 @@ showhide('lh', 'ifLH');
 showhide('sh', 'ifSH');
 
 //Show/Hide Complex Fields
-$('input[name="type"]').change(function () {
-	switch($(this).val()) {
-        case 'posting':
-            $('.typeSwitch').hide();
-            $('.ifPost').show();
-            break;
-        case 'timeline': 
-            $('.typeSwitch').hide();
-            $('.ifTime').show();
-            break;
-        case 'tabbed': 
-            $('.typeSwitch').hide();
-            $('.ifTabbed').show();            
-            var html = '';
-            for (var i = 0; i < $('#tabCount').val(); i++) {
-                html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-            }
-            $('.tabContents').html(html);
-            break;
-        default:
-            console.log('template type: ' + $(this).val());
-            break;
-    }
-});
+var tabHTML = ['<span class="twoCol altCol"><input id="tabTitle', '" placeholder="Tab Title" /><textarea id="tabText', '"placeholder="Tab Contents"></textarea></span>'];
+addFields('tabCount', tabHTML, 'tabContents');
 
-$('select[name="tabCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-    }
-    $('.tabContents').html(html);
-});
+var eventHTML = ['<input type="text" name="ev', '" class="year" placeholder="YYYY" /><input type="text" name="ev', '" class="month" placeholder="MM" /><input type="text" name="ev', '" class="event" placeholder="Event" />'];
+addFields('eventCount', eventHTML, 'eventContent');
 
 
 //Create Flexible Fields

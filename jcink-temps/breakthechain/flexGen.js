@@ -70,30 +70,8 @@ $('input[name="igType"]').change(function () {
     }
 });
 
-//Show/Hide Complex Fields
-var imgHTML = ['<input type="text" name="i', '" class="iLink" />'];
-addFields('imgCount', imgHTML, 'imgContent');
-
-var songHTML = ['<input type="text" name="s', '" class="songTitle" placeholder="Song Name" /><input type="text" name="s', '" class="songArtist" placeholder="Song Artist" />'];
-addFields('songCount', songHTML, 'songContent');
-
-var tabHTML = ['<span class="twoCol altCol"><input id="tabTitle', '" placeholder="Tab Title" /><textarea id="tabText', '"placeholder="Tab Contents"></textarea></span>'];
-addFields('tabCount', tabHTML, 'tabContents');
-
 var charHTML = ['<span class="twoCol altCol"><span><select name="wantGroup', '"><option value="">Group Not Decided</option><option value="deity">Deity</option><option value="creature">Creature</option><option value="spirit">Spirit</option><option value="gifted">Gifted</option><option value="mortal">Mortal</option></select><input id="charName', '" placeholder="Section Title" style="margin-top: 10px;" /><input id="charImg', '" placeholder="Section Image" style="margin-top: 10px;" /><input id="charDeets', '" placeholder="Section Details" style="margin-top: 10px;" /></span><textarea id="charText', '"placeholder="Section Contents"></textarea></span>'];
 addFields('charCount', charHTML, 'wantContents');
-
-var msgHTML = ['<textarea class="message" id="msg', '"></textarea>'];
-addFields('msgCount', msgHTML, 'msgContents');
-
-var igHTML = ['<span class="twoCol"><input type="text" id="igNPCName', '" name="igNPCName', '" placeholder="Commenter Name" /><input type="text" id="igNPCText', '" name="igNPCText', '" placeholder="Comment" /></span>'];
-addFields('commCount', igHTML, 'igComments');
-
-var eventHTML = ['<input type="text" name="ev', '" class="year" placeholder="YYYY" /><input type="text" name="ev', '" class="month" placeholder="MM" /><input type="text" name="ev', '" class="event" placeholder="Event" />'];
-addFields('eventCount', eventHTML, 'eventContent');
-
-var threadHTML = ['<input type="text" name="post', '" class="title" placeholder="Thread Title" /><input type="text" name="post', '" class="tid" placeholder="Topic ID" /><select name="post', '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post', '" class="feat" placeholder="Featuring" /><input type="text" name="post', '" class="year" placeholder="YYYY" /><input type="text" name="post', '" class="month" placeholder="MM" /><input type="text" name="post', '" class="location" placeholder="location" />'];
-addFields('threadCount', threadHTML, 'threadContent');
 
 //Set Variables
 function setValues() {
@@ -140,21 +118,6 @@ function setValues() {
                     '; --textAccent: ' +
                     $('input[name="textAccent"]').val() +
                     ';}</style>';
-}
-
-//Create Flexible Fields
-function addFieldSet(fieldVar, fieldType) {
-    switch(fieldType) {
-        case 'event':
-            $('.ifTime span.timeline').append('<input type="text" name="ev' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="ev' + fieldVar + '" class="month" placeholder="MM" /><input type="text" name="ev' + fieldVar + '" class="event" placeholder="Event" />');
-            break;    
-        case 'thread':
-            $('.ifTrack span.tracker').append('<input type="text" name="post' + fieldVar + '" class="title" placeholder="Thread Title" /><input type="text" name="post' + fieldVar + '" class="tid" placeholder="Topic ID" /><select name="post' + fieldVar + '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post' + fieldVar + '" class="feat" placeholder="Featuring" /><input type="text" name="post' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="post' + fieldVar + '" class="month" placeholder="Month" /><input type="text" name="post' + fieldVar + '" class="location" placeholder="location" />');
-            break;
-        case 'songNum':
-            $('.ifMusic span.songList').append('<input type="text" name="s' + imageNum + '" class="songTitle" placeholder="Song Name" /><input type="text" name="s' + imageNum + '" class="songArtist" placeholder="Song Artist" />');
-            break;
-    }  
 }
 
 

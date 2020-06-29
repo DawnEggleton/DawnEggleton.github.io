@@ -10,41 +10,6 @@ showhide('image', 'ifImg');
 showhide('lh', 'ifLH');
 showhide('sh', 'ifSH');
 
-//Show/Hide Complex Fields
-$('input[name="type"]').change(function () {
-	switch($(this).val()) {
-        case 'large': 
-        case 'small':
-            $('.typeSwitch').hide();
-            $('.ifPost').show();
-            break;
-        case 'timeline': 
-            $('.typeSwitch').hide();
-            $('.ifTime').show();
-            break;
-        case 'tabbed': 
-            $('.typeSwitch').hide();
-            $('.ifTabbed').show();            
-            var html = '';
-            for (var i = 0; i < $('#tabCount').val(); i++) {
-                html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-            }
-            $('.tabContents').html(html);
-            break;
-        default:
-            console.log('template type: ' + $(this).val());
-            break;
-    }
-});
-
-$('select[name="tabCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-    }
-    $('.tabContents').html(html);
-});
-
 
 //Set Variables
 function setValues() {

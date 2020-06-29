@@ -249,8 +249,10 @@
                             <input type="text" id="tabsTitle" name="tabsTitle" placeholder="Title (optional)" />
                             <input type="text" id="tabsNotes" name="tabsNotes" placeholder="Notes / Tag (optional)" />
                         </div>
-                        <h2>Tab Count</h2>
-                        <input type="number" id="tabCount" name="tabCount" />                        
+                        <span class="twoCol">
+                            <h2>Tab Count</h2>
+                            <input type="number" id="tabCount" name="tabCount" />
+                        </span>                     
                         <h2 class="fullWidth" style="margin-top: 20px;">Tabs</h2>
                         <div class="tabContents"></div>
                     </div>
@@ -429,7 +431,7 @@
                             <input type="number" name="eventCount" id="eventCount" />
                         </span>
                         <h2 class="fullWidth">Events</h2>
-                        <i class="fullWidth">(Do not need to be in order)</i>
+                        <i class="fullWidth">(Will order by year and month)</i>
                         <span class="timeline eventContent"></span>
                     </div>
 
@@ -468,6 +470,7 @@
                             <input type="number" name="threadCount" id="threadCount" />
                         </span>
                         <h2>Threads</h2>
+                        <i class="fullWidth">(Will order by year and month)</i>
                         <span class="tracker threadContent"></span>
                     </div>
 

@@ -18,8 +18,6 @@ let imageNum = [0], songNum = [0], quote, source, images, songs, columns;
 showhide('lh', 'ifLH');
 showhide('ih', 'ifIH');
 showhide('idt', 'ifIDT');
-
-
 $('input[name="tc"]').change(function () {
     if($(this).val() == 'y') {
         $('.ifCustomCol').show();
@@ -34,83 +32,29 @@ $('input[name="tc"]').change(function () {
 });
 
 //Show/Hide Complex Fields
-$('input[name="type"]').change(function () {
-	switch($(this).val()) {
-        case 'posting': 
-            $('.typeSwitch').hide();
-            $('.ifPost').show();
-            break;
-        case 'timeline': 
-            $('.typeSwitch').hide();
-            $('.ifTime').show();
-            break;
-        case 'tracker': 
-            $('.typeSwitch').hide();
-            $('.ifTrack').show();
-            break;
-        case 'playlist': 
-            $('.typeSwitch').hide();
-            $('.ifMusic').show();
-            break;
-        case 'imagedev': 
-            $('.typeSwitch').hide();
-            $('.ifImage').show();
-            break;
-        case 'wanted': 
-            $('.typeSwitch').hide();
-            $('.ifWant').show();            
-            var html = '';
-            for (var i = 0; i < $('#charCount').val(); i++) {
-                html += '<span class="twoCol altCol"><span><input id="charName' + i + '" placeholder="Section Title" /><input id="charImg' + i + '" placeholder="Section Image" style="margin-top: 20px;" /></span><textarea id="charText' + i + '"placeholder="Section Contents"></textarea></span>';
-            }
-            $('.wantContents').html(html);
-            break;
-        case 'phone': 
-            $('.typeSwitch').hide();
-            $('.ifPhone').show();         
-            var html = '';
-            for (var i = 0; i < $('#msgCount').val(); i++) {
-                html += '<textarea class="message" id="msg' + i + '"></textarea>';
-            }
-            $('.msgContents').html(html);
-            break;
-        case 'tabbed': 
-            $('.typeSwitch').hide();
-            $('.ifTab').show();            
-            var html = '';
-            for (var i = 0; i < $('#tabCount').val(); i++) {
-                html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-            }
-            $('.tabContents').html(html);
-            break;
-        default:
-            console.log('template type: ' + $(this).val());
-            break;
-    }
-});
 
 
-$('input[name="tabCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
-    }
-    $('.tabContents').html(html);
-});
-$('input[name="charCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<span class="twoCol altCol"><span><input id="charName' + i + '" placeholder="Section Title" /><input id="charImg' + i + '" placeholder="Section Image" style="margin-top: 20px;" /></span><textarea id="charText' + i + '"placeholder="Section Contents"></textarea></span>';
-    }
-    $('.wantContents').html(html);
-});
-$('input[name="msgCount"]').change(function() {
-    var html = '';
-    for (var i = 0; i < $(this).val(); i++) {
-        html += '<textarea class="message" id="msg' + i + '"></textarea>';
-    }
-    $('.msgContents').html(html);
-});
+//Complex Field Generation
+var imgHTML = ['<input type="text" name="i', '" class="iLink" />'];
+addFields('imgCount', imgHTML, 'imgContent');
+
+var songHTML = ['<input type="text" name="s', '" class="songTitle" placeholder="Song Name" /><input type="text" name="s', '" class="songArtist" placeholder="Song Artist" />'];
+addFields('songCount', songHTML, 'songContent');
+
+var tabHTML = ['<span class="twoCol altCol"><input id="tabTitle', '" placeholder="Tab Title" /><textarea id="tabText', '"placeholder="Tab Contents"></textarea></span>'];
+addFields('tabCount', tabHTML, 'tabContents');
+
+var charHTML = ['<span class="twoCol altCol"><span><input id="charName', '" placeholder="Section Title" /><input id="charImg', '" placeholder="Section Image" style="margin-top: 20px;" /></span><textarea id="charText', '"placeholder="Section Contents"></textarea></span>'];
+addFields('charCount', charHTML, 'wantContents');
+
+var msgHTML = ['<textarea class="message" id="msg', '"></textarea>'];
+addFields('msgCount', msgHTML, 'msgContents');
+
+var eventHTML = ['<input type="text" name="ev', '" class="year" placeholder="YYYY" /><input type="text" name="ev', '" class="month" placeholder="MM" /><input type="text" name="ev', '" class="event" placeholder="Event" />'];
+addFields('eventCount', eventHTML, 'eventContent');
+
+var threadHTML = ['<input type="text" name="post', '" class="title" placeholder="Thread Title" /><input type="text" name="post', '" class="tid" placeholder="Topic ID" /><select name="post', '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post', '" class="feat" placeholder="Featuring" /><input type="text" name="post', '" class="year" placeholder="YYYY" /><input type="text" name="post', '" class="month" placeholder="MM" /><input type="text" name="post', '" class="location" placeholder="location" />'];
+addFields('threadCount', threadHTML, 'threadContent');
 
 
 //Set Variables
@@ -159,23 +103,6 @@ function setValues() {
                     ';}</style>';
 }
 
-//Create Flexible Fields
-function addFieldSet(fieldVar, fieldType) {
-    switch(fieldType) {
-        case 'event':
-            $('.ifTime span.timeline').append('<input type="text" name="ev' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="ev' + fieldVar + '" class="month" placeholder="MM" /><input type="text" name="ev' + fieldVar + '" class="event" placeholder="Event" />');
-            break;    
-        case 'thread':
-            $('.ifTrack span.tracker').append('<input type="text" name="post' + fieldVar + '" class="title" placeholder="Thread Title" /><input type="text" name="post' + fieldVar + '" class="tid" placeholder="Topic ID" /><select name="post' + fieldVar + '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post' + fieldVar + '" class="feat" placeholder="Featuring" /><input type="text" name="post' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="post' + fieldVar + '" class="month" placeholder="Month" /><input type="text" name="post' + fieldVar + '" class="location" placeholder="location" />');
-            break;
-        case 'imageNum':
-            $('.ifImage span.urls').append('<input type="text" name="i' + imageNum + '" class="iLink" />');
-            break;
-        case 'songNum':
-            $('.ifMusic span.songList').append('<input type="text" name="s' + imageNum + '" class="songTitle" placeholder="Song Name" /><input type="text" name="s' + imageNum + '" class="songArtist" placeholder="Song Artist" />');
-            break;
-    }  
-}
 
 
 //Build Complex Content

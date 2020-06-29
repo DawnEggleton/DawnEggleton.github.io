@@ -203,16 +203,47 @@ function addFieldsPL(counterName, htmlPieces, appendBox) {
     $('.' + appendBox).html(html);
 }
 
+//Complex Field Generation
+var imgHTML = ['<input type="text" name="i', '" class="iLink" />'];
+addFields('imgCount', imgHTML, 'imgContent');
+
+var songHTML = ['<input type="text" name="s', '" class="songTitle" placeholder="Song Name" /><input type="text" name="s', '" class="songArtist" placeholder="Song Artist" />'];
+addFields('songCount', songHTML, 'songContent');
+
+var tabHTML = ['<span class="twoCol altCol"><input id="tabTitle', '" placeholder="Tab Title" /><textarea id="tabText', '"placeholder="Tab Contents"></textarea></span>'];
+addFields('tabCount', tabHTML, 'tabContents');
+
+var msgHTML = ['<textarea class="message" id="msg', '"></textarea>'];
+addFields('msgCount', msgHTML, 'msgContents');
+
+var igHTML = ['<span class="twoCol"><input type="text" id="igNPCName', '" name="igNPCName', '" placeholder="Commenter Name" /><input type="text" id="igNPCText', '" name="igNPCText', '" placeholder="Comment" /></span>'];
+addFields('commCount', igHTML, 'igComments');
+
+var eventHTML = ['<input type="text" name="ev', '" class="year" placeholder="YYYY" /><input type="text" name="ev', '" class="month" placeholder="MM" /><input type="text" name="ev', '" class="event" placeholder="Event" />'];
+addFields('eventCount', eventHTML, 'eventContent');
+
+var threadHTML = ['<input type="text" name="post', '" class="title" placeholder="Thread Title" /><input type="text" name="post', '" class="tid" placeholder="Topic ID" /><select name="post', '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post', '" class="feat" placeholder="Featuring" /><input type="text" name="post', '" class="year" placeholder="YYYY" /><input type="text" name="post', '" class="month" placeholder="MM" /><input type="text" name="post', '" class="location" placeholder="location" />'];
+addFields('threadCount', threadHTML, 'threadContent');
+
+
+console.log('start complex fields');
 //set up complex fields
 $('input[name="type"]').change(function () {
 	switch($(this).val()) {
+        case 'general': 
+            $('.typeSwitch').hide();
+            $('.ifGen').show();
+            break;
         case 'posting': 
+        case 'small': 
+        case 'large': 
             $('.typeSwitch').hide();
             $('.ifPost').show();
             break;
         case 'tabbed': 
             $('.typeSwitch').hide();
-            $('.ifTab').show();            
+            $('.ifTab').show(); 
+            $('.ifTabbed').show();            
             addFieldsPL('tabCount', tabHTML, 'tabContents');
             break;
         case 'wanted': 

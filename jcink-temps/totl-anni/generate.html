@@ -197,8 +197,10 @@
 
                     <!-- Tabbed Template -->
                     <div class="hideFirst typeSwitch ifTab">
-                        <h2>Tab Count</h2>
-                        <input type="number" id="tabCount" name="tabCount" />                        
+                        <span class="twoCol">
+                            <h2>Number of Tabs</h2>
+                            <input type="number" name="tabCount" id="tabCount" />
+                        </span>                    
                         <h2 class="fullWidth" style="margin-top: 20px;">Tabs</h2>
                         <div class="tabContents"></div>
                     </div>
@@ -220,23 +222,22 @@
                                 </label>                        
                             </span>
                         </div>
-                        <h2>Section Count</h2>
-                        <input type="number" id="charCount" name="charCount" />                        
+                        <span class="twoCol">
+                            <h2>Number of Sections</h2>
+                            <input type="number" name="charCount" id="charCount" />
+                        </span>                     
                         <h2 class="fullWidth" style="margin-top: 20px;">Characters</h2>
                         <div class="wantContents"></div>
                     </div>
 
                     <!-- Playlist Template -->
                     <div class="hideFirst typeSwitch ifMusic">
-                        <h2 class="fullWidth">Songs</h2>
-                        <span class="twoCol songList">
-                            <input type="text" name="s0" class="songTitle" placeholder="Song Name" />
-                            <input type="text" name="s0" class="songArtist" placeholder="Song Artist" />
-                        </span>
                         <span class="twoCol">
-                            <input type="text" name="addsongNum" placeholder="numbers only" />
-                            <button id="addSongs" onClick="addFields(songNum, 'songNum')">New Songs</button>
+                            <h2>Number of Songs</h2>
+                            <input type="number" name="songCount" id="songCount" />
                         </span>
+                        <h2 class="fullWidth">Songs</h2>
+                        <span class="twoCol songList songContent"></span>
                     </div>
 
                     <!-- Image Dev Template -->
@@ -264,14 +265,12 @@
                                 4
                             </label>                    
                         </span>
-                        <h2>Image URLs</h2>
-                        <span class="urls">
-                            <input type="text" name="i0" class="iLink" />
-                        </span>
                         <span class="twoCol">
-                            <input type="text" name="addimageNum" placeholder="numbers only" />
-                            <button id="addImages" onClick="addFields(imageNum, 'imageNum')">New Images</button>
+                            <h2>Number of Images</h2>
+                            <input type="number" name="imgCount" id="imgCount" />
                         </span>
+                        <h2>Image URLs</h2>
+                        <span class="urls imgContent"></span>
                     </div>
 
                     <!-- Quote Template -->
