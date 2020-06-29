@@ -316,6 +316,7 @@ section input[type="text"] {
     font: 12px Jost;
     box-sizing: border-box;
     min-height: 23px;
+    width: 100%;
 }
 
 button {

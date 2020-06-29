@@ -1,0 +1,946 @@
+//general variables
+let type, colors, image = [''], lHead = [''], sHead = [''], tempCode = '', idHead = [''];
+
+//post variables
+let temp_post, tag = [''], messages;
+
+//timeline variables
+let tevent = [0], years = [], months = [], events = [], timeline;
+
+//tracker variables
+let thread = [0], tYears = [], tMonths = [], threads = [], tracking;
+
+//dev variables
+let imageNum = [0], songNum = [0], quote, source, images, songs, columns;
+
+
+//Show/Hide Basic Fields
+showhide('psc', 'ifPostScroll');
+showhide('tabsc', 'ifTabScroll');
+
+
+$('input[name="tc"]').change(function () {
+    if($(this).val() == 'y') {
+        $('.ifCustomCol').show();
+        $('.ifGroupCol').hide();
+    } else if($(this).val() == 'n') {
+        $('.ifCustomCol').hide();
+        $('.ifGroupCol').show();
+    } else {
+        $('.ifGroupCol').hide();
+        $('.ifCustomCol').hide();
+    }
+});
+$('input[name="tinType"]').change(function () {
+    if($(this).val() == 'tinP') {
+        $('.ifTinP').show();
+        $('.ifTinM').hide();
+        $('.ifTinO').hide();
+    } else if($(this).val() == 'tinM') {
+        $('.ifTinP').hide();
+        $('.ifTinM').show();
+        $('.ifTinO').hide();
+    } else if($(this).val() == 'tinO') {
+        $('.ifTinP').hide();
+        $('.ifTinM').hide();
+        $('.ifTinO').show();
+    } else {
+        $('.ifTinP').hide();
+        $('.ifTinM').hide();
+        $('.ifTinO').hide();
+    }
+});
+$('input[name="igType"]').change(function () {
+    if($(this).val() == 'igP') {
+        $('.ifIGP').show();
+        $('.ifIGNP').hide();
+        $('.ifIGC').hide();
+    } else if($(this).val() == 'igNP') {
+        $('.ifIGP').hide();
+        $('.ifIGNP').show();
+        $('.ifIGC').hide();
+    } else if($(this).val() == 'igC') {
+        $('.ifIGP').hide();
+        $('.ifIGNP').hide();
+        $('.ifIGC').show();
+    } else {
+        $('.ifIGP').hide();
+        $('.ifIGNP').hide();
+        $('.ifIGC').hide();
+    }
+});
+
+//Show/Hide Complex Fields
+$('input[name="type"]').change(function () {
+	switch($(this).val()) {
+        case 'posting': 
+            $('.typeSwitch').hide();
+            $('.ifPost').show();
+            break;
+        case 'tabbed': 
+            $('.typeSwitch').hide();
+            $('.ifTab').show();            
+            var html = '';
+            for (var i = 0; i < $('#tabCount').val(); i++) {
+                html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
+            }
+            $('.tabContents').html(html);
+            break;
+        case 'wanted': 
+            $('.typeSwitch').hide();
+            $('.ifWant').show();            
+            var html = '';
+            for (var i = 0; i < $('#charCount').val(); i++) {
+                html += '<span class="twoCol altCol"><span><select name="wantGroup' + i + '"><option value="">Group Not Decided</option><option value="deity">Deity</option><option value="creature">Creature</option><option value="spirit">Spirit</option><option value="gifted">Gifted</option><option value="mortal">Mortal</option></select><input id="charName' + i + '" placeholder="Section Title" style="margin-top: 10px;" /><input id="charImg' + i + '" placeholder="Section Image" style="margin-top: 10px;" /><input id="charDeets' + i + '" placeholder="Section Details" style="margin-top: 10px;" /></span><textarea id="charText' + i + '"placeholder="Section Contents"></textarea></span>';
+            }
+            $('.wantContents').html(html);
+            break;
+        case 'phone': 
+            $('.typeSwitch').hide();
+            $('.ifPhone').show();         
+            var html = '';
+            for (var i = 0; i < $('#msgCount').val(); i++) {
+                html += '<textarea class="message" id="msg' + i + '"></textarea>';
+            }
+            $('.msgContents').html(html);
+            break;
+        case 'tindr': 
+            $('.typeSwitch').hide();
+            $('.ifTindr').show();
+            break;
+        case 'instagram': 
+            $('.typeSwitch').hide();
+            $('.ifInsta').show();
+            var html = '';
+            for (var i = 0; i < $('#commCount').val(); i++) {
+                html += '<span class="twoCol"><input type="text" id="igNPCName' + i + '" name="igNPCName' + i + '" placeholder="Commenter Name" /><input type="text" id="igNPCText' + i + '" name="igNPCText' + i + '" placeholder="Comment" /></span>';
+            }
+            $('.igComments').html(html);
+            break;
+        case 'timeline': 
+            $('.typeSwitch').hide();
+            $('.ifTime').show();
+            break;
+        case 'tracker': 
+            $('.typeSwitch').hide();
+            $('.ifTrack').show();
+            break;
+        case 'imagedev': 
+            $('.typeSwitch').hide();
+            $('.ifImage').show();
+            break;
+        case 'playlist': 
+            $('.typeSwitch').hide();
+            $('.ifMusic').show();
+            break;
+        case 'quotedev': 
+            $('.typeSwitch').hide();
+            $('.ifQuote').show();
+            break;
+        default:
+            console.log('template type: ' + $(this).val());
+            break;
+    }
+});
+
+
+$('input[name="tabCount"]').change(function() {
+    var html = '';
+    for (var i = 0; i < $(this).val(); i++) {
+        html += '<span class="twoCol altCol"><input id="tabTitle' + i + '" placeholder="Tab Title" /><textarea id="tabText' + i + '"placeholder="Tab Contents"></textarea></span>';
+    }
+    $('.tabContents').html(html);
+});
+$('input[name="charCount"]').change(function() {
+    var html = '';
+    for (var i = 0; i < $(this).val(); i++) {
+        html += '<span class="twoCol altCol"><span><select name="wantGroup' + i + '"><option value="">Group Not Decided</option><option value="deity">Deity</option><option value="creature">Creature</option><option value="spirit">Spirit</option><option value="gifted">Gifted</option><option value="mortal">Mortal</option></select><input id="charName' + i + '" placeholder="Section Title" style="margin-top: 10px;" /><input id="charImg' + i + '" placeholder="Section Image" style="margin-top: 10px;" /><input id="charDeets' + i + '" placeholder="Section Details" style="margin-top: 10px;" /></span><textarea id="charText' + i + '"placeholder="Section Contents"></textarea></span>';
+    }
+    $('.wantContents').html(html);
+});
+$('input[name="msgCount"]').change(function() {
+    var html = '';
+    for (var i = 0; i < $(this).val(); i++) {
+        html += '<textarea class="message" id="msg' + i + '"></textarea>';
+    }
+    $('.msgContents').html(html);
+});
+$('input[name="commCount"]').change(function() {
+    var html = '';
+    for (var i = 0; i < $(this).val(); i++) {
+        html += '<span class="twoCol"><input type="text" id="igNPCName' + i + '" name="igNPCName' + i + '" placeholder="Commenter Name" /><input type="text" id="igNPCText' + i + '" name="igNPCText' + i + '" placeholder="Comment" /></span>';
+    }
+    $('.igComments').html(html);
+});
+
+
+//Set Variables
+function setValues() {
+
+    //set image
+    //fromRadio('lh', lHead, '', '');
+    type = $('input[name="type"]:checked').val();
+
+    //timeline vs tracker
+    if(type == 'timeline') {
+        timeline = orderEvents(tevent[0], years, months, events, type, 'ev');
+    } else if (type == 'tracker') {
+        tracking = orderEvents(thread[0], tYears, tMonths, threads, type, 'post');
+    }
+
+    //set phone messages
+    messages = '';
+    $('.message').each(function() {
+        messages += '<div class="bs-phoneMsg">' + $(this).val() + '</div>\n';
+    });
+
+    //set image dev
+    columns = $('input[name="cols"]:checked').val();
+    images = setImageDev('i');
+    
+    //set song dev
+    songs = '';
+    $('.songTitle').each(function() {
+        songs += '<div class="cell-msg"><span>\n<b>' + $(this).val() + '</b><i>' + $(this).next().val() + '</i></span></div>\n';
+    });
+
+    //set up color styles
+    colors =        '<style>' +
+                    '.' + $('input[name="char"]').val() + ' .temp-wrap,' +
+                    '.' + $('input[name="char"]').val() + ' .cell-wrap,' +
+                    '.' + $('input[name="char"]').val() + ' .tindr-wrap,' +
+                    '.' + $('input[name="char"]').val() + ' .insta-wrap,' +
+                    '.' + $('input[name="char"]').val() + ' .insta-smlWrap,' +
+                    '.' + $('input[name="char"]').val() + '.md-charWrap' +
+                    ' {--dkAccent: ' +
+                    $('input[name="dkAccent"]').val() +
+                    '; --accent: ' +
+                    $('input[name="accent"]').val() +
+                    '; --textAccent: ' +
+                    $('input[name="textAccent"]').val() +
+                    ';}</style>';
+}
+
+//Create Flexible Fields
+function addFieldSet(fieldVar, fieldType) {
+    switch(fieldType) {
+        case 'event':
+            $('.ifTime span.timeline').append('<input type="text" name="ev' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="ev' + fieldVar + '" class="month" placeholder="MM" /><input type="text" name="ev' + fieldVar + '" class="event" placeholder="Event" />');
+            break;    
+        case 'thread':
+            $('.ifTrack span.tracker').append('<input type="text" name="post' + fieldVar + '" class="title" placeholder="Thread Title" /><input type="text" name="post' + fieldVar + '" class="tid" placeholder="Topic ID" /><select name="post' + fieldVar + '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post' + fieldVar + '" class="feat" placeholder="Featuring" /><input type="text" name="post' + fieldVar + '" class="year" placeholder="YYYY" /><input type="text" name="post' + fieldVar + '" class="month" placeholder="Month" /><input type="text" name="post' + fieldVar + '" class="location" placeholder="location" />');
+            break;
+        case 'imageNum':
+            $('.ifImage span.urls').append('<input type="text" name="i' + imageNum + '" class="iLink" />');
+            break;
+        case 'songNum':
+            $('.ifMusic span.songList').append('<input type="text" name="s' + imageNum + '" class="songTitle" placeholder="Song Name" /><input type="text" name="s' + imageNum + '" class="songArtist" placeholder="Song Artist" />');
+            break;
+    }  
+}
+
+
+//Build Complex Content
+function buildTimeline (yearArray, monthArray, eventArray) {    
+    for (var i = 0; i < yearArray.length; i++) {
+        monthArray.sort();
+        var tempYear =  '<div class="temp-sectWrap"><div class="temp-fancyTop"><div class="temp-fancyTitle">' +
+                        yearArray[i] + '</div><span></span></div>\n';
+        for (var j = 0; j < monthArray[i].length; j++) {
+            console.log(monthArray[i]);
+            switch(monthArray[i][j].split('-')[2]) {
+                case '1':
+                    tempYear += '<div class="temp-lineTitle">January</div>\n';
+                    break;
+                case '2':
+                    tempYear += '<div class="temp-lineTitle">February</div>\n';
+                    break;
+                case '3':
+                    tempYear += '<div class="temp-lineTitle">March</div>\n';
+                    break;
+                case '4':
+                    tempYear += '<div class="temp-lineTitle">April</div>\n';
+                    break;
+                case '5':
+                    tempYear += '<div class="temp-lineTitle">May</div>\n';
+                    break;
+                case '6':
+                    tempYear += '<div class="temp-lineTitle">June</div>\n';
+                    break;
+                case '7':
+                    tempYear += '<div class="temp-lineTitle">July</div>\n';
+                    break;
+                case '8':
+                    tempYear += '<div class="temp-lineTitle">August</div>\n';
+                    break;
+                case '9':
+                    tempYear += '<div class="temp-lineTitle">September</div>\n';
+                    break;
+                case '10':
+                    tempYear += '<div class="temp-lineTitle">October</div>\n';
+                    break;
+                case '11':
+                    tempYear += '<div class="temp-lineTitle">November</div>\n';
+                    break;
+                case '12':
+                    tempYear += '<div class="temp-lineTitle">December</div>\n';
+                    break;
+                default:
+                    console.log('no month');
+                    break;
+            }
+            tempYear += '<div class="temp-body">';
+            $('.event').each(function () {
+                var simpMonth;                
+                if(monthArray[i][j].split('-')[2] != '10') {
+                    simpMonth = $(this).prev().val().replace('0', '');
+                } else {
+                    simpMonth = $(this).prev().val();
+                }
+                if($(this).prev().prev().val() == yearArray[i] && simpMonth == monthArray[i][j].split('-')[2]) {
+                    tempYear += '' + $(this).val() + '<p>\n';
+                }
+            });
+            tempYear += '</div>';
+        }
+        tempYear += '</div>';
+        eventArray.push(tempYear);
+    }
+    var eventList = '';
+    for (var i = 0; i < eventArray.length; i++) {
+        eventList += eventArray[i];
+    }
+    return eventList;
+}
+
+function buildTracker (yearArray, monthArray, eventArray) {
+    var tempThread = '';
+    tempThread += '<div class="temp-sectWrap"><div class="temp-fancyTop2"><div class="temp-fancyTitle">active</div><span></span></div><div class="temp-body temp-track">';    
+    if ($('input[name="tsc"]:checked').val() == 'y') {
+        tempThread += '<div class="scroll pad20">';
+    }
+    
+    for (var i = 0; i < yearArray.length; i++) {
+        monthArray[i].sort();
+        var currMonth = '';   
+        for (var j = 0; j < monthArray[i].length; j++) {             
+            $('.tracker .title').each(function() { 
+                var simpMonth;                
+                if(monthArray[i][j].split('-')[2] != '10') {
+                    simpMonth = $(this).next().next().next().next().next().val().replace('0', '');
+                } else {
+                    simpMonth = $(this).next().next().next().next().next().val();
+                }
+
+                if(     $(this).next().next().next().next().val() == yearArray[i] &&
+                        simpMonth == monthArray[i][j].split('-')[2] &&
+                        $(this).next().next().children(':selected').val() == 'ip'
+                ) {
+
+                    switch(monthArray[i][j].split('-')[2]) {
+                        case '01':
+                        case '1':
+                            currMonth = 'January';
+                            break;
+                        case '02':
+                        case '2':
+                            currMonth = 'February';
+                            break;
+                        case '03':
+                        case '3':
+                            currMonth = 'March';
+                            break;
+                        case '04':
+                        case '4':
+                            currMonth = 'April';
+                            break;
+                        case '05':
+                        case '5':
+                            currMonth = 'May';
+                            break;
+                        case '06':
+                        case '6':
+                            currMonth = 'June';
+                            break;
+                        case '07':
+                        case '7':
+                            currMonth = 'July';
+                            break;
+                        case '08':
+                        case '8':
+                            currMonth = 'August';
+                            break;
+                        case '09':
+                        case '9':
+                            currMonth = 'September';
+                            break;
+                        case '10':
+                            currMonth = 'October';
+                            break;
+                        case '11':
+                            currMonth = 'November';
+                            break;
+                        case '12':
+                            currMonth = 'December';
+                            break;
+                        default:
+                            console.log('no month');
+                            break;
+                    }
+                    
+                    tempThread += '<thread><a href="?showtopic=' + $(this).next().val() + '">' + $(this).val() + '</a>\n<i>featuring ' + $(this).next().next().next().val() + '</i>\n<span>' + currMonth + ' ' + yearArray[i] + '. ' + $(this).next().next().next().next().next().next().val() + '. ' + $(this).next().next().children(':selected').text() + '.</span></thread>';
+                }
+            }); 
+        }
+    }    
+    if ($('input[name="tsc"]:checked').val() == 'y') {
+        tempThread += '</div>';
+    }
+    tempThread += '</div></div>';
+    tempThread += '<div class="temp-sectWrap"><div class="temp-fancyTop2"><div class="temp-fancyTitle">archived</div><span></span></div><div class="temp-body temp-track">';    
+    if ($('input[name="tsc"]:checked').val() == 'y') {
+        tempThread += '<div class="scroll pad20">';
+    }
+    for (var i = 0; i < yearArray.length; i++) {
+        monthArray[i].sort();
+        var currMonth = '';   
+        for (var j = 0; j < monthArray[i].length; j++) {                      
+            $('.tracker .title').each(function() {    
+                var simpMonth;                
+                if(monthArray[i][j].split('-')[2] != '10') {
+                    simpMonth = $(this).next().next().next().next().next().val().replace('0', '');
+                } else {
+                    simpMonth = $(this).next().next().next().next().next().val();
+                }
+                if(     $(this).next().next().next().next().val() == yearArray[i] &&
+                        simpMonth == monthArray[i][j].split('-')[2] &&
+                        ($(this).next().next().children(':selected').val() == 'c' || $(this).next().next().children(':selected').val() == 'ic')
+                ) {
+
+                    switch(monthArray[i][j].split('-')[2]) {
+                        case '01':
+                        case '1':
+                            currMonth = 'January';
+                            break;
+                        case '02':
+                        case '2':
+                            currMonth = 'February';
+                            break;
+                        case '03':
+                        case '3':
+                            currMonth = 'March';
+                            break;
+                        case '04':
+                        case '4':
+                            currMonth = 'April';
+                            break;
+                        case '05':
+                        case '5':
+                            currMonth = 'May';
+                            break;
+                        case '06':
+                        case '6':
+                            currMonth = 'June';
+                            break;
+                        case '07':
+                        case '7':
+                            currMonth = 'July';
+                            break;
+                        case '08':
+                        case '8':
+                            currMonth = 'August';
+                            break;
+                        case '09':
+                        case '9':
+                            currMonth = 'September';
+                            break;
+                        case '10':
+                            currMonth = 'October';
+                            break;
+                        case '11':
+                            currMonth = 'November';
+                            break;
+                        case '12':
+                            currMonth = 'December';
+                            break;
+                        default:
+                            console.log('no month');
+                            break;
+                    }
+                    
+                    tempThread += '<thread><a href="?showtopic=' + $(this).next().val() + '">' + $(this).val() + '</a>\n<i>featuring ' + $(this).next().next().next().val() + '</i>\n<span>' + currMonth + ' ' + yearArray[i] + '. ' + $(this).next().next().next().next().next().next().val() + '. ' + $(this).next().next().children(':selected').text() + '.</span></thread>';
+                }
+            });  
+        }
+    }    
+    if ($('input[name="tsc"]:checked').val() == 'y') {
+        tempThread += '</div>';
+    }
+    tempThread += '</div></div>';
+    return tempThread;
+}
+
+
+//Build Final Content
+function setPostCode() {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="tempSize"]').val() + ' ';
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="psc"]:checked').val() == 'y') {
+        code += $('input[name="scrollSize"]:checked').val() + ' ';
+    }
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    code += '<div class="temp-wrap"><div class="temp-top">';
+    code += $('#postTitle').val();
+    code += '</div><div class="temp-content"><div class="scroll">';
+    code += $('#postText').val();
+    code += '</div></div><div class="temp-bottom">';
+    code += $('#postTag').val();
+    code += '</div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setTabbedCode() {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="tempSize"]').val() + ' ';
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="tabsc"]:checked').val() == 'y') {
+        code += $('input[name="scrollSize"]:checked').val() + ' ';
+    }
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    code += '<div class="temp-wrap"><div class="temp-top2">';
+    code += $('#tabsTitle').val();
+    code += '</div><div class="temp-tabs"><div class="temp-menu"><div class="temp-menuInner">';
+    for (var i = 0; i < $('#tabCount').val(); i++) {
+        if (i == 0) {
+            code += '<span id="tab-' + i + '" class="tempActive" title="' + $('#tabTitle' + i).val() + '">' + $('#tabTitle' + i).val() + '<div></div></span>';
+        } else {
+            code += '<span id="tab-' + i + '" title="' + $('#tabTitle' + i).val() + '">' + $('#tabTitle' + i).val() + '<div></div></span>';
+        }
+    }
+    code += '</div></div><div class="temp-content">';
+    for (var i = 0; i < $('#tabCount').val(); i++) {
+        if (i == 0) {
+            code += '<div id="tab-' + i + '-content" class="scroll tempActive">' + $('#tabText' + i).val() + '</div>';
+        } else {
+            code += '<div id="tab-' + i + '-content" class="scroll">' + $('#tabText' + i).val() + '</div>';
+        }
+    }
+    code += '</div></div><div class="temp-bottom2">';
+    code += $('#tabsNotes').val();
+    code += '</div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setWantedCode () {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="tempSize"]').val() + ' ';
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    code += '<div class="temp-wrap"><div class="temp-top2">';
+    code += $('#wantTitle').val();
+    code += '</div><div class="temp-content">';
+    for (var i = 0; i < $('#charCount').val(); i++) {
+        code +='<div class="md-charWrap ' + $('select[name="wantGroup' + i + '"]').val();
+        code += '"><div class="md-charTop"><div class="md-img"><img src="' + $('#charImg' + i).val();
+        code += '"></div><div class="md-name"><a>' + $('#charName' + i).val();
+        code += '</a><span></span></div></div><div class="md-info">' + $('#charDeets' + i).val();
+        code += '</div><div class="md-desc"><div class="scroll pad20">' + $('#charText' + i).val();
+        code += '</div></div></div>';
+    }
+    code += '</div><div class="temp-bottom2">';
+    code += $('#wantNotes').val();
+    code += '</div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setPhoneCode () {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    code += '<div class="cell-wrap"><div class="cell-top">';
+    code += $('#phoneTime').val();
+    code += '<span style="float: right;"><i class="fad fa-signal"></i> <i class="fad fa-wifi"></i> <i class="far fa-battery-full"></i></span></div><div class="cell-content">';
+    for (var i = 0; i < $('#msgCount').val(); i++) {
+        code += '<div class="cell-msg"><span>' + $('#msg' + i).val() + '</span></div>';
+    }
+    code += '</div><div class="cell-imgWrap"><div class="cell-img"><img src="';
+    code += $('#phoneImg').val();
+    code += '"></div><span>to ';
+    code += $('#phoneTag').val();
+    code += '</span></div><div class="cell-bottom">';
+    if ($('input[name="phoneType"]:checked').val() == 'text' ) {
+        code += 'message sent!';
+    } else if ($('input[name="phoneType"]:checked').val() == 'call' ) {
+        code += 'currently calling...';
+    } 
+    code += '</div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setTindrCode () {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    if ($('input[name="tinType"]:checked').val() == 'tinP') {
+        //profile
+        code += '<div class="tindr-wrap"><img src="';
+        code += $('#tinPImg').val();
+        code += '"><div class="tindr-content"><b>';
+        code += $('#tinPName').val();
+        code += ' <span>' + $('#tinPAge').val() + '</span></b><i class="fal fa-briefcase"> ';
+        code += $('#tinPJob').val();
+        code += '</i><div class="scroll pad20">';
+        code += $('#tinPBio').val();
+        code += '</div></div></div>';
+    } else if ($('input[name="tinType"]:checked').val() == 'tinM') {
+        //message
+        code += '<div class="tindr-wrap"><div class="tindr-msgTop"><div class="tindr-img"><img src="';
+        code += $('#tinMImg').val();
+        code += '"></div><b>';
+        code += $('#tinMName').val();
+        code += '</b></div><div class="tindr-content"><div class="scroll pad20">';
+        code += $('#tinMMsg').val();
+        code += '</div></div></div>';
+    } else if ($('input[name="tinType"]:checked').val() == 'tinO') {
+        //swipe
+        code += '<a href="' + $('#tinOURL').val();
+        code += '"><div class="tindr-wrap"><div class="tindr-content"><div class="scroll pad20"><b>';
+        code += $('#tinOMsg').val();
+        code += '</b></div></div></div></a>';
+    }
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setInstaCode () {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    if ($('input[name="igType"]:checked').val() == 'igP') {
+        //profile
+        code += '<div class="insta-wrap"><div class="insta-top"><div class="insta-imgTop"><img src="';
+        code += $('#igPImg').val();
+        code += '"></div><b>';
+        code += $('#igPName').val();
+        code += '</b><div class="insta-stats"><span><b>';
+        code += $('#igPPosts').val();
+        code += '</b> posts</span><span><b>';
+        code += $('#igPFollowers').val();
+        code += '</b> followers</span><span><b>';
+        code += $('#igPFollowing').val();
+        code += '</b> following</span></div><div class="insta-bio">';
+        code += $('#igPBio').val();
+        code += '</div></div><div class="insta-grid">';
+        for (var i = 0; i < 9; i++) {
+            code += '<img src="' + $('input[name="igPI' + i + '"]').val() + '">\n';
+        }
+        code += '</div></div>';
+    } else if ($('input[name="igType"]:checked').val() == 'igNP') {
+        //new post
+        code += '<div class="insta-smlWrap"><div class="insta-postImg"><img src="';
+        code += $('#igNPImg').val();
+        code += '"></div><div class="insta-smlContent"><i>liked by <b>';
+        code += $('#igNPLike').val();
+        code += '</b> and <b>';
+        code += $('#igNPLikeNum').val();
+        code += ' others</b></i><div class="scroll pad20"><span>';
+        for (var i = 0; i < $('#commCount').val(); i++) {
+            code += '<b>' + $('#igNPCName' + i).val() + '</b> ' + $('#igNPCText' + i).val();
+        }
+        code += '</span></div></div></div>';
+    } else if ($('input[name="igType"]:checked').val() == 'igC') {
+        //comment
+        code += '<div class="insta-smlWrap"><div class="insta-smlContent"><div class="scroll pad20"><b>';
+        code += $('#igCName').val();
+        code += '</b> ';
+        code += $('#igCText').val();
+        code += '</div></div></div>';
+    }
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setTimelineCode() {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="tempSize"]').val() + ' ';
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    code += '<div class="temp-wrap"><div class="temp-top2">';
+    code += $('#timeTitle').val();
+    code += '</div><div class="temp-content">';
+    code += timeline;
+    code += '</div><div class="temp-bottom2">';
+    code += $('#timeNotes').val();
+    code += '</div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setTrackerCode() {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="tempSize"]').val() + ' ';
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    code += '<div class="temp-wrap"><div class="temp-top2">';
+    code += $('#trackTitle').val();
+    code += '</div><div class="temp-content">';
+    code += tracking;
+    code += '</div><div class="temp-bottom2">';
+    code += $('#trackNotes').val();
+    code += '</div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setImageCode() {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="tempSize"]').val() + ' ';
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="wt"]:checked').val() == 'y') {
+        code += $('input[name="scrollSize"]:checked').val() + ' ';
+    }
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += $('input[name="cols"]:checked').val();
+    code += '">';
+    
+    //content starts
+    code += '<div class="temp-wrap"><div class="temp-top">';
+    code += $('#imgTitle').val();
+    code += '</div><div class="temp-content temp-grid">';
+    code += images;
+    code += '</div><div class="temp-bottom">';
+    code += $('#imgNotes').val();
+    code += '</div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setPlaylistCode() {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    code += '<div class="cell-wrap"><div class="cell-top">';
+    code += $('#musicTime').val();
+    code += '<span style="float: right;"><i class="fad fa-signal"></i> <i class="fad fa-wifi"></i> <i class="far fa-battery-full"></i></span></div><div class="cell-content cell-playlist">';
+    code += songs;
+    code += '</div><div class="cell-imgWrap"><div class="cell-img"><img src="';
+    code += $('#musicImg').val();
+    code += '"></div><span><a href="';
+    code += $('#musicLink').val();
+    code += '" target="_blank">listen</a></span></div><div class="cell-bottom">now playing</div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+function setQuoteCode() {
+    var code = '';
+    code += '<span class="';
+    if ($('input[name="tc"]:checked').val() == 'y') {
+        //custom color
+        code += $('#char').val() + ' ';
+    } else if  ($('input[name="tc"]:checked').val() == 'n') {
+        //group color
+        code += $('select[name="groupColor"]').val();
+    }
+    code += $('select[name="tempSize"]').val() + ' ';
+    code += $('select[name="fontSize"]').val() + ' ';
+    if ($('input[name="dm"]:checked').val() == 'y') {
+        code += 'darkMode ';
+    }
+    code += '">';
+    
+    //content starts
+    code += '<div class="temp-wrap temp-quote"><div class="temp-top"></div><div class="temp-content">';
+    code += $('#quoteBody').val();
+    code += '<qs>&mdash; ';
+    code += $('#quoteSource').val();
+    code += '</qs></div><div class="temp-bottom"></div></div>';
+    //content ends
+    
+    code += '</span>';
+    
+    code += '<link href="//dawneggleton.github.io/jcink-temps/blacksands/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/blacksands/characters.css" rel="stylesheet">' + colors;
+    return code;
+}
+
+
+$('#runScript').on('click', function() {
+    $('.temp-menuInner span').on('click', function() {
+        $('.temp-menuInner span').removeClass('tempActive');
+        $('.temp-tabs .scroll').removeClass('tempActive');
+        $(this).addClass('tempActive');
+        $(this).parent().parent().parent().children('.temp-content').children('#' + this.id + '-content').addClass('tempActive');
+    });
+});

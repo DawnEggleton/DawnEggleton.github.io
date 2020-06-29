@@ -46,6 +46,12 @@ $('#updateTemp').on('click', function() {
         case 'phone': 
             tempCode = setPhoneCode();
             break;
+        case 'instagram':
+            tempCode = setInstaCode();
+            break;
+        case 'tindr':
+            tempCode = setTindrCode();
+            break;
         default:
             $('#display').html('Please select a template.');
             break;
