@@ -503,12 +503,12 @@ function setPostCode() {
     code += '">';
     
     //content starts
-    code += '<div class="temp-wrap"><div class="temp-top">';
-    code += $('#postTitle').val();
-    code += '</div><div class="temp-content"><div class="scroll">';
-    code += $('#postText').val();
-    code += '</div></div><div class="temp-bottom">';
-    code += $('#postTag').val();
+    code += '<div class="temp-wrap"><div class="temp-top">' + '\n\n';
+    code += $('#postTitle').val() + '\n\n';
+    code += '</div><div class="temp-content"><div class="scroll">' + '\n\n';
+    code += $('#postText').val() + '\n\n';
+    code += '</div></div><div class="temp-bottom">' + '\n\n';
+    code += $('#postTag').val() + '\n\n';
     code += '</div></div>';
     //content ends
     
@@ -541,24 +541,24 @@ function setTabbedCode() {
     //content starts
     code += '<div class="temp-wrap"><div class="temp-top2">';
     code += $('#tabsTitle').val();
-    code += '</div><div class="temp-tabs"><div class="temp-menu"><div class="temp-menuInner">';
+    code += '</div><div class="temp-tabs"><div class="temp-menu"><div class="temp-menuInner">' + '\n\n';
     for (var i = 0; i < $('#tabCount').val(); i++) {
         if (i == 0) {
-            code += '<span id="tab-' + i + '" class="tempActive" title="' + $('#tabTitle' + i).val() + '">' + $('#tabTitle' + i).val() + '<div></div></span>';
+            code += '<span id="tab-' + i + '" class="tempActive" title="' + $('#tabTitle' + i).val() + '">' + $('#tabTitle' + i).val() + '<div></div></span>\n';
         } else {
-            code += '<span id="tab-' + i + '" title="' + $('#tabTitle' + i).val() + '">' + $('#tabTitle' + i).val() + '<div></div></span>';
+            code += '<span id="tab-' + i + '" title="' + $('#tabTitle' + i).val() + '">' + $('#tabTitle' + i).val() + '<div></div></span>\n';
         }
     }
-    code += '</div></div><div class="temp-content">';
+    code += '</div></div><div class="temp-content">' + '\n\n';
     for (var i = 0; i < $('#tabCount').val(); i++) {
         if (i == 0) {
-            code += '<div id="tab-' + i + '-content" class="scroll tempActive">' + $('#tabText' + i).val() + '</div>';
+            code += '<div id="tab-' + i + '-content" class="scroll tempActive">' + '\n\n' + $('#tabText' + i).val() + '\n\n' + '</div>\n';
         } else {
-            code += '<div id="tab-' + i + '-content" class="scroll">' + $('#tabText' + i).val() + '</div>';
+            code += '<div id="tab-' + i + '-content" class="scroll">' + '\n\n' + $('#tabText' + i).val() + '\n\n' + '</div>\n';
         }
     }
-    code += '</div></div><div class="temp-bottom2">';
-    code += $('#tabsNotes').val();
+    code += '\n\n</div></div><div class="temp-bottom2">' + '\n\n';
+    code += $('#tabsNotes').val() + '\n\n';
     code += '</div></div>';
     //content ends
     
@@ -586,19 +586,19 @@ function setWantedCode () {
     code += '">';
     
     //content starts
-    code += '<div class="temp-wrap"><div class="temp-top2">';
-    code += $('#wantTitle').val();
-    code += '</div><div class="temp-content">';
+    code += '<div class="temp-wrap"><div class="temp-top2">' + '\n\n';
+    code += $('#wantTitle').val() + '\n\n';
+    code += '</div><div class="temp-content">' + '\n\n';
     for (var i = 0; i < $('#charCount').val(); i++) {
         code +='<div class="md-charWrap ' + $('select[name="wantGroup' + i + '"]').val();
-        code += '"><div class="md-charTop"><div class="md-img"><img src="' + $('#charImg' + i).val();
-        code += '"></div><div class="md-name"><a>' + $('#charName' + i).val();
-        code += '</a><span></span></div></div><div class="md-info">' + $('#charDeets' + i).val();
-        code += '</div><div class="md-desc"><div class="scroll pad20">' + $('#charText' + i).val();
-        code += '</div></div></div>';
+        code += '"><div class="md-charTop"><div class="md-img">\n<img src="' + $('#charImg' + i).val();
+        code += '">\n</div><div class="md-name"><a>\n' + $('#charName' + i).val();
+        code += '\n</a><span></span></div></div><div class="md-info">\n' + $('#charDeets' + i).val();
+        code += '\n</div><div class="md-desc"><div class="scroll pad20">\n' + $('#charText' + i).val();
+        code += '\n</div></div></div>';
     }
-    code += '</div><div class="temp-bottom2">';
-    code += $('#wantNotes').val();
+    code += '\n\n</div><div class="temp-bottom2">' + '\n\n';
+    code += $('#wantNotes').val() + '\n\n';
     code += '</div></div>';
     //content ends
     
@@ -625,17 +625,17 @@ function setPhoneCode () {
     code += '">';
     
     //content starts
-    code += '<div class="cell-wrap"><div class="cell-top">';
+    code += '<div class="cell-wrap"><div class="cell-top">\n';
     code += $('#phoneTime').val();
-    code += '<span style="float: right;"><i class="fad fa-signal"></i> <i class="fad fa-wifi"></i> <i class="far fa-battery-full"></i></span></div><div class="cell-content">';
+    code += '\n<span style="float: right;"><i class="fad fa-signal"></i> <i class="fad fa-wifi"></i> <i class="far fa-battery-full"></i></span></div><div class="cell-content">' + '\n\n';
     for (var i = 0; i < $('#msgCount').val(); i++) {
-        code += '<div class="cell-msg"><span>' + $('#msg' + i).val() + '</span></div>';
+        code += '<div class="cell-msg"><span>' + $('#msg' + i).val() + '</span></div>\n';
     }
-    code += '</div><div class="cell-imgWrap"><div class="cell-img"><img src="';
+    code += '\n\n</div><div class="cell-imgWrap"><div class="cell-img"><img src="';
     code += $('#phoneImg').val();
-    code += '"></div><span>to ';
+    code += '"></div><span>\nto ';
     code += $('#phoneTag').val();
-    code += '</span></div><div class="cell-bottom">';
+    code += '\n</span></div><div class="cell-bottom">';
     if ($('input[name="phoneType"]:checked').val() == 'text' ) {
         code += 'message sent!';
     } else if ($('input[name="phoneType"]:checked').val() == 'call' ) {
@@ -669,29 +669,29 @@ function setTindrCode () {
     //content starts
     if ($('input[name="tinType"]:checked').val() == 'tinP') {
         //profile
-        code += '<div class="tindr-wrap"><img src="';
+        code += '<div class="tindr-wrap">\n<img src="';
         code += $('#tinPImg').val();
-        code += '"><div class="tindr-content"><b>';
+        code += '">\n<div class="tindr-content">\n<b>';
         code += $('#tinPName').val();
-        code += ' <span>' + $('#tinPAge').val() + '</span></b><i class="fal fa-briefcase"> ';
+        code += ' \n<span>' + $('#tinPAge').val() + '</span></b>\n<i class="fal fa-briefcase"> ';
         code += $('#tinPJob').val();
-        code += '</i><div class="scroll pad20">';
-        code += $('#tinPBio').val();
+        code += '</i>\n<div class="scroll pad20">' + '\n\n';
+        code += $('#tinPBio').val() + '\n\n';
         code += '</div></div></div>';
     } else if ($('input[name="tinType"]:checked').val() == 'tinM') {
         //message
-        code += '<div class="tindr-wrap"><div class="tindr-msgTop"><div class="tindr-img"><img src="';
+        code += '<div class="tindr-wrap"><div class="tindr-msgTop"><div class="tindr-img">\n<img src="';
         code += $('#tinMImg').val();
-        code += '"></div><b>';
+        code += '">\n</div>\n<b>';
         code += $('#tinMName').val();
-        code += '</b></div><div class="tindr-content"><div class="scroll pad20">';
-        code += $('#tinMMsg').val();
+        code += '</b>\n</div><div class="tindr-content"><div class="scroll pad20">' + '\n\n';
+        code += $('#tinMMsg').val() + '\n\n';
         code += '</div></div></div>';
     } else if ($('input[name="tinType"]:checked').val() == 'tinO') {
         //swipe
         code += '<a href="' + $('#tinOURL').val();
-        code += '"><div class="tindr-wrap"><div class="tindr-content"><div class="scroll pad20"><b>';
-        code += $('#tinOMsg').val();
+        code += '"><div class="tindr-wrap"><div class="tindr-content"><div class="scroll pad20"><b>' + '\n\n';
+        code += $('#tinOMsg').val() + '\n\n';
         code += '</b></div></div></div></a>';
     }
     //content ends
@@ -721,43 +721,43 @@ function setInstaCode () {
     //content starts
     if ($('input[name="igType"]:checked').val() == 'igP') {
         //profile
-        code += '<div class="insta-wrap"><div class="insta-top"><div class="insta-imgTop"><img src="';
+        code += '<div class="insta-wrap"><div class="insta-top"><div class="insta-imgTop">\n<img src="';
         code += $('#igPImg').val();
-        code += '"></div><b>';
+        code += '">\n</div><b>\n';
         code += $('#igPName').val();
-        code += '</b><div class="insta-stats"><span><b>';
+        code += '\n</b><div class="insta-stats"><span>\n<b>';
         code += $('#igPPosts').val();
-        code += '</b> posts</span><span><b>';
+        code += '</b> posts\n</span><span>\n<b>';
         code += $('#igPFollowers').val();
-        code += '</b> followers</span><span><b>';
+        code += '</b> followers\n</span><span>\n<b>';
         code += $('#igPFollowing').val();
-        code += '</b> following</span></div><div class="insta-bio">';
-        code += $('#igPBio').val();
-        code += '</div></div><div class="insta-grid">';
+        code += '</b> following\n</span></div><div class="insta-bio">\n';
+        code += $('#igPBio').val() + '\n';
+        code += '</div></div><div class="insta-grid">' + '\n\n';
         for (var i = 0; i < 9; i++) {
             code += '<img src="' + $('input[name="igPI' + i + '"]').val() + '">\n';
         }
-        code += '</div></div>';
+        code += '\n</div></div>';
     } else if ($('input[name="igType"]:checked').val() == 'igNP') {
         //new post
-        code += '<div class="insta-smlWrap"><div class="insta-postImg"><img src="';
+        code += '<div class="insta-smlWrap"><div class="insta-postImg">\n<img src="';
         code += $('#igNPImg').val();
-        code += '"></div><div class="insta-smlContent"><i>liked by <b>';
+        code += '">\n</div><div class="insta-smlContent"><i>liked by \n<b>';
         code += $('#igNPLike').val();
         code += '</b> and <b>';
         code += $('#igNPLikeNum').val();
-        code += ' others</b></i><div class="scroll pad20"><span>';
+        code += ' others</b>\n</i><div class="scroll pad20"><span>' + '\n\n';
         for (var i = 0; i < $('#commCount').val(); i++) {
-            code += '<b>' + $('#igNPCName' + i).val() + '</b> ' + $('#igNPCText' + i).val();
+            code += '<b>' + $('#igNPCName' + i).val() + '</b> ' + $('#igNPCText' + i).val() + '<p>\n';
         }
-        code += '</span></div></div></div>';
+        code += '\n</span></div></div></div>';
     } else if ($('input[name="igType"]:checked').val() == 'igC') {
         //comment
-        code += '<div class="insta-smlWrap"><div class="insta-smlContent"><div class="scroll pad20"><b>';
+        code += '<div class="insta-smlWrap"><div class="insta-smlContent"><div class="scroll pad20">\n\n<b>';
         code += $('#igCName').val();
         code += '</b> ';
         code += $('#igCText').val();
-        code += '</div></div></div>';
+        code += '\n\n</div></div></div>';
     }
     //content ends
     
@@ -785,12 +785,12 @@ function setTimelineCode() {
     code += '">';
     
     //content starts
-    code += '<div class="temp-wrap"><div class="temp-top2">';
-    code += $('#timeTitle').val();
-    code += '</div><div class="temp-content">';
+    code += '<div class="temp-wrap"><div class="temp-top2">' + '\n\n';
+    code += $('#timeTitle').val() + '\n\n';
+    code += '</div><div class="temp-content">' + '\n\n';
     code += timeline;
-    code += '</div><div class="temp-bottom2">';
-    code += $('#timeNotes').val();
+    code += '\n\n</div><div class="temp-bottom2">' + '\n\n';
+    code += $('#timeNotes').val() + '\n\n';
     code += '</div></div>';
     //content ends
     
@@ -818,12 +818,12 @@ function setTrackerCode() {
     code += '">';
     
     //content starts
-    code += '<div class="temp-wrap"><div class="temp-top2">';
-    code += $('#trackTitle').val();
-    code += '</div><div class="temp-content">';
+    code += '<div class="temp-wrap"><div class="temp-top2">' + '\n\n';
+    code += $('#trackTitle').val() + '\n\n';
+    code += '</div><div class="temp-content">' + '\n\n';
     code += tracking;
-    code += '</div><div class="temp-bottom2">';
-    code += $('#trackNotes').val();
+    code += '\n\n</div><div class="temp-bottom2">' + '\n\n';
+    code += $('#trackNotes').val() + '\n\n';
     code += '</div></div>';
     //content ends
     
@@ -855,12 +855,12 @@ function setImageCode() {
     code += '">';
     
     //content starts
-    code += '<div class="temp-wrap"><div class="temp-top">';
-    code += $('#imgTitle').val();
-    code += '</div><div class="temp-content temp-grid">';
+    code += '<div class="temp-wrap"><div class="temp-top">' + '\n\n';
+    code += $('#imgTitle').val() + '\n\n';
+    code += '</div><div class="temp-content temp-grid">' + '\n\n';
     code += images;
-    code += '</div><div class="temp-bottom">';
-    code += $('#imgNotes').val();
+    code += '\n\n</div><div class="temp-bottom">' + '\n\n';
+    code += $('#imgNotes').val() + '\n\n';
     code += '</div></div>';
     //content ends
     
@@ -887,15 +887,15 @@ function setPlaylistCode() {
     code += '">';
     
     //content starts
-    code += '<div class="cell-wrap"><div class="cell-top">';
-    code += $('#musicTime').val();
-    code += '<span style="float: right;"><i class="fad fa-signal"></i> <i class="fad fa-wifi"></i> <i class="far fa-battery-full"></i></span></div><div class="cell-content cell-playlist">';
+    code += '<div class="cell-wrap"><div class="cell-top">' + '\n\n';
+    code += $('#musicTime').val() + '\n\n';
+    code += '<span style="float: right;"><i class="fad fa-signal"></i> <i class="fad fa-wifi"></i> <i class="far fa-battery-full"></i></span></div><div class="cell-content cell-playlist">' + '\n\n';
     code += songs;
-    code += '</div><div class="cell-imgWrap"><div class="cell-img"><img src="';
+    code += '\n\n</div><div class="cell-imgWrap"><div class="cell-img">\n<img src="';
     code += $('#musicImg').val();
-    code += '"></div><span><a href="';
+    code += '">\n</div><span>\n<a href="';
     code += $('#musicLink').val();
-    code += '" target="_blank">listen</a></span></div><div class="cell-bottom">now playing</div></div>';
+    code += '" target="_blank">listen</a>\n</span></div><div class="cell-bottom">now playing</div></div>';
     //content ends
     
     code += '</span>';
@@ -922,11 +922,11 @@ function setQuoteCode() {
     code += '">';
     
     //content starts
-    code += '<div class="temp-wrap temp-quote"><div class="temp-top"></div><div class="temp-content">';
-    code += $('#quoteBody').val();
+    code += '<div class="temp-wrap temp-quote"><div class="temp-top"></div><div class="temp-content">' + '\n\n';
+    code += $('#quoteBody').val() + '\n';
     code += '<qs>&mdash; ';
     code += $('#quoteSource').val();
-    code += '</qs></div><div class="temp-bottom"></div></div>';
+    code += '</qs>\n\n</div><div class="temp-bottom"></div></div>';
     //content ends
     
     code += '</span>';
