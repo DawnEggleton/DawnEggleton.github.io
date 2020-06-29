@@ -10,6 +10,9 @@ $('.result h3').on('click', function () {
 $('#updateTemp').on('click', function() {
     setValues();
     switch(type) {
+        case 'general':
+            tempCode = setGeneralCode();
+            break;
         case 'posting':
             tempCode = setPostCode();
             break;
@@ -36,6 +39,12 @@ $('#updateTemp').on('click', function() {
             break;
         case 'quotedev': 
             tempCode = setQuoteCode();
+            break;
+        case 'wanted': 
+            tempCode = setWantedCode();
+            break;
+        case 'phone': 
+            tempCode = setPhoneCode();
             break;
         default:
             $('#display').html('Please select a template.');
@@ -93,6 +102,8 @@ function orderEvents(num, yearArray, monthArray, eventArray, type, prefix) {
 function fromRadio(radioName, varName, prefix, suffix) {
     if($('input[name="' + radioName + '"]:checked').val() == 'y') {
         varName[0] = prefix + $('input[name="' + radioName + '"]:checked').parent().parent().next().val() + suffix;
+    } else {
+        varName[0] = '';
     }
 }
 
@@ -144,3 +155,13 @@ function showhide (inputName, shClass) {
         }
     })
 }
+
+//hex to rgb
+function hexToRgb(hex) {
+    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    return result ? {
+      r: parseInt(result[1], 16),
+      g: parseInt(result[2], 16),
+      b: parseInt(result[3], 16)
+    } : null;
+  }
