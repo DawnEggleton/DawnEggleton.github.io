@@ -12,6 +12,12 @@
 	--accent: #e1bdb2;
 	--dkAccent: #d48d79;
 }
+.tia .insta-top,
+.tia .tindr-msgTop,
+.tia .insta-postImg {
+	--accent: #e1bdb2;
+	--dkAccent: #d48d79;
+}
 .connor {
 	--accent: #e0d0b5;
 	--dkAccent: #b6a280;
@@ -38,7 +44,9 @@
 	--accent: #e8ccd1;
 	--dkAccent: #ca8a93;
 }
-.harley .insta-top {
+.harley .insta-top,
+.harley .tindr-msgTop,
+.harley .insta-postImg {
 	--accent: #ca8a93;
 	--dkAccent: #a2636c;
 }
