@@ -74,6 +74,7 @@ function buildTimeline (yearArray, monthArray, eventArray) {
         var tempYear = '<section><year>\n' + yearArray[i] + '\n</year><events>\n';
         for (var j = 0; j < monthArray[i].length; j++) {
             console.log(monthArray[i]);
+            console.log(monthArray[i][j]);
             switch(monthArray[i][j].split('-')[2]) {
                 case '1':
                     tempYear += '<b>January</b>\n';
