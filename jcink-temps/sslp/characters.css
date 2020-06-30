@@ -38,6 +38,10 @@
 	--accent: #e8ccd1;
 	--dkAccent: #ca8a93;
 }
+.harley .insta-top {
+	--accent: #ca8a93;
+	--dkAccent: #a2636c;
+}
 .hayd {
 	--accent: #96b79a;
 	--dkAccent: #519358;
