@@ -58,3 +58,7 @@
 	--accent: #cde0a8;
 	--dkAccent: #9cc34f;
 }
+.sterling {
+	--accent: #c0c0c0;
+	--dkAccent: #808080;
+}
