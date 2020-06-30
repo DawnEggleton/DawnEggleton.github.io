@@ -19,11 +19,11 @@ function setValues() {
     colors =        '<style>.' +
                     $('input[name="char"]').val() + ' .lux-slide-box ' + 
                     ' {--accent: ' +
-                    $('input[name="accent"]').val() +
+                    $('input[name="accent"]').spectrum("get").toHexString() +
                     '; --dkAccent: ' +
-                    $('input[name="dkAccent"]').val() +
+                    $('input[name="dkAccent"]').spectrum("get").toHexString() +
                     '; --ltAccent: ' +
-                    $('input[name="ltAccent"]').val() +
+                    $('input[name="ltAccent"]').spectrum("get").toHexString() +
                     ';}</style>';
 }
 

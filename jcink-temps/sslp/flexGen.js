@@ -40,6 +40,7 @@ function setValues() {
 
     }
 
+
     //set image dev
     columns = $('input[name="cols"]:checked').val();
     images = setImageDev('i');
@@ -58,9 +59,9 @@ function setValues() {
     colors =        '<style>.' +
                     $('input[name="char"]').val() +
                     ' {--accent: ' +
-                    $('input[name="accent"]').val() +
+                    $("#accent").spectrum("get").toHexString() +
                     '; --dkAccent: ' +
-                    $('input[name="dkAccent"]').val() +
+                    $("#dkAccent").spectrum("get").toHexString() +
                     ';}</style>';
 }
 

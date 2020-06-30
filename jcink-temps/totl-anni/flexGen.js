@@ -97,7 +97,7 @@ function setValues() {
     quote = '<quote>' + $('#quoteBody').val() + '</quote>\n<qSource>' + $('#quoteSource').val() + '</qSource>';
 
     //set up color styles
-    var accentArr = hexToRgb($('input[name="dullAccent"]').val().split('#')[1]);
+    var accentArr = hexToRgb($('input[name="dullAccent"]').spectrum("get").toHexString().split('#')[1]);
     var accent70 = 'rgba(' + accentArr.r + ', ' + accentArr.g + ', ' + accentArr.b + ', 0.7)';
     var accent35 = 'rgba(' + accentArr.r + ', ' + accentArr.g + ', ' + accentArr.b + ', 0.35)';
     colors =        '<style>' +
@@ -107,7 +107,7 @@ function setValues() {
                     '; --dullAccent-35: ' +
                     accent35 +
                     '; --brightAccent: ' +
-                    $('input[name="brightAccent"]').val() +
+                    $('input[name="brightAccent"]').spectrum("get").toHexString() +
                     ';}.' + $('input[name="char"]').val() +
                     ' .sl-tempBox {border-color: var(--brightAccent);}</style>';
 }

@@ -24,7 +24,7 @@ function setValues() {
     colors =        '<style>' +
                     '.' + $('input[name="char"]').val() + ' .lux-temp1-container' +
                     ' {--accent: ' +
-                    $('input[name="accent"]').val() +
+                    $('input[name="accent"]').spectrum("get").toHexString() +
                     '}</style>';
 }
 

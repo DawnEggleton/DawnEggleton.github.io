@@ -100,11 +100,11 @@ function setValues() {
                     '.' + $('input[name="char"]').val() + ' .insta-smlWrap,' +
                     '.' + $('input[name="char"]').val() + '.md-charWrap' +
                     ' {--dkAccent: ' +
-                    $('input[name="dkAccent"]').val() +
+                    $('input[name="dkAccent"]').spectrum("get").toHexString() +
                     '; --accent: ' +
-                    $('input[name="accent"]').val() +
+                    $('input[name="accent"]').spectrum("get").toHexString() +
                     '; --textAccent: ' +
-                    $('input[name="textAccent"]').val() +
+                    $('input[name="textAccent"]').spectrum("get").toHexString() +
                     ';}</style>';
 }
 

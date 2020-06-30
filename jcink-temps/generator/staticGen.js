@@ -1,6 +1,43 @@
 //default counter variables
 let imgCount, songCount, tabCount, msgCount, igCount, eventCount, threadCount, charCount;
 
+$("#dkAccent").spectrum({
+    color: "#000",
+    change: function(color) {
+        console.log(color.toHexString());
+    }
+});
+$("#accent").spectrum({
+    color: "#000",
+    change: function(color) {
+        console.log(color.toHexString());
+    }
+});
+$("#darkAccent").spectrum({
+    color: "#000",
+    change: function(color) {
+        console.log(color.toHexString());
+    }
+});
+$("#brightAccent").spectrum({
+    color: "#000",
+    change: function(color) {
+        console.log(color.toHexString());
+    }
+});
+$("#textAccent").spectrum({
+    color: "#000",
+    change: function(color) {
+        console.log(color.toHexString());
+    }
+});
+$("#ltAccent").spectrum({
+    color: "#000",
+    change: function(color) {
+        console.log(color.toHexString());
+    }
+});
+
 if ($('#imgCount').val()) {
     imgCount = [$('#imgCount').val()];
 }

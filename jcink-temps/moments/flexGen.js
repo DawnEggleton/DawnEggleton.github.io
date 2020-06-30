@@ -45,9 +45,9 @@ function setValues() {
     colors =        '<style>' +
                     '.' + $('input[name="char"]').val() + ' .lux-moments' +
                     ' {--accent: ' +
-                    $('input[name="accent"]').val() +
+                    $('input[name="accent"]').spectrum("get").toHexString() +
                     '; --ltAccent: ' +
-                    $('input[name="ltAccent"]').val() +
+                    $('input[name="ltAccent"]').spectrum("get").toHexString() +
                     '}</style>';
 }
 

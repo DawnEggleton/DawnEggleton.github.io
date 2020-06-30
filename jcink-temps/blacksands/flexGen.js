@@ -19,14 +19,10 @@ showhide('lh', 'ifLH');
 showhide('ih', 'ifIH');
 showhide('idt', 'ifIDT');
 
-//Show/Hide Complex Fields
-
-
 //Complex Field Generation
 
 var charHTML = ['<span class="twoCol altCol"><span><input id="charName', '" placeholder="Section Title" /><input id="charImg', '" placeholder="Section Image" style="margin-top: 20px;" /></span><textarea id="charText', '"placeholder="Section Contents"></textarea></span>'];
 addFields(charCount, 'charCount', charHTML, 'wantContents');
-
 
 //Set Variables
 function setValues() {
@@ -60,21 +56,19 @@ function setValues() {
     });
 
     //set up color styles
-    var fadeAccentArr = hexToRgb($('input[name="brightAccent"]').val().split('#')[1]);
+    var fadeAccentArr = hexToRgb($('input[name="brightAccent"]').spectrum("get").toHexString().split('#')[1]);
     var fadeAccent = 'rgba(' + fadeAccentArr.r + ', ' + fadeAccentArr.g + ', ' + fadeAccentArr.b + ', 0.3)';
     colors =        '<style>' +
                     '.' + $('input[name="char"]').val() + ' .bs-tempBox,' +
                     '.' + $('input[name="char"]').val() + ' .bs-phoneCase' +
                     ' {--darkAccent: ' +
-                    $('input[name="darkAccent"]').val() +
+                    $('input[name="darkAccent"]').spectrum("get").toHexString() +
                     '; --brightAccent: ' +
-                    $('input[name="brightAccent"]').val() +
+                    $('input[name="brightAccent"]').spectrum("get").toHexString() +
                     '; --brightTrans: ' +
                     fadeAccent +
                     ';}</style>';
 }
-
-
 
 //Build Complex Content
 function buildTimeline (yearArray, monthArray, eventArray) {    
