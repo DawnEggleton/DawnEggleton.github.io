@@ -117,7 +117,13 @@ function buildTimeline (yearArray, monthArray, eventArray) {
                     break;
             }
             $('.event').each(function () {
-                if($(this).prev().prev().val() == yearArray[i] && $(this).prev().val() == monthArray[i][j].split('-')[2]) {
+                var simpMonth;                
+                if(monthArray[i][j].split('-')[2] != '10') {
+                    simpMonth = $(this).prev().val().replace('0', '');
+                } else {
+                    simpMonth = $(this).prev().val();
+                }
+                if($(this).prev().prev().val() == yearArray[i] && simpMonth == monthArray[i][j].split('-')[2]) {
                     tempYear += '<event>' + $(this).val() + '</event>\n';
                 }
             });
@@ -138,36 +144,52 @@ function buildTracker (yearArray, monthArray, eventArray) {
         var tempThread = '', currMonth = '';   
         for (var j = 0; j < monthArray[i].length; j++) {   
             $('.tracker .title').each(function() {
+                var simpMonth;                
+                if(monthArray[i][j].split('-')[2] != '10') {
+                    simpMonth = $(this).next().next().next().next().next().val().replace('0', '');
+                } else {
+                    simpMonth = $(this).next().next().next().next().next().val();
+                }
+                
                 if(     $(this).next().next().next().next().val() == yearArray[i] &&
-                        $(this).next().next().next().next().next().val() == monthArray[i][j].split('-')[2]
+                        simpMonth == monthArray[i][j].split('-')[2]
                 ) {
 
                     switch(monthArray[i][j].split('-')[2]) {
-                        case '01' || '1':
+                        case '01':
+                        case '1':
                             currMonth = 'January';
                             break;
-                        case '02' || '2':
+                        case '02':
+                        case '2':
                             currMonth = 'February';
                             break;
-                        case '03' || '3':
+                        case '03':
+                        case '3':
                             currMonth = 'March';
                             break;
-                        case '04' || '4':
+                        case '04':
+                        case '4':
                             currMonth = 'April';
                             break;
-                        case '05' || '5':
+                        case '05':
+                        case '5':
                             currMonth = 'May';
                             break;
-                        case '06' || '6':
+                        case '06':
+                        case '6':
                             currMonth = 'June';
                             break;
-                        case '07' || '7':
+                        case '07':
+                        case '7':
                             currMonth = 'July';
                             break;
-                        case '08' || '8':
+                        case '08':
+                        case '8':
                             currMonth = 'August';
                             break;
-                        case '09' || '9':
+                        case '09':
+                        case '9':
                             currMonth = 'September';
                             break;
                         case '10':
