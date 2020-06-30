@@ -766,6 +766,7 @@ margin: 20px 0;
 	box-sizing: border-box;
 	padding: 20px;
 	line-height: 200%;
+	font-size: var(--mBody);
 }
 .tindr-wrap b {
 	font-family: var(--titleFont);
