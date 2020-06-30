@@ -36,7 +36,7 @@ function setPostCode() {
     var code =  '<span class="' +
                 $('input[name="char"]').val() +
                 '"><div class="lux-temp1-container lux-' + 
-                $('#tempSize :checked').val() +
+                $('select[name="tempSize"]').val() +
                 '"><div class="lux-temp1-titlebox"><div class="lux-temp1-title"><span class="link">' + '\n\n' + 
                 sHead + '\n\n' + 
                 '</span>' + '\n\n' + 
@@ -52,7 +52,7 @@ function setTabbedCode() {
     var code =  '<span class="' +
                 $('input[name="char"]').val() +
                 '"><div class="lux-temp1-container lux-' + 
-                $('#tempSize :checked').val() +
+                $('select[name="tempSize"]').val() +
                 ' lux-tabbed"><div class="lux-temp1-titlebox">\n';
 
 

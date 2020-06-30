@@ -163,6 +163,7 @@
 
                     <!-- Posting Template -->
                     <div class="hideFirst typeSwitch ifPost">
+                        <hr>
                         <span>
                             <h2>Template Size</h2>
                             <select name="tempSize">
@@ -209,6 +210,7 @@
 
                     <!-- Tabbed Template -->
                     <div class="hideFirst typeSwitch ifTab">
+                        <hr>
                         <span>
                             <h2>Template Size</h2>
                             <select name="tempSize">
@@ -250,8 +252,8 @@
                             <input type="text" id="tabsNotes" name="tabsNotes" placeholder="Notes / Tag (optional)" />
                         </div>
                         <span class="twoCol">
-                            <h2>Tab Count</h2>
-                            <input type="number" id="tabCount" name="tabCount" />
+                            <h2>Number of Tabs</h2>
+                            <input type="number" id="tabCount" name="tabCount" value="1" />
                         </span>                     
                         <h2 class="fullWidth" style="margin-top: 20px;">Tabs</h2>
                         <div class="tabContents"></div>
@@ -259,6 +261,7 @@
 
                     <!-- Wanted -->
                     <div class="hideFirst typeSwitch ifWant">
+                        <hr>
                         <span>
                             <h2>Template Size</h2>
                             <select name="tempSize">
@@ -274,14 +277,17 @@
                             <input type="text" id="wantTitle" name="wantTitle" placeholder="Title (optional)" />
                             <input type="text" id="wantNotes" name="wantNotes" placeholder="Notes / Tag (optional)" />
                         </div>
-                        <h2>Section Count</h2>
-                        <input type="number" id="charCount" name="charCount" />                        
-                        <h2 class="fullWidth" style="margin-top: 20px;">Characters</h2>
+                        <span class="twoCol">
+                            <h2>Number of Sections</h2>
+                            <input type="number" id="charCount" name="charCount" value="1" />    
+                        </span>                    
+                        <h2 class="fullWidth" style="margin-top: 20px;">Sections</h2>
                         <div class="wantContents"></div>
                     </div>
 
                     <!-- Phone -->
                     <div class="hideFirst typeSwitch ifPhone">
+                        <hr>
                         <div class="twoCol">
                             <h2 class="fullWidth">Method</h2>
                             <span class="twoCol fullWidth">
@@ -302,8 +308,10 @@
                             <input type="text" id="phoneImg" name="phoneImg" />
                             <h2>Tag</h2>
                             <input type="text" id="phoneTag" name="phoneTag" />
-                            <h2>Message Count</h2>
-                            <input type="number" id="msgCount" name="msgCount" />                        
+                            <span class="twoCol fullWidth">
+                                <h2>Number of Messages</h2>
+                                <input type="number" id="msgCount" name="msgCount" value="1" />     
+                            </span>                   
                             <h2 class="fullWidth" style="margin-top: 20px;">Messages</h2>
                             <div class="msgContents fullWidth altCol"></div>
                         </div>
@@ -311,6 +319,7 @@
 
                     <!-- Tindr -->
                     <div class="hideFirst typeSwitch ifTindr">
+                        <hr>
                         <h2 class="fullWidth" style="margin-top: 20px;">Tindr Type</h2>
                         <span class="threeCol fullWidth" style="margin-top: 0;">
                             <label for="tinP">
@@ -353,6 +362,7 @@
 
                     <!-- Instagram -->
                     <div class="hideFirst typeSwitch ifInsta">
+                        <hr>
                         <h2 class="fullWidth" style="margin-top: 20px;">Instagram Type</h2>
                         <span class="threeCol fullWidth" style="margin-top: 0;">
                             <label for="igP">
@@ -400,8 +410,10 @@
                                 <input type="text" id="igNPLike" name="igNPLike" placeholder="Liked by names" />
                                 <input type="text" id="igNPLikeNum" name="igNPLikeNum" placeholder="'00 others' number" />
                             </span>
-                            <h2>Comment Count</h2>
-                            <input type="number" id="commCount" name="commCount" />                        
+                            <span class="twoCol">
+                                <h2>Number of Comments</h2>
+                                <input type="number" id="commCount" name="commCount" value="1" /> 
+                            </span>                       
                             <h2 class="fullWidth" style="margin-top: 20px;">Comments</h2>
                             <div class="igComments fullWidth altCol"></div>
                         </div>
@@ -413,6 +425,7 @@
 
                     <!-- Timeline Template -->
                     <div class="hideFirst typeSwitch ifTime">
+                        <hr>
                         <h2>Template Size</h2>
                         <select name="tempSize">
                             <option value="">Standard</option>
@@ -428,7 +441,7 @@
                         </div>
                         <span class="twoCol">
                             <h2>Number of Events</h2>
-                            <input type="number" name="eventCount" id="eventCount" />
+                            <input type="number" name="eventCount" id="eventCount" value="1" />
                         </span>
                         <h2 class="fullWidth">Events</h2>
                         <i class="fullWidth">(Will order by year and month)</i>
@@ -437,6 +450,7 @@
 
                     <!-- Tracker Template -->
                     <div class="hideFirst typeSwitch ifTrack">
+                        <hr>
                         <h2>Template Size</h2>
                         <select name="tempSize">
                             <option value="">Standard</option>
@@ -467,7 +481,7 @@
                         </div>
                         <span class="twoCol">
                             <h2>Number of Threads</h2>
-                            <input type="number" name="threadCount" id="threadCount" />
+                            <input type="number" name="threadCount" id="threadCount" value="1" />
                         </span>
                         <h2>Threads</h2>
                         <i class="fullWidth">(Will order by year and month)</i>
@@ -476,6 +490,7 @@
 
                     <!-- Image Dev Template -->
                     <div class="hideFirst typeSwitch ifImage">
+                        <hr>
                         <span>
                             <h2>Template Size</h2>
                             <select name="tempSize">
@@ -516,7 +531,7 @@
                         </span>
                         <span class="twoCol">
                             <h2>Number of Images</h2>
-                            <input type="number" name="imgCount" id="imgCount" />
+                            <input type="number" name="imgCount" id="imgCount" value="1" />
                         </span>
                         <h2>Image URLs</h2>
                         <div class="imgContent"></div>
@@ -524,6 +539,7 @@
 
                     <!-- Playlist Template -->
                     <div class="hideFirst typeSwitch ifMusic">
+                        <hr>
                         <h2>Time</h2>
                         <input type="text" id="musicTime" name="musicTime" placeholder="The time you want for the message/call" />
                         <h2 style="margin-top: 20px;">Image</h2>
@@ -533,7 +549,7 @@
                         <h2 class="fullWidth" style="margin-top: 20px">Songs</h2>
                         <span class="twoCol">
                             <h2>Number of Songs</h2>
-                            <input type="number" name="songCount" id="songCount" />
+                            <input type="number" name="songCount" id="songCount" value="1" />
                         </span>
                         <h2>Songs</h2>
                         <span class="twoCol songList songContent"></span>
@@ -541,6 +557,7 @@
 
                     <!-- Quote Template -->
                     <div class="hideFirst typeSwitch ifQuote">
+                        <hr>
                         <span>
                             <h2>Template Size</h2>
                             <select name="tempSize">

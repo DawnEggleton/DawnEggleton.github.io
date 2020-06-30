@@ -25,18 +25,73 @@
 
                     <!-- START FORM CONTENTS -->
 
-                    <!-- Styling -->
-                    <h2>Character</h2>
-                    <input type="text" id="char" name="char" placeholder="First name only." />
+                    <!-- Template Type -->
+                    <h2>Template Type</h2>
+                    <div class="tempType">
+                        <label for="posting">
+                            <input type="radio" id="posting" name="type" value="posting" />
+                            <div><div></div></div>
+                            Posting
+                        </label>
+                        <label for="timeline">
+                            <input type="radio" id="timeline" name="type" value="timeline" />
+                            <div><div></div></div>
+                            Timeline
+                        </label>
+                        <label for="tracker">
+                            <input type="radio" id="tracker" name="type" value="tracker" />
+                            <div><div></div></div>
+                            Tracker
+                        </label>
+                        <label for="playlist">
+                            <input type="radio" id="playlist" name="type" value="playlist" />
+                            <div><div></div></div>
+                            Playlist
+                        </label>
+                        <label for="imagedev">
+                            <input type="radio" id="imagedev" name="type" value="imagedev" />
+                            <div><div></div></div>
+                            Image Dev
+                        </label>
+                        <label for="quotedev">
+                            <input type="radio" id="quotedev" name="type" value="quotedev" />
+                            <div><div></div></div>
+                            Quote Dev
+                        </label>
+                    </div>
+
+                    
+                    <!-- Coloring -->
                     <div class="twoCol">
-                        <span>
-                            <h2>Main Accent</h2>
-                            <input type="color" id="dkAccent" name="dkAccent" />
+                        <h2 class="fullWidth">Coloring</h2>
+                        <span class="threeCol fullWidth" style="margin-top: 0;">
+                            <label for="ccY">
+                                <input type="radio" id="ccY" name="tc" value="y" />
+                                <div><div></div></div>
+                                Custom
+                            </label>    
+                            <label for="ccD">
+                                <input type="radio" id="ccD" name="tc" value="default" />
+                                <div><div></div></div>
+                                Default
+                            </label>                        
                         </span>
-                        <span>
-                            <h2>Lighter Accent</h2>
-                            <input type="color" id="accent" name="accent" />  
-                        </span>               
+                    </div>
+                    <div class="hideFirst ifCustomCol" style="margin-top: 0;">
+                        <div class="threeCol">
+                            <span>
+                                <h2>Character</h2>
+                                <input type="text" id="char" name="char" placeholder="First name only." /> 
+                            </span>
+                            <span>
+                                <h2>Main Accent</h2>
+                                <input type="color" id="dkAccent" name="dkAccent" />
+                            </span>
+                            <span>
+                                <h2>Lighter Accent</h2>
+                                <input type="color" id="accent" name="accent" />  
+                            </span>            
+                        </div>
                     </div>
 
                     <!-- Post Image -->
@@ -111,52 +166,19 @@
                         <input type="text" id="ntText" name="ntText" class="ifNT hideFirst" />
                     </div>
 
-                    <!-- Template Type -->
-                    <h2>Template Type</h2>
-                    <div class="tempType">
-                        <label for="posting">
-                            <input type="radio" id="posting" name="type" value="posting" />
-                            <div><div></div></div>
-                            Posting
-                        </label>
-                        <label for="timeline">
-                            <input type="radio" id="timeline" name="type" value="timeline" />
-                            <div><div></div></div>
-                            Timeline
-                        </label>
-                        <label for="tracker">
-                            <input type="radio" id="tracker" name="type" value="tracker" />
-                            <div><div></div></div>
-                            Tracker
-                        </label>
-                        <label for="playlist">
-                            <input type="radio" id="playlist" name="type" value="playlist" />
-                            <div><div></div></div>
-                            Playlist
-                        </label>
-                        <label for="imagedev">
-                            <input type="radio" id="imagedev" name="type" value="imagedev" />
-                            <div><div></div></div>
-                            Image Dev
-                        </label>
-                        <label for="quotedev">
-                            <input type="radio" id="quotedev" name="type" value="quotedev" />
-                            <div><div></div></div>
-                            Quote Dev
-                        </label>
-                    </div>
-
                     <!-- Posting Template -->
                     <div class="hideFirst typeSwitch ifPost">
+                        <hr>
                         <h2>Post Content</h2>
                         <textarea id="postText" name="postText"></textarea>
                     </div>
 
                     <!-- Tracker Template -->
                     <div class="hideFirst typeSwitch ifTrack">
+                        <hr>
                         <span class="twoCol">
                             <h2>Number of Threads</h2>
-                            <input type="number" id="threadCount" name="threadCount" />
+                            <input type="number" id="threadCount" name="threadCount" value="1" />
                         </span>    
                         <h2>Threads</h2>
                         <i class="fullWidth">(Will order by year and month)</i>
@@ -165,15 +187,17 @@
 
                     <!-- Playlist Template -->
                     <div class="hideFirst typeSwitch ifMusic">
+                        <hr>
                         <span class="twoCol">
                             <h2>Number of Songs</h2>
-                            <input type="number" id="songCount" name="songCount" />
+                            <input type="number" id="songCount" name="songCount" value="1" />
                         </span>    
                         <span class="twoCol songList songContent"></span>
                     </div>
 
                     <!-- Image Dev Template -->
                     <div class="hideFirst typeSwitch ifImage">
+                        <hr>
                         <h2>Number of Columns</h2>
                         <span class="fiveCol">
                             <label for="col1">
@@ -204,7 +228,7 @@
                         </span>
                         <span class="twoCol">
                             <h2>Number of Images</h2>
-                            <input type="number" id="imgCount" name="imgCount" />
+                            <input type="number" id="imgCount" name="imgCount" value="1" />
                         </span>    
                         <h2>Image URLs</h2>
                         <span class="urls imgContent"></span>
@@ -212,6 +236,7 @@
 
                     <!-- Quote Template -->
                     <div class="hideFirst typeSwitch ifQuote">
+                        <hr>
                         <h2>Quote</h2>
                         <textarea id="quoteBody" name="quoteBody"></textarea>
                         <h2>Source</h2>
@@ -220,9 +245,10 @@
 
                     <!-- Timeline Template -->
                     <div class="hideFirst typeSwitch ifTime">
+                        <hr>
                         <span class="twoCol">
                             <h2>Number of Events</h2>
-                            <input type="number" id="eventCount" name="eventCount" />
+                            <input type="number" id="eventCount" name="eventCount" value="1" />
                         </span>
                         <h2>Events</h2>
                         <i class="fullWidth">(Will order by year and month)</i>

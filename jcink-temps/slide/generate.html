@@ -25,22 +25,39 @@
 
                     <!-- START FORM CONTENTS -->
 
-                    <!-- Styling -->
-                    <h2>Character</h2>
-                    <input type="text" id="char" name="char" placeholder="First name only." />
-                    <div class="threeCol">
-                        <span>
-                            <h2>Light Accent</h2>
-                            <input type="color" id="ltAccent" name="ltAccent" />  
-                        </span> 
-                        <span>
-                            <h2>Main Accent</h2>
-                            <input type="color" id="accent" name="accent" />
-                        </span>   
-                        <span>
-                            <h2>Dark Accent</h2>
-                            <input type="color" id="dkAccent" name="dkAccent" />
-                        </span>              
+                    <!-- Coloring -->
+                    <div class="twoCol">
+                        <h2 class="fullWidth">Coloring</h2>
+                        <span class="threeCol fullWidth" style="margin-top: 0;">
+                            <label for="ccY">
+                                <input type="radio" id="ccY" name="tc" value="y" />
+                                <div><div></div></div>
+                                Custom
+                            </label>    
+                            <label for="ccD">
+                                <input type="radio" id="ccD" name="tc" value="default" />
+                                <div><div></div></div>
+                                Default
+                            </label>                        
+                        </span>
+                    </div>
+                    <div class="hideFirst ifCustomCol" style="margin-top: 0;">
+                        <h2>Character</h2>
+                        <input type="text" id="char" name="char" placeholder="First name only." /> 
+                        <div class="threeCol">
+                            <span>
+                                <h2>Light Accent</h2>
+                                <input type="color" id="ltAccent" name="ltAccent" />  
+                            </span> 
+                            <span>
+                                <h2>Main Accent</h2>
+                                <input type="color" id="accent" name="accent" />
+                            </span>   
+                            <span>
+                                <h2>Dark Accent</h2>
+                                <input type="color" id="dkAccent" name="dkAccent" />
+                            </span>              
+                        </div>
                     </div>
 
                     <!-- Post Image -->

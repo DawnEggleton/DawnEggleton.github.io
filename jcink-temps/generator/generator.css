@@ -158,6 +158,16 @@ main > section h2 {
     font-weight: 700;
     margin: 0 0 10px 0;
 }
+main > section h1 {
+    color: #f0f0f0;
+    font: 24px mallory_narrow;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+main > section hr {
+    margin: 20px 0;
+}
 main > section label input {
     display: none;
 }
@@ -246,14 +256,6 @@ section input[type="text"] {
     display: grid;
     width: 100%;
 }
-.ifTime span {
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    row-gap: 10px;
-    width: 100%;
-}
 .typeSwitch button {
     margin-top: 0;
 }
@@ -264,13 +266,14 @@ section input[type="text"] {
     display: grid;
     width: 100%;
 }
-.ifTrack span {
+.ifTrack span span {
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     row-gap: 10px;
     width: 100%;
+    margin-bottom: 10px;
 }
 .ifTrack .title {
     grid-column: 1 / 3;

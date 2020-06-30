@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sit Still, Look Pretty Generator</title>
+        <title>Stripe Generator</title>
         <link rel="stylesheet" href="../generator/generator.css" />
         <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-IIED/eyOkM6ihtOiQsX2zizxFBphgnv1zbe1bKA+njdFzkr6cDNy16jfIKWu4FNH" crossorigin="anonymous">
@@ -24,42 +24,6 @@
                 <div class="scroll">
 
                     <!-- START FORM CONTENTS -->
-
-                    <!-- Styling -->
-                    <h2>Character</h2>
-                    <input type="text" id="char" name="char" placeholder="First name only." />
-                    <div class="twoCol">
-                        <span>
-                            <h2>Main Accent</h2>
-                            <input type="color" id="accent" name="accent" />
-                        </span>
-                        <span>
-                            <h2>Lighter Accent</h2>
-                            <input type="color" id="ltAccent" name="ltAccent" />  
-                        </span>               
-                    </div>
-
-                    <!-- Post Header -->
-                    <h2 class="fullWidth">Large Header</h2>
-                    <input type="text" id="lhText" name="lhText" />
-
-                    <!-- Post Subheader -->
-                    <div class="twoCol">
-                        <h2 class="fullWidth">Small Header?</h2>
-                        <span class="twoCol">
-                            <label for="shY">
-                                <input type="radio" id="shY" name="sh" value="y" />
-                                <div><div></div></div>
-                                Yes
-                            </label>
-                            <label for="shN">
-                                <input type="radio" id="shN" name="sh" value="n" />
-                                <div><div></div></div>
-                                No
-                            </label>                        
-                        </span>
-                        <input type="text" id="shText" name="shText" class="ifSH hideFirst" />
-                    </div>
 
                     <!-- Template Type -->
                     <h2>Template Type</h2>
@@ -86,29 +50,85 @@
                         </label>
                     </div>
 
+                    <!-- Coloring -->
+                    <div class="twoCol">
+                        <h2 class="fullWidth">Coloring</h2>
+                        <span class="threeCol fullWidth" style="margin-top: 0;">
+                            <label for="ccY">
+                                <input type="radio" id="ccY" name="tc" value="y" />
+                                <div><div></div></div>
+                                Custom
+                            </label>    
+                            <label for="ccD">
+                                <input type="radio" id="ccD" name="tc" value="default" />
+                                <div><div></div></div>
+                                Default
+                            </label>                        
+                        </span>
+                    </div>
+                    <div class="hideFirst ifCustomCol" style="margin-top: 0;">
+                        <div class="threeCol">
+                            <span>
+                                <h2>Character</h2>
+                                <input type="text" id="char" name="char" placeholder="First name only." /> 
+                            </span>
+                            <span>
+                                <h2>Main Accent</h2>
+                                <input type="color" id="accent" name="accent" />
+                            </span>
+                            <span>
+                                <h2>Lighter Accent</h2>
+                                <input type="color" id="ltAccent" name="ltAccent" />  
+                            </span>                 
+                        </div>
+                    </div>
+
+                    <!-- Post Header -->
+                    <h2 class="fullWidth">Large Header</h2>
+                    <input type="text" id="lhText" name="lhText" />
+
                     <!-- Large & Small Template -->
                     <div class="hideFirst typeSwitch ifPost">
+                        <hr>
+                        <div class="twoCol">
+                            <h2 class="fullWidth">Small Header?</h2>
+                            <span class="twoCol">
+                                <label for="shY">
+                                    <input type="radio" id="shY" name="sh" value="y" />
+                                    <div><div></div></div>
+                                    Yes
+                                </label>
+                                <label for="shN">
+                                    <input type="radio" id="shN" name="sh" value="n" />
+                                    <div><div></div></div>
+                                    No
+                                </label>                        
+                            </span>
+                            <input type="text" id="shText" name="shText" class="ifSH hideFirst" />
+                        </div>
                         <h2>Post Content</h2>
                         <textarea id="postText" name="postText"></textarea>
                     </div>
 
                     <!-- Tabbed Template -->
                     <div class="hideFirst typeSwitch ifTabbed">
+                        <hr>
                         <span class="twoCol">
                             <h2>Number of Tabs</h2>
-                            <input type="number" name="tabCount" id="tabCount" />
+                            <input type="number" name="tabCount" id="tabCount" value="1" />
                         </span>
                         <h2>Tabs</h2>
                         <div class="tabContents"></div>
                     </div>
 
                     <!-- Timeline Template -->
-                    <div class="hideFirst typeSwitch ifTime">                        
+                    <div class="hideFirst typeSwitch ifTime">
+                        <hr>                        
                         <h2 class="fullWidth">Image</h2>
                         <input type="text" id="imgURL" name="imgURL" />
                         <span class="twoCol">
                             <h2>Number of Events</h2>
-                            <input type="number" name="eventCount" id="eventCount" />
+                            <input type="number" name="eventCount" id="eventCount" value="1" />
                         </span>
                         <h2 style="margin-top: 20px;">Events</h2>
                         <i class="fullWidth">(Will order by year and month)</i>

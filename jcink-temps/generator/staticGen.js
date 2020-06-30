@@ -1,3 +1,43 @@
+//default counter variables
+let imgCount, songCount, tabCount, msgCount, igCount, eventCount, threadCount, charCount;
+
+if ($('#imgCount').val()) {
+    imgCount = [$('#imgCount').val()];
+}
+if ($('#songCount').val()) {
+    songCount = [$('#songCount').val()];
+}
+if ($('#tabCount').val()) {
+    tabCount = [$('#tabCount').val()];
+}
+if ($('#msgCount').val()) {
+    msgCount = [$('#msgCount').val()];
+}
+if ($('#commCount').val()) {
+    igCount = [$('#commCount').val()];
+}
+if ($('#eventCount').val()) {
+    eventCount = [$('#eventCount').val()];
+}
+if ($('#threadCount').val()) {
+    threadCount = [$('#threadCount').val()];
+}
+if ($('#charCount').val()) {
+    charCount = [$('#charCount').val()];
+}
+$('input[name="tc"]').change(function () {
+    if($(this).val() == 'y') {
+        $('.ifCustomCol').show();
+        $('.ifGroupCol').hide();
+    } else if($(this).val() == 'n') {
+        $('.ifCustomCol').hide();
+        $('.ifGroupCol').show();
+    } else {
+        $('.ifGroupCol').hide();
+        $('.ifCustomCol').hide();
+    }
+});
+
 //Preview Tabs
 $('.result h3').on('click', function () {
     $('.result h3').removeClass('active');
@@ -174,7 +214,8 @@ function hexToRgb(hex) {
 
   
 //Add/Subtract Fields
-function addFields(counterName, htmlPieces, appendBox) {
+/*
+function addFieldsOriginal(counterName, htmlPieces, appendBox) {
     $('input[name="' + counterName + '"]').change(function () {
         var html = '';
         for (var i = 0; i < $(this).val(); i++) {
@@ -187,6 +228,30 @@ function addFields(counterName, htmlPieces, appendBox) {
             }
         }
         $('.' + appendBox).html(html);
+    });
+}
+*/
+function addFields(counter, counterName, htmlPieces, appendBox) {
+    $('input[name="' + counterName + '"]').change(function () {
+        if ($(this).val() < counter) {
+            //if decrement
+            $('.' + appendBox).children().last().remove();
+            counter[0] = $(this).val();
+        } else if ($(this).val() > counter) {
+            //if increment
+            var html = '';
+            for (var j = 0; j < htmlPieces.length; j++) {
+                if (j == 0) {
+                    html += htmlPieces[j];
+                } else {
+                    html += $(this).val() + htmlPieces[j];
+                }            
+            }
+            $('.' + appendBox).append(html);
+            counter[0] = $(this).val();
+        } else {
+            console.log('no real change');
+        }
     });
 }
 function addFieldsPL(counterName, htmlPieces, appendBox) {
@@ -205,28 +270,27 @@ function addFieldsPL(counterName, htmlPieces, appendBox) {
 
 //Complex Field Generation
 var imgHTML = ['<input type="text" name="i', '" class="iLink" />'];
-addFields('imgCount', imgHTML, 'imgContent');
+addFields(imgCount, 'imgCount', imgHTML, 'imgContent');
 
-var songHTML = ['<input type="text" name="s', '" class="songTitle" placeholder="Song Name" /><input type="text" name="s', '" class="songArtist" placeholder="Song Artist" />'];
-addFields('songCount', songHTML, 'songContent');
+var songHTML = ['<span class="twoCol fullWidth"><input type="text" name="s', '" class="songTitle" placeholder="Song Name" /><input type="text" name="s', '" class="songArtist" placeholder="Song Artist" /></span>'];
+addFields(songCount, 'songCount', songHTML, 'songContent');
 
 var tabHTML = ['<span class="twoCol altCol"><input id="tabTitle', '" placeholder="Tab Title" /><textarea id="tabText', '"placeholder="Tab Contents"></textarea></span>'];
-addFields('tabCount', tabHTML, 'tabContents');
+addFields(tabCount, 'tabCount', tabHTML, 'tabContents');
 
 var msgHTML = ['<textarea class="message" id="msg', '"></textarea>'];
-addFields('msgCount', msgHTML, 'msgContents');
+addFields(msgCount, 'msgCount', msgHTML, 'msgContents');
 
 var igHTML = ['<span class="twoCol"><input type="text" id="igNPCName', '" name="igNPCName', '" placeholder="Commenter Name" /><input type="text" id="igNPCText', '" name="igNPCText', '" placeholder="Comment" /></span>'];
-addFields('commCount', igHTML, 'igComments');
+addFields(igCount, 'commCount', igHTML, 'igComments');
 
-var eventHTML = ['<input type="text" name="ev', '" class="year" placeholder="YYYY" /><input type="text" name="ev', '" class="month" placeholder="MM" /><input type="text" name="ev', '" class="event" placeholder="Event" />'];
-addFields('eventCount', eventHTML, 'eventContent');
+var eventHTML = ['<span class="threeCol"><input type="text" name="ev', '" class="year" placeholder="YYYY" /><input type="text" name="ev', '" class="month" placeholder="MM" /><input type="text" name="ev', '" class="event" placeholder="Event" /></span>'];
+addFields(eventCount, 'eventCount', eventHTML, 'eventContent');
 
-var threadHTML = ['<input type="text" name="post', '" class="title" placeholder="Thread Title" /><input type="text" name="post', '" class="tid" placeholder="Topic ID" /><select name="post', '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post', '" class="feat" placeholder="Featuring" /><input type="text" name="post', '" class="year" placeholder="YYYY" /><input type="text" name="post', '" class="month" placeholder="MM" /><input type="text" name="post', '" class="location" placeholder="location" />'];
-addFields('threadCount', threadHTML, 'threadContent');
+var threadHTML = ['<span><input type="text" name="post', '" class="title" placeholder="Thread Title" /><input type="text" name="post', '" class="tid" placeholder="Topic ID" /><select name="post', '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post', '" class="feat" placeholder="Featuring" /><input type="text" name="post', '" class="year" placeholder="YYYY" /><input type="text" name="post', '" class="month" placeholder="MM" /><input type="text" name="post', '" class="location" placeholder="location" /></span>'];
+addFields(threadCount, 'threadCount', threadHTML, 'threadContent');
 
 
-console.log('start complex fields');
 //set up complex fields
 $('input[name="type"]').change(function () {
 	switch($(this).val()) {

@@ -24,19 +24,28 @@
                 <div class="scroll">
 
                     <!-- START FORM CONTENTS -->
+                    <!-- Template Type -->
+                    <h2>Template Type</h2>
+                    <div class="tempType">
+                        <label for="posting">
+                            <input type="radio" id="posting" name="type" value="posting" />
+                            <div><div></div></div>
+                            Posting
+                        </label>
+                        <label for="timeline">
+                            <input type="radio" id="timeline" name="type" value="timeline" />
+                            <div><div></div></div>
+                            Timeline
+                        </label>
+                        <label for="tabbed">
+                            <input type="radio" id="tabbed" name="type" value="tabbed" />
+                            <div><div></div></div>
+                            Tabbed
+                        </label>
+                    </div>
 
-                    <!-- Styling -->
-                    <h2>Character</h2>
-                    <input type="text" id="char" name="char" placeholder="First name only." />
-                    <div class="threeCol">
-                        <span>
-                            <h2>Main Accent</h2>
-                            <input type="color" id="accent" name="accent" />  
-                        </span> 
-                        <span>
-                            <h2>Light Accent</h2>
-                            <input type="color" id="ltAccent" name="ltAccent" />  
-                        </span> 
+                    <!-- Coloring -->
+                    <div class="twoCol">
                         <span>
                             <h2>Width</h2>
                             <select name="tempSize" id="tempSize">
@@ -44,7 +53,38 @@
                                 <option value="m">Medium</option>
                                 <option value="l">Large</option>
                             </select>                            
-                        </span>         
+                        </span>  
+                        <span>
+                            <h2 class="fullWidth">Coloring</h2>
+                            <span class="twoCol fullWidth" style="margin-top: 0;">
+                                <label for="ccY">
+                                    <input type="radio" id="ccY" name="tc" value="y" />
+                                    <div><div></div></div>
+                                    Custom
+                                </label>    
+                                <label for="ccD">
+                                    <input type="radio" id="ccD" name="tc" value="default" />
+                                    <div><div></div></div>
+                                    Default
+                                </label>                        
+                            </span>
+                        </span>
+                    </div>
+                    <div class="hideFirst ifCustomCol" style="margin-top: 0;">
+                        <div class="threeCol">
+                            <span>
+                                <h2>Character</h2>
+                                <input type="text" id="char" name="char" placeholder="First name only." /> 
+                            </span>
+                            <span>
+                                <h2>Main Accent</h2>
+                                <input type="color" id="accent" name="accent" />  
+                            </span> 
+                            <span>
+                                <h2>Light Accent</h2>
+                                <input type="color" id="ltAccent" name="ltAccent" />  
+                            </span>            
+                        </div>
                     </div>
 
                     <!-- Post Header -->
@@ -83,28 +123,9 @@
                         <input type="text" id="shText" name="shText" class="ifSH hideFirst" />
                     </div>
 
-                    <!-- Template Type -->
-                    <h2>Template Type</h2>
-                    <div class="tempType">
-                        <label for="posting">
-                            <input type="radio" id="posting" name="type" value="posting" />
-                            <div><div></div></div>
-                            Posting
-                        </label>
-                        <label for="timeline">
-                            <input type="radio" id="timeline" name="type" value="timeline" />
-                            <div><div></div></div>
-                            Timeline
-                        </label>
-                        <label for="tabbed">
-                            <input type="radio" id="tabbed" name="type" value="tabbed" />
-                            <div><div></div></div>
-                            Tabbed
-                        </label>
-                    </div>
-
                     <!-- Posting Template -->
                     <div class="hideFirst typeSwitch ifPost">
+                        <hr>
                         <h2>Scrolling?</h2>
                         <span class="twoCol">
                             <label for="scrollY">
@@ -124,9 +145,10 @@
 
                     <!-- Tabbed Template -->
                     <div class="hideFirst typeSwitch ifTabbed">
+                        <hr>
                         <span class="twoCol">
                             <h2>Number of Tabs</h2>
-                            <input type="number" name="tabCount" id="tabCount" />
+                            <input type="number" name="tabCount" id="tabCount" value="1" />
                         </span>
                         <h2>Tabs</h2>
                         <div class="tabContents"></div>
@@ -134,9 +156,10 @@
 
                     <!-- Timeline Template -->
                     <div class="hideFirst typeSwitch ifTime">
+                        <hr>
                         <span class="twoCol">
                             <h2>Number of Events</h2>
-                            <input type="number" name="eventCount" id="eventCount" />
+                            <input type="number" name="eventCount" id="eventCount" value="1" />
                         </span>
                         <h2>Events</h2>
                         <i class="fullWidth">(Will order by year and month)</i>

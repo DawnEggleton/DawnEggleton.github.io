@@ -18,43 +18,14 @@ let imageNum = [0], songNum = [0], quote, source, images, songs, columns;
 showhide('lh', 'ifLH');
 showhide('ih', 'ifIH');
 showhide('idt', 'ifIDT');
-$('input[name="tc"]').change(function () {
-    if($(this).val() == 'y') {
-        $('.ifCustomCol').show();
-        $('.ifGroupCol').hide();
-    } else if($(this).val() == 'n') {
-        $('.ifCustomCol').hide();
-        $('.ifGroupCol').show();
-    } else {
-        $('.ifGroupCol').hide();
-        $('.ifCustomCol').hide();
-    }
-});
 
 //Show/Hide Complex Fields
 
 
 //Complex Field Generation
-var imgHTML = ['<input type="text" name="i', '" class="iLink" />'];
-addFields('imgCount', imgHTML, 'imgContent');
-
-var songHTML = ['<input type="text" name="s', '" class="songTitle" placeholder="Song Name" /><input type="text" name="s', '" class="songArtist" placeholder="Song Artist" />'];
-addFields('songCount', songHTML, 'songContent');
-
-var tabHTML = ['<span class="twoCol altCol"><input id="tabTitle', '" placeholder="Tab Title" /><textarea id="tabText', '"placeholder="Tab Contents"></textarea></span>'];
-addFields('tabCount', tabHTML, 'tabContents');
 
 var charHTML = ['<span class="twoCol altCol"><span><input id="charName', '" placeholder="Section Title" /><input id="charImg', '" placeholder="Section Image" style="margin-top: 20px;" /></span><textarea id="charText', '"placeholder="Section Contents"></textarea></span>'];
-addFields('charCount', charHTML, 'wantContents');
-
-var msgHTML = ['<textarea class="message" id="msg', '"></textarea>'];
-addFields('msgCount', msgHTML, 'msgContents');
-
-var eventHTML = ['<input type="text" name="ev', '" class="year" placeholder="YYYY" /><input type="text" name="ev', '" class="month" placeholder="MM" /><input type="text" name="ev', '" class="event" placeholder="Event" />'];
-addFields('eventCount', eventHTML, 'eventContent');
-
-var threadHTML = ['<input type="text" name="post', '" class="title" placeholder="Thread Title" /><input type="text" name="post', '" class="tid" placeholder="Topic ID" /><select name="post', '" class="status"><option value="ip">in progress</option><option value="c">complete</option><option value="ic">incomplete</option></select><input type="text" name="post', '" class="feat" placeholder="Featuring" /><input type="text" name="post', '" class="year" placeholder="YYYY" /><input type="text" name="post', '" class="month" placeholder="MM" /><input type="text" name="post', '" class="location" placeholder="location" />'];
-addFields('threadCount', threadHTML, 'threadContent');
+addFields(charCount, 'charCount', charHTML, 'wantContents');
 
 
 //Set Variables

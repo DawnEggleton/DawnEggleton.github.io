@@ -26,108 +26,6 @@
 
                     <!-- START FORM CONTENTS -->
 
-                    <!-- Styling -->
-                    <div class="twoCol">
-                        <span>
-                            <h2>Template Size</h2>
-                            <select name="tempSize">
-                                <option value="">Standard</option>
-                                <option value="xsmall">Extra Small</option>
-                                <option value="small">Small</option>
-                                <option value="large">Large</option>
-                                <option value="xlarge">Extra Large</option>
-                            </select>
-                        </span>                        
-                        <span>
-                            <h2>Font Size</h2>
-                            <select name="fontSize">
-                                <option value="">Standard</option>
-                                <option value="smlFont">Small Font</option>
-                                <option value="lrgFont">Large Font</option>
-                            </select>
-                        </span>
-                        <span>
-                            <h2 class="fullWidth" style="margin-top: 20px;">Scrolling?</h2>
-                            <span class="twoCol">
-                                <label for="scY">
-                                    <input type="radio" id="scY" name="sc" value="y" />
-                                    <div><div></div></div>
-                                    Yes
-                                </label>
-                                <label for="scN">
-                                    <input type="radio" id="scN" name="sc" value="n" />
-                                    <div><div></div></div>
-                                    No
-                                </label>                        
-                            </span>
-                        </span>
-                        <span>
-                            <h2 class="fullWidth" style="margin-top: 20px;">Dark Mode?</h2>
-                            <span class="twoCol">
-                                <label for="dmY">
-                                    <input type="radio" id="dmY" name="dm" value="y" />
-                                    <div><div></div></div>
-                                    Yes
-                                </label>
-                                <label for="dmN">
-                                    <input type="radio" id="dmN" name="dm" value="n" />
-                                    <div><div></div></div>
-                                    No
-                                </label>                        
-                            </span>
-                        </span>
-                        <h2 class="fullWidth" style="margin-top: 20px;">Coloring</h2>
-                        <span class="threeCol fullWidth" style="margin-top: 0;">
-                            <label for="ccN">
-                                <input type="radio" id="ccN" name="tc" value="n" />
-                                <div><div></div></div>
-                                Group
-                            </label>
-                            <label for="ccY">
-                                <input type="radio" id="ccY" name="tc" value="y" />
-                                <div><div></div></div>
-                                Custom
-                            </label>    
-                            <label for="ccD">
-                                <input type="radio" id="ccD" name="tc" value="default" />
-                                <div><div></div></div>
-                                Default
-                            </label>                        
-                        </span>
-                    </div>
-                    <div class="hideFirst ifGroupCol">
-                        <span class="twoCol">
-                            <h2>Group</h2>
-                            <select name="groupColor">
-                                <option value="Gryffindor">Gryffindor</option>
-                                <option value="Ravenclaw">Ravenclaw</option>
-                                <option value="Slytherin">Slytherin</option>
-                                <option value="Hufflepuff">Hufflepuff</option>
-                                <option value="Ministry">Ministry</option>
-                                <option value="Healer">Healer</option>
-                                <option value="Quidditch">Quidditch</option>
-                                <option value="Research">Research</option>
-                                <option value="Media">Media</option>
-                                <option value="Adult">Adult</option>
-                                <option value="Student">Student</option>
-                            </select>
-                        </span>
-                    </div>
-                    <div class="hideFirst ifCustomCol">
-                        <h2>Character</h2>
-                        <input type="text" id="char" name="char" placeholder="First name only." /> 
-                        <div class="twoCol">
-                            <span>
-                                <h2>Main Accent</h2>
-                                <input type="color" id="darkAccent" name="darkAccent" />
-                            </span>
-                            <span>
-                                <h2>Bright Accent</h2>
-                                <input type="color" id="brightAccent" name="brightAccent" />  
-                            </span>               
-                        </div>
-                    </div>
-
                     <!-- Template Type -->
                     <h2>Template Type</h2>
                     <div class="tempType">
@@ -173,8 +71,119 @@
                         </label>
                     </div>
 
+                    <!-- Styling -->
+                    <div class="threeCol">
+                        <span>
+                            <h2>Template Size</h2>
+                            <select name="tempSize">
+                                <option value="">Standard</option>
+                                <option value="xsmall">Extra Small</option>
+                                <option value="small">Small</option>
+                                <option value="large">Large</option>
+                                <option value="xlarge">Extra Large</option>
+                            </select>
+                        </span>                        
+                        <span>
+                            <h2>Font Size</h2>
+                            <select name="fontSize">
+                                <option value="">Standard</option>
+                                <option value="smlFont">Small Font</option>
+                                <option value="lrgFont">Large Font</option>
+                            </select>
+                        </span>
+                        <span>
+                            <h2 class="fullWidth">Dark Mode?</h2>
+                            <span class="twoCol">
+                                <label for="dmY">
+                                    <input type="radio" id="dmY" name="dm" value="y" />
+                                    <div><div></div></div>
+                                    Yes
+                                </label>
+                                <label for="dmN">
+                                    <input type="radio" id="dmN" name="dm" value="n" />
+                                    <div><div></div></div>
+                                    No
+                                </label>                        
+                            </span>
+                        </span>
+                    </div>
+
+                    <!-- Coloring -->
+                    <div class="twoCol">
+                        <h2 class="fullWidth">Coloring</h2>
+                        <span class="threeCol fullWidth" style="margin-top: 0;">
+                            <label for="ccN">
+                                <input type="radio" id="ccN" name="tc" value="n" />
+                                <div><div></div></div>
+                                Group
+                            </label>
+                            <label for="ccY">
+                                <input type="radio" id="ccY" name="tc" value="y" />
+                                <div><div></div></div>
+                                Custom
+                            </label>    
+                            <label for="ccD">
+                                <input type="radio" id="ccD" name="tc" value="default" />
+                                <div><div></div></div>
+                                Default
+                            </label>                        
+                        </span>
+                    </div>
+                    <div class="hideFirst ifGroupCol">
+                        <span class="twoCol">
+                            <h2>Group</h2>
+                            <select name="groupColor">
+                                <option value="Gryffindor">Gryffindor</option>
+                                <option value="Ravenclaw">Ravenclaw</option>
+                                <option value="Slytherin">Slytherin</option>
+                                <option value="Hufflepuff">Hufflepuff</option>
+                                <option value="Ministry">Ministry</option>
+                                <option value="Healer">Healer</option>
+                                <option value="Quidditch">Quidditch</option>
+                                <option value="Research">Research</option>
+                                <option value="Media">Media</option>
+                                <option value="Adult">Adult</option>
+                                <option value="Student">Student</option>
+                            </select>
+                        </span>
+                    </div>
+                    <div class="hideFirst ifCustomCol" style="margin-top: 0;">
+                        <div class="threeCol">
+                            <span>
+                                <h2>Character</h2>
+                                <input type="text" id="char" name="char" placeholder="First name only." /> 
+                            </span>
+                            <span>
+                                <h2>Main Accent</h2>
+                                <input type="color" id="darkAccent" name="darkAccent" />
+                            </span>
+                            <span>
+                                <h2>Bright Accent</h2>
+                                <input type="color" id="brightAccent" name="brightAccent" />  
+                            </span>               
+                        </div>
+                    </div>
+
+                    <!-- Scrolling -->
+                    <span class="hideFirst ifPost ifTab ifWant ifTrack">
+                        <h2 class="fullWidth" style="margin-top: 20px;">Scrolling?</h2>
+                        <span class="twoCol">
+                            <label for="scY">
+                                <input type="radio" id="scY" name="sc" value="y" />
+                                <div><div></div></div>
+                                Yes
+                            </label>
+                            <label for="scN">
+                                <input type="radio" id="scN" name="sc" value="n" />
+                                <div><div></div></div>
+                                No
+                            </label>                        
+                        </span>
+                    </span>
+
                     <!-- Posting Template -->
                     <div class="hideFirst typeSwitch ifPost">
+                        <hr>
                         <div class="twoCol">
                             <h2 class="fullWidth">Title / Tag</h2>
                             <input type="text" id="postTitle" name="postTitle" />
@@ -185,6 +194,7 @@
 
                     <!-- Tabbed Template -->
                     <div class="hideFirst typeSwitch ifTab">
+                        <hr>
                         <div class="twoCol">
                             <h2 class="fullWidth">Title?</h2>
                             <span class="twoCol">
@@ -217,14 +227,17 @@
                             </span>
                             <input type="text" id="ihURL" name="ihURL" class="ifIH hideFirst" />
                         </div>
-                        <h2>Tab Count</h2>
-                        <input type="number" id="tabCount" name="tabCount" />                        
-                        <h2 class="fullWidth" style="margin-top: 20px;">Tabs</h2>
+                        <span class="twoCol">
+                            <h2>Number of Tabs</h2>
+                            <input type="number" id="tabCount" name="tabCount" value="1" />  
+                        </span>                      
+                        <h2 class="fullWidth">Tabs</h2>
                         <div class="tabContents"></div>
                     </div>
 
                     <!-- Phone -->
                     <div class="hideFirst typeSwitch ifPhone">
+                        <hr>
                         <div class="twoCol">
                             <h2 class="fullWidth">Method</h2>
                             <span class="twoCol fullWidth">
@@ -245,8 +258,10 @@
                             <input type="text" id="phoneImg" name="phoneImg" />
                             <h2>Tag</h2>
                             <input type="text" id="phoneTag" name="phoneTag" />
-                            <h2>Message Count</h2>
-                            <input type="number" id="msgCount" name="msgCount" />                        
+                            <span class="twoCol fullWidth">
+                                <h2>Number of Messages</h2>
+                                <input type="number" id="msgCount" name="msgCount" value="1" />  
+                            </span>                      
                             <h2 class="fullWidth" style="margin-top: 20px;">Messages</h2>
                             <div class="msgContents fullWidth altCol"></div>
                         </div>
@@ -254,6 +269,7 @@
 
                     <!-- Wanted -->
                     <div class="hideFirst typeSwitch ifWant">
+                        <hr>
                         <div class="twoCol">
                             <h2 class="fullWidth">Style</h2>
                             <span class="twoCol">
@@ -269,17 +285,20 @@
                                 </label>                        
                             </span>
                         </div>
-                        <h2>Section Count</h2>
-                        <input type="number" id="charCount" name="charCount" />                        
-                        <h2 class="fullWidth" style="margin-top: 20px;">Characters</h2>
+                        <span class="twoCol">
+                            <h2>Number of Sections</h2>
+                            <input type="number" id="charCount" name="charCount" value="1" /> 
+                        </span>                       
+                        <h2 class="fullWidth">Sections</h2>
                         <div class="wantContents"></div>
                     </div>
 
                     <!-- Tracker Template -->
                     <div class="hideFirst typeSwitch ifTrack">
+                        <hr>
                         <span class="twoCol">
                             <h2>Number of Threads</h2>
-                            <input type="number" name="threadCount" id="threadCount" />
+                            <input type="number" name="threadCount" id="threadCount" value="1" />
                         </span>
                         <h2>Threads</h2>
                         <i class="fullWidth">(Will order by year and month)</i>
@@ -288,6 +307,7 @@
 
                     <!-- Playlist Template -->
                     <div class="hideFirst typeSwitch ifMusic">
+                        <hr>
                         <h2>Time</h2>
                         <input type="text" id="musicTime" name="phoneTime" placeholder="The time you want for the message/call" />
                         <h2 style="margin-top: 20px;">Image</h2>
@@ -296,7 +316,7 @@
                         <input type="text" id="musicLink" name="musicLink" />
                         <span class="twoCol">
                             <h2>Number of Songs</h2>
-                            <input type="number" name="songCount" id="songCount" />
+                            <input type="number" name="songCount" id="songCount" value="1" />
                         </span>
                         <h2 class="fullWidth">Songs</h2>
                         <span class="twoCol songList songContent"></span>
@@ -304,6 +324,7 @@
 
                     <!-- Image Dev Template -->
                     <div class="hideFirst typeSwitch ifImage">
+                        <hr>
                         <div class="twoCol">
                             <h2 class="fullWidth">Title?</h2>
                             <span class="twoCol">
@@ -350,7 +371,7 @@
                         </span>
                         <span class="twoCol">
                             <h2>Number of Images</h2>
-                            <input type="number" name="imgCount" id="imgCount" />
+                            <input type="number" name="imgCount" id="imgCount" value="1" />
                         </span>
                         <h2>Image URLs</h2>
                         <span class="urls imgContent"></span>
@@ -358,9 +379,10 @@
 
                     <!-- Timeline Template -->
                     <div class="hideFirst typeSwitch ifTime">
+                        <hr>
                         <span class="twoCol">
                             <h2>Number of Events</h2>
-                            <input type="number" name="eventCount" id="eventCount" />
+                            <input type="number" name="eventCount" id="eventCount" value="1" />
                         </span>
                         <h2 class="fullWidth">Events</h2>
                         <i class="fullWidth">(Will order by year and month)</i>

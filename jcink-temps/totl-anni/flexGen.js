@@ -11,24 +11,10 @@ let imageNum = [0], songNum = [0], quote, source, images, songs, columns, wanted
 //Show/Hide Basic Fields
 showhide('sc', 'ifScroll');
 
-
-$('input[name="tc"]').change(function () {
-    if($(this).val() == 'y') {
-        $('.ifCustomCol').show();
-        $('.ifGroupCol').hide();
-    } else if($(this).val() == 'n') {
-        $('.ifCustomCol').hide();
-        $('.ifGroupCol').show();
-    } else {
-        $('.ifGroupCol').hide();
-        $('.ifCustomCol').hide();
-    }
-});
-
 //Show/Hide Complex Fields
 
 var charHTML = ['<span class="twoCol altCol"><span><input id="charName', '" placeholder="Section Title" /><input id="charImg', '" placeholder="Section Image" style="margin-top: 20px;" /><input id="charDeets', '" placeholder="Section Details" style="margin-top: 20px;" /></span><textarea id="charText', '"placeholder="Section Contents"></textarea></span>'];
-addFields('charCount', charHTML, 'wantContents');
+addFields(charCount, 'charCount', charHTML, 'wantContents');
 
 
 //Set Variables

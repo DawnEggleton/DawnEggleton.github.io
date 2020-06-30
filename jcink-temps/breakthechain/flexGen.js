@@ -19,18 +19,6 @@ showhide('psc', 'ifPostScroll');
 showhide('tabsc', 'ifTabScroll');
 
 
-$('input[name="tc"]').change(function () {
-    if($(this).val() == 'y') {
-        $('.ifCustomCol').show();
-        $('.ifGroupCol').hide();
-    } else if($(this).val() == 'n') {
-        $('.ifCustomCol').hide();
-        $('.ifGroupCol').show();
-    } else {
-        $('.ifGroupCol').hide();
-        $('.ifCustomCol').hide();
-    }
-});
 $('input[name="tinType"]').change(function () {
     if($(this).val() == 'tinP') {
         $('.ifTinP').show();
@@ -71,7 +59,7 @@ $('input[name="igType"]').change(function () {
 });
 
 var charHTML = ['<span class="twoCol altCol"><span><select name="wantGroup', '"><option value="">Group Not Decided</option><option value="deity">Deity</option><option value="creature">Creature</option><option value="spirit">Spirit</option><option value="gifted">Gifted</option><option value="mortal">Mortal</option></select><input id="charName', '" placeholder="Section Title" style="margin-top: 10px;" /><input id="charImg', '" placeholder="Section Image" style="margin-top: 10px;" /><input id="charDeets', '" placeholder="Section Details" style="margin-top: 10px;" /></span><textarea id="charText', '"placeholder="Section Contents"></textarea></span>'];
-addFields('charCount', charHTML, 'wantContents');
+addFields(charCount, 'charCount', charHTML, 'wantContents');
 
 //Set Variables
 function setValues() {
