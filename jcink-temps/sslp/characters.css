@@ -74,3 +74,9 @@
 	--accent: #D2B55B;
 	--dkAccent: #C49102;
 }
+.sterling .insta-top,
+.sterling .tindr-msgTop,
+.sterling .insta-postImg {
+	--accent: #C49102;
+	--dkAccent: #F5C43C;
+}
