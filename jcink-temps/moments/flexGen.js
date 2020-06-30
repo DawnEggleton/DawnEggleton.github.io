@@ -38,7 +38,7 @@ function setValues() {
 
     //timeline vs tracker
     if(type == 'timeline') {
-        timeline = orderEvents(tevent[0], years, months, events, type, 'ev');
+        timeline = orderEvents($('#eventCount').val(), years, months, events, type, 'ev');
     }
 
     //set up color styles

@@ -162,7 +162,7 @@ function orderEvents(num, yearArray, monthArray, eventArray, type, prefix) {
     yearArray = [];
     monthArray = [];
     eventArray = [];
-    for (var i = 0; i <= num; i++) {
+    for (var i = 0; i < num; i++) {
         var year = $('input[name="' + prefix + i + '"].year').val();
         if(jQuery.inArray(year, yearArray) == -1) {
             yearArray.push(year);

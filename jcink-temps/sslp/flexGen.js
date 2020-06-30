@@ -33,9 +33,9 @@ function setValues() {
 
     //timeline vs tracker
     if(type == 'timeline') {
-        timeline = orderEvents(tevent[0], years, months, events, type, 'ev');
+        timeline = orderEvents($('#eventCount').val(), years, months, events, type, 'ev');
     } else if (type == 'tracker') {
-        tracking = orderEvents(thread[0], tYears, tMonths, threads, type, 'post');
+        tracking = orderEvents($('#eventCount').val(), tYears, tMonths, threads, type, 'post');
     } else if (type == 'imagedev') {
 
     }
@@ -67,7 +67,8 @@ function setValues() {
 
 
 //Build Complex Content
-function buildTimeline (yearArray, monthArray, eventArray) {    
+function buildTimeline (yearArray, monthArray, eventArray) {  
+    console.log(yearArray);  
     for (var i = 0; i < yearArray.length; i++) {
         monthArray.sort();
         var tempYear = '<section><year>\n' + yearArray[i] + '\n</year><events>\n';

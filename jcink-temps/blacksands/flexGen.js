@@ -34,9 +34,9 @@ function setValues() {
 
     //timeline vs tracker
     if(type == 'timeline') {
-        timeline = orderEvents(tevent[0], years, months, events, type, 'ev');
+        timeline = orderEvents($('#eventCount').val(), years, months, events, type, 'ev');
     } else if (type == 'tracker') {
-        tracking = orderEvents(thread[0], tYears, tMonths, threads, type, 'post');
+        tracking = orderEvents($('#eventCount').val(), tYears, tMonths, threads, type, 'post');
     }
 
     //set phone messages
