@@ -25,10 +25,10 @@ showhide('nt', 'ifNT');
 function setValues() {
 
     //set image
-    fromRadio('image', image, '<ib><img src="', '"></ib>');
-    fromRadio('lh', lHead, '<h1>', '</h1>');
-    fromRadio('sh', sHead, '<h2>', '</h2>');
-    fromRadio('nt', tag, '<tag>', '</tag>');
+    fromRadio('image', image, '<ib><img src="', '"></ib>\n\n');
+    fromRadio('lh', lHead, '<h1>', '</h1>\n\n');
+    fromRadio('sh', sHead, '<h2>', '</h2>\n\n');
+    fromRadio('nt', tag, '<tag>', '</tag>\n\n');
     type = $('input[name="type"]:checked').val();
 
     //timeline vs tracker
@@ -209,13 +209,13 @@ function setPostCode() {
     var code =     '<span class="' +
                     $('input[name="char"]').val() +
                     '"><div class="sslp-wrap">' + '\n\n' +
-                    image + '\n\n' +
-                    lHead + '\n\n' +
-                    sHead + '\n\n' +
+                    image +
+                    lHead +
+                    sHead +
                     '<div class="sslp-scroll">' + '\n\n' + 
                     $('#postText').val() + '\n\n' +
                     '</div>' + '\n\n' +
-                    tag + '\n\n' +
+                    tag +
                     '</div></span><link href="//dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="//dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                     colors;
     return code;
@@ -225,9 +225,9 @@ function setTrackerCode() {
     var code =  '<span class="scroll ' +
                 $('input[name="char"]').val() +
                 '"><div class="sslp-wrap tracker">' + '\n\n' +
-                image + '\n\n' +
-                lHead + '\n\n' +
-                sHead + '\n\n' +
+                image +
+                lHead +
+                sHead +
                 '<div class="sslp-scroll">' + '\n\n' + 
                 tracking + '\n\n' +
                 '</div>' + '\n\n' +
@@ -240,11 +240,11 @@ function setImageCode() {
     var code =  '<span class="' +
                 $('input[name="char"]').val() +
                 '"><div class="sslp-wrap">' + '\n\n' + 
-                image + '\n\n' +
-                lHead + '\n\n' +
-                sHead + '\n\n' +
+                image +
+                lHead +
+                sHead +
                 '<span class="imgdev col' + columns + '">' + '\n\n' +
-                images + '\n\n' + 
+                images + '\n\n' +
                 '</span>' + '\n\n' +
                 '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                 colors;
@@ -255,11 +255,11 @@ function setPlaylistCode() {
     var code =  '<span class="scroll ' +
                 $('input[name="char"]').val() +
                 '"><div class="sslp-wrap playlist">' + '\n\n' +
-                image + '\n\n' +
-                lHead + '\n\n' +
-                sHead + '\n\n' +
+                image +
+                lHead +
+                sHead +
                 '<div class="sslp-scroll">' + '\n\n' + 
-                songs + '\n\n' + 
+                songs + '\n\n' +
                 '</div>' + '\n\n' +
                 '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                 colors;
@@ -270,9 +270,9 @@ function setQuoteCode() {
     var code =  '<span class="' +
                 $('input[name="char"]').val() +
                 '"><div class="sslp-wrap quote">' + '\n\n' +
-                image + '\n\n' +
-                lHead + '\n\n' +
-                sHead + '\n\n' +
+                image +
+                lHead +
+                sHead +
                 quote + '\n\n' +
                 source + '\n\n' +
                 '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
@@ -284,9 +284,9 @@ function setTimelineCode() {
     var code =  '<span class="' +
                 $('input[name="char"]').val() +
                 '"><div class="sslp-wrap timeline">' + '\n\n' +
-                image + '\n\n' +
-                lHead + '\n\n' +
-                sHead + '\n\n' +
+                image +
+                lHead +
+                sHead +
                 timeline + '\n\n' +
                 '</div></span><link href="https://dawneggleton.github.io/jcink-temps/sslp/base.css" rel="stylesheet"><link href="https://dawneggleton.github.io/jcink-temps/sslp/characters.css" rel="stylesheet">' +
                 colors;
