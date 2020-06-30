@@ -3,36 +3,54 @@ let imgCount, songCount, tabCount, msgCount, igCount, eventCount, threadCount, c
 
 $("#dkAccent").spectrum({
     color: "#000",
+    showInput: true,
+    showInitial: true,
+    preferredFormat: "hex",
     change: function(color) {
         console.log(color.toHexString());
     }
 });
 $("#accent").spectrum({
     color: "#000",
+    showInput: true,
+    showInitial: true,
+    preferredFormat: "hex",
     change: function(color) {
         console.log(color.toHexString());
     }
 });
 $("#darkAccent").spectrum({
     color: "#000",
+    showInput: true,
+    showInitial: true,
+    preferredFormat: "hex",
     change: function(color) {
         console.log(color.toHexString());
     }
 });
 $("#brightAccent").spectrum({
     color: "#000",
+    showInput: true,
+    showInitial: true,
+    preferredFormat: "hex",
     change: function(color) {
         console.log(color.toHexString());
     }
 });
 $("#textAccent").spectrum({
     color: "#000",
+    showInput: true,
+    showInitial: true,
+    preferredFormat: "hex",
     change: function(color) {
         console.log(color.toHexString());
     }
 });
 $("#ltAccent").spectrum({
     color: "#000",
+    showInput: true,
+    showInitial: true,
+    preferredFormat: "hex",
     change: function(color) {
         console.log(color.toHexString());
     }
