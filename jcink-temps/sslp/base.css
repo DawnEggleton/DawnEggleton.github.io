@@ -17,6 +17,9 @@ a {
   text-transform: none;
   letter-spacing: 0;
 }
+.sslp-wrap p {
+  margin: 20px 0;
+}
 .sslp-wrap ib {
   position: absolute;
   left: -35.5px;
