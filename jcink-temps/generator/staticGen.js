@@ -290,19 +290,25 @@ function addFields(counter, counterName, htmlPieces, appendBox) {
     $('input[name="' + counterName + '"]').change(function () {
         if ($(this).val() < counter) {
             //if decrement
-            $('.' + appendBox).children().last().remove();
+            var diff = counter - $(this).val();
+            for (var i = 0; i < diff; i++) {
+                $('.' + appendBox).children().last().remove();
+            }
             counter[0] = $(this).val();
         } else if ($(this).val() > counter) {
             //if increment
-            var html = '';
-            for (var j = 0; j < htmlPieces.length; j++) {
-                if (j == 0) {
-                    html += htmlPieces[j];
-                } else {
-                    html += ($(this).val() - 1) + htmlPieces[j];
-                }            
+            var diff = $(this).val() - counter;
+            for (var i = 0; i < diff; i++) {
+                var html = '';
+                for (var j = 0; j < htmlPieces.length; j++) {
+                    if (j == 0) {
+                        html += htmlPieces[j];
+                    } else {
+                        html += ($(this).val() - 1) + htmlPieces[j];
+                    }            
+                }
+                $('.' + appendBox).append(html);
             }
-            $('.' + appendBox).append(html);
             counter[0] = $(this).val();
         } else {
             console.log('no real change');
