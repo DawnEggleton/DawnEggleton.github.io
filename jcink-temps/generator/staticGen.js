@@ -244,7 +244,7 @@ function addFields(counter, counterName, htmlPieces, appendBox) {
                 if (j == 0) {
                     html += htmlPieces[j];
                 } else {
-                    html += $(this).val() + htmlPieces[j];
+                    html += ($(this).val() - 1) + htmlPieces[j];
                 }            
             }
             $('.' + appendBox).append(html);
