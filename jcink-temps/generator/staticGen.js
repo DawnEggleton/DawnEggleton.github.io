@@ -156,7 +156,7 @@ function fromRadio(radioName, varName, prefix, suffix) {
 //set up images for image dev
 function setImageDev(imgNamePrefix) {
     var tempImages = '';
-    for (var i = 0; i <= imageNum; i++) {
+    for (var i = 0; i < imgCount; i++) {
         var tempImage = '<img src="' + $('input[name="' + imgNamePrefix + i + '"]').val() + '">\n';
         tempImages += tempImage;
     }
