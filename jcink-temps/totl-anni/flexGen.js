@@ -220,6 +220,7 @@ function setTabbedCode() {
     //content start
     code += '<div class="sl-tempWrap"><div class="sl-tempBox"><div class="sl-tempContent sl-tempTab"><div class="sl-tempTabs"><div class="sl-sticky">\n';
     for(var i = 0; i < $('#tabCount').val(); i++) {
+        console.log('tab ' + i);
         var labelArr = $('#tabTitle' + i).val().split(' ');
         var label = '';
         for (var h = 0; h < labelArr.length; h++) {

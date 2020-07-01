@@ -248,12 +248,13 @@ jQuery.fn.selectText = function(){
 };
 
 //Add Flexible Fields
+/*
 function addFields (fieldVar, fieldType) {
     for(var i = 0; i < $('input[name=add' + fieldType + ']').val(); i++) {
         fieldVar[0]++;
         addFieldSet(fieldVar, fieldType);
     }
-}
+}*/
 
 //Show/Hide Fields
 function showhide (inputName, shClass) {
@@ -300,6 +301,7 @@ function addFields(counter, counterName, htmlPieces, appendBox) {
         if ($(this).val() < counter) {
             //if decrement
             var diff = counter - $(this).val();
+            console.log('diff ' + diff);
             for (var i = 0; i < diff; i++) {
                 $('.' + appendBox).children().last().remove();
             }
@@ -313,7 +315,7 @@ function addFields(counter, counterName, htmlPieces, appendBox) {
                     if (j == 0) {
                         html += htmlPieces[j];
                     } else {
-                        html += ($(this).val() - 1) + htmlPieces[j];
+                        html += ($(this).val() - diff + i) + htmlPieces[j];
                     }            
                 }
                 $('.' + appendBox).append(html);
