@@ -55,6 +55,15 @@ $("#ltAccent").spectrum({
         console.log(color.toHexString());
     }
 });
+$("#dullAccent").spectrum({
+    color: "#000",
+    showInput: true,
+    showInitial: true,
+    preferredFormat: "hex",
+    change: function(color) {
+        console.log(color.toHexString());
+    }
+});
 
 if ($('#imgCount').val()) {
     imgCount = [$('#imgCount').val()];
