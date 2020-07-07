@@ -18,6 +18,16 @@
 	--accent: #d48d79;
 	--dkAccent: #b56b56;
 }
+.cain {
+	--accent: #b2c06d;
+	--dkAccent: #7b8f1a;
+}
+.cain .insta-top,
+.cain .tindr-msgTop,
+.cain .insta-postImg {
+	--accent: #7b8f1a;
+	--dkAccent: #687a13;
+}
 .connor {
 	--accent: #e0d0b5;
 	--dkAccent: #b6a280;
