@@ -1,4 +1,6 @@
 .bs-tempBox, .bs-phoneCase {   
+	color: var(--grey);
+	
 	--black: #121212;
 	--white: #f1f1f1;
 	--grey: #2e2e2e;
