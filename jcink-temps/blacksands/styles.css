@@ -1,6 +1,6 @@
 .bs-tempBox, .bs-phoneCase {   
 	color: var(--grey);
-	
+
 	--black: #121212;
 	--white: #f1f1f1;
 	--grey: #2e2e2e;
@@ -675,6 +675,9 @@ student .bs-phoneCase {
 	margin-bottom: 15px;
 	text-align: justify;
 	line-height: 160%;
+}
+.bs-phoneMsg img {
+	max-width: 100%;
 }
 .bs-phoneSong {
 	width: 100%;
