@@ -75,7 +75,7 @@ quidditch .bs-tempBox,
 quidditch .bs-phoneCase {
 	--darkAccent: #5c3a63;
 	--brightAccent: #8b6792;
-    --brightTrans: rgba(142, 176, 95, 0.3);
+    --brightTrans: rgba(139,103,146, 0.3);
 }
 research .bs-tempBox,
 research .bs-phoneCase {
