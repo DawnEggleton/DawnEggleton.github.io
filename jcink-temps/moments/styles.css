@@ -4,6 +4,8 @@
 .lux-moments {
 	--accent: #869e9d;
 	--ltAccent: #abbebd;
+
+	color: #737373;
 }
 .lux-moments .inline-header {
 	box-sizing: border-box;
