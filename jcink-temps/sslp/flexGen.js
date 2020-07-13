@@ -1,5 +1,5 @@
 //general variables
-let type, colors, image = [''], lHead = [''], sHead = [''], tempCode = '';
+let type, colors = '', image = [''], lHead = [''], sHead = [''], tempCode = '';
 
 //post variables
 let temp_post, tag = [''];
@@ -56,13 +56,15 @@ function setValues() {
     source = '<tag>— ' + $('input[name="quoteSource"]').val() + '</tag>';
 
     //set up color styles
-    colors =        '<style>.' +
-                    $('input[name="char"]').val() +
-                    ' {--accent: ' +
-                    $("#accent").spectrum("get").toHexString() +
-                    '; --dkAccent: ' +
-                    $("#dkAccent").spectrum("get").toHexString() +
-                    ';}</style>';
+    if ($('input[name="tc"]:checked').val() != 'default') {
+        colors =        '<style>.' +
+                        $('input[name="char"]').val() +
+                        ' {--accent: ' +
+                        $("#accent").spectrum("get").toHexString() +
+                        '; --dkAccent: ' +
+                        $("#dkAccent").spectrum("get").toHexString() +
+                        ';}</style>';
+    }
 }
 
 

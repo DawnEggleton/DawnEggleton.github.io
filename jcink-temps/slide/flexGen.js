@@ -16,15 +16,17 @@ function setValues() {
     type = 'posting';
 
     //set up color styles
-    colors =        '<style>.' +
-                    $('input[name="char"]').val() + ' .lux-slide-box ' + 
-                    ' {--accent: ' +
-                    $('input[name="accent"]').spectrum("get").toHexString() +
-                    '; --dkAccent: ' +
-                    $('input[name="dkAccent"]').spectrum("get").toHexString() +
-                    '; --ltAccent: ' +
-                    $('input[name="ltAccent"]').spectrum("get").toHexString() +
-                    ';}</style>';
+    if ($('input[name="tc"]:checked').val() != 'default') {
+        colors =        '<style>.' +
+                        $('input[name="char"]').val() + ' .lux-slide-box ' + 
+                        ' {--accent: ' +
+                        $('input[name="accent"]').spectrum("get").toHexString() +
+                        '; --dkAccent: ' +
+                        $('input[name="dkAccent"]').spectrum("get").toHexString() +
+                        '; --ltAccent: ' +
+                        $('input[name="ltAccent"]').spectrum("get").toHexString() +
+                        ';}</style>';
+    }
 }
 
 //Build Final Content

@@ -42,13 +42,16 @@ function setValues() {
     }
 
     //set up color styles
-    colors =        '<style>' +
-                    '.' + $('input[name="char"]').val() + ' .lux-moments' +
-                    ' {--accent: ' +
-                    $('input[name="accent"]').spectrum("get").toHexString() +
-                    '; --ltAccent: ' +
-                    $('input[name="ltAccent"]').spectrum("get").toHexString() +
-                    '}</style>';
+    
+    if ($('input[name="tc"]:checked').val() != 'default') {
+        colors =        '<style>' +
+                        '.' + $('input[name="char"]').val() + ' .lux-moments' +
+                        ' {--accent: ' +
+                        $('input[name="accent"]').spectrum("get").toHexString() +
+                        '; --ltAccent: ' +
+                        $('input[name="ltAccent"]').spectrum("get").toHexString() +
+                        '}</style>';
+    }
 }
 
 

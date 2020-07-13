@@ -92,20 +92,23 @@ function setValues() {
     });
 
     //set up color styles
-    colors =        '<style>' +
-                    '.' + $('input[name="char"]').val() + ' .temp-wrap,' +
-                    '.' + $('input[name="char"]').val() + ' .cell-wrap,' +
-                    '.' + $('input[name="char"]').val() + ' .tindr-wrap,' +
-                    '.' + $('input[name="char"]').val() + ' .insta-wrap,' +
-                    '.' + $('input[name="char"]').val() + ' .insta-smlWrap,' +
-                    '.' + $('input[name="char"]').val() + '.md-charWrap' +
-                    ' {--dkAccent: ' +
-                    $('input[name="dkAccent"]').spectrum("get").toHexString() +
-                    '; --accent: ' +
-                    $('input[name="accent"]').spectrum("get").toHexString() +
-                    '; --textAccent: ' +
-                    $('input[name="textAccent"]').spectrum("get").toHexString() +
-                    ';}</style>';
+    
+    if ($('input[name="tc"]:checked').val() != 'default') {
+        colors =        '<style>' +
+                        '.' + $('input[name="char"]').val() + ' .temp-wrap,' +
+                        '.' + $('input[name="char"]').val() + ' .cell-wrap,' +
+                        '.' + $('input[name="char"]').val() + ' .tindr-wrap,' +
+                        '.' + $('input[name="char"]').val() + ' .insta-wrap,' +
+                        '.' + $('input[name="char"]').val() + ' .insta-smlWrap,' +
+                        '.' + $('input[name="char"]').val() + '.md-charWrap' +
+                        ' {--dkAccent: ' +
+                        $('input[name="dkAccent"]').spectrum("get").toHexString() +
+                        '; --accent: ' +
+                        $('input[name="accent"]').spectrum("get").toHexString() +
+                        '; --textAccent: ' +
+                        $('input[name="textAccent"]').spectrum("get").toHexString() +
+                        ';}</style>';
+    }
 }
 
 

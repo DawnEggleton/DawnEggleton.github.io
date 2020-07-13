@@ -28,14 +28,17 @@ function setValues() {
     }
 
     //set up color styles
-    colors =        '<style>' +
-                    '.' + $('input[name="char"]').val() + ' .adr2-template,' + 
-                    '.' + $('input[name="char"]').val() + ' .lux-timeline-contain' +
-                    ' {--accent: ' +
-                    $('input[name="accent"]').val() +
-                    '; --ltAccent: ' +
-                    $('input[name="ltAccent"]').val() +
-                    ';}</style>';
+    
+    if ($('input[name="tc"]:checked').val() != 'default') {
+        colors =        '<style>' +
+                        '.' + $('input[name="char"]').val() + ' .adr2-template,' + 
+                        '.' + $('input[name="char"]').val() + ' .lux-timeline-contain' +
+                        ' {--accent: ' +
+                        $('input[name="accent"]').val() +
+                        '; --ltAccent: ' +
+                        $('input[name="ltAccent"]').val() +
+                        ';}</style>';
+    }
 }
 
 

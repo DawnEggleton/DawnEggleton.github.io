@@ -58,16 +58,19 @@ function setValues() {
     //set up color styles
     var fadeAccentArr = hexToRgb($('input[name="brightAccent"]').spectrum("get").toHexString().split('#')[1]);
     var fadeAccent = 'rgba(' + fadeAccentArr.r + ', ' + fadeAccentArr.g + ', ' + fadeAccentArr.b + ', 0.3)';
-    colors =        '<style>' +
-                    '.' + $('input[name="char"]').val() + ' .bs-tempBox,' +
-                    '.' + $('input[name="char"]').val() + ' .bs-phoneCase' +
-                    ' {--darkAccent: ' +
-                    $('input[name="darkAccent"]').spectrum("get").toHexString() +
-                    '; --brightAccent: ' +
-                    $('input[name="brightAccent"]').spectrum("get").toHexString() +
-                    '; --brightTrans: ' +
-                    fadeAccent +
-                    ';}</style>';
+    
+    if ($('input[name="tc"]:checked').val() != 'default') {
+        colors =        '<style>' +
+                        '.' + $('input[name="char"]').val() + ' .bs-tempBox,' +
+                        '.' + $('input[name="char"]').val() + ' .bs-phoneCase' +
+                        ' {--darkAccent: ' +
+                        $('input[name="darkAccent"]').spectrum("get").toHexString() +
+                        '; --brightAccent: ' +
+                        $('input[name="brightAccent"]').spectrum("get").toHexString() +
+                        '; --brightTrans: ' +
+                        fadeAccent +
+                        ';}</style>';
+    }
 }
 
 //Build Complex Content

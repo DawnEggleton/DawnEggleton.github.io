@@ -100,16 +100,19 @@ function setValues() {
     var accentArr = hexToRgb($('input[name="dullAccent"]').spectrum("get").toHexString().split('#')[1]);
     var accent70 = 'rgba(' + accentArr.r + ', ' + accentArr.g + ', ' + accentArr.b + ', 0.7)';
     var accent35 = 'rgba(' + accentArr.r + ', ' + accentArr.g + ', ' + accentArr.b + ', 0.35)';
-    colors =        '<style>' +
-                    '.' + $('input[name="char"]').val() + ' .sl-tempWrap' +
-                    ' {--dullAccent-70: ' +
-                    accent70 +
-                    '; --dullAccent-35: ' +
-                    accent35 +
-                    '; --brightAccent: ' +
-                    $('input[name="brightAccent"]').spectrum("get").toHexString() +
-                    ';}.' + $('input[name="char"]').val() +
-                    ' .sl-tempBox {border-color: var(--brightAccent);}</style>';
+    
+    if ($('input[name="tc"]:checked').val() != 'default') {
+        colors =        '<style>' +
+                        '.' + $('input[name="char"]').val() + ' .sl-tempWrap' +
+                        ' {--dullAccent-70: ' +
+                        accent70 +
+                        '; --dullAccent-35: ' +
+                        accent35 +
+                        '; --brightAccent: ' +
+                        $('input[name="brightAccent"]').spectrum("get").toHexString() +
+                        ';}.' + $('input[name="char"]').val() +
+                        ' .sl-tempBox {border-color: var(--brightAccent);}</style>';
+    }
 }
 
 
