@@ -490,6 +490,7 @@ pre code {
     main > section {
         position: relative;
         width: 100%;
+        height: auto;
         top: unset;
         left: unset;
         right: unset;
