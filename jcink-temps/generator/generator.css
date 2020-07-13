@@ -478,3 +478,19 @@ pre code {
     font-weight: 500;
     font-style: normal;
   }
+
+
+/********************
+    Media Queries
+********************/
+@media only screen and (max-width: 900px) {
+    main {
+        grid-template: 1fr 1fr / 1fr;
+    }
+    main > section {
+        position: relative;
+        width: 100%;
+        left: unset;
+        right: unset;
+    }
+}
