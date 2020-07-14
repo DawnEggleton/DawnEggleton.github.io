@@ -64,6 +64,10 @@
 	--accent: #96b79a;
 	--dkAccent: #519358;
 }
+.jazz {
+	--accent: #cbaec8;
+	--dkAccent: #997495;
+}
 .maggie {
 	--accent: #b6c2b9;
 	--dkAccent: #65806b;
