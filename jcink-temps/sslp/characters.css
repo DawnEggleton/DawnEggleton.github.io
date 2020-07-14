@@ -18,6 +18,10 @@
 	--accent: #d48d79;
 	--dkAccent: #b56b56;
 }
+.basil {
+	--accent: #8b9c7d;
+	--dkAccent: #6c7d5f;
+}
 .cain {
 	--accent: #b2c06d;
 	--dkAccent: #7b8f1a;
