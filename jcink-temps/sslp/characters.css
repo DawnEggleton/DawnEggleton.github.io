@@ -22,13 +22,13 @@
 	--accent: #8b9c7d;
 	--dkAccent: #6c7d5f;
 }
-.cain {
+.loki {
 	--accent: #b2c06d;
 	--dkAccent: #7b8f1a;
 }
-.cain .insta-top,
-.cain .tindr-msgTop,
-.cain .insta-postImg {
+.loki .insta-top,
+.loki .tindr-msgTop,
+.loki .insta-postImg {
 	--accent: #7b8f1a;
 	--dkAccent: #687a13;
 }
