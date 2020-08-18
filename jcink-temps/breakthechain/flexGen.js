@@ -1,5 +1,5 @@
 //general variables
-let type, colors, image = [''], lHead = [''], sHead = [''], tempCode = '', idHead = [''];
+let type, colors = '', image = [''], lHead = [''], sHead = [''], tempCode = '', idHead = [''];
 
 //post variables
 let temp_post, tag = [''], messages;
