@@ -58,6 +58,7 @@ a {
   text-transform: uppercase;
   font-weight: 900;
   color: #000000;  
+  border: 0;
 }
 .sslp-wrap h1 {
   text-align: center;
