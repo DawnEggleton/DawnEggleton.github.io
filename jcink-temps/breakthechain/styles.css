@@ -1250,3 +1250,111 @@ thread:last-of-type {
 .xsmall .temp-wrap {
 	max-width: 250px;
 }
+
+
+
+.temp-content h1,
+.temp-content h2,
+.temp-content h3,
+.temp-content strong,
+.temp-content a {
+    font-family: var(--titleFont);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 30px 0 10px 0;
+}
+.temp-content h4,
+.temp-content h5,
+.temp-content h6 {
+    font-family: var(--titleFont);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 30px auto 10px;
+    max-width: 200px;
+    text-align: center;
+}
+.temp-content h1:first-child,
+.temp-content h2:first-child,
+.temp-content h3:first-child,
+.temp-content h4:first-child,
+.temp-content h5:first-child,
+.temp-content h6:first-child,
+.temp-content h1 + h1,
+.temp-content h1 + h2,
+.temp-content h1 + h3,
+.temp-content h1 + h4,
+.temp-content h1 + h5,
+.temp-content h1 + h6,
+.temp-content h2 + h1,
+.temp-content h2 + h2,
+.temp-content h2 + h3,
+.temp-content h2 + h4,
+.temp-content h2 + h5,
+.temp-content h2 + h6,
+.temp-content h3 + h1,
+.temp-content h3 + h2,
+.temp-content h3 + h3,
+.temp-content h3 + h4,
+.temp-content h3 + h5,
+.temp-content h3 + h6,
+.temp-content h4 + h1,
+.temp-content h4 + h2,
+.temp-content h4 + h3,
+.temp-content h4 + h4,
+.temp-content h4 + h5,
+.temp-content h4 + h6,
+.temp-content h5 + h1,
+.temp-content h5 + h2,
+.temp-content h5 + h3,
+.temp-content h5 + h4,
+.temp-content h5 + h5,
+.temp-content h5 + h6,
+.temp-content h6 + h1,
+.temp-content h6 + h2,
+.temp-content h6 + h3,
+.temp-content h6 + h4,
+.temp-content h6 + h5,
+.temp-content h6 + h6 {
+    margin-top: 0;
+}
+.temp-content h1 {
+    font-size: var(--xlBody);
+}
+.temp-content h2 {
+    font-size: var(--lBody);
+}
+.temp-content h3,
+.temp-content strong,
+.temp-content a {
+    font-size: var(--mBody);
+}
+.temp-content h4 {
+    font-size: var(--mBody);
+}
+.temp-content h5 {
+    font-size: var(--sBody);
+}
+.temp-content h6 {
+    font-size: var(--xsBody);
+}
+.temp-content strong {
+    display: block;
+    margin: 0 0 5px 0;
+}
+.temp-content a {
+    margin: 0;
+    color: var(--dkAccent);
+    letter-spacing: 0;
+}
+.temp-content b {
+    font-weight: 800;
+    color: var(--dkAccent);
+    font-size: var(--xlBody);
+}
+.temp-content i {
+    font-style: italic;
+    color: var(--dkAccent);
+    font-size: var(--lBody);
+}
