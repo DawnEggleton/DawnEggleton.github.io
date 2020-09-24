@@ -1116,12 +1116,12 @@ margin-bottom: 0;
 	letter-spacing: 1px;
 	color: var(--dkGrey);
 }
-thread {
+.temp-track thread {
 	display: block;
 	line-height: 160%;
 	margin-bottom: 20px;
 }
-thread:last-of-type {
+.temp-track thread:last-of-type {
 	margin-bottom: 0;
 }
 .temp-grid {
