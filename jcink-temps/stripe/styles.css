@@ -22,7 +22,7 @@ ul.lux-stripe-tabs li {
 	height: 30px; 
 	cursor: pointer; 
 	text-align: center; 
-	font-size: 8px; 
+	font-size: var(--xsBody, var(--size-xs, 8px)); 
 	font-family: 'raleway', sans-serif; 
 	letter-spacing: 1px; 
 	position: absolute; 
@@ -129,7 +129,7 @@ ul.lux-stripe-tabs li.current{
 	float: left; width: calc(100% - 50px); 
 	min-height: 35px; 
 	font-family: 'raleway', sans-serif; 
-	font-size: 10px; 
+	font-size: var(--sBody, var(--size-s, 10px)); 
 	line-height: 16px; 
 	text-align: justify; 
 	color: #2a2a2a;
@@ -142,7 +142,7 @@ ul.lux-stripe-tabs li.current{
 }
 .lux-timeline-text h2 {
 	font-family: 'roboto', sans-serif; 
-	font-size: 11px; 
+	font-size: var(--mBody, var(--size-sm, 11px)); 
 	line-height: 14px; 
 	color: #000000; 
 	margin-top: -5px; 
@@ -153,7 +153,7 @@ ul.lux-stripe-tabs li.current{
 	font-style: normal; 
 	color: #000000; 
 	text-transform: uppercase; 
-	font-size: 8px; 
+	font-size: var(--xsBody, var(--size-xs, 8px)); 
 	letter-spacing: 1px;
 }
 
@@ -211,7 +211,7 @@ ul.lux-stripe-tabs li.current{
 	line-height: 30px;
 	transform: rotate(-90deg);
 	font-family: 'raleway', sans-serif;
-	font-size: 12px;
+	font-size: var(--mBody, var(--size-m, 12px)); 
 	color: #ffffff;
 	text-align: right;
 	padding: 10px;
@@ -219,7 +219,7 @@ ul.lux-stripe-tabs li.current{
 .adr2-temp-subbar span a {
 	color: #ffffff !important;
 	font-family: 'raleway', sans-serif !important;
-	font-size: 12px !important;
+	font-size: var(--mBody, var(--size-m, 12px)) !important; 
 	text-transform: lowercase;
 }
 .adr2-temp-content {
@@ -233,7 +233,7 @@ ul.lux-stripe-tabs li.current{
 	background: #ffffff;
 	text-align: justify;
 	font-family: 'raleway', sans-serif;
-	font-size: 11px;
+	font-size: var(--mBody, var(--size-sm, 11px)); 
 	line-height: 160%;
 }
 .sub .adr2-temp-content {
@@ -252,7 +252,7 @@ ul.lux-stripe-tabs li.current{
 }
 .adr2-temp-inner h3 {
 	font-family: 'oswald', sans-serif;
-	font-size: 14px;
+	font-size: var(--lBody, var(--size-l, 14px)); 
 	color: var(--accent);
 	margin: 10px 0 5px 0;
 }
