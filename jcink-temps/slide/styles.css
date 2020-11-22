@@ -43,7 +43,7 @@
 	width: 190px;
 	font-family: 'Crimson Text', serif;
 	font-style: italic;
-	font-size: 16px;
+	font-size: var(--xlBody, var(--size-xl, 16px)); 
 	line-height: 18px;
 	color: var(--ltAccent);
 	text-align: center;
@@ -62,13 +62,13 @@
 	bottom: 60px;
 	width: 210px;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 10px;
+	font-size: var(--sBody, var(--size-s, 10px)); 
 	color: var(--accent);
 	text-align: left;
 }
 .lux-slide-tag a {
 	font-family: 'Montserrat', sans-serif;
-	font-size: 10px;
+	font-size: var(--sBody, var(--size-s, 10px)); 
 	color: var(--dkAccent);
 	letter-spacing: 0;
 	text-transform: lowercase;
@@ -84,14 +84,14 @@
 	width: 210px;
 	font-family: 'Crimson Text', serif;
 	font-style: italic;
-	font-size: 14px;
+	font-size: var(--lBody, var(--size-sl, 14px)); 
 	line-height: 20px;
 	color: var(--accent);
 	text-align: right;
 	cursor: pointer;
 }
 .lux-slide-togPost i {
-	font-size: 12px;
+	font-size: var(--mBody, var(--size-m, 12px)); 
 	margin-left: 5px;
 	color: var(--dkAccent);
 }
@@ -110,14 +110,14 @@
 	width: 310px;
 	font-family: 'Crimson Text', serif;
 	font-style: italic;
-	font-size: 14px;
+	font-size: var(--lBody, var(--size-l, 14px)); 
 	line-height: 20px;
 	color: var(--dkAccent);
 	text-align: left;
 	cursor: pointer;
 }
 .lux-slide-togInfo i {
-	font-size: 12px;
+	font-size: var(--mBody, var(--size-m, 12px)); 
 	margin-right: 5px;
 }
 .lux-slide-postBox {
@@ -127,7 +127,7 @@
 	width: 290px;
 	height: 350px;
 	font-family: 'montserrat', sans-serif;
-	font-size: 12px;
+	font-size: var(--mBody, var(--size-m, 12px)); 
 	line-height: 16px;
 	color: #959595;
 	text-align: justify;
@@ -140,7 +140,7 @@
 	color: var(--dkAccent);
 }
 .lux-slide-postBox a {
-	font-size: 10px;
+	font-size: var(--sBody, var(--size-s, 10px)); 
 }
 .lux-slide-postBoxIn {
 	width: calc(100% - 10px);
