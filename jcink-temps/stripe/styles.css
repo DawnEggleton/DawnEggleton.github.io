@@ -142,7 +142,7 @@ ul.lux-stripe-tabs li.current{
 }
 .lux-timeline-text h2 {
 	font-family: 'roboto', sans-serif; 
-	font-size: var(--mBody, var(--size-sm, 11px)); 
+	font-size: var(--mBody, var(--size-m, 11px)); 
 	line-height: 14px; 
 	color: #000000; 
 	margin-top: -5px; 
@@ -233,7 +233,7 @@ ul.lux-stripe-tabs li.current{
 	background: #ffffff;
 	text-align: justify;
 	font-family: 'raleway', sans-serif;
-	font-size: var(--mBody, var(--size-sm, 11px)); 
+	font-size: var(--mBody, var(--size-m, 11px)); 
 	line-height: 160%;
 }
 .sub .adr2-temp-content {
