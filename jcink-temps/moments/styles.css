@@ -100,7 +100,7 @@
 	box-sizing: border-box;
 	background: #ffffff;
 	font-family: 'Karla', sans-serif;
-	font-size: var(--mBody, var(--size-sm, 11px));
+	font-size: var(--mBody, var(--size-m, 11px));
 	text-align: left;
 	display: none;
 	min-height: 240px;
@@ -335,7 +335,7 @@
 	box-sizing: border-box;
 	background: #ffffff;
 	font-family: 'Karla', sans-serif;
-	font-size: var(--mBody, var(--size-sm, 11px));
+	font-size: var(--mBody, var(--size-m, 11px));
 	text-align: left;
 	min-height: 240px;
 	max-height: 520px;
