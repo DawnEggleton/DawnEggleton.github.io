@@ -125,7 +125,7 @@ entertainment .sl-tempBox {
 	background: var(--white);
 	box-sizing: border-box;
 	font-family: var(--bodyFont);
-	font-size: var(--size-s);
+	font-size: var(--sBody, var(--size-s));
 	line-height: 160%;
 	color: var(--mgrey);
 }
@@ -174,7 +174,7 @@ divider {
 .sl-tempChar a {
 	padding: 0 !important;
 	text-transform: uppercase;
-	font-size: var(--size-s);
+	font-size: var(--sBody, var(--size-s));
 }
 .sl-tempChar b.tag {
 	align-self: end;
@@ -183,11 +183,11 @@ divider {
 	align-self: start;
 	text-transform: uppercase;
 	text-align: justify;
-	font-size: var(--size-xs);
+	font-size: var(--xsBody, var(--size-xs));
 	letter-spacing: 1px;
 }
 .sl-tempChar span a {
-	font-size: var(--size-xs);
+	font-size: var(--xsBody, var(--size-xs));
 }
 .sl-tempTab.sl-tempContent {
 	padding: 0;
@@ -211,7 +211,7 @@ divider {
   margin: 0 5px 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: var(--size-xs);	
+  font-size: var(--xsBody, var(--size-xs));
   cursor: pointer;
 }
 .sl-tempWantTab {
@@ -274,17 +274,17 @@ divider {
 .sl-tempSong i {
 	grid-row-start: 1;
 	grid-row-end: 3;
-	font-size: 14px;
+	font-size: var(--lBody, var(--size-l));
 }
 .sl-tempSong b {
 	align-self: end;
 	padding: 0 !important;
-	font-size: var(--size-s);
+	font-size: var(--sBody, var(--size-s));
 	text-transform: uppercase;
 }
 .sl-tempSong span {
 	align-self: start;
-	font-size: var(--size-xs);
+	font-size: var(--xsBody, var(--size-xs));
 	text-transform: uppercase;
 	letter-spacing: 0;
 }
@@ -300,7 +300,7 @@ divider {
 }
 .sl-tempQuote qsource {
 	display: block;
-	font-size: var(--size-xs);
+	font-size: var(--xsBody, var(--size-xs));
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	padding: 20px 20px 0;
@@ -319,7 +319,7 @@ divider {
 	border-bottom: 0;
 }
 .dir-name {
-	font-size: var(--size-l);
+	font-size: var(--lBody, var(--size-l));
 	text-transform: uppercase;
 	color: var(--black);
 	font-weight: bold;
@@ -332,8 +332,8 @@ divider {
 }
 .dir-name i {
 	text-align: right;
-	font-size: var(--size-xs);
-	line-height: var(--size-xs);
+	font-size: var(--xsBody, var(--size-xs));
+	line-height: var(--xsBody), var(--size-xs));
 	align-self: end;
 	font-style: normal;
 }
@@ -350,7 +350,7 @@ divider {
 	padding-right: 15px;
 	overflow: auto;
 	height: calc(100% - 140px);
-	font-size: var(--size-m);
+	font-size: var(--mBody, var(--size-m));
 	box-sizing: border-box;
 	scrollbar-width: thin;
 	scrollbar-color: var(--black) transparent;
@@ -375,10 +375,10 @@ divider {
 	margin: 0;
 	padding: 0;
 	align-self: end;
-	font-size: var(--size-s) !important;
+	font-size: var(--sBody, var(--size-s)) !important;
 }
 .dir-topper b {
-	font-size: var(--size-xs) !important;
+	font-size: var(--xsBody, var(--size-xs)) !important;
 	letter-spacing: 1px;
 	line-height: 14px;
 	padding: 0;
@@ -436,10 +436,10 @@ divider {
 }
 
 .medFont .sl-tempWrap {
-	font-size: var(--size-m);
+	font-size: var(--mBody, var(--size-m));
 }
 .lrgFont .sl-tempWrap {
-	font-size: var(--size-l);
+	font-size: var(--lBody, var(--size-l));
 }
 
 .scroll .sl-tempScroll,
@@ -509,18 +509,18 @@ divider + h6 {
 	margin-top: 0;
 }
 .sl-tempWrap h1 {
-	font-size: var(--size-xl);
+	font-size: var(--xlBody, var(--size-xl));
 }
 .sl-tempWrap h2 {
-	font-size: var(--size-l);
+	font-size: var(--lBody, var(--size-l));
 }
 .sl-tempWrap h3 {
-	font-size: var(--size-s);
+	font-size: var(--sBody, var(--size-s));
 }
 .sl-tempWrap h4,
 .sl-tempWrap h5,
 .sl-tempWrap h6 {
-	font-size: var(--size-xs);
+	font-size: var(--xsBody, var(--size-xs));
 }
 .sl-tempWrap h5,
 .sl-tempWrap h6 {
@@ -538,7 +538,7 @@ divider + h6 {
 }
 .sl-tempWrap b,
 .sl-tempWrap a {
-	font-size: var(--size-m);
+	font-size: var(--mBody, var(--size-m));
 }
 .sl-tempWrap i {
 	letter-spacing: 1px;

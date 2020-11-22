@@ -64,7 +64,7 @@
 	background: var(--accent);
 	color: #ffffff;
 	font-family: 'Karla', sans-serif;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-align: right;
@@ -81,7 +81,7 @@
 	background: var(--ltAccent);
 	text-align: center;
 	line-height: 40px;
-	font-size: 16px;
+	font-size: var(--xlBody, var(--size-xl, 16px));
 	color: #ffffff;
 	margin-bottom: 5px;
 	cursor: pointer;
@@ -100,7 +100,7 @@
 	box-sizing: border-box;
 	background: #ffffff;
 	font-family: 'Karla', sans-serif;
-	font-size: 11px;
+	font-size: var(--mBody, var(--size-sm, 11px));
 	text-align: left;
 	display: none;
 	min-height: 240px;
@@ -116,7 +116,7 @@
 	border: 1px dashed #e2e2e2;
 	padding: 10px;
 	font-family: 'Karla', sans-serif;
-	font-size: 10px;
+	font-size: var(--sBody, var(--size-s, 10px));
 	color: #737373;
 	line-height: 16px;
 }
@@ -147,7 +147,7 @@
 	height: 30px;
 	line-height: 30px;
 	font-family: 'Karla', sans-serif;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	font-weight: normal;
 	letter-spacing: 1px;
 	color: #ffffff;
@@ -173,7 +173,7 @@
 }
 .lux-moments .app-content h3 {
 	font-family: 'oswald', sans-serif;
-	font-size: 12px;
+	font-size: var(--mBody, var(--size-m, 12px));
 	text-transform: uppercase;
 	color: var(--accent);
 	margin: 0 0 20px 0;
@@ -185,7 +185,7 @@
 	margin: 0 5px 5px 0;
 	background: var(--accent);
 	color: #ffffff;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	text-transform: uppercase;
 	width: max-content;
 }
@@ -194,7 +194,7 @@
 	margin: 0 5px 5px 0;
 	background: var(--accent);
 	color: #ffffff;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	text-transform: uppercase;
 	width: max-content;
 	max-width: 200px;
@@ -208,7 +208,7 @@
 	padding: 2px 5px;
 	background: var(--ltAccent);
 	color: #ffffff;
-	font-size: 10px;
+	font-size: var(--sBody, var(--size-s, 10px));
 	text-transform: uppercase;
 	display: inline-block;
 	margin-bottom: 5px;
@@ -279,7 +279,7 @@
 	background: var(--accent);
 	color: #ffffff;
 	font-family: 'Karla', sans-serif;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-align: right;
@@ -293,7 +293,7 @@
 	background: var(--accent);
 	color: #ffffff;
 	font-family: 'Karla', sans-serif;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	text-align: left;
@@ -320,7 +320,7 @@
 	content: counter(tabCount, lower-roman) '. ';
 	font-family: 'oswald', sans-serif;
 	font-weight: bold;
-	font-size: 16px;
+	font-size: var(--xlBody, var(--size-xl, 16px));
 	color: #ffffff;
 }
 .lux-moments .temp-tabs span:hover {
@@ -335,7 +335,7 @@
 	box-sizing: border-box;
 	background: #ffffff;
 	font-family: 'Karla', sans-serif;
-	font-size: 11px;
+	font-size: var(--mBody, var(--size-sm, 11px));
 	text-align: left;
 	min-height: 240px;
 	max-height: 520px;
@@ -396,7 +396,7 @@
 	height: 30px;
 	line-height: 30px;
 	font-family: 'Karla', sans-serif;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	font-weight: normal;
 	letter-spacing: 1px;
 	color: #ffffff;
@@ -422,7 +422,7 @@
 }
 .lux-moments .temp-content h3 {
 	font-family: 'oswald', sans-serif;
-	font-size: 12px;
+	font-size: var(--mBody, var(--size-m, 12px));
 	text-transform: uppercase;
 	color: var(--accent);
 	margin: 0 0 20px 0;
@@ -434,7 +434,7 @@
 	margin: 0 5px 5px 0;
 	background: var(--accent);
 	color: #ffffff;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	text-transform: uppercase;
 	width: max-content;
 }
@@ -443,7 +443,7 @@
 	color: var(--accent);
 }
 .lux-moments .temp-cred .temp-content b {
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	letter-spacing: 1px;
 	text-transform: uppercase;
 }
@@ -451,7 +451,7 @@
 	padding: 2px 5px;
 	background: var(--ltAccent);
 	color: #ffffff;
-	font-size: 10px;
+	font-size: var(--sBody, var(--size-s, 10px));
 	text-transform: uppercase;
 	display: inline-block;
 	margin-bottom: 5px;
@@ -476,7 +476,7 @@
 .lux-moments .temp-cred .temp-credIn a {
 	background: transparent;
 	padding: 0;
-	font-size: 9px;
+	font-size: var(--sBody, var(--size-xss, 9px));
 	margin: 0;
 }
 .lux-moments .temp-cred .temp-credIn a:hover {
@@ -530,7 +530,7 @@
 	border: 1px dashed #e2e2e2;
 	padding: 10px;
 	font-family: 'Karla', sans-serif;
-	font-size: 10px;
+	font-size: var(--sBody, var(--size-s, 10px));
 	color: #737373;
 	line-height: 16px;
 }

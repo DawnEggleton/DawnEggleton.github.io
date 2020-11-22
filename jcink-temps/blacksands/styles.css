@@ -155,7 +155,7 @@ student .bs-phoneCase {
 	text-transform: uppercase;
 	font-family: var(--bodyFont);
 	letter-spacing: 1px;
-	font-size: var(--xsBody);
+	font-size: var(--xsBody, var(--size-xs));
 	max-width: 100%;
 	box-sizing: border-box;
 	text-align: left;
@@ -211,18 +211,18 @@ student .bs-phoneCase {
 .bs-tempBox b {
 	color: var(--brightAccent);
 	font-family: var(--displayFont);
-	font-size: var(--lBody);
+	font-size: var(--lBody, var(--size-l));
 }
 .bs-phoneCase i,
 .bs-tempBox i {
 	color: var(--transGrey);
-	font-size: var(--sBody);
+	font-size: var(--sBody, var(--size-s));
 	letter-spacing: 1px;
 }
 .bs-phoneCase a,
 .bs-tempBox a {
 	color: var(--darkAccent);
-	font-size: var(--xsBody);
+	font-size: var(--xsBody, var(--size-xs));
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -252,7 +252,7 @@ student .bs-phoneCase {
 .bs-tempBox,
 .bs-phoneCase {
     font-family: var(--bodyFont);
-    font-size: var(--mBody);
+    font-size: var(--mBody, var(--size-m));
 }
 .bs-gridChange {
 	grid-template-columns: 100%;
@@ -297,7 +297,7 @@ student .bs-phoneCase {
 	border: 20px solid var(--white);
 	background: var(--white);
 	font-family: var(--bodyFont);
-	font-size: var(--mBody);
+	font-size: var(--mBody, var(--size-m));
 	color: var(--lightGrey);
 	height: 100%;
 	box-sizing: border-box;
@@ -346,10 +346,10 @@ student .bs-phoneCase {
 
 /* FONTS */
 .smlFont .bs-content {
-	font-size: var(--sBody);
+	font-size: var(--sBody, var(--size-s));
 }
 .lrgFont .bs-content {
-	font-size: var(--lBody);
+	font-size: var(--lBody, var(--size-l));
 }
 
 /* TABS */
@@ -561,14 +561,14 @@ student .bs-phoneCase {
 .bs-tracker .bs-content {
 	height: auto;
 	margin-bottom: 20px;
-	font-size: var(--sBody);
+	font-size: var(--sBody, var(--size-s));
 }
 .bs-tracker .bs-content a:first-of-type {
 	font-weight: bold;
 }
 .bs-tracker .bs-content i {
 	text-transform: uppercase;
-	font-size: var(--xsBody);
+	font-size: var(--xsBody, var(--size-xs));
 }
 
 /* Image Dev */
@@ -641,14 +641,14 @@ student .bs-phoneCase {
 	color: var(--white);
 	box-sizing: border-box;
 	padding: 0 20px;
-	font-size: var(--xsBody);
+	font-size: var(--xsBody, var(--size-xs));
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
 }
 .bs-phoneBar i {
 	color: var(--white);
-	font-size: var(--xsBody);
+	font-size: var(--xsBody, var(--size-xs));
 	margin-left: 2px;
 }
 .bs-phoneContent {
@@ -693,11 +693,11 @@ student .bs-phoneCase {
 	line-height: 14px;
 }
 .bs-phoneSong b {
-	font-size: var(--mBody);
+	font-size: var(--mBody, var(--size-m));
 }
 .bs-phoneSong i {
 	text-transform: uppercase;
-	font-size: var(--xsBody);
+	font-size: var(--xsBody, var(--size-xs));
 }
 .bs-phoneSong i.fa-play {
 	font-size: 14px;
@@ -735,7 +735,7 @@ student .bs-phoneCase {
 }
 .bs-phoneContact b a {
 	color: var(--darkAccent);
-	font-size: var(--lBody);
+	font-size: var(--lBody, var(--size-l));
 	text-transform: lowercase;
 }
 .bs-phoneCut {
@@ -755,10 +755,10 @@ student .bs-phoneCase {
 	bottom: 0;
 }
 .smlFont .bs-phoneMsg {
-	font-size: var(--sBody);
+	font-size: var(--sBody, var(--size-s));
 }
 .lrgFont .bs-phoneMsg {
-	font-size: var(--lBody);
+	font-size: var(--lBody, var(--size-l));
 }
 .dark .bs-phoneContent {
 	background: var(--grey);
