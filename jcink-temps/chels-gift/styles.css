@@ -8,6 +8,7 @@
   font-family: var(--bodyFont);
   font-size: var(--bodySize);
   line-height: 200%;
+  background: var(--background);
 }
 .gift-icon {
   position: absolute;
