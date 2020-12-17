@@ -24,8 +24,15 @@ luxblock b,
 luxblock i {
   font-size: 14px;
 }
+luxblock b {
+  font-weight: 900;
+}
+luxblock i {
+  font-weight: 500;
+}
 luxblock a {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-size: 10px;
+  font-weight: 600;
 }
