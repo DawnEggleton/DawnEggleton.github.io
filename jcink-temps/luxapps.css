@@ -14,3 +14,17 @@ luxblock h3 {
   font-family: 'montserrat', sans-serif;
   color: var(--accent);
 }
+luxblock b,
+luxblock i,
+luxblock a {
+  color: var(--accent);
+}
+luxblock b,
+luxblock i {
+  font-size: 13px;
+}
+luxblock a {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
