@@ -18,10 +18,11 @@ luxblock b,
 luxblock i,
 luxblock a {
   color: var(--accent);
+  padding: 0 2px;
 }
 luxblock b,
 luxblock i {
-  font-size: 13px;
+  font-size: 14px;
 }
 luxblock a {
   text-transform: uppercase;
