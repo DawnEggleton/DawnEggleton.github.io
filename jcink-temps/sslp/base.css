@@ -1,17 +1,17 @@
 a {
   text-decoration: none;
 }
-.sslp-wrap {
+body .sslp-wrap {
   --background: #fff;  
   --textColor: #696969;
   --accent: #e0e0e0;
   --dkAccent: #000;
 }
-.dkMode .sslp-wrap {
+body.dkMode .sslp-wrap {
   --background: #242424;
   --textColor: #b5b5b5;
-  --accent: #e0e0e0;
-  --dkAccent: #515151;
+  --accent: #515151;
+  --dkAccent: #e0e0e0;
 }
 .sslp-wrap {
   position: relative;
