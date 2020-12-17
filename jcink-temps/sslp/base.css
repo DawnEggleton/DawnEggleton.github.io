@@ -329,6 +329,9 @@ event {
 .dkMode .sslp-wrap year {
 	border-color: var(--accent, #515151) !important;
 }
+.dkMode .sslp-wrap year {
+	background-color: var(--background, #242424);	
+}
 
 
 
