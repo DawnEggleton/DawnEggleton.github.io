@@ -9,8 +9,8 @@
 .mav,
 .milo,
 .tia {
-	--accent: #e1bdb2;
-	--dkAccent: #d48d79;
+	--accent: #e1bdb2 !important;
+	--dkAccent: #d48d79 !important;
 }
 .tia .insta-top,
 .tia .tindr-msgTop,
@@ -45,6 +45,7 @@
 	--accent: #c9aebe;
 	--dkAccent: #805e73;
 }
+body .fletch .sslp-wrap,
 .fletch {
 	--accent: #bdd2c0;
 	--dkAccent: #5a7e5e;
@@ -80,6 +81,7 @@
 	--accent: #e6cdc6;
 	--dkAccent: #dba797;
 }
+body .nik .sslp-wrap,
 .nik {
 	--accent: #81c1c5;
 	--dkAccent: #61a6aa;
