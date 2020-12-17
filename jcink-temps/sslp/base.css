@@ -2,18 +2,26 @@ a {
   text-decoration: none;
 }
 .sslp-wrap {
+  --background: #fff;  
+  --textColor: #696969;
+}
+.dkMode .sslp-wrap {
+  --background: #242424;
+  --textColor: #b5b5b5;
+}
+.sslp-wrap {
   position: relative;
   box-sizing: border-box;
   margin: 40px auto;
   padding: 30px 50px;
   width: 450px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: var(--background);
+  border: 1px solid var(--accent, #e0e0e0);
   text-align: justify;
   font-family: 'jost', sans-serif;
 	font-size: var(--mBody, var(--size-m, 12px));
   line-height: 200%;
-  color: #696969;
+  color: var(--textColor);
   text-transform: none;
   letter-spacing: 0;
 }
@@ -27,7 +35,7 @@ a {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 5px solid #ffffff;
+  border: 5px solid var(--background);
   display: grid;
   align-items: center;
   justify-items: center;
@@ -46,8 +54,8 @@ a {
   position: absolute;
   top: -6px;
   left: -6px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
+  background: var(--background);
+  border: 1px solid var(--accent, #e0e0e0);
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -57,7 +65,7 @@ a {
   font-family: 'mallory_narrow';
   text-transform: uppercase;
   font-weight: 900;
-  color: #000000;  
+  color: var(--dkAccent, #000);  
   border: 0;
 }
 .sslp-wrap h1 {
@@ -84,7 +92,7 @@ a {
 .sslp-wrap b,
 .sslp-wrap i,
 .sslp-wrap a {
-  color: #000000;
+  color: var(--dkAccent), #000;
   padding: 0;
 }
 
@@ -109,7 +117,7 @@ a {
   font-family: 'mallory_narrow';
   text-transform: uppercase;
   font-weight: 900;
-  color: #000000;  
+  color: var(--dkAccent, #000);  
 	font-size: var(--sBody, var(--size-s, 10px));
   letter-spacing: 2px;
 }
@@ -122,14 +130,14 @@ a {
   overflow: auto;
   padding-right: 30px;
   scrollbar-width: thin;
-  scrollbar-color: #000000 transparent;
+  scrollbar-color: var(--dkAccent, #000) transparent;
 }  
 .scroll .sslp-scroll::-webkit-scrollbar {
   width: 5px;
   background-color: transparent;
 }
 .scroll .sslp-scroll::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  background-color: var(--dkAccent, #000);
 }
 
 .playlist {
@@ -154,7 +162,7 @@ a {
   grid-column: 1 / 2;
   grid-row: 1 / 3;
 	font-size: var(--mBody, var(--size-m, 12px));
-  border: 1px solid #000000;
+  border: 1px solid var(--dkAccent, #000);
   padding: 10px 9px 10px 11px;
   border-radius: 50%;
   font-style: normal;
@@ -241,7 +249,7 @@ a {
 year {
   width: 70px;
   height: 70px;
-  border: 1px solid #000000;
+  border: 1px solid var(--dkAccent, #000);
   border-radius: 50%;
   display: grid;
   align-items: center;
@@ -249,7 +257,7 @@ year {
   font-family: 'mallory_narrow';
   font-weight: 900;
   font-size: 18px;
-  background: #ffffff;
+  background: var(--dkAccent, #e0e0e0);
 }
 events {
   display: grid;
@@ -277,19 +285,45 @@ event {
 .sslp-wrap a,
 .sslp-wrap tag,
 .sslp-wrap year {
-	color: var(--dkAccent) !important;
+	color: var(--dkAccent, #000) !important;
 }
 .scroll .sslp-scroll {
-	scrollbar-color: var(--dkAccent) transparent !important;
+	scrollbar-color: var(--dkAccent, #000) transparent !important;
 }
 .scroll .sslp-scroll::-webkit-scrollbar-thumb {
-	background-color: var(--dkAccent) !important;
+	background-color: var(--dkAccent, #000) !important;
 }
 .sslp-wrap,
 .sslp-wrap ib:before,
 .sslp-wrap song i,
 .sslp-wrap year {
-	border-color: var(--accent) !important;
+	border-color: var(--accent, #e0e0e0) !important;
+}
+
+
+
+
+.dkMode .sslp-wrap h1,
+.dkMode .sslp-wrap h2,
+.dkMode .sslp-wrap b,
+.dkMode .sslp-wrap b i,
+.dkMode .sslp-wrap i,
+.dkMode .sslp-wrap a,
+.dkMode .sslp-wrap tag,
+.dkMode .sslp-wrap year {
+	color: var(--dkAccent, #eaeaea) !important;
+}
+.dkMode .scroll .sslp-scroll {
+	scrollbar-color: var(--dkAccent, #eaeaea) transparent !important;
+}
+.dkMode .scroll .sslp-scroll::-webkit-scrollbar-thumb {
+	background-color: var(--dkAccent, #eaeaea) !important;
+}
+.dkMode .sslp-wrap,
+.dkMode .sslp-wrap ib:before,
+.dkMode .sslp-wrap song i,
+.dkMode .sslp-wrap year {
+	border-color: var(--accent, #515151) !important;
 }
 
 
