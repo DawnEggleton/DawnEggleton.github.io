@@ -55,6 +55,11 @@ body .duck .sslp-wrap,
 	--accent: #c9aebe;
 	--dkAccent: #805e73;
 }
+body .emma .sslp-wrap,
+.emma {
+	--accent: #d38dae;
+	--dkAccent: #d38dae;
+}
 body .fletch .sslp-wrap,
 .fletch {
 	--accent: #bdd2c0;
