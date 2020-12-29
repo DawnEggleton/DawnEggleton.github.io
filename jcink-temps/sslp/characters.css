@@ -5,6 +5,10 @@
 	--dkAccent: #444444;
 }
 
+body .al .sslp-wrap,
+body .mav .sslp-wrap,
+body .milo .sslp-wrap,
+body .tia .sslp-wrap,
 .al,
 .mav,
 .milo,
@@ -18,10 +22,12 @@
 	--accent: #d48d79;
 	--dkAccent: #b56b56;
 }
+body .basil .sslp-wrap,
 .basil {
 	--accent: #8b9c7d;
 	--dkAccent: #6c7d5f;
 }
+body .loki .sslp-wrap,
 .loki {
 	--accent: #b2c06d;
 	--dkAccent: #7b8f1a;
@@ -32,15 +38,19 @@
 	--accent: #7b8f1a;
 	--dkAccent: #687a13;
 }
+body .connor .sslp-wrap,
 .connor {
 	--accent: #e0d0b5;
 	--dkAccent: #b6a280;
 }
+body .cyn .sslp-wrap,
+body .evan .sslp-wrap,
 .cyn,
 .evan {
 	--accent: #bb9a9a;
 	--dkAccent: #994545;
 }
+body .duck .sslp-wrap,
 .duck {
 	--accent: #c9aebe;
 	--dkAccent: #805e73;
@@ -50,10 +60,13 @@ body .fletch .sslp-wrap,
 	--accent: #bdd2c0;
 	--dkAccent: #5a7e5e;
 }
+body .gabe .sslp-wrap,
 .gabe {
 	--accent: #cad9bb;
 	--dkAccent: #92a481;
 }
+body .harley .sslp-wrap,
+body .lottie .sslp-wrap,
 .harley,
 .lottie {
 	--accent: #e8ccd1;
@@ -65,18 +78,22 @@ body .fletch .sslp-wrap,
 	--accent: #ca8a93;
 	--dkAccent: #a2636c;
 }
+body .hayd .sslp-wrap,
 .hayd {
 	--accent: #96b79a;
 	--dkAccent: #519358;
 }
+body .jazz .sslp-wrap,
 .jazz {
 	--accent: #cbaec8;
 	--dkAccent: #997495;
 }
+body .maggie .sslp-wrap,
 .maggie {
 	--accent: #b6c2b9;
 	--dkAccent: #65806b;
 }
+body .mari .sslp-wrap,
 .mari {
 	--accent: #e6cdc6;
 	--dkAccent: #dba797;
@@ -86,14 +103,17 @@ body .nik .sslp-wrap,
 	--accent: #81c1c5;
 	--dkAccent: #61a6aa;
 }
+body .noah .sslp-wrap,
 .noah {
 	--accent: #b5c8a4;
 	--dkAccent: #92a481;
 }
+body .simon .sslp-wrap,
 .simon {
 	--accent: #cde0a8;
 	--dkAccent: #9cc34f;
 }
+body .sterling .sslp-wrap,
 .sterling {
 	--accent: #D2B55B;
 	--dkAccent: #C49102;
