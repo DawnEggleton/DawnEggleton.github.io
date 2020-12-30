@@ -55,6 +55,16 @@ body .evan .sslp-wrap,
 	--accent: #bb9a9a;
 	--dkAccent: #994545;
 }
+body .darcy .sslp-wrap,
+.darcy {
+	--accent: #d2ccd5;
+	--dkAccent: #9e88a8;
+}
+body .gen .sslp-wrap,
+.gen {
+	--accent: #cab6c8;
+	--dkAccent: #915c8b;
+}
 body .draco .sslp-wrap,
 .draco {
 	--accent: #7d927a;
