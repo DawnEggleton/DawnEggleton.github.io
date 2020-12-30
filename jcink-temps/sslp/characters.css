@@ -5,6 +5,11 @@
 	--dkAccent: #444444;
 }
 
+body .addie .sslp-wrap,
+.addie {
+	--accent: #f6b6b6;
+	--dkAccent: #f08989;
+}
 body .al .sslp-wrap,
 body .mav .sslp-wrap,
 body .milo .sslp-wrap,
