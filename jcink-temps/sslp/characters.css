@@ -118,6 +118,11 @@ body .noah .sslp-wrap,
 	--accent: #b5c8a4;
 	--dkAccent: #92a481;
 }
+body .percy .sslp-wrap,
+.percy {
+	--accent: #a88f80;
+	--dkAccent: #91664c;
+}
 body .simon .sslp-wrap,
 .simon {
 	--accent: #cde0a8;
