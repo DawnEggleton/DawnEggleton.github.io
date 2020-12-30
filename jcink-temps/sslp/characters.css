@@ -55,6 +55,11 @@ body .evan .sslp-wrap,
 	--accent: #bb9a9a;
 	--dkAccent: #994545;
 }
+body .draco .sslp-wrap,
+.draco {
+	--accent: #7d927a;
+	--dkAccent: #394737;
+}
 body .duck .sslp-wrap,
 .duck {
 	--accent: #c9aebe;
