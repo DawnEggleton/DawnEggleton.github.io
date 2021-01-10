@@ -43,6 +43,7 @@ body.dkMode .sslp-wrap {
   display: grid;
   align-items: center;
   justify-items: center;
+  box-sizing: border-box;
 }
 .sslp-wrap ib img {
   position: relative;
