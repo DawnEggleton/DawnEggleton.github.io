@@ -42,6 +42,11 @@ body .loki .sslp-wrap,
 	--accent: #b2c06d;
 	--dkAccent: #7b8f1a;
 }
+body.dkmode .loki .sslp-wrap,
+.dkmode .loki {
+    --accent: #868e5d;
+    --dkAccent: #8fa625;
+}
 .loki .insta-top,
 .loki .tindr-msgTop,
 .loki .insta-postImg {
@@ -112,6 +117,11 @@ body .hayd .sslp-wrap,
 .hayd {
 	--accent: #96b79a;
 	--dkAccent: #519358;
+}
+body.dkMode  .hayd .sslp-wrap,
+.dkMode .hayd {
+    --accent: #6d8670;
+    --dkAccent: #5c8660;
 }
 body .jazz .sslp-wrap,
 .jazz {
