@@ -10,6 +10,11 @@ body .addie .sslp-wrap,
 	--accent: #f6b6b6;
 	--dkAccent: #f08989;
 }
+body .remy .sslp-wrap,
+.remy {
+	--accent: #6c3939;
+	--dkAccent: #aa6464;
+}
 body .al .sslp-wrap,
 body .mav .sslp-wrap,
 body .milo .sslp-wrap,
