@@ -78,6 +78,7 @@ p {
     background: #212121;
     z-index: 100;
     padding: 0 5%;
+    font-size: 14px;
 }
 #topNav a:not(.logo) {
     display: block;
