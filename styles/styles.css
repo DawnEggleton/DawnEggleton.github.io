@@ -210,7 +210,6 @@ section {
 }
 .item-grid img:hover {
     opacity: 1;
-    box-shadow: 0 0 3px #ddd;
 }
 .item-caption {
     z-index: 2;
