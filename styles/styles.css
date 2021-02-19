@@ -24,65 +24,273 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-/*******************
-    Custom Styles
-********************/
-main#idx {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    height: 100vh;
-}
-section {
+* {
     position: relative;
-    background: #121212;
-    margin: 0;
-    padding: 20% 10%;
     box-sizing: border-box;
 }
-section.imgSection {
-    display: grid;
-    align-items: end;
-    justify-content: center;
+body {
+    margin: 0;
+    padding: 0;
+    background: #212121;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    color: #aaa;
 }
-#idx section a {
-    position: relative;
-    z-index: 2;
+a {
+    text-decoration: none;
 }
-#idx section img {
-    position: absolute;
-    top: 0;
-    left: 0;
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    opacity: 0.3;
+}
+.anchorTag {
+    line-height: 0;
+    padding-top: 50px;
+}
+#topNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background: #212121;
+    z-index: 100;
+    padding: 0 5%;
+}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#topNav a:not(.logo) {
+    display: block;
+    color: #ddd;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    padding: 3px 12px 3px 15px;
+}
+#topNav a:not(.logo):before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 100%;
+    border-bottom: 1px solid #ddd;
     transition-duration: 0.5s;
 }
-#idx section img:hover {
-    opacity: 0.6;
+#topNav a:not(.logo):hover:before {
+    width: 100%;
+}
+#sideNav {
+    position: fixed;
+    top: 0;
+    left: 10px;
+    z-index: 101;
+    display: grid;
+    grid-template-rows: 1fr repeat(2,16px 32px) 16px 1fr;
+    width: 16px;
+    height: 100vh;
+}
+#sideNav > a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #bbb;
+    border-radius: 50%;
+    transition-duration: 0.3s;
+}
+#sideNav > a:hover {
+    background: #212121;
+    box-shadow: 0 0 3px #ddd;
+}
+#sideNav > a.active {
+    background: #ddd;
+    box-shadow: 0 0 3px #ddd;
+}
+#sideNav > a > span {
+    display: none;
+}
+#sideNav > a.active > span {
+    position: absolute;
+    top: 0;
+    left: 21px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #ddd;
+    letter-spacing: 5px;
+    font-weight: 500;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg) translateY(calc(200% + 12px));
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    white-space: nowrap;
+}
+#sideNav > a.active > span:before {
+    content: '';
+    position: absolute;
+    bottom: calc(100% + 7px);
+    left: 2.5px;
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #ddd;
+}
+#sideNav > a.active > span:after {
+    content: '';
+    position: absolute;
+    bottom: calc(200% + 2px);
+    left: 11px;
+    display: block;
+    width: 1px;
+    height: 150%;
+    background: #ddd;
+    transform: rotate(55deg);
+}
+#sideNav > span {
+    width: 1px;
+    height: 100%;
+    background: #bbb;
+    margin: 0 auto;
+}
+main {
+    margin-top: 50px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    overflow: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ddd transparent;
+    scroll-snap-type: y mandatory;
+}
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.item-grid {
+    padding: 50px 50px 50px 75px;
+    width: 100%;
+    height: calc(100vh - 50px);
+    display: grid;
+    grid-template: 100% / 1fr 1fr;
+    scroll-snap-align: start;
+}
+.item-grid:not(:last-child) {
+    margin-bottom: 50px;
+}
+.item-grid img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.7;
+    transition-duration: 0.3s;
+}
+.item-grid img.web-image {
+    object-position: left;
+}
+.item-grid img:hover {
+    opacity: 1;
+    box-shadow: 0 0 3px #ddd;
+}
+.item-caption {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.item-inner {
+    position: absolute;
+    top: max(40px, 5vh);
+    right: 0;
+}
+.item-grid img + .item-caption .item-inner {
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: max(40px, 5vh);
+}
+.item-caption p {
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-right: -50px;
+    border-top: 1px solid #ddd;
+    color: #ddd;
+    padding: 10px 70px 0 10px;
+    text-align: right;
+}
+.item-grid img + .item-caption p {
+    text-align: left;
+    border-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px 10px 70px;
+    margin-right: 0;
+    margin-left: -50px;
+}
+.item-caption a {
+    display: block;
+    color: #ddd;
+    line-height: 20px;
+    padding: 0 10px;
+    transition-duration: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+.item-caption a:hover {
+    padding: 0 20px;
+}
+.item-caption a i {
+    font-size: 20px;
+    top: 1.5px;
+}
+.item-grid img + .item-caption a {
+    text-align: right;
+}
+.item-grid img + .item-caption a:hover {
+    padding: 0;
+}
+.anchorTag {
+    display: block;
+    position: absolute;
+    top: 0;
+}
+@media only screen and (max-width: 750px) {
+    .item-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr max-content;
+    }
+    .item-caption {
+        height: auto;
+        order: 2;
+    }
+    .item-inner,
+    .item-grid img + .item-caption .item-inner {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        display: grid;
+    }
+    .item-inner p,
+    .item-grid img + .item-caption .item-inner p {
+        margin: 0;
+        padding: 20px;
+        border-top: 0;
+        border-bottom: 1px solid #ddd;
+    }
+    .item-inner a,
+    .item-grid img + .item-caption .item-inner a {
+        margin: 0;
+        padding: 20px;
+        order: 2;
+        text-align: right;
+    }
 }
