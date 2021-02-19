@@ -144,7 +144,7 @@ main {
     overflow: auto;
     scrollbar-width: thin;
     scrollbar-color: #ddd transparent;
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
 }
 section {
     max-width: 1200px;
