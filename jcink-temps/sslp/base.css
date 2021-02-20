@@ -215,11 +215,13 @@ body.dkMode .sslp-wrap {
   max-width: 100%;
   height: auto;
 }
-.imgdev {
+.sslp-wrap .imgdev {
   display: grid;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   padding: 30px;
+  height: auto;
+  width: auto;
 }
 .sslp-wrap > .imgdev {
   padding: 20px 0;
