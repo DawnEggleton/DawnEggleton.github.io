@@ -208,14 +208,14 @@ section {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    opacity: 0.7;
+    opacity: 1;
     transition-duration: 0.3s;
 }
 .item-grid img.web-image {
     object-position: left;
 }
 .item-grid img:hover {
-    opacity: 1;
+    opacity: 0.6;
 }
 .item-caption {
     z-index: 2;
@@ -295,6 +295,9 @@ section {
 }
 .gallery-item.tall {
     padding-top: 177.78%;
+}
+.gallery-item.wide {
+    padding-top: 56.25%;
 }
 .gallery-item > img {
     position: absolute;
