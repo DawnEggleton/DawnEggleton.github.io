@@ -226,12 +226,13 @@ section {
     position: absolute;
     top: max(40px, 5vh);
     right: 0;
+    display: grid;
 }
-.item-grid img + .item-caption .item-inner {
-    top: auto;
-    right: auto;
-    left: 0;
-    bottom: max(40px, 5vh);
+.item-grid:nth-of-type(even) .item-inner a {
+    order: 1;
+}
+.item-grid:nth-of-type(even) .item-inner p {
+    order: 2;
 }
 .item-caption p {
     font-size: 11px;
@@ -241,14 +242,6 @@ section {
     color: #ddd;
     padding: 10px 70px 0 10px;
     text-align: right;
-}
-.item-grid img + .item-caption p {
-    text-align: left;
-    border-top: 0;
-    border-bottom: 1px solid #ddd;
-    padding: 0 10px 10px 70px;
-    margin-right: 0;
-    margin-left: -50px;
 }
 .item-caption a {
     display: block;
@@ -267,12 +260,41 @@ section {
     font-size: 20px;
     top: 1.5px;
 }
-.item-grid img + .item-caption a {
+.item-grid:nth-of-type(odd) .item-caption .item-inner {
+    top: auto;
+    right: auto;
+    left: 0;
+    bottom: max(40px, 5vh);
+}
+.item-grid:nth-of-type(odd) .item-caption a {
     text-align: right;
 }
-.item-grid img + .item-caption a:hover {
+.item-grid:nth-of-type(odd) .item-caption a:hover {
     padding: 0;
 }
+.item-grid:nth-of-type(odd) .item-caption p {
+    text-align: left;
+    border-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px 10px 70px;
+    margin-right: 0;
+    margin-left: -50px;
+}
+.item-grid > a {
+    order: 1;
+}
+.item-grid > .item-caption {
+    order: 2;
+}
+.item-grid:nth-of-type(even) > a {
+    order: 2;
+}
+.item-grid:nth-of-type(even) > .item-caption {
+    order: 1;
+}
+
+
+
 .gallery {
     margin-bottom: 50px;
     display: grid;
@@ -379,7 +401,7 @@ section {
         order: 2;
     }
     .item-inner,
-    .item-grid img + .item-caption .item-inner {
+    .item-grid:nth-of-type(odd) .item-caption .item-inner {
         position: relative;
         top: auto;
         left: auto;
@@ -388,14 +410,14 @@ section {
         display: grid;
     }
     .item-inner p,
-    .item-grid img + .item-caption .item-inner p {
+    .item-grid:nth-of-type(odd) .item-caption .item-inner p {
         margin: 0;
         padding: 20px;
         border-top: 0;
         border-bottom: 1px solid #ddd;
     }
     .item-inner a,
-    .item-grid img + .item-caption .item-inner a {
+    .item-grid:nth-of-type(odd) .item-caption .item-inner a {
         margin: 0;
         padding: 20px;
         order: 2;
