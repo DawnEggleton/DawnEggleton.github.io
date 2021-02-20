@@ -51,6 +51,10 @@ ul li {
     list-style-type: none;
     margin-bottom: 10px;
 }
+ul > li > ul {
+    margin: 20px;
+    border-left: 0;
+}
 ul li::before {
     content: '+';
     font-weight: 700;
@@ -110,7 +114,7 @@ p {
     left: 10px;
     z-index: 101;
     display: grid;
-    grid-template-rows: 1fr repeat(2,16px 32px) 16px 1fr;
+    grid-template-rows: 1fr repeat(3,16px 32px) 16px 1fr;
     width: 16px;
     height: 100vh;
 }

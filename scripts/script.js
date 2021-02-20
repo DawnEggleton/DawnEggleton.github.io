@@ -12,6 +12,7 @@ $(document).ready(function() {
             // subtract height of main to fix bug of triggering one section too late
             var offset = $(this).offset().top - $('main').height();
             //determine which menu item to highlight
+            console.log($('section').first().offset().top);
             if(Scroll >= offset) {
                 $('#sideNav > a').removeClass('active');
                 $(buttons[sectNum]).addClass('active');
