@@ -72,6 +72,18 @@ p {
     line-height: 0;
     padding-top: 50px;
 }
+img.align-left {
+    object-position: left;
+}
+img.align-right {
+    object-position: right;
+}
+img.align-top {
+    object-position: top;
+}
+img.align-bottom {
+    object-position: bottom;
+}
 #topNav {
     position: fixed;
     top: 0;
