@@ -254,8 +254,8 @@ section {
     order: 2;
 }
 .item-caption p {
-    font-size: 11px;
-    letter-spacing: 3px;
+    font-size: 13px;
+    letter-spacing: 2px;
     margin-right: -50px;
     border-top: 1px solid #ddd;
     color: #ddd;
