@@ -204,10 +204,13 @@ main {
 section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 100px;
+}
+.index section {
+    padding-left: 125px;
 }
 .item-grid {
-    padding: 50px 50px 50px 75px;
+    padding: 50px 0;
     width: 100%;
     height: calc(100vh - 50px);
     display: grid;
