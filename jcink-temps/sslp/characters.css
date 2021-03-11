@@ -1,28 +1,22 @@
 /*still need: */
 
-:root {
+.sslp-wrap {
 	--accent: #222222;
 	--dkAccent: #444444;
 }
 
-body .addie .sslp-wrap,
-.addie {
+.addie .sslp-wrap {
 	--accent: #f6b6b6;
 	--dkAccent: #f08989;
 }
-body .remy .sslp-wrap,
-.remy {
+.remy .sslp-wrap {
 	--accent: #6c3939;
 	--dkAccent: #aa6464;
 }
-body .al .sslp-wrap,
-body .mav .sslp-wrap,
-body .milo .sslp-wrap,
-body .tia .sslp-wrap,
-.al,
-.mav,
-.milo,
-.tia {
+.al .sslp-wrap,
+.mav .sslp-wrap,
+.milo .sslp-wrap,
+.tia .sslp-wrap {
 	--accent: #e1bdb2 !important;
 	--dkAccent: #d48d79 !important;
 }
@@ -32,18 +26,15 @@ body .tia .sslp-wrap,
 	--accent: #d48d79;
 	--dkAccent: #b56b56;
 }
-body .basil .sslp-wrap,
-.basil {
+.basil .sslp-wrap {
 	--accent: #8b9c7d;
 	--dkAccent: #6c7d5f;
 }
-body .loki .sslp-wrap,
-.loki {
+.loki .sslp-wrap {
 	--accent: #b2c06d;
 	--dkAccent: #7b8f1a;
 }
-body.dkmode .loki .sslp-wrap,
-.dkmode .loki {
+.dkmode .loki .sslp-wrap {
     --accent: #868e5d;
     --dkAccent: #8fa625;
 }
@@ -53,57 +44,45 @@ body.dkmode .loki .sslp-wrap,
 	--accent: #7b8f1a;
 	--dkAccent: #687a13;
 }
-body .connor .sslp-wrap,
-.connor {
+.connor .sslp-wrap {
 	--accent: #e0d0b5;
 	--dkAccent: #b6a280;
 }
-body .cyn .sslp-wrap,
-body .evan .sslp-wrap,
-.cyn,
-.evan {
+.cyn .sslp-wrap,
+.evan .sslp-wrap {
 	--accent: #bb9a9a;
 	--dkAccent: #994545;
 }
-body .darcy .sslp-wrap,
-.darcy {
+.darcy .sslp-wrap {
 	--accent: #d2ccd5;
 	--dkAccent: #9e88a8;
 }
-body .gen .sslp-wrap,
-.gen {
+.gen .sslp-wrap {
 	--accent: #cab6c8;
 	--dkAccent: #915c8b;
 }
-body .draco .sslp-wrap,
-.draco {
+.draco .sslp-wrap {
 	--accent: #7d927a;
 	--dkAccent: #394737;
 }
-body .duck .sslp-wrap,
-.duck {
+.duck .sslp-wrap {
 	--accent: #c9aebe;
 	--dkAccent: #805e73;
 }
-body .emma .sslp-wrap,
-.emma {
+.emma .sslp-wrap {
 	--accent: #d38dae;
 	--dkAccent: #d38dae;
 }
-body .fletch .sslp-wrap,
-.fletch {
+.fletch .sslp-wrap {
 	--accent: #bdd2c0;
 	--dkAccent: #5a7e5e;
 }
-body .gabe .sslp-wrap,
-.gabe {
+.gabe .sslp-wrap {
 	--accent: #cad9bb;
 	--dkAccent: #92a481;
 }
-body .harley .sslp-wrap,
-body .lottie .sslp-wrap,
-.harley,
-.lottie {
+.harley .sslp-wrap,
+.lottie .sslp-wrap {
 	--accent: #e8ccd1;
 	--dkAccent: #ca8a93;
 }
@@ -113,53 +92,43 @@ body .lottie .sslp-wrap,
 	--accent: #ca8a93;
 	--dkAccent: #a2636c;
 }
-body .hayd .sslp-wrap,
-.hayd {
+.hayd .sslp-wrap {
 	--accent: #96b79a;
 	--dkAccent: #519358;
 }
-body.dkMode  .hayd .sslp-wrap,
-.dkMode .hayd {
+.dkMode  .hayd .sslp-wrap {
     --accent: #6d8670;
     --dkAccent: #5c8660;
 }
-body .jazz .sslp-wrap,
-.jazz {
+.jazz .sslp-wrap {
 	--accent: #cbaec8;
 	--dkAccent: #997495;
 }
-body .maggie .sslp-wrap,
-.maggie {
+.maggie .sslp-wrap {
 	--accent: #b6c2b9;
 	--dkAccent: #65806b;
 }
-body .mari .sslp-wrap,
-.mari {
+.mari .sslp-wrap {
 	--accent: #e6cdc6;
 	--dkAccent: #dba797;
 }
-body .nik .sslp-wrap,
-.nik {
+.nik .sslp-wrap {
 	--accent: #81c1c5;
 	--dkAccent: #61a6aa;
 }
-body .noah .sslp-wrap,
-.noah {
+.noah .sslp-wrap {
 	--accent: #b5c8a4;
 	--dkAccent: #92a481;
 }
-body .percy .sslp-wrap,
-.percy {
+.percy .sslp-wrap {
 	--accent: #a88f80;
 	--dkAccent: #91664c;
 }
-body .simon .sslp-wrap,
-.simon {
+.simon .sslp-wrap {
 	--accent: #cde0a8;
 	--dkAccent: #9cc34f;
 }
-body .sterling .sslp-wrap,
-.sterling {
+.sterling .sslp-wrap {
 	--accent: #D2B55B;
 	--dkAccent: #C49102;
 }
