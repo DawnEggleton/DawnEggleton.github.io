@@ -144,6 +144,24 @@ body.dkMode .sslp-wrap {
 .scroll .sslp-scroll::-webkit-scrollbar-thumb {
   background-color: var(--dkAccent, #000);
 }
+.sslp-wrap tag-reserve {
+    font-size: var(--sBody, var(--size-s, 10px));
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    font-style: italic;
+    letter-spacing: 1px;
+}
+.sslp-wrap tag-claim,
+.sslp-wrap tag-claim a {
+    font-size: var(--sBody, var(--size-s, 10px));
+    text-transform: uppercase;
+    font-weight: 600;
+    display: block;
+    font-style: italic;
+    letter-spacing: 1px;
+    color: var(--dkAccent);
+}
 
 .playlist {
   width: 280px;
