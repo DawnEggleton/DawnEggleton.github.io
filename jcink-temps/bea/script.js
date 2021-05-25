@@ -3,9 +3,9 @@ $('.bea-wrap.timeline h1').on('click', function() {
 });
 
 $('.bea-wrap.tabbed .bea-notes span').on('click', function() {
-    console.log(this.id);
-    $('.bea-wrap.tabbed .bea-notes span').removeClass('activeTab');
-    $('.bea-wrap.tabbed .bea-main').removeClass('activeTab');
+    let id = this.id;
+    $(this).siblings().removeClass('activeTab');
+    $(this).parent().parent().siblings('.bea-main').removeClass('activeTab');
     $(this).addClass('activeTab');
-    $('#' + this.id + '-content').addClass('activeTab');
+    $(this).parent().parent().siblings('#' + id + '-content').addClass('activeTab');
 });

@@ -34,13 +34,13 @@ h2 {
 h1 {
     padding: 0 50px 10px;
     letter-spacing: 8px;
-    font-size: 40px;
+    font-size: min(40px, 6vw);
 }
 h2 {
     margin-left: 0;
     padding: 0 30px 6px;
     letter-spacing: 5px;
-    font-size: 24px;
+    font-size: min(40px, 3.6vw);
 }
 ul {
     border-left: 1px solid #aaa;
@@ -204,10 +204,13 @@ main {
 section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 50px;
+    padding: 0 100px;
+}
+.index section {
+    padding-left: 125px;
 }
 .item-grid {
-    padding: 50px 50px 50px 75px;
+    padding: 50px 0;
     width: 100%;
     height: calc(100vh - 50px);
     display: grid;
@@ -251,8 +254,8 @@ section {
     order: 2;
 }
 .item-caption p {
-    font-size: 11px;
-    letter-spacing: 3px;
+    font-size: 13px;
+    letter-spacing: 2px;
     margin-right: -50px;
     border-top: 1px solid #ddd;
     color: #ddd;
@@ -411,10 +414,11 @@ section {
     .item-grid {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr max-content;
+        padding: 0;
     }
     .item-caption {
         height: auto;
-        order: 2;
+        order: 2 !important;
     }
     .item-inner,
     .item-grid:nth-of-type(odd) .item-caption .item-inner {
@@ -436,7 +440,7 @@ section {
     .item-grid:nth-of-type(odd) .item-caption .item-inner a {
         margin: 0;
         padding: 20px;
-        order: 2;
+        order: 2 !important;
         text-align: right;
     }
 }
@@ -447,7 +451,7 @@ section {
 }
 @media only screen and (max-width: 500px) {
     section {
-        padding: 0 20px;
+        padding: 0 20px 0 65px !important;
     }
     .gallery {
         display: block;
