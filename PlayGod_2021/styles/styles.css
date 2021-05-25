@@ -507,7 +507,7 @@ header p {
 .g-4 .nav-main .staffOnly {
     display: inline;
 }
-.g-2 .nav-popout .guestOnly,
-.g-4 .nav-popout .staffOnly {
+.g-2 .nav-popout .guestOnly:not(.mobileNav),
+.g-4 .nav-popout .staffOnly:not(.mobileNav) {
     display: block;
 }
