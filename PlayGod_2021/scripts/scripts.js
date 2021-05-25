@@ -48,3 +48,14 @@ $(document).ready(function(){
         }
     });
 });
+
+
+$('.subforums-macro').each(function() {
+	$(this).remove();
+});
+$('.forum-links').each(function() {
+	if($(this).next().length != 0) {
+		$(this).next('.subforums').append($(this).html());
+		$(this).remove();
+	}
+});

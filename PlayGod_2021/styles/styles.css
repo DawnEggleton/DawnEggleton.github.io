@@ -69,8 +69,8 @@ html {
 body {
     padding: 0;
     margin: 0;
-    min-height: 1000vh;
     overflow-x: hidden;
+    color: var(--mainColor);
 }
 body:before {
     content: '';
@@ -91,6 +91,7 @@ body > * {
 }
 a {
     text-decoration: none;
+    color: var(--accent);
 }
 
 /******************************
@@ -211,6 +212,20 @@ body > nav {
     display: grid;
     align-items: center;
 }
+.nav-breadcrumb:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -39px;
+    width: calc(100% + 100px);
+    height: 100%;
+    background-image: var(--paper);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    filter: invert(var(--invert));
+}
 .nav-breadcrumb a {
     color: var(--mainColor);
     font-weight: 900;
@@ -267,7 +282,8 @@ body > nav {
 .nav-popout.active ~ .nav-breadcrumb {
     left: calc(15% + 39px);
 }
-.nav-popout.active ~ header {
+.nav-popout.active ~ header,
+.nav-popout.active ~ main {
     left: 15%;
 }
 .nav-popout a {
@@ -315,6 +331,16 @@ header:before {
     background-repeat: no-repeat;
     background-attachment: fixed; 
     filter: invert(var(--invert));
+}
+header:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--ltAccent);
+    bottom: -11px;
+    right: -17px;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 header img {
     position: absolute;
@@ -434,6 +460,154 @@ header p {
 }
 
 /******************************
+    Wrappers
+*******************************/
+main {
+    margin: 0 auto 80px;
+    left: 0;
+    width: calc(100% - 120px);
+    max-width: 1160px;
+}
+
+/******************************
+    Categories
+*******************************/
+.cat-wrap h2 {
+    background: var(--mainColor);
+    max-width: max-content;
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: var(--altColor);
+    font-size: var(--xsBody);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+}
+.cat-forums {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto-fit, 370px);
+    grid-gap: 10px;
+}
+.forum-wrap {
+    background: var(--transBG);
+    counter-increment: forumCount;
+    height: 370px;
+}
+.forum-wrap h3 {
+    margin: 6px 15px 0;
+    font-family: var(--serif);
+}
+.forum-wrap h3:before {
+    content: counter(forumCount, lower-roman) '.';
+    font-size: 35px;
+    font-style: italic;
+    display: block;
+}
+.forum-wrap h3 > a {
+    font-size: 50px;
+    display: block;
+    margin: -20px 0 0 10px;
+}
+.forum-stats {
+    text-align: right;
+    font-size: 0;
+    margin: -8px 15px 0;
+}
+.forum-stats > span {
+    display: inline-block;
+    background: var(--mainColor);
+    color: var(--altColor);
+    text-transform: uppercase;
+    font-size: var(--xsBody);
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    margin-left: 15px;
+}
+.forum-desc {
+    margin: 15px 15px 10px;
+}
+.forum-desc .scroll {
+    text-align: justify;
+    height: 100px;
+    margin-bottom: 15px;
+}
+.forum-desc .scroll p {
+    font-family: var(--serif);
+    font-size: var(--lBody);
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+.forum-desc .forum-links,
+.forum-desc .subforums {
+    font-size: 0;
+}
+.forum-desc .forum-links a,
+.forum-desc .subforums a {
+    display: inline-block;
+    background: var(--mainColor);
+    color: var(--altColor);
+    font-size: var(--xsBody);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-align: center;
+    padding: 3px 5px;
+    border-radius: 3px;
+    max-width: max-content;
+    margin: 0 5px 5px 0;
+}
+.forum-latest {
+    margin-bottom: -9px;
+    background: var(--transBG);
+    border-top: 1px solid var(--ltAccent);
+    padding: 15px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 70px;
+    grid-gap: 0 15px;
+}
+.forum-latest > a {
+    font-family: var(--serif);
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-weight: 800;
+}
+.forum-latest > a:first-child {
+    align-self: end;
+    font-size: var(--xlBody);
+}
+.forum-latest > a:nth-child(2) {
+    color: var(--mainColor);
+    font-size: var(--lBody);
+}
+.forum-latest > a:nth-child(2):before {
+    content: 'written by\00a0';
+}
+.forum-latest > span {
+    align-self: start;
+    font-size: var(--xsBody);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    display: block;
+    top: 5px;
+}
+.forum-latest img {
+    grid-row: 1 / 4;
+    grid-column: 2 / 3;
+    width: 70px;
+    height: 70px;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+
+
+/******************************
     Media Queries
 *******************************/
 @media only screen and (max-width: 1200px) {
@@ -448,7 +622,8 @@ header p {
     .nav-popout.active ~ .nav-breadcrumb {
         left: 239px;
     }
-    .nav-popout.active ~ header {
+    .nav-popout.active ~ header,
+    .nav-popout.active ~ main {
         left: 200px;
     }
     .nav-popout.active ~ .nav-toggles {
