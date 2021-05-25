@@ -10,6 +10,7 @@
     --serif: 'eb garamond', serif;
     --body: 'open sans', sans-serif;
 
+    --black: rgba(40, 40, 40, 1);
     --darkGrey: rgba(49, 49, 49, 1);
     --darkGrey-80: rgba(49, 49, 49, 0.8);
     --offwhite: rgba(200, 200, 200, 1);
@@ -24,6 +25,7 @@
     --ltAccent: rgba(174, 155, 132, 1);
     --mainBG-60: var(--white-60);
     --transBG: var(--white-60);
+    --strongBG: var(--white);
     --linkBG: var(--darkGrey-80);
     --linkHover: var(--darkGrey);
     --mainColor: var(--darkGrey);
@@ -39,6 +41,7 @@
     --ltAccent: rgba(136, 116, 95, 1);
     --mainBG-60: var(--darkGrey);
     --transBG: var(--darkGrey-80);
+    --strongBG: var(--black);
     --linkBG: var(--accent-60);
     --linkHover: var(--accent);
     --mainColor: var(--offwhite);
@@ -105,6 +108,21 @@ body > nav {
     position: fixed;
     top: 10px;
     right: 10px;
+    z-index: 10;
+}
+.nav-toggles:before {
+    /*content: '';*/
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-image: var(--paper);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    filter: invert(var(--invert));
 }
 .nav-toggles button {
     background: transparent;
@@ -161,7 +179,7 @@ body > nav {
     width: calc(100% - 66px);
     font-size: 0;
 }
-.nav-main::before {
+.nav-main:before {
     content: '';
     position: absolute;
     top: 59px;
@@ -169,6 +187,20 @@ body > nav {
     width: 2px;
     height: calc(100vh - 109px);
     background: var(--ltAccent);
+}
+.nav-main:after {
+    /*content: '';*/
+    position: absolute;
+    top: -10px;
+    left: -39px;
+    width: calc(100% + 100px);
+    height: 39px;
+    background-image: var(--paper);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    filter: invert(var(--invert));
 }
 .nav-main a {
     margin-right: 15px;
@@ -482,22 +514,31 @@ main {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin: 0;
+    font-weight: 900;
 }
 .cat-forums {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(auto-fit, 370px);
     grid-gap: 10px;
 }
 .forum-wrap {
     background: var(--transBG);
     counter-increment: forumCount;
-    height: 370px;
+    display: grid;
+    grid-template-rows: max-content 17px 145px 1fr;
+    grid-template-areas: "title" "stats" "description" "latest";
+}
+.forum-wrap:last-child:nth-child(2n+1) {
+    grid-column: span 2;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "title latest" "stats latest" "description latest";
+    grid-template-rows: max-content 17px 1fr;
 }
 .forum-wrap h3 {
     margin: 6px 15px 0;
     font-family: var(--serif);
+    grid-area: title;
 }
 .forum-wrap h3:before {
     content: counter(forumCount, lower-roman) '.';
@@ -514,6 +555,7 @@ main {
     text-align: right;
     font-size: 0;
     margin: -8px 15px 0;
+    grid-area: stats;
 }
 .forum-stats > span {
     display: inline-block;
@@ -529,25 +571,23 @@ main {
 }
 .forum-desc {
     margin: 15px 15px 10px;
+    grid-area: description;
 }
 .forum-desc .scroll {
     text-align: justify;
-    height: 100px;
-    margin-bottom: 15px;
-}
-.forum-desc .scroll p {
+    max-height: 100px;
     font-family: var(--serif);
     font-size: var(--lBody);
     font-weight: 600;
     letter-spacing: 1px;
     font-style: italic;
+    margin: 15px auto 25px;
+    max-width: 380px;
 }
-.forum-desc .forum-links,
-.forum-desc .subforums {
+.forum-subs {
     font-size: 0;
 }
-.forum-desc .forum-links a,
-.forum-desc .subforums a {
+.forum-subs a {
     display: inline-block;
     background: var(--mainColor);
     color: var(--altColor);
@@ -561,15 +601,25 @@ main {
     max-width: max-content;
     margin: 0 5px 5px 0;
 }
+.forum-footer {
+    grid-area: latest;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+}
 .forum-latest {
-    margin-bottom: -9px;
-    background: var(--transBG);
-    border-top: 1px solid var(--ltAccent);
-    padding: 15px;
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 70px;
     grid-gap: 0 15px;
+    grid-template-rows: 1fr max-content 1fr;
+    height: 100px;
+    background: var(--strongBG);
+    padding: 15px;
+    border-top: 1px solid var(--ltAccent);
+    border-bottom: 1px solid var(--ltAccent);
+}
+.forum-subs:not(:empty) {
+    padding: 10px 10px 5px;
 }
 .forum-latest > a {
     font-family: var(--serif);
@@ -603,6 +653,21 @@ main {
     width: 70px;
     height: 70px;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+.forum-wrap:last-child:nth-child(2n+1) .forum-footer {
+    border-left: 1px solid var(--ltAccent);
+    border-right: 1px solid var(--ltAccent);
+    margin-right: 35px;
+}
+.forum-wrap:last-child:nth-child(2n+1) .forum-latest {
+    border: 0;
+}
+.forum-wrap:last-child:nth-child(2n+1) .forum-subs {
+    background: var(--strongBG);
+}
+.forum-wrap:last-child:nth-child(2n+1) .forum-stats {
+    text-align: left;
+    padding-left: 15px;
 }
 
 

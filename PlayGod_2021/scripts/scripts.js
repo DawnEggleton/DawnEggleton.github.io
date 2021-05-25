@@ -50,12 +50,11 @@ $(document).ready(function(){
 });
 
 
-$('.subforums-macro').each(function() {
-	$(this).remove();
-});
-$('.forum-links').each(function() {
-	if($(this).next().length != 0) {
-		$(this).next('.subforums').append($(this).html());
-		$(this).remove();
-	}
+document.querySelectorAll('.forum-links').forEach(linkSet => {
+    if(linkSet.parentNode.parentNode.nextElementSibling.children[1].children[0]) {
+        linkSet.parentNode.parentNode.nextElementSibling.children[1].children[0].insertAdjacentHTML('beforeend', linkSet.innerHTML);
+    } else {
+        linkSet.parentNode.parentNode.nextElementSibling.children[1].insertAdjacentHTML('beforeend', linkSet.innerHTML);
+    }
+    linkSet.remove();
 });
