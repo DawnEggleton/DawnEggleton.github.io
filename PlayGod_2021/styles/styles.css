@@ -503,7 +503,11 @@ header p {
 .g-2 .memOnly {
     display: none;
 }
-.g-2 nav .guestOnly,
-.g-4 nav .staffOnly {
+.g-2 .nav-main .guestOnly,
+.g-4 .nav-main .staffOnly {
     display: inline;
+}
+.g-2 .nav-popout .guestOnly,
+.g-4 .nav-popout .staffOnly {
+    display: block;
 }
