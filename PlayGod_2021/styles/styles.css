@@ -369,6 +369,24 @@ header:after {
     right: -17px;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
+.header-accent {
+    position: absolute;
+    top: 39px;
+    left: 0;
+    background: var(--ltAccent);
+    width: 40%;
+    height: 2px;
+}
+.header-accent:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--ltAccent);
+    bottom: -9px;
+    right: -17px;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
 header img {
     position: absolute;
     height: 100%;
