@@ -546,7 +546,7 @@ main {
     grid-template-areas: "title" "stats" "description" "latest";
     box-shadow: var(--boxShadow);
 }
-.forum-wrap:last-child:nth-child(2n+1) {
+.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) {
     grid-column: span 2;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "title latest" "stats latest" "description latest";
@@ -670,20 +670,48 @@ main {
     height: 70px;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
-.forum-wrap:last-child:nth-child(2n+1) .forum-footer {
+.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) .forum-footer {
     border-left: 1px solid var(--ltAccent);
     border-right: 1px solid var(--ltAccent);
     margin-right: 35px;
 }
-.forum-wrap:last-child:nth-child(2n+1) .forum-latest {
+.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) .forum-latest {
     border: 0;
 }
-.forum-wrap:last-child:nth-child(2n+1) .forum-subs {
+.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) .forum-subs {
     background: var(--strongBG);
 }
-.forum-wrap:last-child:nth-child(2n+1) .forum-stats {
+.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) .forum-stats {
     text-align: left;
     padding-left: 15px;
+}
+.forum-wrap.redirect {
+    grid-template-areas: "title latest" "stats latest";
+    grid-column: span 2;
+    grid-template-columns: 2fr 1.5fr;
+    grid-template-rows: max-content 1fr;
+}
+.forum-wrap.redirect h3::before {
+    content: 'read more';
+}
+.forum-wrap.redirect .forum-desc {
+    grid-area: unset;
+}
+.forum-wrap.redirect .forum-stats {
+    text-align: left;
+    padding-left: 15px;
+}
+.forum-wrap.redirect .forum-footer {
+    background: var(--strongBG);
+    border-left: 1px solid var(--ltAccent);
+    border-right: 1px solid var(--ltAccent);
+    margin-right: 35px;
+}
+.forum-wrap.redirect .forum-footer .forum-desc {
+    margin: 0 15px;
+}
+.forum-wrap.redirect .forum-footer .forum-desc .scroll {
+    margin: 15px auto 5px;
 }
 
 /******************************
@@ -738,6 +766,7 @@ main {
     }
 }
 @media only screen and (max-width: 1000px) {
+    .forum-wrap.redirect,
     .forum-wrap:last-child:nth-child(2n+1),
     .forum-wrap {
         grid-column: span 2;
@@ -745,27 +774,33 @@ main {
         grid-template-areas: "title latest" "stats latest" "description latest";
         grid-template-rows: max-content 17px 1fr;
     }
+    .forum-wrap.redirect .forum-footer,
     .forum-wrap .forum-footer {
         border-left: 1px solid var(--ltAccent);
         border-right: 1px solid var(--ltAccent);
         margin-right: 35px;
     }
+    .forum-wrap.redirect .forum-latest,
     .forum-wrap .forum-latest {
         border: 0;
     }
+    .forum-wrap.redirect .forum-subs,
     .forum-wrap .forum-subs {
         background: var(--strongBG);
     }
+    .forum-wrap.redirect .forum-stats,
     .forum-wrap .forum-stats {
         text-align: left;
         padding-left: 15px;
         margin-top: -3px;
     }
+    .forum-wrap.redirect h3 > a,
     .forum-wrap h3 > a {
         font-size: 35px;
         margin: -12px 0 0 10px;
     }
-    .forum-wrap h3::before {
+    .forum-wrap.redirect h3:before,
+    .forum-wrap h3:before {
         font-size: 25px;
     }
 }
@@ -777,19 +812,31 @@ main {
     .forum-wrap {
         grid-template-columns: 1fr;
         grid-template-areas: "title" "stats" "description" "latest";
-        grid-template-rows: max-content 17px 145px 1fr;
     }
+    .forum-wrap.redirect {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "stats" "latest";
+        grid-template-rows: max-content 17px 1fr;
+    }
+    .forum-wrap.redirect .forum-footer,
     .forum-wrap:last-child:nth-child(2n+1) .forum-footer,
     .forum-wrap .forum-footer {
         border-left: 0;
         border-right: 0;
         margin-right: 0;
     }
+    .forum-wrap.redirect .forum-footer {
+        border-top: 1px solid var(--ltAccent);
+        border-bottom: 1px solid var(--ltAccent);
+        margin: 15px 0 35px;
+    }
+    .forum-wrap.redirect .forum-latest,
     .forum-wrap:last-child:nth-child(2n+1) .forum-latest,
     .forum-wrap .forum-latest {
         border-top: 1px solid var(--ltAccent);
         border-bottom: 1px solid var(--ltAccent);
     }
+    .forum-wrap.redirect .forum-subs,
     .forum-wrap:last-child:nth-child(2n+1) .forum-subs,
     .forum-wrap .forum-subs {
         background: transparent;

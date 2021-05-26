@@ -50,11 +50,19 @@ $(document).ready(function(){
 });
 
 
-document.querySelectorAll('.forum-links').forEach(linkSet => {
+document.querySelectorAll('.forum-wrap:not(.redirect) .forum-links').forEach(linkSet => {
     if(linkSet.parentNode.parentNode.nextElementSibling.children[1].children[0]) {
         linkSet.parentNode.parentNode.nextElementSibling.children[1].children[0].insertAdjacentHTML('beforeend', linkSet.innerHTML);
     } else {
         linkSet.parentNode.parentNode.nextElementSibling.children[1].insertAdjacentHTML('beforeend', linkSet.innerHTML);
+    }
+    linkSet.remove();
+});
+document.querySelectorAll('.forum-wrap.redirect .forum-links').forEach(linkSet => {
+    if(linkSet.parentNode.parentNode.nextElementSibling.children[0]) {
+        linkSet.parentNode.parentNode.nextElementSibling.children[0].insertAdjacentHTML('beforeend', linkSet.innerHTML);
+    } else {
+        linkSet.parentNode.parentNode.nextElementSibling.insertAdjacentHTML('beforeend', linkSet.innerHTML);
     }
     linkSet.remove();
 });
