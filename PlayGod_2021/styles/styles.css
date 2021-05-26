@@ -759,11 +759,11 @@ main {
     .forum-wrap .forum-stats {
         text-align: left;
         padding-left: 15px;
-        margin-top: -6px;
+        margin-top: -3px;
     }
     .forum-wrap h3 > a {
         font-size: 35px;
-        margin: -15px 0 0 10px;
+        margin: -12px 0 0 10px;
     }
     .forum-wrap h3::before {
         font-size: 25px;
