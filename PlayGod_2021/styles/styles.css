@@ -203,7 +203,12 @@ body > nav {
     filter: invert(var(--invert));
 }
 .nav-main a {
-    margin-right: 15px;
+    display: block;
+    width: 40px;
+    margin-bottom: 10px;
+}
+.nav-main a:not(:first-child) {
+    margin-left: 10px;
 }
 .nav-main a i {
     display: inline-grid;
@@ -221,16 +226,6 @@ body > nav {
     width: 60px;
     height: 60px;
     font-weight: bold;
-}
-.nav-main a:not(:last-child):not(.last):after,
-.g-4 .nav-main a.memOnly.last:after {
-    content: '';
-    position: absolute;
-    right: -16px;
-    height: 2px;
-    width: 17px;
-    background: var(--ltAccent);
-    top: calc(50% - 6px);
 }
 .nav-breadcrumb {
     bottom: 0;
@@ -670,6 +665,32 @@ main {
     padding-left: 15px;
 }
 
+/******************************
+    Overrides
+*******************************/
+.hide {
+    display: none !important;
+}
+.scroll {
+    overflow: auto;
+    scrollbar-width: thin;
+    padding-right: 10px;
+    scrollbar-color: var(--mainColor) transparent;
+}
+.mobileNav,
+.guestOnly,
+.staffOnly,
+.g-2 .memOnly {
+    display: none !important;
+}
+.g-2 .nav-main .guestOnly,
+.g-4 .nav-main .staffOnly,
+.g-2 .nav-popout .guestOnly:not(.mobileNav),
+.g-4 .nav-popout .staffOnly:not(.mobileNav) {
+    display: block !important;
+}
+
+
 
 
 /******************************
@@ -705,15 +726,12 @@ main {
     .nav-main a.memOnly,
     .g-4 .nav-main a.staffOnly,
     .g-2 .nav-main a.guestOnly {
-        display: none;
-    }
-    .nav-main a.mobile-last:after {
-        display: none;
+        display: none !important;
     }
     body:not(.g-2) .nav-popout a.mobileNav.memOnly,
     .g-4 .nav-popout a.mobileNav.staffOnly,
     .g-2 .nav-popout a.mobileNav.guestOnly {
-        display: block;
+        display: block !important;
     }
     .info-tabs {
         background: var(--transBG);
@@ -724,30 +742,4 @@ main {
         height: calc(100% - 20px);
         margin: 10px;
     }
-}
-
-/******************************
-    Overrides
-*******************************/
-.hide {
-    display: none !important;
-}
-.scroll {
-    overflow: auto;
-    scrollbar-width: thin;
-    padding-right: 10px;
-    scrollbar-color: var(--mainColor) transparent;
-}
-.guestOnly,
-.staffOnly,
-.g-2 .memOnly {
-    display: none;
-}
-.g-2 .nav-main .guestOnly,
-.g-4 .nav-main .staffOnly {
-    display: inline;
-}
-.g-2 .nav-popout .guestOnly:not(.mobileNav),
-.g-4 .nav-popout .staffOnly:not(.mobileNav) {
-    display: block;
 }
