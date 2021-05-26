@@ -546,7 +546,7 @@ main {
     grid-template-areas: "title" "stats" "description" "latest";
     box-shadow: var(--boxShadow);
 }
-.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) {
+.forum-wrap:last-child:nth-child(2n+1) {
     grid-column: span 2;
     grid-template-columns: 2fr 1fr;
     grid-template-areas: "title latest" "stats latest" "description latest";
@@ -587,7 +587,7 @@ main {
     margin-left: 15px;
 }
 .forum-desc {
-    margin: 15px 15px 10px;
+    margin: 0px 15px 10px;
     grid-area: description;
 }
 .forum-desc .scroll {
@@ -670,48 +670,26 @@ main {
     height: 70px;
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
-.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) .forum-footer {
+.forum-wrap:last-child:nth-child(2n+1) .forum-footer {
     border-left: 1px solid var(--ltAccent);
     border-right: 1px solid var(--ltAccent);
     margin-right: 35px;
 }
-.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) .forum-latest {
+.forum-wrap:last-child:nth-child(2n+1) .forum-latest {
     border: 0;
 }
-.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) .forum-subs {
+.forum-wrap:last-child:nth-child(2n+1) .forum-subs {
     background: var(--strongBG);
 }
-.cat-forums > *:first-child:not(.redirect) ~ .forum-wrap:last-child:nth-child(2n+1) .forum-stats {
+.forum-wrap:last-child:nth-child(2n+1) .forum-stats {
     text-align: left;
     padding-left: 15px;
 }
-.forum-wrap.redirect {
-    grid-template-areas: "title latest" "stats latest";
-    grid-column: span 2;
-    grid-template-columns: 2fr 1.5fr;
-    grid-template-rows: max-content 1fr;
-}
-.forum-wrap.redirect h3::before {
-    content: 'read more';
-}
-.forum-wrap.redirect .forum-desc {
-    grid-area: unset;
-}
-.forum-wrap.redirect .forum-stats {
-    text-align: left;
-    padding-left: 15px;
-}
-.forum-wrap.redirect .forum-footer {
-    background: var(--strongBG);
-    border-left: 1px solid var(--ltAccent);
-    border-right: 1px solid var(--ltAccent);
-    margin-right: 35px;
-}
-.forum-wrap.redirect .forum-footer .forum-desc {
-    margin: 0 15px;
-}
-.forum-wrap.redirect .forum-footer .forum-desc .scroll {
-    margin: 15px auto 5px;
+.forum-wrap.redirect .forum-latest {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 900;
+    display: block;
 }
 
 /******************************
