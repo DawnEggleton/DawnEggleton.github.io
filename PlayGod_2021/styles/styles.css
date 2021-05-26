@@ -176,7 +176,7 @@ body > nav {
 .nav-main {
     top: 10px;
     left: 10px;
-    width: calc(100% - 66px);
+    width: 60px;
     font-size: 0;
 }
 .nav-main:before {
