@@ -374,7 +374,7 @@ header:after {
     top: 39px;
     left: 0;
     background: var(--ltAccent);
-    width: 40%;
+    width: clamp(303px, 70%, 660px);
     height: 2px;
 }
 .header-accent:after {
