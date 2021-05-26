@@ -512,8 +512,9 @@ header p {
 main {
     margin: 0 auto 80px;
     left: 0;
-    width: calc(100% - 120px);
+    width: calc(90% - 120px);
     max-width: 1160px;
+    min-width: 230px;
 }
 
 /******************************
@@ -620,7 +621,7 @@ main {
 .forum-footer {
     grid-area: latest;
     display: grid;
-    grid-template-rows: 100px 1fr;
+    grid-template-rows: max-content 1fr;
 }
 .forum-latest {
     display: grid;
@@ -628,7 +629,6 @@ main {
     grid-template-columns: 1fr 70px;
     grid-gap: 0 15px;
     grid-template-rows: 1fr max-content 1fr;
-    height: 100px;
     background: var(--strongBG);
     padding: 15px;
     border-top: 1px solid var(--ltAccent);
@@ -735,6 +735,65 @@ main {
     }
     .nav-popout.active ~ .nav-toggles {
         right: -190px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .forum-wrap:last-child:nth-child(2n+1),
+    .forum-wrap {
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "title latest" "stats latest" "description latest";
+        grid-template-rows: max-content 17px 1fr;
+    }
+    .forum-wrap .forum-footer {
+        border-left: 1px solid var(--ltAccent);
+        border-right: 1px solid var(--ltAccent);
+        margin-right: 35px;
+    }
+    .forum-wrap .forum-latest {
+        border: 0;
+    }
+    .forum-wrap .forum-subs {
+        background: var(--strongBG);
+    }
+    .forum-wrap .forum-stats {
+        text-align: left;
+        padding-left: 15px;
+        margin-top: -6px;
+    }
+    .forum-wrap h3 > a {
+        font-size: 35px;
+        margin: -15px 0 0 10px;
+    }
+    .forum-wrap h3::before {
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width: 700px) {
+    main {
+        width: calc(100% - 110px);
+    }
+    .forum-wrap:last-child:nth-child(2n+1),
+    .forum-wrap {
+        grid-template-columns: 1fr;
+        grid-template-areas: "title" "stats" "description" "latest";
+        grid-template-rows: max-content 17px 145px 1fr;
+    }
+    .forum-wrap:last-child:nth-child(2n+1) .forum-footer,
+    .forum-wrap .forum-footer {
+        border-left: 0;
+        border-right: 0;
+        margin-right: 0;
+    }
+    .forum-wrap:last-child:nth-child(2n+1) .forum-latest,
+    .forum-wrap .forum-latest {
+        border-top: 1px solid var(--ltAccent);
+        border-bottom: 1px solid var(--ltAccent);
+    }
+    .forum-wrap:last-child:nth-child(2n+1) .forum-subs,
+    .forum-wrap .forum-subs {
+        background: transparent;
+        min-height: 35px;
     }
 }
 @media only screen and (max-width: 650px) {
