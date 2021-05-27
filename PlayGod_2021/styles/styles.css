@@ -595,9 +595,10 @@ main {
     background: var(--mainColor);
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
     bottom: 6px;
+    opacity: 0.6;
 }
 .macro-forum.new {
-    background: var(--ltAccent);
+    opacity: 1;
 }
 .forum-wrap h3 > a {
     font-size: 50px;
