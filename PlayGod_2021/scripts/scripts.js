@@ -58,3 +58,9 @@ document.querySelectorAll('.forum-links').forEach(linkSet => {
     }
     linkSet.remove();
 });
+document.querySelectorAll('.forum-cta').forEach(cta => {
+    cta.parentNode.parentNode.nextElementSibling.children[0].children[1].insertAdjacentHTML('beforeend', cta.innerHTML);
+    cta.remove();
+});
+
+$('#recent-topics').appendTo($('#recent-topics-clip'));
