@@ -564,16 +564,16 @@ main {
     font-family: var(--serif);
     grid-area: title;
 }
-.forum-wrap h3:before {
+/*.forum-wrap h3:before {
     content: counter(forumCount, lower-roman) '.';
     font-size: 35px;
     font-style: italic;
     display: block;
-}
+}*/
 .forum-wrap h3 > a {
     font-size: 50px;
     display: block;
-    margin: -20px 0 0 10px;
+    margin: 5px 0 0 10px; /*-20px 0 0 10px*/
 }
 .forum-stats {
     text-align: right;
@@ -594,7 +594,7 @@ main {
     margin-left: 15px;
 }
 .forum-desc {
-    margin: 0px 15px 10px;
+    margin: 0 35px 10px; /*0 15px 10px*/
     grid-area: description;
 }
 .forum-desc .scroll {
@@ -969,7 +969,7 @@ main {
     }
     .forum-wrap h3 > a {
         font-size: 35px;
-        margin: -12px 0 0 10px;
+        margin: 10px 0 0 10px; /* -12px 0 0 10px */
     }
     .forum-wrap h3:before {
         font-size: 25px;
@@ -981,6 +981,33 @@ main {
     .forum-wrap.redirect .forum-latest i {
         font-size: 30px;
         bottom: -9px;
+    }
+    .stat-wrap h2 {
+        font-size: 35px;
+    }
+}
+@media only screen and (max-width: 860px) {
+    .stat-wrap {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 250px 37px 100px 37px;
+        grid-template-areas: "main" "recent" "links" "today" "credit";
+    }
+    .stat-now.scroll {
+        height: auto;
+    }
+    .stat-recent {
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid var(--ltAccent);
+        border-bottom: 1px solid var(--ltAccent);
+    }
+    .stat-recent .scroll {
+        max-height: 220px;
+    }
+    .stat-links {
+        grid-template-rows: 37px;
+        grid-template-columns: repeat(4, 22px);
+        padding: 7.5px;
     }
 }
 @media only screen and (max-width: 700px) {
@@ -1039,6 +1066,15 @@ main {
         width: calc(100% - 20px);
         height: calc(100% - 20px);
         margin: 10px;
+    }
+    .stat-wrap {
+        grid-template-rows: max-content 250px 37px max-content 37px;
+    }
+    .stat-bottom {
+        grid-template-columns: 1fr;
+    }
+    .stat-today.scroll {
+        height: auto;
     }
 }
 @media only screen and (max-width: 500px) {
