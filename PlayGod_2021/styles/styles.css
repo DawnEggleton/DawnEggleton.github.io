@@ -590,15 +590,14 @@ main {
 }
 .macro-forum {
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: var(--mainColor);
-    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-    bottom: 6px;
-    opacity: 0.6;
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--mainColor);
+    bottom: 9px;
+    transform: rotate(45deg);
 }
 .macro-forum.new {
-    opacity: 1;
+    background: var(--mainColor);
 }
 .forum-wrap h3 > a {
     font-size: 50px;
@@ -792,7 +791,7 @@ main {
     letter-spacing: 1px;
     font-style: italic;
     margin: 22px auto 15px;
-    max-width: 380px;
+    max-width: 650px;
     text-transform: capitalize;
 }
 .stat-now.scroll a {
@@ -939,18 +938,17 @@ main {
     display: grid;
     grid-template-columns: 16px 1fr;
     align-items: center;
-    grid-gap: 10px;
+    grid-gap: 5px;
 }
 .macro-thread {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    background: var(--mainColor);
-    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-    opacity: 0.6;
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--mainColor);
+    transform: rotate(45deg);
 }
 .macro-thread.new {
-    opacity: 1;
+    background: var(--mainColor);
 }
 .thread-title a {
     font-family: var(--serif);
@@ -1163,9 +1161,9 @@ main {
         margin-top: -3px;
     }
     .macro-forum {
-        width: 16px;
-        height: 16px;
-        bottom: 4px;
+        width: 10px;
+        height: 10px;
+        bottom: 6px;
     }
     .forum-wrap h3 > a {
         font-size: 35px;
