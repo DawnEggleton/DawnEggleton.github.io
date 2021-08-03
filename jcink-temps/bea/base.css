@@ -319,3 +319,34 @@
 .totl .bea-wrap.playlist song span {
     font-size: var(--size-s);
 }
+.bea-wrap.comm {
+    width: 300px;
+    display: block;
+}
+.bea-wrap.comm .bea-main {
+    display: grid;
+    grid-template-columns: 89px 1fr;
+    align-items: center;
+    grid-gap: 10px;
+}
+.bea-wrap.comm .bea-img {
+    margin-bottom: 0;
+}
+.bea-wrap.comm .bea-content {
+    grid-column: span 2;
+}
+.bea-tag a {
+    color: var(--accent);
+    font-family: 'Thasadith', sans-serif;
+    margin-top: 10px;
+    display: block;
+    text-align: right;
+    font-size: var(--mBody);
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-right: 10px;
+}
+.bea-tag a::before {
+    content: '#';
+}
