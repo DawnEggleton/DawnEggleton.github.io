@@ -8,6 +8,20 @@
 .bea-wrap.imageDev {
     display: block;
 }
+.bea-wrap.imageDev .bea-content span {
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+}
+.bea-wrap.imageDev .bea-content span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
 .bea-sticky {
     position: sticky;
     top: 0;
