@@ -7,6 +7,7 @@ body .sslp-wrap {
   --accent: #e0e0e0;
   --dkAccent: #000;
 }
+body.dkMode .sslp-wrap,
 body.dark .sslp-wrap {
   --background: #242424;
   --textColor: #b5b5b5;
