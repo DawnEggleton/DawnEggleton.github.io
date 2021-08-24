@@ -7,7 +7,7 @@ body .sslp-wrap {
   --accent: #e0e0e0;
   --dkAccent: #000;
 }
-body.dkMode .sslp-wrap {
+body.dark .sslp-wrap {
   --background: #242424;
   --textColor: #b5b5b5;
   --accent: #515151;
@@ -28,6 +28,14 @@ body.dkMode .sslp-wrap {
   color: var(--textColor);
   text-transform: none;
   letter-spacing: 0;
+}
+.sslp-wrap p,
+.sslp-wrap b,
+.sslp-wrap i,
+.sslp-wrap a,
+.sslp-wrap h1,
+.sslp-wrap h2 {
+  all: inherit;
 }
 .sslp-wrap p {
   margin: 20px 0;
@@ -100,18 +108,17 @@ body.dkMode .sslp-wrap {
   color: var(--dkAccent), #000;
   padding: 0;
 }
-
 .sslp-wrap b {
   font-family: 'mallory_narrow';
   font-weight: 900;
   letter-spacing: 1px;
 }
 .sslp-wrap i {
-	font-size: var(--lBody, var(--size-l, 14px));
+  font-size: var(--lBody, var(--size-l, 14px));
 }
 .sslp-wrap a {
   text-transform: uppercase;
-	font-size: var(--sBody, var(--size-s, 10px));
+  font-size: var(--sBody, var(--size-s, 10px));
   letter-spacing: 1px;
   font-weight: bold;
 }
@@ -123,7 +130,7 @@ body.dkMode .sslp-wrap {
   text-transform: uppercase;
   font-weight: 900;
   color: var(--dkAccent, #000);  
-	font-size: var(--sBody, var(--size-s, 10px));
+  font-size: var(--sBody, var(--size-s, 10px));
   letter-spacing: 2px;
 }
 .sslp-wrap tag a {
