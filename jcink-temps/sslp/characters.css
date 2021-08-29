@@ -6,37 +6,287 @@
 }
 
 .addie .sslp-wrap {
-	--accent: #f6b6b6;
-	--dkAccent: #f08989;
+	--accent: #A77381;
+	--dkAccent: #915062;
+}
+.aiden .sslp-wrap {
+	
+}
+.ambrose .sslp-wrap {
+	
+}
+.al .sslp-wrap {
+	--accent: #D99B88;
+	--dkAccent: #D0836B;
+}
+.andy .sslp-wrap {
+	--accent: #7B3939;
+	--dkAccent: #5A0808;
+}
+.antoni .sslp-wrap {
+	
+}
+.archer .sslp-wrap {
+	
+}
+.avery .sslp-wrap {
+	--accent: #B2B492;
+	--dkAccent: #9FA277;
+}
+.basil .sslp-wrap {
+	--accent: #989E91;
+	--dkAccent: #7F8676;
+}
+.ben .sslp-wrap,
+.cain .sslp-wrap,
+.loki .sslp-wrap {
+	--accent: #95A547;
+	--dkAccent: #7B8F1A;
+}
+.dkmode .ben .sslp-wrap,
+.dkmode .cain .sslp-wrap,
+.dkmode .loki .sslp-wrap,
+.dark .ben .sslp-wrap,
+.dark .cain .sslp-wrap,
+.dark .loki .sslp-wrap {
+    --accent: #868e5d;
+    --dkAccent: #8fa625;
+}
+.brennan .sslp-wrap {
+	--accent: #76845C;
+	--dkAccent: #546634;
+}
+.bryn .sslp-wrap {
+	--accent: #9BD1BA;
+	--dkAccent: #82C6A9;
+}
+.cas .sslp-wrap {
+	--accent: #AF8474;
+	--dkAccent: #9C6652;
+}
+.cat .sslp-wrap {
+	
+}
+.connor .sslp-wrap {
+	--accent: #C2AF81;
+	--dkAccent: #B39B62;
+}
+.corey .sslp-wrap {
+	--accent: #5A4F6F;
+	--dkAccent: #31244C;
+}
+.cyn .sslp-wrap {
+	--accent: #653F3F;
+	--dkAccent: #3F0F0F;
+}
+.dalton .sslp-wrap {
+	--accent: #817E8D;
+	--dkAccent: #625E71;
+}
+.darcy .sslp-wrap {
+	--accent: #BBA0C5;
+	--dkAccent: #AB89B7;
+}
+.diana .sslp-wrap {
+	
+}
+.draco .sslp-wrap {
+	--accent: #475842;
+	--dkAccent: #1A2F13;
+}
+.duck .sslp-wrap {
+	--accent: #997E8F;
+	--dkAccent: #805E73;
+}
+.elias .sslp-wrap {
+	--accent: #636363;
+	--dkAccent: #3C3C3C;
+}
+.ellis .sslp-wrap {
+	
+}
+.emma .sslp-wrap {
+	--accent: #DFBAC7;
+	--dkAccent: #D7A9BA;
+}
+.evan .sslp-wrap {
+	--accent: #734533;
+	--dkAccent: #511700;
+}
+.felicity .sslp-wrap {
+	
+}
+.gabe .sslp-wrap {
+	--accent: #A7B69A;
+	--dkAccent: #92A481;
+}
+.gavin .sslp-wrap {
+	
+}
+.gen .sslp-wrap {
+	--accent: #cab6c8;
+	--dkAccent: #915c8b;
+}
+.hallie .sslp-wrap {
+	--accent: #B8909E;
+	--dkAccent: #A77586;
+}
+.harley .sslp-wrap {
+	--accent: #C8B0BF;
+	--dkAccent: #BB9DAF;
+}
+.hayd .sslp-wrap {
+	--accent: #737E67;
+	--dkAccent: #515E41;
+}
+.dark .hayd .sslp-wrap,
+.dkMode .hayd .sslp-wrap {
+    --accent: #6d8670;
+    --dkAccent: #5c8660;
+}
+.heiko .sslp-wrap {
+	
+}
+.jazz .sslp-wrap {
+	--accent: #AB939F;
+	--dkAccent: #967988;
+}
+.kit .sslp-wrap {
+	--accent: #D9C3A7;
+	--dkAccent: #D0B592;
+}
+.lore .sslp-wrap {
+	--accent: #BF7551;
+	--dkAccent: #E9F0F8;
+}
+.lottie .sslp-wrap {
+	--accent: #D4A1A8;
+	--dkAccent: #CA8A93;
+}
+.lou .sslp-wrap {
+	
+}
+.maggie .sslp-wrap {
+	--accent: #6B7E67;
+	--dkAccent: #465E42;
+}
+.mal .sslp-wrap {
+	--accent: #635C5C;
+	--dkAccent: #3C3434;
+}
+.malik .sslp-wrap {
+	
+}
+.mari .sslp-wrap {
+	--accent: #AF706A;
+	--dkAccent: #9B4D45;
+}
+.mav .sslp-wrap {
+	--accent: #B98781;
+	--dkAccent: #A86962;
+}
+.milo .sslp-wrap {
+	--accent: #DCA393;
+	--dkAccent: #D48D79;
+}
+.monty .sslp-wrap {
+	--accent: #879794;
+	--dkAccent: #6A7D7A;
+}
+.morgan .sslp-wrap {
+	--accent: #9797AB;
+	--dkAccent: #7E7D96;
+}
+.naya .sslp-wrap {
+	
+}
+.nikt .sslp-wrap {
+	--accent: #68768B;
+	--dkAccent: #43546F;
+}
+.nik .sslp-wrap {
+	--accent: #8EADB3;
+	--dkAccent: #7299A0;
+}
+.nim .sslp-wrap {
+	
+}
+.noah .sslp-wrap {
+	--accent: #9BA78E;
+	--dkAccent: #829272;
+}
+.oli .sslp-wrap {
+	--accent: #C89677;
+	--dkAccent: #BB7C56;
+}
+.percy .sslp-wrap {
+	--accent: #a88f80;
+	--dkAccent: #91664c;
+}
+.sephi .sslp-wrap {
+	--accent: #A36591;
+	--dkAccent: #8D3F76;
+}
+.rebecca .sslp-wrap {
+	
 }
 .remy .sslp-wrap {
-	--accent: #6c3939;
-	--dkAccent: #aa6464;
+	--accent: #97B4AD;
+	--dkAccent: #7DA299;
 }
-.al .sslp-wrap,
-.mav .sslp-wrap,
-.milo .sslp-wrap,
+.ren .sslp-wrap {
+	
+}
+.riv .sslp-wrap {
+	--accent: #979FAA;
+	--dkAccent: #7D8895;
+}
+.ryan .sslp-wrap {
+	
+}
+.sal .sslp-wrap {
+	
+}
 .tia .sslp-wrap {
-	--accent: #e1bdb2 !important;
-	--dkAccent: #d48d79 !important;
+	--accent: #C5A080;
+	--dkAccent: #B78961;
 }
+.simon .sslp-wrap {
+	--accent: #B4C781;
+	--dkAccent: #A2B962;
+}
+.sorren .sslp-wrap {
+	--accent: #614F4F;
+	--dkAccent: #3A2323;
+}
+.spence .sslp-wrap {
+	--accent: #8A97AE;
+	--dkAccent: #6D7D9A;
+}
+.sterling .sslp-wrap {
+	--accent: #CFA734;
+	--dkAccent: #C49102;
+}
+.tom .sslp-wrap {
+	
+}
+.fletch .sslp-wrap {
+	--accent: #898F79;
+	--dkAccent: #6C7358;
+}
+.vee .sslp-wrap {
+	--accent: #6F4D4D;
+	--dkAccent: #4C2121;
+}
+
+
+/***** Instagram for BTC Fall 2020 *****/
+
 .tia .insta-top,
 .tia .tindr-msgTop,
 .tia .insta-postImg {
 	--accent: #d48d79;
 	--dkAccent: #b56b56;
-}
-.basil .sslp-wrap {
-	--accent: #8b9c7d;
-	--dkAccent: #6c7d5f;
-}
-.loki .sslp-wrap {
-	--accent: #b2c06d;
-	--dkAccent: #7b8f1a;
-}
-.dkmode .loki .sslp-wrap {
-    --accent: #868e5d;
-    --dkAccent: #8fa625;
 }
 .loki .insta-top,
 .loki .tindr-msgTop,
@@ -44,93 +294,11 @@
 	--accent: #7b8f1a;
 	--dkAccent: #687a13;
 }
-.connor .sslp-wrap {
-	--accent: #e0d0b5;
-	--dkAccent: #b6a280;
-}
-.cyn .sslp-wrap,
-.evan .sslp-wrap {
-	--accent: #bb9a9a;
-	--dkAccent: #994545;
-}
-.darcy .sslp-wrap {
-	--accent: #d2ccd5;
-	--dkAccent: #9e88a8;
-}
-.gen .sslp-wrap {
-	--accent: #cab6c8;
-	--dkAccent: #915c8b;
-}
-.draco .sslp-wrap {
-	--accent: #7d927a;
-	--dkAccent: #394737;
-}
-.duck .sslp-wrap {
-	--accent: #c9aebe;
-	--dkAccent: #805e73;
-}
-.emma .sslp-wrap {
-	--accent: #d38dae;
-	--dkAccent: #d38dae;
-}
-.fletch .sslp-wrap {
-	--accent: #bdd2c0;
-	--dkAccent: #5a7e5e;
-}
-.gabe .sslp-wrap {
-	--accent: #cad9bb;
-	--dkAccent: #92a481;
-}
-.harley .sslp-wrap,
-.lottie .sslp-wrap {
-	--accent: #e8ccd1;
-	--dkAccent: #ca8a93;
-}
 .harley .insta-top,
 .harley .tindr-msgTop,
 .harley .insta-postImg {
 	--accent: #ca8a93;
 	--dkAccent: #a2636c;
-}
-.hayd .sslp-wrap {
-	--accent: #96b79a;
-	--dkAccent: #519358;
-}
-.dkMode  .hayd .sslp-wrap {
-    --accent: #6d8670;
-    --dkAccent: #5c8660;
-}
-.jazz .sslp-wrap {
-	--accent: #cbaec8;
-	--dkAccent: #997495;
-}
-.maggie .sslp-wrap {
-	--accent: #b6c2b9;
-	--dkAccent: #65806b;
-}
-.mari .sslp-wrap {
-	--accent: #e6cdc6;
-	--dkAccent: #dba797;
-}
-.nik .sslp-wrap {
-	--accent: #81c1c5;
-	--dkAccent: #61a6aa;
-}
-.noah .sslp-wrap {
-	--accent: #b5c8a4;
-	--dkAccent: #92a481;
-}
-.percy .sslp-wrap {
-	--accent: #a88f80;
-	--dkAccent: #91664c;
-}
-.simon .sslp-wrap {
-	--accent: #cde0a8;
-	--dkAccent: #9cc34f;
-}
-.sterling .sslp-wrap {
-	--accent: #D2B55B;
-	--dkAccent: #C49102;
 }
 .sterling .insta-top,
 .sterling .tindr-msgTop,
