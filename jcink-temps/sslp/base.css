@@ -244,11 +244,6 @@ body.dark .sslp-wrap {
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   padding: 30px;
-  height: auto;
-  width: auto;
-}
-.sslp-wrap > .imgdev {
-  padding: 20px 0;
 }
 .col2 {
   grid-template-columns: 1fr 1fr;
