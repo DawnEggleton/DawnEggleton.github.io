@@ -239,7 +239,7 @@ body.dark .sslp-wrap {
   max-width: 100%;
   height: auto;
 }
-.sslp-wrap .imgdev {
+.sslp-wrap.imgdev {
   display: grid;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
