@@ -245,6 +245,21 @@ body.dark .sslp-wrap {
   grid-row-gap: 10px;
   padding: 30px;
 }
+.sslp-wrap.imgdev > span {
+	width: 100%;
+	height: 0;
+	padding-top: 100%;
+}
+.sslp-wrap.imgdev > span > img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
 .col2 {
   grid-template-columns: 1fr 1fr;
 }
