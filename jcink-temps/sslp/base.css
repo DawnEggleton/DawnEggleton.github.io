@@ -136,6 +136,9 @@ body.dark .sslp-wrap {
   text-decoration: none;
   letter-spacing: 2px;
 }  
+.sslp-wrap tag a[href=""] {
+	text-decoration: line-through;
+}
 .scroll .sslp-scroll {
   max-height: 300px;
   overflow: auto;
