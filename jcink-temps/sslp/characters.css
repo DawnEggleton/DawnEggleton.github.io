@@ -272,6 +272,12 @@
 	--accent: #AF706A;
 	--dkAccent: #9B4D45;
 }
+.marlowe.lux,
+.marlowe.lux-track,
+.marlowe .sslp-wrap {
+	--accent: #b5c4ca;
+	--dkAccent: #859399;
+}
 .mav.lux,
 .maverick.lux-track,
 .mav .sslp-wrap {
