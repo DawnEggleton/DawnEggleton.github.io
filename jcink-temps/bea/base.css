@@ -181,6 +181,7 @@
 
 .bea-wrap.timeline .bea-content {
     display: none;
+    padding: 0 !important;
 }
 .bea-wrap.timeline .bea-main h1 {
     cursor: pointer;
@@ -194,10 +195,10 @@
 }
 .bea-wrap.timeline .bea-content event {
     display: block;
-    margin-bottom: 20px;
+    padding: 20px 20px 0;
 }
-.bea-wrap.timeline .bea-content event:last-of-type {
-    margin-bottom: 0;
+.bea-wrap.timeline .bea-content event:last-child {
+    padding-bottom: 20px;
 }
 .bea-wrap.playlist {
     width: 500px;
