@@ -6,7 +6,7 @@ if(years.length > 0) {
             $(content).slideToggle(300);
         });
     });
-});
+}
 
 $('.bea-wrap.tabbed .bea-notes span').on('click', function() {
     let id = this.id;
