@@ -1,5 +1,5 @@
 let years = document.querySelectorAll(`.bea-wrap.timeline h1`);
-if(years.length > 0 {
+if(years.length > 0) {
     years.forEach(year => {
         year.addEventListener('click', e=> {
             let content = e.currentTarget.nextElementSibling;
