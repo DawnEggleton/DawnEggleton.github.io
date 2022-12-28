@@ -279,7 +279,7 @@ body.dark .sslp-wrap {
   grid-column: 1 / -1;
 }
 
-.timeline {
+.sslp-wrap.timeline {
   padding: 50px;
 }
 
