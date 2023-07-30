@@ -224,6 +224,12 @@
 	--accent: #AB939F;
 	--dkAccent: #967988;
 }
+.jesse.lux,
+.jesse.lux-track,
+.jesse .sslp-wrap {
+	--accent: rgb(210, 193, 166);
+	--dkAccent: rgb(210, 193, 166);
+}
 .kit.lux,
 .kit.lux-track,
 .kit .sslp-wrap {
@@ -391,6 +397,12 @@
 .tia .sslp-wrap {
 	--accent: #C5A080;
 	--dkAccent: #B78961;
+}
+.silas.lux,
+.silas.lux-track,
+.silas .sslp-wrap {
+	--accent: rgb(166, 174, 176);
+	--dkAccent: rgb(166, 174, 176);
 }
 .simon.lux,
 .simon.lux-track,
