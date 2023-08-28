@@ -242,6 +242,9 @@
 	--accent: #BF7551;
 	--dkAccent: #E9F0F8;
 }
+.abby.lux,
+.abigail.lux-track,
+.abby .sslp-wrap,
 .lottie.lux,
 .lottie.lux-track,
 .lottie .sslp-wrap {
@@ -373,6 +376,12 @@
 .ren .sslp-wrap {
 	--accent: #79A4AB;
 	--dkAccent: #588E97;
+}
+.rory.lux,
+.riordan.lux-track,
+.rory .sslp-wrap {
+	--accent: #9F9D96;
+	--dkAccent: #88867E;
 }
 .riv.lux,
 .riven.lux-track,
