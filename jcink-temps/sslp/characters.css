@@ -218,6 +218,12 @@
 	--accent: #92B7BC;
 	--dkAccent: #77A5AC;
 }
+.isobel.lux,
+.isobel.lux-track,
+.isobel .sslp-wrap {
+	--accent: #D5BCCC;
+	--dkAccent: #D5BCCC;
+}
 .jazz.lux,
 .jasper.lux-track,
 .jazz .sslp-wrap {
