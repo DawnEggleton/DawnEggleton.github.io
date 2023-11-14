@@ -4,6 +4,13 @@
 	--accent: #222222;
 	--dkAccent: #444444;
 }
+.abby.lux,
+.abigail.lux-track,
+.abby .sslp-wrap {
+	--rgb: 212,161,168;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
+}
 .addie.lux,
 .adaline.lux-track,
 .addie .sslp-wrap {
@@ -27,6 +34,13 @@
 .al .sslp-wrap {
 	--accent: #D99B88;
 	--dkAccent: #D0836B;
+}
+.alya.lux,
+.alya.lux-track,
+.alya .sslp-wrap {
+	--rgb: 107,126,103;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
 }
 .andy.lux,
 .alexander.lux-track,
@@ -92,6 +106,13 @@
 	--accent: #CA8F7E;
 	--dkAccent: #BD745E;
 }
+.chris.lux,
+.christopher.lux-track,
+.chris .sslp-wrap {
+	--rgb: 104,118,139;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
+}
 .connor.lux,
 .connor.lux-track,
 .connor .sslp-wrap {
@@ -115,6 +136,13 @@
 .dalton .sslp-wrap {
 	--accent: #817E8D;
 	--dkAccent: #625E71;
+}
+.damian.lux,
+.damian.lux-track,
+.damian .sslp-wrap {
+	--rgb: 119,132,162;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
 }
 .darcy.lux,
 .darcy.lux-track,
@@ -200,6 +228,13 @@
 	--accent: #C8B0BF;
 	--dkAccent: #BB9DAF;
 }
+.harry.lux,
+.harriet.lux-track,
+.harry .sslp-wrap {
+	--rgb: 208,183,190;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
+}
 .hayd.lux,
 .hayden.lux-track,
 .hayd .sslp-wrap {
@@ -218,6 +253,20 @@
 	--accent: #92B7BC;
 	--dkAccent: #77A5AC;
 }
+.holly.lux,
+.holly.lux-track,
+.holly .sslp-wrap {
+	--rgb: 183,133,79;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
+}
+.isaiah.lux,
+.isaiah.lux-track,
+.isaiah .sslp-wrap {
+	--rgb: 135,151,148;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
+}
 .isobel.lux,
 .isobel.lux-track,
 .isobel .sslp-wrap {
@@ -233,8 +282,9 @@
 .jesse.lux,
 .jesse.lux-track,
 .jesse .sslp-wrap {
-	--accent: rgb(210, 193, 166);
-	--dkAccent: rgb(210, 193, 166);
+	--rgb: 210, 193, 166;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
 }
 .kit.lux,
 .kit.lux-track,
@@ -413,6 +463,13 @@
 	--accent: #C5A080;
 	--dkAccent: #B78961;
 }
+.bash.lux,
+.sebastian.lux-track,
+.bash .sslp-wrap {
+	--rgb: 197,187,181;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
+}
 .silas.lux,
 .silas.lux-track,
 .silas .sslp-wrap {
@@ -460,6 +517,13 @@
 .vee .sslp-wrap {
 	--accent: #6F4D4D;
 	--dkAccent: #4C2121;
+}
+.viv.lux,
+.viveka.lux-track,
+.viv .sslp-wrap {
+	--rgb: 185,135,129;
+	--accent: rgb(var(--rgb));
+	--dkAccent: rgb(var(--rgb));
 }
 
 
