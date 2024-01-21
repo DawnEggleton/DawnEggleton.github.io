@@ -9,7 +9,8 @@ $('.gallery').isotope({
 document.querySelectorAll('.gallery-thumb').forEach(thumb => {
     thumb.addEventListener('click', e => {
         $('.lightbox').addClass('is-open');
-        let startSlide = $(this).data('slide');
+        let startSlide = e.currentTarget.dataset.slide;
+        console.log(startSlide);
         if ($('.lightbox .glide').length) {
             let slider = new Glide('.glide', {
               gap: 40,
