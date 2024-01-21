@@ -89,7 +89,7 @@ function initPhotos(photos) {
         if(i < 12) {
             hidden = `default`;
         }
-        thumbnails += `<a class="gallery-thumb ${hidden}" href="javascript:;" data-slide="${i}"><img src="../dist/images/full/${photo.Category.toLowerCase().trim()}/${photo.Year.trim()}/${photo.Filename.trim()}" loading="lazy"></a>`;
+        thumbnails += `<a class="gallery-thumb ${hidden}" href="javascript:;" data-slide="${i}"><img src="../dist/images/thumb/${photo.Category.toLowerCase().trim()}/${photo.Year.trim()}/${photo.Filename.trim()}" loading="lazy"></a>`;
         lightbox += `<li class="glide__slide"><img src="../dist/images/full/${photo.Category.toLowerCase().trim()}/${photo.Year.trim()}/${photo.Filename.trim()}" loading="lazy"></li>`;
     });
 

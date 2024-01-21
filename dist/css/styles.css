@@ -5,6 +5,7 @@
   --dark-navy: #1a1e32;
   --navy: #232947;
   --navy-rgb: 35, 41, 71;
+  --light-navy: #4c5377;
   --cream: #dbd8d3;
   --dark-brown: #4d4a45;
   --brown: #777674;
@@ -295,15 +296,6 @@ h2 {
   border-radius: 2px;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s; }
-  .btn::after {
-    content: '\f178';
-    font-family: 'Font Awesome 6 Pro';
-    margin-left: 15px;
-    font-weight: 400;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s; }
-  .btn:hover::after {
-    margin-left: 25px; }
   .btn.btn-primary {
     background: var(--navy);
     color: var(--white);
@@ -312,8 +304,17 @@ h2 {
     font-size: 0.75em;
     padding: 15px 30px;
     letter-spacing: 0.2em; }
+    .btn.btn-primary::after {
+      content: '\f178';
+      font-family: 'Font Awesome 6 Pro';
+      margin-left: 15px;
+      font-weight: 400;
+      -webkit-transition-duration: 0.3s;
+              transition-duration: 0.3s; }
     .btn.btn-primary:hover {
       background: var(--dark-navy); }
+      .btn.btn-primary:hover::after {
+        margin-left: 25px; }
   .btn.btn-load {
     background: var(--navy);
     color: var(--white);
@@ -323,10 +324,33 @@ h2 {
     padding: 15px 30px;
     letter-spacing: 0.2em;
     cursor: pointer; }
-    .btn.btn-load::after {
-      display: none; }
     .btn.btn-load:hover {
       background: var(--dark-navy); }
+  .btn.btn-small {
+    border: 0;
+    background: var(--dark-brown);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.75em;
+    padding: 8px 15px;
+    letter-spacing: 0.1em;
+    cursor: pointer; }
+    .btn.btn-small:hover {
+      background: var(--brown); }
+  .btn.btn-arrow {
+    border: 0;
+    background: var(--cream);
+    color: var(--light-navy);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.75em;
+    padding: 8px 15px;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    border: 1px solid var(--light-brown); }
+    .btn.btn-arrow:hover {
+      background: var(--white); }
 
 footer {
   background: var(--dark-navy);
@@ -420,6 +444,11 @@ footer {
   height: 100dvh;
   padding: 50px;
   background: rgba(0, 0, 0, 0.8); }
+  .lightbox > button {
+    position: absolute;
+    z-index: 2;
+    top: 10px;
+    right: 10px; }
   .lightbox.is-open {
     display: block; }
   .lightbox .glide {
@@ -429,6 +458,18 @@ footer {
       height: 100%; }
     .lightbox .glide__slide {
       text-align: center; }
+    .lightbox .glide__arrows {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -webkit-transform: translateX(-50%) translateY(50%);
+          -ms-transform: translateX(-50%) translateY(50%);
+              transform: translateX(-50%) translateY(50%);
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      gap: 10px; }
     .lightbox .glide img {
       margin: 0 auto;
       max-width: 100%;

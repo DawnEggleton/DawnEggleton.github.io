@@ -9,6 +9,7 @@
     --dark-navy: #1a1e32;
     --navy: #232947;
     --navy-rgb: 35, 41, 71;
+    --light-navy: #4c5377;
     --cream: #dbd8d3;
     --dark-brown: #4d4a45;
     --brown: #777674;
@@ -299,20 +300,6 @@ h2 {
     border-radius: 2px;
     transition-duration: 0.3s;
 
-    &::after {
-        content: '\f178';
-        font-family: 'Font Awesome 6 Pro';
-        margin-left: 15px;
-        font-weight: 400;
-        transition-duration: 0.3s;
-    }
-
-    &:hover {
-        &::after {
-            margin-left: 25px;
-        }
-    }
-
     &.btn-primary {
         background: var(--navy);
         color: var(--white);
@@ -322,8 +309,20 @@ h2 {
         padding: 15px 30px;
         letter-spacing: 0.2em;
 
+        &::after {
+            content: '\f178';
+            font-family: 'Font Awesome 6 Pro';
+            margin-left: 15px;
+            font-weight: 400;
+            transition-duration: 0.3s;
+        }
+
         &:hover {
             background: var(--dark-navy);
+
+            &::after {
+                margin-left: 25px;
+            }
         }
     }
 
@@ -337,12 +336,41 @@ h2 {
         letter-spacing: 0.2em;
         cursor: pointer;
 
-        &::after {
-            display: none;
-        }
-
         &:hover {
             background: var(--dark-navy);
+        }
+    }
+
+    &.btn-small {
+        border: 0;
+        background: var(--dark-brown);
+        color: var(--white);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.75em;
+        padding: 8px 15px;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+
+        &:hover {
+            background: var(--brown);
+        }
+    }
+
+    &.btn-arrow {
+        border: 0;
+        background: var(--cream);
+        color: var(--light-navy);
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 0.75em;
+        padding: 8px 15px;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        border: 1px solid var(--light-brown);
+
+        &:hover {
+            background: var(--white);
         }
     }
 }
@@ -444,6 +472,13 @@ footer {
     padding: 50px;
     background: rgba(0,0,0,0.8);
 
+    & > button {
+        position: absolute;
+        z-index: 2;
+        top: 10px;
+        right: 10px;
+    }
+
     &.is-open {
         display: block;
     }
@@ -460,6 +495,15 @@ footer {
 
         &__slide {
             text-align: center;
+        }
+
+        &__arrows {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(50%);
+            display: flex;
+            gap: 10px;
         }
 
         img {
