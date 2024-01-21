@@ -77,8 +77,8 @@ function initPhotos(photos) {
     });
 
     photos.forEach((photo, i) => {
-        thumbnails += `<a class="gallery-thumb" href="javascript:;" data-slide="${i}"><img src="../dist/images/thumb/${photo.Category.toLowerCase().trim()}/${photo.Year.trim()}/${photo.Filename.trim()}"></a>`;
-        lightbox += `<li class="glide__slide"><img src="../dist/images/full/${photo.Category.toLowerCase().trim()}/${photo.Year.trim()}/${photo.Filename.trim()}"></li>`;
+        thumbnails += `<a class="gallery-thumb" href="javascript:;" data-slide="${i}"><img src="../dist/images/full/${photo.Category.toLowerCase().trim()}/${photo.Year.trim()}/${photo.Filename.trim()}" loading="lazy"></a>`;
+        lightbox += `<li class="glide__slide"><img src="../dist/images/full/${photo.Category.toLowerCase().trim()}/${photo.Year.trim()}/${photo.Filename.trim()}" loading="lazy"></li>`;
     });
 
     document.querySelector('.gallery').innerHTML = thumbnails;
