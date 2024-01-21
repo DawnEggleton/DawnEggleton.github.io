@@ -15,6 +15,10 @@ function fetchContent(category) {
         initPhotos(photos);
     }).then(() => {
         initPage();
+    }).then(() => {
+        setTimeout(() => {
+            $('.gallery').isotope('layout');
+        }, 300)
     });
 }
 
@@ -101,7 +105,9 @@ function loadMore(e) {
             item.classList.remove('hidden');
         }
     });
-    $(e.closest('.gallery-wrap').querySelector('.gallery')).isotope('layout');
+    setTimeout(() => {
+        $(e.closest('.gallery-wrap').querySelector('.gallery')).isotope('layout');
+    }, 100)
     if(e.closest('.gallery-wrap').querySelectorAll('.hidden').length === 0) {
         e.classList.add('hidden');
     }
