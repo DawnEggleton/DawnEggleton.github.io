@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../source/templates/head.html', {
+            "prefix": ".",
+            "siteTitle": "Dawn Eggleton | Portfolio"
+        })
+    </head>
+    <body>
+        @@include('../source/templates/nav.html', {
+            "prefix": "."
+        })
+
+        <header>
+            <h1>dawn eggleton photography</h1>
+            <p>A Nova Scotia photographer specializing in wildlife and equine photography.</p>
+        </header>
+
+        <section class="highlight">
+            <blockquote>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                <span class="highlight">Subtitle</span>
+            </blockquote>
+        </section>
+
+        <section class="alternating">
+            <div class="alternating-image">
+                <img src="./dist/images/large/equineThumb.jpg" loading="lazy" />
+            </div>
+            <article>
+                <h2>Equine</h2>
+                <p class="highlight">2016 &mdash; Present</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="links">
+                    <a href="./photos/equine.html" class="btn btn-primary">View</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="alternating even">
+            <div class="alternating-image">
+                <img src="./dist/images/large/wildlifeThumb.jpg" loading="lazy" />
+            </div>
+            <article>
+                <h2>Wildlife</h2>
+                <p class="highlight">2016 &mdash; 2020</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="links">
+                    <a href="./photos/wildlife.html" class="btn btn-primary">Coming Soon</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="alternating">
+            <div class="alternating-image">
+                <img src="./dist/images/large/portraitsThumb.jpg" loading="lazy" />
+            </div>
+            <article>
+                <h2>Portraits</h2>
+                <p class="highlight">2016 &mdash; 2020</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="links">
+                    <a href="./photos/portraits.html" class="btn btn-primary">Coming Soon</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="alternating even">
+            <div class="alternating-image">
+                <img src="./dist/images/large/landscapeThumb.jpg" loading="lazy" />
+            </div>
+            <article>
+                <h2>Landscapes</h2>
+                <p class="highlight">2016 &mdash; 2019</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="links">
+                    <a href="./photos/landscapes.html" class="btn btn-primary">Coming Soon</a>
+                </div>
+            </article>
+        </section>
+
+        @@include('../source/templates/footer.html', {
+            "prefix": "."
+        })
+
+        @@include('../source/templates/bottomScripts.html', {
+            "prefix": "."
+        })
+    </body>
+</html>

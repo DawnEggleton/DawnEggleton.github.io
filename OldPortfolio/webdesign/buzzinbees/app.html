@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Queen Bee</title>
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="https://use.typekit.net/asv6kbe.css">
+	</head>
+	<body>
+        <a name="top"></a>
+		<header class="scrolled">
+			<a href="index.html">
+				<div class="scroll-logo">
+					<img src="images/beeRightDark.svg">
+					Buzzin' Bees
+				</div>
+			</a>
+			<nav>
+				<a href="index.html">
+					<span>
+						<img src="images/beeRightDark.svg">
+						Intro
+					</span>
+				</a>
+				<a href="app.html" class="active">
+					<span>
+						<img src="images/beeRightDark.svg">
+						App
+					</span>
+				</a>
+				<a href="device.html">
+					<span>
+						<img src="images/beeRightDark.svg">
+						Device
+					</span>
+				</a>
+				<a href="timeline.html">
+					<span>
+						<img src="images/beeRightDark.svg">
+						Timeline
+					</span>
+				</a>
+				<a href="assets.html">
+					<span>
+						<img src="images/beeRightDark.svg">
+						Assets
+					</span>
+				</a>
+				<a href="team.html">
+					<span>
+						<img src="images/beeRightDark.svg">
+						Team
+					</span>
+				</a>
+			</nav>
+		</header>
+		<div class="mobile-header">
+				<a href="/index.html">
+					<div class="scroll-logo">
+						<img src="images/beeRightWhite.svg">
+						Buzzin' Bees
+					</div>
+				</a>
+				<div class="mobile-menu"><i class="fas fa-bars"></i></div>
+				<div class="mobile-nav">
+					<a href="index.html">
+						<img src="images/beeRightDark.svg">
+						Intro
+					</a>
+					<a href="app.html" class="active">
+						<img src="images/beeRightDark.svg">
+						App
+					</a>
+					<a href="device.html">
+						<img src="images/beeRightDark.svg">
+						Device
+					</a>
+					<a href="timeline.html">
+						<img src="images/beeRightDark.svg">
+						Timeline
+					</a>
+					<a href="assets.html">
+						<img src="images/beeRightDark.svg">
+						Assets
+					</a>
+					<a href="team.html">
+						<img src="images/beeRightDark.svg">
+						Team
+					</a>
+				</div>
+        </div>
+        <a class="toTop" href="#top" title="Go To Top"><i class="fas fa-long-arrow-up"></i></a>
+		<section class="first main">
+            <h2>Mobile Application</h2>
+            <p>Our mobile application is intended as a companion application for the Queen Bee neckband device and would be marketed as such. However, it is capable of working on its own. The application itself is a music player with:</p>
+            <p>
+                <img src="images/app_homeplaying.png" style="float: left; margin-right: 30px; height: auto; width: 250px;">
+                <ul>
+                    <li><i class="fal fa-hexagon"></i> Basic music player functions - play, pause, skip forward/backward, shuffle, loop, and repeat</li>
+                    <li><i class="fal fa-hexagon"></i> Song favouriting</li>
+                    <li><i class="fal fa-hexagon"></i> Custom playlist creation</li>
+                    <li><i class="fal fa-hexagon"></i> A music visualizer that responds to the bass frequencies of any song that is playing</li>
+                    <li><i class="fal fa-hexagon"></i> Bluetooth connection to the neckband, when the neckband is present</li>
+                    <li><i class="fal fa-hexagon"></i> Background functions which send data to the neckband</li>
+                </ul>
+                <div style="clear:both;"></div>
+            </p>
+            <p>
+                Below are sections featuring <a href="#images">screenshots and development images</a> of our application. Additionally, we have provided details on our <a href="#usertests">application user testing</a> and a <a href="#demo">video demonstration</a> of our application for your viewing. Lastly, we encourage you to trial our application on your own Android device by <a href="#apk">downloading our APK</a>.
+            </p>
+        </section>
+        <section class="alt prog"><span>
+            <a name="images"></a>
+            <h2>Application Progression</h2>
+            <p>
+				<b>Home Screen Progression</b>				
+				As can be seen below, the home page experienced very few changes from initial conception to final screen. What changes were made were done due to two separate design user tests.<br>
+            </p>
+			<p>
+				<img src="images/app_prog_home.png">
+            </p><br>
+            <p>
+				<b>Song List Progression</b><br>
+				Similarly to the home page, the song list page experienced very few changes - in fact, even fewer than the home page.<br>
+            </p>
+			<p>
+                <img src="images/app_prog_songs.png">
+            </p><br>
+            <p>
+				<b>List of Playlists Progression</b><br>
+				The list of playlists page experienced more changes than some of the other pages. Namely, the image in advance of the name and the lettered separations were not implemented. The icon seen in the final screenshot is only present for the Favourites playlist, although users can include emojis from their keyboard when titling their playlists.
+			</p>
+			<p>
+                <img src="images/app_prog_playlists.png">
+            </p><br>
+            <p>
+				<b>Add Song to Playlist Progression</b><br>
+				The add song to playlist page had the most changes between sketch and wireframe, although the changes between wireframe and final screen were minor.<br>
+            </p>
+            <p>
+                <img src="images/app_prog_add.png">
+            </p><br>
+            <p>
+				<b>Visualizer Progression</b><br>
+				Note: no exclusive visualizer sketch was done, with the intent of making the visualizer page similar to the 'currently playing' sketch displayed.<br>
+            </p>
+            <p>
+                <img src="images/app_prog_vis.png">
+            </p>
+        </span></section>
+        <section class="main"><span>
+            <h2>Additional Screenshots</h2>
+            <div class="gallery tallImages">
+				<div id="photo-1">
+					<img src="images/app_homeplaying.png">
+					<div class="hover">click to view</div>
+					<div class="caption">Application screenshot - home screen, song playing</div>
+				</div>
+				<div id="photo-2">
+					<img src="images/app_menu.png">
+					<div class="hover">click to view</div>
+					<div class="caption">Application screenshot - menu</div>
+				</div>
+				<div id="photo-3">
+					<img src="images/app_songmenu.png">
+					<div class="hover">click to view</div>
+					<div class="caption">Application screenshot - popout song menu</div>
+				</div>
+				<div id="photo-4">
+					<img src="images/app_favorited.png">
+					<div class="hover">click to view</div>
+					<div class="caption">Application screenshot - visualizer, song favourited</div>
+				</div>
+				<div id="photo-5">
+					<img src="images/app_shufflerepeat.png">
+					<div class="hover">click to view</div>
+					<div class="caption">Application screenshot - visualizer, shuffle and repeat on</div>
+				</div>
+				<div id="photo-6">
+					<img src="images/app_visplaying.png">
+					<div class="hover">click to view</div>
+					<div class="caption">Application screenshot - visualizer, song playing</div>
+				</div>
+				<div id="photo-7">
+					<img src="images/app_bluetooth.png">
+					<div class="hover">click to view</div>
+					<div class="caption">Application screenshot - initial bluetooth screen</div>
+				</div>
+			</div>
+        </span></section>
+        <section class="alt"><span>
+            <a name="usertests"></a>
+            <h2>User Testing</h2>
+            <p>
+                Throughout our development process, we completed three user tests on the application. The first user test was completed with the wireframes and was done to decide on our navigation style. The second and third were to determine design features of the application. Test protocols and results are available below.
+            </p>
+            <p>                
+                <ul>
+                    <li><i class="fal fa-hexagon"></i> <a href="documents/nav-protocol.pdf" target="_blank">Navigation - Test Protocol</a></li>
+                    <li><i class="fal fa-hexagon"></i> <a href="documents/nav-results.pdf" target="_blank">Navigation - Results</a></li>
+                    <li><i class="fal fa-hexagon"></i> <a href="documents/design-protocol.pdf" target="_blank">Design - Test Protocol</a></li>
+                    <li><i class="fal fa-hexagon"></i> <a href="documents/design-results.pdf" target="_blank">Design - Results</a></li>
+                    <li><i class="fal fa-hexagon"></i> <a href="documents/homepage-protocol.pdf" target="_blank">Homepage Design - Test Protocol</a></li>
+                    <li><i class="fal fa-hexagon"></i> <a href="documents/homepage-results.pdf" target="_blank">Homepage Design - Results</a></li>
+                </ul>
+            </p>
+        </span></section>
+        <section class="main"><span>
+            <a name="demo"></a>
+            <h2>Demonstration</h2>
+            <p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/u04p8IWb7vc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </p>
+        </span></section>
+        <section class="alt"><span>
+            <a name="apk"></a>
+            <h2>Experience Our Application</h2>
+            <p>
+				While we recognize that the full experience cannot be demonstrated in the comfort of your own home, we have built our Android application into an APK which you can demo on any Android device which runs API 24 or higher. Instructions for installing the APK for demonstration purposes can be found in the repository. Your computer must have <a href="https://developer.android.com/studio" target="_blank">Android Studio</a> installed for this process.
+			</p>
+			<p>				
+				<a href="https://github.com/seniorprojectgroup5/Buzzin-Bees-App">
+					<i class="fab fa-github"></i>&nbsp;&nbsp;
+					Download the APK
+				</a>
+			</p>
+        </span></section>
+
+		<footer>
+			<a href="https://carleton.ca/" target="_blank" title="Carleton University"><img src="images/cuLogo.svg"></a>
+			<a href="https://www.algonquincollege.com/" target="_blank" title="Algonquin College"><img src="images/acLogo.svg"></a>
+			<a href="https://bitdegree.ca/" target="_blank" title="Bachelor of Information Technology"><img src="images/bitLogo.svg"></a><br>
+			<a href="https://www.facebook.com/Buzzin-Bees-101147957930352/" target="_blank" title="Buzzin Bees Facebook"><i class="fab fa-facebook"></i></a>
+			<a href="https://www.instagram.com/_buzzinbees/" target="_blank" title="Buzzin Bees Instagram"><i class="fab fa-instagram"></i></a>
+			2019 &copy; Buzzin' Bees
+		</footer>
+
+		<div class="lightbox">
+			<div class="backgroundlb"></div>
+			<div class="closelb">close <i class="fal fa-times" style="margin-left: 10px;"></i></div>
+			<div class="activeImg"></div>
+		</div>
+
+		<script src="jquery-1.12.1.min.js"></script>
+		<script src="script.js"></script>
+		<script src="gallery.js"></script>
+		<script src="https://kit.fontawesome.com/66e864331c.js" crossorigin="anonymous"></script>
+	</body>
+</html>
