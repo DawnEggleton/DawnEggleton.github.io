@@ -31,7 +31,9 @@ function initPage() {
         }
     });
 
-    $('.gallery').isotope('layout');
+    $('.gallery').imagesLoaded().progress( function() {
+        $('.gallery').isotope('layout');
+    });
 
     document.querySelectorAll('.gallery-thumb').forEach(thumb => {
         thumb.addEventListener('click', e => {
@@ -105,9 +107,9 @@ function loadMore(e) {
             item.classList.remove('hidden');
         }
     });
-    setTimeout(() => {
+    $(e.closest('.gallery-wrap').querySelector('.gallery')).imagesLoaded().progress( function() {
         $(e.closest('.gallery-wrap').querySelector('.gallery')).isotope('layout');
-    }, 100)
+    });
     if(e.closest('.gallery-wrap').querySelectorAll('.hidden').length === 0) {
         e.classList.add('hidden');
     }
