@@ -397,20 +397,20 @@ footer {
 .hidden {
     display: none;
 }
-.gallery-wrap {
-    padding: 20px 20px 0;
-    text-align: center;
-
-    @include mq-up(xs) {
-        padding: 50px 50px 30px;
-    }
-
-    button {
-        margin: 0 auto 20px;
-        border: 0;
-    }
-}
 .gallery {
+    &-wrap {
+        padding: 20px 20px 0;
+        text-align: center;
+    
+        @include mq-up(xs) {
+            padding: 50px 50px 30px;
+        }
+    
+        button {
+            margin: 0 auto 20px;
+            border: 0;
+        }
+    }
     &-thumb {
         line-height: 0;
         border-radius: 2px;
@@ -418,7 +418,7 @@ footer {
         width: 100%;
         margin-bottom: 20px;
 
-        @include mq-up(xs) {
+        @include mq-up(xxs) {
             width: calc((100% / 2) - (20px / 2));
         }
 
@@ -428,6 +428,10 @@ footer {
 
         @include mq-up(md) {
             width: calc((100% / 4) - (60px / 4));
+        }
+
+        @include mq-up(xl) {
+            width: calc((100% / 5) - (80px / 5));
         }
 
         &::before {
@@ -495,6 +499,9 @@ footer {
 
         &__slide {
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         &__arrows {

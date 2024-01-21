@@ -391,7 +391,7 @@ footer {
   overflow: hidden;
   width: 100%;
   margin-bottom: 20px; }
-  @media (min-width: 601px) {
+  @media (min-width: 481px) {
     .gallery-thumb {
       width: calc((100% / 2) - (20px / 2)); } }
   @media (min-width: 769px) {
@@ -400,6 +400,9 @@ footer {
   @media (min-width: 1025px) {
     .gallery-thumb {
       width: calc((100% / 4) - (60px / 4)); } }
+  @media (min-width: 1441px) {
+    .gallery-thumb {
+      width: calc((100% / 5) - (80px / 5)); } }
   .gallery-thumb::before {
     content: 'View';
     position: absolute;
@@ -457,7 +460,19 @@ footer {
     .lightbox .glide__track, .lightbox .glide__slides, .lightbox .glide__slide {
       height: 100%; }
     .lightbox .glide__slide {
-      text-align: center; }
+      text-align: center;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
     .lightbox .glide__arrows {
       position: absolute;
       bottom: 0;
