@@ -71,9 +71,9 @@ function initPhotos(photos) {
             return -1;
         } else if(parseInt(a.Year) < parseInt(b.Year)) {
             return 1;
-        } else if(parseInt(a.Month) < parseInt(b.Month)) {
-            return -1;
         } else if(parseInt(a.Month) > parseInt(b.Month)) {
+            return -1;
+        } else if(parseInt(a.Month) < parseInt(b.Month)) {
             return 1;
         } else if(new Date(a.Timestamp) > new Date(b.Timestamp)) {
             return -1;
