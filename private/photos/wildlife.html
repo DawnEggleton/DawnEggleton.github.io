@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../../source/templates/head.html', {
+            "prefix": "..",
+            "siteTitle": "Dawn Eggleton | Portfolio"
+        })
+    </head>
+    <body>
+        @@include('../../source/templates/nav.html', {
+            "prefix": ".."
+        })
+
+        <header>
+            <h1>wildlife</h1>
+            <p>2016 &mdash; 2020</p>
+        </header>
+
+        <main>
+            <section class="gallery"></section>
+        </main>
+
+        <div class="lightbox">
+            <button onClick="closeLightbox(this)">Close</button>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides"></ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                </div>
+            </div>
+        </div>
+
+        @@include('../../source/templates/footer.html', {
+            "prefix": ".."
+        })
+
+        @@include('../../source/templates/bottomScripts.html', {
+            "prefix": "..",
+            "category": "wildlife"
+        })
+    </body>
+</html>

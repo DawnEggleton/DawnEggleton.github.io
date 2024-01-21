@@ -1,38 +1,27 @@
-$('.gallery').isotope({
-    itemSelector: '.gallery-thumb',
-    percentPosition: true,
-    masonry: {
-      gutter: 20
-    }
-});
+if(document.querySelector('#submit')) {
+    document.querySelector('#submit').addEventListener('submit', e => {
+        e.preventDefault();
+    
+        let form = e.currentTarget;
+    
+        let category = form.querySelector('#category').options[form.querySelector('#category').selectedIndex].value;
+        let file = form.querySelector('#filename').value.trim();
+        let year = form.querySelector('#year').value.trim();
+        let month = form.querySelector('#month').options[form.querySelector('#month').selectedIndex].value;
+        let password = form.querySelector('#filename').value.toLowerCase().trim();
+    
+        let data = {
+            "SubmissionType": "submit",
+            Category: category,
+            Filename: file,
+            Year: year,
+            Month: month,
+        }
 
-document.querySelectorAll('.gallery-thumb').forEach(thumb => {
-    thumb.addEventListener('click', e => {
-        $('.lightbox').addClass('is-open');
-        let startSlide = e.currentTarget.dataset.slide;
-        console.log(startSlide);
-        if ($('.lightbox .glide').length) {
-            let slider = new Glide('.glide', {
-              gap: 40,
-                bound: true,
-                peek: {
-                    before: 0,
-                    after: 0
-                },
-                startAt: startSlide,
-                breakpoints: {
-                    960: {
-                        gap: 0
-                    },
-                    1350: {
-                        gap: 20
-                    }
-                }
-            }).mount();
+        form.querySelector('button[type="submit"]').innerText = 'Submitting...';
+    
+        if(password = `justincase`) {
+            sendAjax(form, data);
         }
     });
-});
-
-function closeLightbox(e) {
-    $('.lightbox').removeClass('is-open');
 }

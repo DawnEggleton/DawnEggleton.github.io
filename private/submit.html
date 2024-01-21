@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        @@include('../source/templates/head.html', {
+            "prefix": ".",
+            "siteTitle": "Dawn Eggleton | Portfolio"
+        })
+    </head>
+    <body>
+        @@include('../source/templates/nav.html', {
+            "prefix": "."
+        })
+
+        <main>
+            <section class="highlight">
+                <form id="submit">
+                    <label>
+                        <b>Category</b>
+                        <select id="category">
+                            <option value="">(select)</option>
+                            <option value="equine">Equine</option>
+                            <option value="portrait">Portrait</option>
+                            <option value="wildlife">Wildlife</option>
+                            <option value="misc">Miscellaneous</option>
+                        </select>
+                    </label>
+                    <label>
+                        <b>File Name</b>
+                        <input type="text" id="filename" placeholder="File Name" />
+                    </label>
+                    <label>
+                        <b>Year</b>
+                        <input type="number" id="year" placeholder="2024" />
+                    </label>
+                    <label>
+                        <b>Month</b>
+                        <select id="month">
+                            <option value="">(select)</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                            <option value="4">April</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">August</option>
+                            <option value="9">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </label>
+                    <label class="fullWidth">
+                        <b>Password</b>
+                        <input type="text" id="password" />
+                    </label>
+                    <button type="submit" id="submit" class="fullWidth btn btn-primary">Submit</button>
+                </form>
+            </section>
+        </main>
+
+        @@include('../source/templates/footer.html', {
+            "prefix": "."
+        })
+
+        @@include('../source/templates/bottomScripts.html', {
+            "prefix": "."
+        })
+    </body>
+</html>
