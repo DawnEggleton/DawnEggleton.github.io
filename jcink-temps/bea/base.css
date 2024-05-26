@@ -105,7 +105,7 @@
     width: 100px;
     height: 100%;
     font-family: 'thasadith', sans-serif;
-    font-size: var(--lBody, var(--size-l, 14px));
+    font-size: var(--size-lg, var(--lBody, var(--size-l, 14px)));
     font-style: italic;
     color: var(--accent);
 }
@@ -242,19 +242,19 @@
     align-items: center;
     justify-items: center;
     border-radius: 50%;
-    font-size: var(--sBody, var(--size-s, 10px));
+    font-size: var(--size-sm, var(--sBody, var(--size-s, 10px)));
     padding: 0 0 0 2px;
     font-family: 'Font Awesome 5 Pro';
     box-sizing: border-box;
 }
 .bea-wrap.playlist song b {
-    font-size: var(--mBody, var(--size-m, 12px));
+    font-size: var(--size-md, var(--mBody, var(--size-m, 12px)));
     text-transform: uppercase;
     padding: 0;
     margin: 0;
 }
 .bea-wrap.playlist song span {
-    font-size: var(--sBody, var(--size-s, 10px));
+    font-size: var(--size-sm, var(--sBody, var(--size-s, 10px)));
     text-transform: uppercase;
     font-style: italic;
 }
@@ -286,7 +286,7 @@
 }
 .bea-wrap.quoteDev .bea-content span {
     font-family: 'open sans', sans-serif;
-    font-size: var(--mBody, var(--size-m, 12px));
+    font-size: var(--size-md, var(--mBody, var(--size-m, 12px)));
     text-transform: uppercase;
     display: block;
     margin: 20px 30px 0;
@@ -321,20 +321,20 @@
 
 .totl .bea-content,
 .totl .bea-content a {
-    font-size: var(--size-m);
+    font-size: var(--size-md, var(--mBody, var(--size-m, 12px)));
 }
 .totl .bea-content b,
 .totl .bea-content i {
-    font-size: var(--size-l);
+    font-size: var(--size-lg, var(--lBody, var(--size-l, 14px)));
 }
 .totl .bea-wrap.timeline .bea-content b,
 .totl .bea-wrap.playlist song b,
 .totl .bea-wrap.quoteDev .bea-content span {
-    font-size: var(--size-m);
+    font-size: var(--size-md, var(--mBody, var(--size-m, 12px)));
 }
 .totl .bea-wrap.playlist song i,
 .totl .bea-wrap.playlist song span {
-    font-size: var(--size-s);
+    font-size: var(--size-sm, var(--sBody, var(--size-s, 10px)));
 }
 .bea-wrap.comm {
     width: 300px;
