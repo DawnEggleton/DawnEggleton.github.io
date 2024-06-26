@@ -1,0 +1,52 @@
+:root, :host {
+  --fa-style-family-sharp: 'Font Awesome 6 Sharp';
+  --fa-font-sharp-light: normal 300 1em/1 'Font Awesome 6 Sharp';
+  --fa-font-sharp-regular: normal 400 1em/1 'Font Awesome 6 Sharp';
+  --fa-font-sharp-solid: normal 900 1em/1 'Font Awesome 6 Sharp';
+  --fa-font-sharp-thin: normal 100 1em/1 'Font Awesome 6 Sharp'; }
+
+@font-face {
+  font-family: 'Font Awesome 6 Sharp';
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url("../webfonts/fa-sharp-light-300.woff2") format("woff2"), url("../webfonts/fa-sharp-light-300.ttf") format("truetype"); }
+
+.fasl,
+.fa-light.fa-sharp {
+  font-weight: 300; }
+
+@font-face {
+  font-family: 'Font Awesome 6 Sharp';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../webfonts/fa-sharp-regular-400.woff2") format("woff2"), url("../webfonts/fa-sharp-regular-400.ttf") format("truetype"); }
+
+.fasr,
+.fa-regular.fa-sharp {
+  font-weight: 400; }
+
+@font-face {
+  font-family: 'Font Awesome 6 Sharp';
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../webfonts/fa-sharp-solid-900.woff2") format("woff2"), url("../webfonts/fa-sharp-solid-900.ttf") format("truetype"); }
+
+.fass,
+.fa-solid.fa-sharp {
+  font-weight: 900; }
+
+@font-face {
+  font-family: 'Font Awesome 6 Sharp';
+  font-style: normal;
+  font-weight: 100;
+  font-display: block;
+  src: url("../webfonts/fa-sharp-thin-100.woff2") format("woff2"), url("../webfonts/fa-sharp-thin-100.ttf") format("truetype"); }
+
+.fast,
+.fa-thin.fa-sharp {
+  font-weight: 100; }
+
+
